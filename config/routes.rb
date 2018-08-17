@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'pokedex/json', to: 'pokemon#share'
+  get 'pokedex/:name', to: 'pokemon#show'
 
   namespace :admin do
     resources :events

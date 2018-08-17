@@ -12,8 +12,12 @@ class Json
 
 		  pok.num = p.num
 		  pok.name = p.name
-		  pok.type_1 = p.type_1
-		  pok.type_2 = p.type_2
+		  pok.type_1 = Type.find(p.type_1).name
+
+		  unless p.type_2.nil?
+	        pok.type_2 = Type.find(p.type_2).name
+	      end
+	      
 		  pok.evolutions = []
 
 		  evolution = Array.new
@@ -30,16 +34,11 @@ class Json
 		  	  candies: e.candies
 		  	})
 
-
-		  	#evolutions.append(evol)
-
-		    
-
 		  end
 
 		  pok.evolutions = evolution
 
-		  @list.append(pok)
+		  @list.prepend(pok)
 
 		end
 
