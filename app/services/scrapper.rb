@@ -76,20 +76,56 @@ class Scrapper
 
   	evolutions.each do |e|
 
-  	  pokemon_num = Pokemon.find(e.pokemon_id).num
+  	  if e.first_form == 0
 
-      url =  Addressable::URI.normalized_encode("https://www.serebii.net/pokemongo/pokemon/#{pokemon_num}.shtml")
+  	  	pokemon_num = Pokemon.find(e.pokemon_id).num
 
-      doc = Nokogiri::HTML(open(url))
+        url =  Addressable::URI.normalized_encode("https://www.serebii.net/pokedex-sm/#{pokemon_num}.shtml")
 
-      evol_num = doc.css('table.evochain tr td[1] a[1]')[0]['href'].gsub(/\/pokemongo\/pokemon\/(.*).shtml/, '\1').to_s.rjust(3, "0")
+        doc = Nokogiri::HTML(open(url))
 
-      e.first_form = evol_num
+        evol_num = doc.css('table.evochain tr td[1] a[1]')[0]['href'].gsub(/\/pokedex-sm\/(.*).shtml/, '\1').to_s.rjust(3, "0")
 
-      e.save
+        e.first_form = evol_num
+
+        e.save
+
+      end
 
   	end
-  	
+
+  end
+
+  def get_candies
+
+  	url =  Addressable::URI.normalized_encode("https://www.pokebip.com/page/jeuxvideo/pokemon_go/pokemon")
+
+    doc = Nokogiri::HTML(open(url))
+
+    evols = doc.css('table.bipcode.tablesorter tbody tr')
+
+    evols.each do |e|
+
+      evol_num = e.css('td[1]')[0].text.to_s.gsub(/#(.*?) (.*)/, '\1').to_s.rjust(3, "0")
+
+      evol_id = Pokemon.where(num: evol_num).first.id
+
+      evol_candies = e.css('td[2]')[0].text.gsub(/ Bonbons/, '')
+
+      pokemon = Evolution.where(pokemon_id: evol_id).first
+
+      unless pokemon.nil?
+
+        pokemon.candies = evol_candies
+
+        pokemon.save
+
+      end
+
+    end
+
+
+
   end
 
 end
