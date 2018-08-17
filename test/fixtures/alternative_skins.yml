@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pokemon: one
+  alternative_skin_category: one
+  position: 1
+
+two:
+  name: MyString
+  pokemon: two
+  alternative_skin_category: two
+  position: 1

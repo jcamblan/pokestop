@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  num: MyString
+  type_1: 1
+  type_2: 1
+  candy: MyString
+  candy_distance: 1
+  pc_min: 1
+  pc_max: 1
+  pv_min: 1
+  pv_max: 1
+  generation: one
+  pokedex_entry: MyText
+  comment: MyText
+  position: 1
+
+two:
+  name: MyString
+  num: MyString
+  type_1: 1
+  type_2: 1
+  candy: MyString
+  candy_distance: 1
+  pc_min: 1
+  pc_max: 1
+  pv_min: 1
+  pv_max: 1
+  generation: two
+  pokedex_entry: MyText
+  comment: MyText
+  position: 1

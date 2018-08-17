@@ -1,0 +1,5616 @@
+[
+	{
+		"num": "001",
+		"name_fr": "Bulbizarre",
+		"name_en": "Bulbasaur",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "002",
+		"name_fr": "Herbizarre",
+		"name_en": "Ivysaur",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "003",
+		"name_fr": "Florizarre",
+		"name_en": "Venusaur",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "004",
+		"name_fr": "Salamèche",
+		"name_en": "Charmander",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "005",
+		"name_fr": "Reptincel",
+		"name_en": "Charmeleon",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "006",
+		"name_fr": "Dracaufeu",
+		"name_en": "Charizard",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "007",
+		"name_fr": "Carapuce",
+		"name_en": "Squirtle",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "008",
+		"name_fr": "Carabaffe",
+		"name_en": "Wartortle",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "009",
+		"name_fr": "Tortank",
+		"name_en": "Blastoise",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "010",
+		"name_fr": "Chenipan",
+		"name_en": "Caterpie",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "011",
+		"name_fr": "Chrysacier",
+		"name_en": "Metapod",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "012",
+		"name_fr": "Papilusion",
+		"name_en": "Butterfree",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "013",
+		"name_fr": "Aspicot",
+		"name_en": "Weedle",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "014",
+		"name_fr": "Coconfort",
+		"name_en": "Kakuna",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "015",
+		"name_fr": "Dardargnan",
+		"name_en": "Beedrill",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "016",
+		"name_fr": "Roucool",
+		"name_en": "Pidgey",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "017",
+		"name_fr": "Roucoups",
+		"name_en": "Pidgeotto",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "018",
+		"name_fr": "Roucarnage",
+		"name_en": "Pidgeot",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "019",
+		"name_fr": "Rattata",
+		"name_en": "Rattata",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "020",
+		"name_fr": "Rattatac",
+		"name_en": "Raticate",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "021",
+		"name_fr": "Piafabec",
+		"name_en": "Spearow",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "022",
+		"name_fr": "Rapasdepic",
+		"name_en": "Fearow",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "023",
+		"name_fr": "Abo",
+		"name_en": "Ekans",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "024",
+		"name_fr": "Arbok",
+		"name_en": "Arbok",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "025",
+		"name_fr": "Pikachu",
+		"name_en": "Pikachu",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "026",
+		"name_fr": "Raichu",
+		"name_en": "Raichu",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "027",
+		"name_fr": "Sabelette",
+		"name_en": "Sandshrew",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "028",
+		"name_fr": "Sablaireau",
+		"name_en": "Sandslash",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "029",
+		"name_fr": "Nidoran♀",
+		"name_en": "Nidoranâ",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "030",
+		"name_fr": "Nidorina",
+		"name_en": "Nidorina",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "031",
+		"name_fr": "Nidoqueen",
+		"name_en": "Nidoqueen",
+		"type_1": "Poison",
+		"type_2": "Sol"
+	},
+	{
+		"num": "032",
+		"name_fr": "Nidoran♂",
+		"name_en": "Nidoranâ",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "033",
+		"name_fr": "Nidorino",
+		"name_en": "Nidorino",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "034",
+		"name_fr": "Nidoking",
+		"name_en": "Nidoking",
+		"type_1": "Poison",
+		"type_2": "Sol"
+	},
+	{
+		"num": "035",
+		"name_fr": "Mélofée",
+		"name_en": "Clefairy",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "036",
+		"name_fr": "Mélodelfe",
+		"name_en": "Clefable",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "037",
+		"name_fr": "Goupix",
+		"name_en": "Vulpix",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "038",
+		"name_fr": "Feunard",
+		"name_en": "Ninetales",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "039",
+		"name_fr": "Rondoudou",
+		"name_en": "Jigglypuff",
+		"type_1": "Normal",
+		"type_2": "Fée"
+	},
+	{
+		"num": "040",
+		"name_fr": "Grodoudou",
+		"name_en": "Wigglytuff",
+		"type_1": "Normal",
+		"type_2": "Fée"
+	},
+	{
+		"num": "041",
+		"name_fr": "Nosferapti",
+		"name_en": "Zubat",
+		"type_1": "Poison",
+		"type_2": "Vol"
+	},
+	{
+		"num": "042",
+		"name_fr": "Nosferalto",
+		"name_en": "Golbat",
+		"type_1": "Poison",
+		"type_2": "Vol"
+	},
+	{
+		"num": "043",
+		"name_fr": "Mystherbe",
+		"name_en": "Oddish",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "044",
+		"name_fr": "Ortide",
+		"name_en": "Gloom",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "045",
+		"name_fr": "Rafflesia",
+		"name_en": "Vileplume",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "046",
+		"name_fr": "Paras",
+		"name_en": "Paras",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "047",
+		"name_fr": "Parasect",
+		"name_en": "Parasect",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "048",
+		"name_fr": "Mimitoss",
+		"name_en": "Venonat",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "049",
+		"name_fr": "Aéromite",
+		"name_en": "Venomoth",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "050",
+		"name_fr": "Taupiqueur",
+		"name_en": "Diglett",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "051",
+		"name_fr": "Triopikeur",
+		"name_en": "Dugtrio",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "052",
+		"name_fr": "Miaouss",
+		"name_en": "Meowth",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "053",
+		"name_fr": "Persian",
+		"name_en": "Persian",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "054",
+		"name_fr": "Psykokwak",
+		"name_en": "Psyduck",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "055",
+		"name_fr": "Akwakwak",
+		"name_en": "Golduck",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "056",
+		"name_fr": "Férosinge",
+		"name_en": "Mankey",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "057",
+		"name_fr": "Colossinge",
+		"name_en": "Primeape",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "058",
+		"name_fr": "Caninos",
+		"name_en": "Growlithe",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "059",
+		"name_fr": "Arcanin",
+		"name_en": "Arcanine",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "060",
+		"name_fr": "Ptitard",
+		"name_en": "Poliwag",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "061",
+		"name_fr": "Têtarte",
+		"name_en": "Poliwhirl",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "062",
+		"name_fr": "Tartard",
+		"name_en": "Poliwrath",
+		"type_1": "Eau",
+		"type_2": "Combat"
+	},
+	{
+		"num": "063",
+		"name_fr": "Abra",
+		"name_en": "Abra",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "064",
+		"name_fr": "Kadabra",
+		"name_en": "Kadabra",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "065",
+		"name_fr": "Alakazam",
+		"name_en": "Alakazam",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "066",
+		"name_fr": "Machoc",
+		"name_en": "Machop",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "067",
+		"name_fr": "Machopeur",
+		"name_en": "Machoke",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "068",
+		"name_fr": "Mackogneur",
+		"name_en": "Machamp",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "069",
+		"name_fr": "Chétiflor",
+		"name_en": "Bellsprout",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "070",
+		"name_fr": "Boustiflor",
+		"name_en": "Weepinbell",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "071",
+		"name_fr": "Empiflor",
+		"name_en": "Victreebel",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "072",
+		"name_fr": "Tentacool",
+		"name_en": "Tentacool",
+		"type_1": "Eau",
+		"type_2": "Poison"
+	},
+	{
+		"num": "073",
+		"name_fr": "Tentacruel",
+		"name_en": "Tentacruel",
+		"type_1": "Eau",
+		"type_2": "Poison"
+	},
+	{
+		"num": "074",
+		"name_fr": "Racaillou",
+		"name_en": "Geodude",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "075",
+		"name_fr": "Gravalanch",
+		"name_en": "Graveler",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "076",
+		"name_fr": "Grolem",
+		"name_en": "Golem",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "077",
+		"name_fr": "Ponyta",
+		"name_en": "Ponyta",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "078",
+		"name_fr": "Galopa",
+		"name_en": "Rapidash",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "079",
+		"name_fr": "Ramoloss",
+		"name_en": "Slowpoke",
+		"type_1": "Eau",
+		"type_2": "Psy"
+	},
+	{
+		"num": "080",
+		"name_fr": "Flagadoss",
+		"name_en": "Slowbro",
+		"type_1": "Eau",
+		"type_2": "Psy"
+	},
+	{
+		"num": "081",
+		"name_fr": "Magnéti",
+		"name_en": "Magnemite",
+		"type_1": "Électrik",
+		"type_2": "Acier"
+	},
+	{
+		"num": "082",
+		"name_fr": "Magnéton",
+		"name_en": "Magneton",
+		"type_1": "Électrik",
+		"type_2": "Acier"
+	},
+	{
+		"num": "083",
+		"name_fr": "Canarticho",
+		"name_en": "Farfetch'd",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "084",
+		"name_fr": "Doduo",
+		"name_en": "Doduo",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "085",
+		"name_fr": "Dodrio",
+		"name_en": "Dodrio",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "086",
+		"name_fr": "Otaria",
+		"name_en": "Seel",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "087",
+		"name_fr": "Lamantine",
+		"name_en": "Dewgong",
+		"type_1": "Eau",
+		"type_2": "Glace"
+	},
+	{
+		"num": "088",
+		"name_fr": "Tadmorv",
+		"name_en": "Grimer",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "089",
+		"name_fr": "Grotadmorv",
+		"name_en": "Muk",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "090",
+		"name_fr": "Kokiyas",
+		"name_en": "Shellder",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "091",
+		"name_fr": "Crustabri",
+		"name_en": "Cloyster",
+		"type_1": "Eau",
+		"type_2": "Glace"
+	},
+	{
+		"num": "092",
+		"name_fr": "Fantominus",
+		"name_en": "Gastly",
+		"type_1": "Spectre",
+		"type_2": "Poison"
+	},
+	{
+		"num": "093",
+		"name_fr": "Spectrum",
+		"name_en": "Haunter",
+		"type_1": "Spectre",
+		"type_2": "Poison"
+	},
+	{
+		"num": "094",
+		"name_fr": "Ectoplasma",
+		"name_en": "Gengar",
+		"type_1": "Spectre",
+		"type_2": "Poison"
+	},
+	{
+		"num": "095",
+		"name_fr": "Onix",
+		"name_en": "Onix",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "096",
+		"name_fr": "Soporifik",
+		"name_en": "Drowzee",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "097",
+		"name_fr": "Hypnomade",
+		"name_en": "Hypno",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "098",
+		"name_fr": "Krabby",
+		"name_en": "Krabby",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "099",
+		"name_fr": "Krabboss",
+		"name_en": "Kingler",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "100",
+		"name_fr": "Voltorbe",
+		"name_en": "Voltorb",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "101",
+		"name_fr": "Électrode",
+		"name_en": "Electrode",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "102",
+		"name_fr": "Noeunoeuf",
+		"name_en": "Exeggcute",
+		"type_1": "Plante",
+		"type_2": "Psy"
+	},
+	{
+		"num": "103",
+		"name_fr": "Noadkoko",
+		"name_en": "Exeggutor",
+		"type_1": "Plante",
+		"type_2": "Psy"
+	},
+	{
+		"num": "104",
+		"name_fr": "Osselait",
+		"name_en": "Cubone",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "105",
+		"name_fr": "Ossatueur",
+		"name_en": "Marowak",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "106",
+		"name_fr": "Kicklee",
+		"name_en": "Hitmonlee",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "107",
+		"name_fr": "Tygnon",
+		"name_en": "Hitmonchan",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "108",
+		"name_fr": "Excelangue",
+		"name_en": "Lickitung",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "109",
+		"name_fr": "Smogo",
+		"name_en": "Koffing",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "110",
+		"name_fr": "Smogogo",
+		"name_en": "Weezing",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "111",
+		"name_fr": "Rhinocorne",
+		"name_en": "Rhyhorn",
+		"type_1": "Sol",
+		"type_2": "Roche"
+	},
+	{
+		"num": "112",
+		"name_fr": "Rhinoféros",
+		"name_en": "Rhydon",
+		"type_1": "Sol",
+		"type_2": "Roche"
+	},
+	{
+		"num": "113",
+		"name_fr": "Leveinard",
+		"name_en": "Chansey",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "114",
+		"name_fr": "Saquedeneu",
+		"name_en": "Tangela",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "115",
+		"name_fr": "Kangourex",
+		"name_en": "Kangaskhan",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "116",
+		"name_fr": "Hypotrempe",
+		"name_en": "Horsea",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "117",
+		"name_fr": "Hypocéan",
+		"name_en": "Seadra",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "118",
+		"name_fr": "Poissirène",
+		"name_en": "Goldeen",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "119",
+		"name_fr": "Poissoroy",
+		"name_en": "Seaking",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "120",
+		"name_fr": "Stari",
+		"name_en": "Staryu",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "121",
+		"name_fr": "Staross",
+		"name_en": "Starmie",
+		"type_1": "Eau",
+		"type_2": "Psy"
+	},
+	{
+		"num": "122",
+		"name_fr": "M.Mime",
+		"name_en": "Mr.Mime",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "123",
+		"name_fr": "Insécateur",
+		"name_en": "Scyther",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "124",
+		"name_fr": "Lippoutou",
+		"name_en": "Jynx",
+		"type_1": "Glace",
+		"type_2": "Psy"
+	},
+	{
+		"num": "125",
+		"name_fr": "Élektek",
+		"name_en": "Electabuzz",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "126",
+		"name_fr": "Magmar",
+		"name_en": "Magmar",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "127",
+		"name_fr": "Scarabrute",
+		"name_en": "Pinsir",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "128",
+		"name_fr": "Tauros",
+		"name_en": "Tauros",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "129",
+		"name_fr": "Magicarpe",
+		"name_en": "Magikarp",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "130",
+		"name_fr": "Léviator",
+		"name_en": "Gyarados",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "131",
+		"name_fr": "Lokhlass",
+		"name_en": "Lapras",
+		"type_1": "Eau",
+		"type_2": "Glace"
+	},
+	{
+		"num": "132",
+		"name_fr": "Métamorph",
+		"name_en": "Ditto",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "133",
+		"name_fr": "Évoli",
+		"name_en": "Eevee",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "134",
+		"name_fr": "Aquali",
+		"name_en": "Vaporeon",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "135",
+		"name_fr": "Voltali",
+		"name_en": "Jolteon",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "136",
+		"name_fr": "Pyroli",
+		"name_en": "Flareon",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "137",
+		"name_fr": "Porygon",
+		"name_en": "Porygon",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "138",
+		"name_fr": "Amonita",
+		"name_en": "Omanyte",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "139",
+		"name_fr": "Amonistar",
+		"name_en": "Omastar",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "140",
+		"name_fr": "Kabuto",
+		"name_en": "Kabuto",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "141",
+		"name_fr": "Kabutops",
+		"name_en": "Kabutops",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "142",
+		"name_fr": "Ptéra",
+		"name_en": "Aerodactyl",
+		"type_1": "Roche",
+		"type_2": "Vol"
+	},
+	{
+		"num": "143",
+		"name_fr": "Ronflex",
+		"name_en": "Snorlax",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "144",
+		"name_fr": "Artikodin",
+		"name_en": "Articuno",
+		"type_1": "Glace",
+		"type_2": "Vol"
+	},
+	{
+		"num": "145",
+		"name_fr": "Électhor",
+		"name_en": "Zapdos",
+		"type_1": "Électrik",
+		"type_2": "Vol"
+	},
+	{
+		"num": "146",
+		"name_fr": "Sulfura",
+		"name_en": "Moltres",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "147",
+		"name_fr": "Minidraco",
+		"name_en": "Dratini",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "148",
+		"name_fr": "Draco",
+		"name_en": "Dragonair",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "149",
+		"name_fr": "Dracolosse",
+		"name_en": "Dragonite",
+		"type_1": "Dragon",
+		"type_2": "Vol"
+	},
+	{
+		"num": "150",
+		"name_fr": "Mewtwo",
+		"name_en": "Mewtwo",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "151",
+		"name_fr": "Mew",
+		"name_en": "Mew",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "152",
+		"name_fr": "Germignon",
+		"name_en": "Chikorita",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "153",
+		"name_fr": "Macronium",
+		"name_en": "Bayleef",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "154",
+		"name_fr": "Méganium",
+		"name_en": "Meganium",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "155",
+		"name_fr": "Héricendre",
+		"name_en": "Cyndaquil",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "156",
+		"name_fr": "Feurisson",
+		"name_en": "Quilava",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "157",
+		"name_fr": "Typhlosion",
+		"name_en": "Typhlosion",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "158",
+		"name_fr": "Kaiminus",
+		"name_en": "Totodile",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "159",
+		"name_fr": "Crocrodil",
+		"name_en": "Croconaw",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "160",
+		"name_fr": "Aligatueur",
+		"name_en": "Feraligatr",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "161",
+		"name_fr": "Fouinette",
+		"name_en": "Sentret",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "162",
+		"name_fr": "Fouinar",
+		"name_en": "Furret",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "163",
+		"name_fr": "Hoothoot",
+		"name_en": "Hoothoot",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "164",
+		"name_fr": "Noarfang",
+		"name_en": "Noctowl",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "165",
+		"name_fr": "Coxy",
+		"name_en": "Ledyba",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "166",
+		"name_fr": "Coxyclaque",
+		"name_en": "Ledian",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "167",
+		"name_fr": "Mimigal",
+		"name_en": "Spinarak",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "168",
+		"name_fr": "Migalos",
+		"name_en": "Ariados",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "169",
+		"name_fr": "Nostenfer",
+		"name_en": "Crobat",
+		"type_1": "Poison",
+		"type_2": "Vol"
+	},
+	{
+		"num": "170",
+		"name_fr": "Loupio",
+		"name_en": "Chinchou",
+		"type_1": "Eau",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "171",
+		"name_fr": "Lanturn",
+		"name_en": "Lanturn",
+		"type_1": "Eau",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "172",
+		"name_fr": "Pichu",
+		"name_en": "Pichu",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "173",
+		"name_fr": "Mélo",
+		"name_en": "Cleffa",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "174",
+		"name_fr": "Toudoudou",
+		"name_en": "Igglybuff",
+		"type_1": "Normal",
+		"type_2": "Fée"
+	},
+	{
+		"num": "175",
+		"name_fr": "Togepi",
+		"name_en": "Togepi",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "176",
+		"name_fr": "Togetic",
+		"name_en": "Togetic",
+		"type_1": "Fée",
+		"type_2": "Vol"
+	},
+	{
+		"num": "177",
+		"name_fr": "Natu",
+		"name_en": "Natu",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "178",
+		"name_fr": "Xatu",
+		"name_en": "Xatu",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "179",
+		"name_fr": "Wattouat",
+		"name_en": "Mareep",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "180",
+		"name_fr": "Lainergie",
+		"name_en": "Flaaffy",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "181",
+		"name_fr": "Pharamp",
+		"name_en": "Ampharos",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "182",
+		"name_fr": "Joliflor",
+		"name_en": "Bellossom",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "183",
+		"name_fr": "Marill",
+		"name_en": "Marill",
+		"type_1": "Eau",
+		"type_2": "Fée"
+	},
+	{
+		"num": "184",
+		"name_fr": "Azumarill",
+		"name_en": "Azumarill",
+		"type_1": "Eau",
+		"type_2": "Fée"
+	},
+	{
+		"num": "185",
+		"name_fr": "Simularbre",
+		"name_en": "Sudowoodo",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "186",
+		"name_fr": "Tarpaud",
+		"name_en": "Politoed",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "187",
+		"name_fr": "Granivol",
+		"name_en": "Hoppip",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "188",
+		"name_fr": "Floravol",
+		"name_en": "Skiploom",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "189",
+		"name_fr": "Cotovol",
+		"name_en": "Jumpluff",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "190",
+		"name_fr": "Capumain",
+		"name_en": "Aipom",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "191",
+		"name_fr": "Tournegrin",
+		"name_en": "Sunkern",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "192",
+		"name_fr": "Héliatronc",
+		"name_en": "Sunflora",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "193",
+		"name_fr": "Yanma",
+		"name_en": "Yanma",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "194",
+		"name_fr": "Axoloto",
+		"name_en": "Wooper",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "195",
+		"name_fr": "Maraiste",
+		"name_en": "Quagsire",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "196",
+		"name_fr": "Mentali",
+		"name_en": "Espeon",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "197",
+		"name_fr": "Noctali",
+		"name_en": "Umbreon",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "198",
+		"name_fr": "Cornèbre",
+		"name_en": "Murkrow",
+		"type_1": "Ténèbres",
+		"type_2": "Vol"
+	},
+	{
+		"num": "199",
+		"name_fr": "Roigada",
+		"name_en": "Slowking",
+		"type_1": "Eau",
+		"type_2": "Psy"
+	},
+	{
+		"num": "200",
+		"name_fr": "Feuforêve",
+		"name_en": "Misdreavus",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "201",
+		"name_fr": "Zarbi",
+		"name_en": "Unown",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "202",
+		"name_fr": "Qulbutoké",
+		"name_en": "Wobbuffet",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "203",
+		"name_fr": "Girafarig",
+		"name_en": "Girafarig",
+		"type_1": "Normal",
+		"type_2": "Psy"
+	},
+	{
+		"num": "204",
+		"name_fr": "Pomdepik",
+		"name_en": "Pineco",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "205",
+		"name_fr": "Foretress",
+		"name_en": "Forretress",
+		"type_1": "Insecte",
+		"type_2": "Acier"
+	},
+	{
+		"num": "206",
+		"name_fr": "Insolourdo",
+		"name_en": "Dunsparce",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "207",
+		"name_fr": "Scorplane",
+		"name_en": "Gligar",
+		"type_1": "Sol",
+		"type_2": "Vol"
+	},
+	{
+		"num": "208",
+		"name_fr": "Steelix",
+		"name_en": "Steelix",
+		"type_1": "Acier",
+		"type_2": "Sol"
+	},
+	{
+		"num": "209",
+		"name_fr": "Snubbull",
+		"name_en": "Snubbull",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "210",
+		"name_fr": "Granbull",
+		"name_en": "Granbull",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "211",
+		"name_fr": "Qwilfish",
+		"name_en": "Qwilfish",
+		"type_1": "Eau",
+		"type_2": "Poison"
+	},
+	{
+		"num": "212",
+		"name_fr": "Cizayox",
+		"name_en": "Scizor",
+		"type_1": "Insecte",
+		"type_2": "Acier"
+	},
+	{
+		"num": "213",
+		"name_fr": "Caratroc",
+		"name_en": "Shuckle",
+		"type_1": "Insecte",
+		"type_2": "Roche"
+	},
+	{
+		"num": "214",
+		"name_fr": "Scarhino",
+		"name_en": "Heracross",
+		"type_1": "Insecte",
+		"type_2": "Combat"
+	},
+	{
+		"num": "215",
+		"name_fr": "Farfuret",
+		"name_en": "Sneasel",
+		"type_1": "Ténèbres",
+		"type_2": "Glace"
+	},
+	{
+		"num": "216",
+		"name_fr": "Teddiursa",
+		"name_en": "Teddiursa",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "217",
+		"name_fr": "Ursaring",
+		"name_en": "Ursaring",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "218",
+		"name_fr": "Limagma",
+		"name_en": "Slugma",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "219",
+		"name_fr": "Volcaropod",
+		"name_en": "Magcargo",
+		"type_1": "Feu",
+		"type_2": "Roche"
+	},
+	{
+		"num": "220",
+		"name_fr": "Marcacrin",
+		"name_en": "Swinub",
+		"type_1": "Glace",
+		"type_2": "Sol"
+	},
+	{
+		"num": "221",
+		"name_fr": "Cochignon",
+		"name_en": "Piloswine",
+		"type_1": "Glace",
+		"type_2": "Sol"
+	},
+	{
+		"num": "222",
+		"name_fr": "Corayon",
+		"name_en": "Corsola",
+		"type_1": "Eau",
+		"type_2": "Roche"
+	},
+	{
+		"num": "223",
+		"name_fr": "Rémoraid",
+		"name_en": "Remoraid",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "224",
+		"name_fr": "Octillery",
+		"name_en": "Octillery",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "225",
+		"name_fr": "Cadoizo",
+		"name_en": "Delibird",
+		"type_1": "Glace",
+		"type_2": "Vol"
+	},
+	{
+		"num": "226",
+		"name_fr": "Démanta",
+		"name_en": "Mantine",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "227",
+		"name_fr": "Airmure",
+		"name_en": "Skarmory",
+		"type_1": "Acier",
+		"type_2": "Vol"
+	},
+	{
+		"num": "228",
+		"name_fr": "Malosse",
+		"name_en": "Houndour",
+		"type_1": "Ténèbres",
+		"type_2": "Feu"
+	},
+	{
+		"num": "229",
+		"name_fr": "Démolosse",
+		"name_en": "Houndoom",
+		"type_1": "Ténèbres",
+		"type_2": "Feu"
+	},
+	{
+		"num": "230",
+		"name_fr": "Hyporoi",
+		"name_en": "Kingdra",
+		"type_1": "Eau",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "231",
+		"name_fr": "Phanpy",
+		"name_en": "Phanpy",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "232",
+		"name_fr": "Donphan",
+		"name_en": "Donphan",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "233",
+		"name_fr": "Porygon2",
+		"name_en": "Porygon2",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "234",
+		"name_fr": "Cerfrousse",
+		"name_en": "Stantler",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "235",
+		"name_fr": "Queulorior",
+		"name_en": "Smeargle",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "236",
+		"name_fr": "Debugant",
+		"name_en": "Tyrogue",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "237",
+		"name_fr": "Kapoera",
+		"name_en": "Hitmontop",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "238",
+		"name_fr": "Lippouti",
+		"name_en": "Smoochum",
+		"type_1": "Glace",
+		"type_2": "Psy"
+	},
+	{
+		"num": "239",
+		"name_fr": "Élekid",
+		"name_en": "Elekid",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "240",
+		"name_fr": "Magby",
+		"name_en": "Magby",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "241",
+		"name_fr": "Écrémeuh",
+		"name_en": "Miltank",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "242",
+		"name_fr": "Leuphorie",
+		"name_en": "Blissey",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "243",
+		"name_fr": "Raikou",
+		"name_en": "Raikou",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "244",
+		"name_fr": "Entei",
+		"name_en": "Entei",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "245",
+		"name_fr": "Suicune",
+		"name_en": "Suicune",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "246",
+		"name_fr": "Embrylex",
+		"name_en": "Larvitar",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "247",
+		"name_fr": "Ymphect",
+		"name_en": "Pupitar",
+		"type_1": "Roche",
+		"type_2": "Sol"
+	},
+	{
+		"num": "248",
+		"name_fr": "Tyranocif",
+		"name_en": "Tyranitar",
+		"type_1": "Roche",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "249",
+		"name_fr": "Lugia",
+		"name_en": "Lugia",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "250",
+		"name_fr": "Ho-Oh",
+		"name_en": "Ho-Oh",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "251",
+		"name_fr": "Celebi",
+		"name_en": "Celebi",
+		"type_1": "Psy",
+		"type_2": "Plante"
+	},
+	{
+		"num": "252",
+		"name_fr": "Arcko",
+		"name_en": "Treecko",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "253",
+		"name_fr": "Massko",
+		"name_en": "Grovyle",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "254",
+		"name_fr": "Jungko",
+		"name_en": "Sceptile",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "255",
+		"name_fr": "Poussifeu",
+		"name_en": "Torchic",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "256",
+		"name_fr": "Galifeu",
+		"name_en": "Combusken",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "257",
+		"name_fr": "Braségali",
+		"name_en": "Blaziken",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "258",
+		"name_fr": "Gobou",
+		"name_en": "Mudkip",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "259",
+		"name_fr": "Flobio",
+		"name_en": "Marshtomp",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "260",
+		"name_fr": "Laggron",
+		"name_en": "Swampert",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "261",
+		"name_fr": "Medhyèna",
+		"name_en": "Poochyena",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "262",
+		"name_fr": "Grahyèna",
+		"name_en": "Mightyena",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "263",
+		"name_fr": "Zigzaton",
+		"name_en": "Zigzagoon",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "264",
+		"name_fr": "Linéon",
+		"name_en": "Linoone",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "265",
+		"name_fr": "Chenipotte",
+		"name_en": "Wurmple",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "266",
+		"name_fr": "Armulys",
+		"name_en": "Silcoon",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "267",
+		"name_fr": "Charmillon",
+		"name_en": "Beautifly",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "268",
+		"name_fr": "Blindalys",
+		"name_en": "Cascoon",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "269",
+		"name_fr": "Papinox",
+		"name_en": "Dustox",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "270",
+		"name_fr": "Nénupiot",
+		"name_en": "Lotad",
+		"type_1": "Eau",
+		"type_2": "Plante"
+	},
+	{
+		"num": "271",
+		"name_fr": "Lombre",
+		"name_en": "Lombre",
+		"type_1": "Eau",
+		"type_2": "Plante"
+	},
+	{
+		"num": "272",
+		"name_fr": "Ludicolo",
+		"name_en": "Ludicolo",
+		"type_1": "Eau",
+		"type_2": "Plante"
+	},
+	{
+		"num": "273",
+		"name_fr": "Grainipiot",
+		"name_en": "Seedot",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "274",
+		"name_fr": "Pifeuil",
+		"name_en": "Nuzleaf",
+		"type_1": "Plante",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "275",
+		"name_fr": "Tengalice",
+		"name_en": "Shiftry",
+		"type_1": "Plante",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "276",
+		"name_fr": "Nirondelle",
+		"name_en": "Taillow",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "277",
+		"name_fr": "Hélédelle",
+		"name_en": "Swellow",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "278",
+		"name_fr": "Goélise",
+		"name_en": "Wingull",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "279",
+		"name_fr": "Bekipan",
+		"name_en": "Pelipper",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "280",
+		"name_fr": "Tarsal",
+		"name_en": "Ralts",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "281",
+		"name_fr": "Kirlia",
+		"name_en": "Kirlia",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "282",
+		"name_fr": "Gardevoir",
+		"name_en": "Gardevoir",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "283",
+		"name_fr": "Arakdo",
+		"name_en": "Surskit",
+		"type_1": "Insecte",
+		"type_2": "Eau"
+	},
+	{
+		"num": "284",
+		"name_fr": "Maskadra",
+		"name_en": "Masquerain",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "285",
+		"name_fr": "Balignon",
+		"name_en": "Shroomish",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "286",
+		"name_fr": "Chapignon",
+		"name_en": "Breloom",
+		"type_1": "Plante",
+		"type_2": "Combat"
+	},
+	{
+		"num": "287",
+		"name_fr": "Parecool",
+		"name_en": "Slakoth",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "288",
+		"name_fr": "Vigoroth",
+		"name_en": "Vigoroth",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "289",
+		"name_fr": "Monaflèmit",
+		"name_en": "Slaking",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "290",
+		"name_fr": "Ningale",
+		"name_en": "Nincada",
+		"type_1": "Insecte",
+		"type_2": "Sol"
+	},
+	{
+		"num": "291",
+		"name_fr": "Ninjask",
+		"name_en": "Ninjask",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "292",
+		"name_fr": "Munja",
+		"name_en": "Shedinja",
+		"type_1": "Insecte",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "293",
+		"name_fr": "Chuchmur",
+		"name_en": "Whismur",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "294",
+		"name_fr": "Ramboum",
+		"name_en": "Loudred",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "295",
+		"name_fr": "Brouhabam",
+		"name_en": "Exploud",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "296",
+		"name_fr": "Makuhita",
+		"name_en": "Makuhita",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "297",
+		"name_fr": "Hariyama",
+		"name_en": "Hariyama",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "298",
+		"name_fr": "Azurill",
+		"name_en": "Azurill",
+		"type_1": "Normal",
+		"type_2": "Fée"
+	},
+	{
+		"num": "299",
+		"name_fr": "Tarinor",
+		"name_en": "Nosepass",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "300",
+		"name_fr": "Skitty",
+		"name_en": "Skitty",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "301",
+		"name_fr": "Delcatty",
+		"name_en": "Delcatty",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "302",
+		"name_fr": "Ténéfix",
+		"name_en": "Sableye",
+		"type_1": "Ténèbres",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "303",
+		"name_fr": "Mysdibule",
+		"name_en": "Mawile",
+		"type_1": "Acier",
+		"type_2": "Fée"
+	},
+	{
+		"num": "304",
+		"name_fr": "Galekid",
+		"name_en": "Aron",
+		"type_1": "Acier",
+		"type_2": "Roche"
+	},
+	{
+		"num": "305",
+		"name_fr": "Galegon",
+		"name_en": "Lairon",
+		"type_1": "Acier",
+		"type_2": "Roche"
+	},
+	{
+		"num": "306",
+		"name_fr": "Galeking",
+		"name_en": "Aggron",
+		"type_1": "Acier",
+		"type_2": "Roche"
+	},
+	{
+		"num": "307",
+		"name_fr": "Méditikka",
+		"name_en": "Meditite",
+		"type_1": "Combat",
+		"type_2": "Psy"
+	},
+	{
+		"num": "308",
+		"name_fr": "Charmina",
+		"name_en": "Medicham",
+		"type_1": "Combat",
+		"type_2": "Psy"
+	},
+	{
+		"num": "309",
+		"name_fr": "Dynavolt",
+		"name_en": "Electrike",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "310",
+		"name_fr": "Élecsprint",
+		"name_en": "Manectric",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "311",
+		"name_fr": "Posipi",
+		"name_en": "Plusle",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "312",
+		"name_fr": "Négapi",
+		"name_en": "Minun",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "313",
+		"name_fr": "Muciole",
+		"name_en": "Volbeat",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "314",
+		"name_fr": "Lumivole",
+		"name_en": "Illumise",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "315",
+		"name_fr": "Rosélia",
+		"name_en": "Roselia",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "316",
+		"name_fr": "Gloupti",
+		"name_en": "Gulpin",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "317",
+		"name_fr": "Avaltout",
+		"name_en": "Swalot",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "318",
+		"name_fr": "Carvanha",
+		"name_en": "Carvanha",
+		"type_1": "Eau",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "319",
+		"name_fr": "Sharpedo",
+		"name_en": "Sharpedo",
+		"type_1": "Eau",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "320",
+		"name_fr": "Wailmer",
+		"name_en": "Wailmer",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "321",
+		"name_fr": "Wailord",
+		"name_en": "Wailord",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "322",
+		"name_fr": "Chamallot",
+		"name_en": "Numel",
+		"type_1": "Feu",
+		"type_2": "Sol"
+	},
+	{
+		"num": "323",
+		"name_fr": "Camérupt",
+		"name_en": "Camerupt",
+		"type_1": "Feu",
+		"type_2": "Sol"
+	},
+	{
+		"num": "324",
+		"name_fr": "Chartor",
+		"name_en": "Torkoal",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "325",
+		"name_fr": "Spoink",
+		"name_en": "Spoink",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "326",
+		"name_fr": "Groret",
+		"name_en": "Grumpig",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "327",
+		"name_fr": "Spinda",
+		"name_en": "Spinda",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "328",
+		"name_fr": "Kraknoix",
+		"name_en": "Trapinch",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "329",
+		"name_fr": "Vibraninf",
+		"name_en": "Vibrava",
+		"type_1": "Sol",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "330",
+		"name_fr": "Libégon",
+		"name_en": "Flygon",
+		"type_1": "Sol",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "331",
+		"name_fr": "Cacnea",
+		"name_en": "Cacnea",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "332",
+		"name_fr": "Cacturne",
+		"name_en": "Cacturne",
+		"type_1": "Plante",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "333",
+		"name_fr": "Tylton",
+		"name_en": "Swablu",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "334",
+		"name_fr": "Altaria",
+		"name_en": "Altaria",
+		"type_1": "Dragon",
+		"type_2": "Vol"
+	},
+	{
+		"num": "335",
+		"name_fr": "Mangriff",
+		"name_en": "Zangoose",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "336",
+		"name_fr": "Séviper",
+		"name_en": "Seviper",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "337",
+		"name_fr": "Séléroc",
+		"name_en": "Lunatone",
+		"type_1": "Roche",
+		"type_2": "Psy"
+	},
+	{
+		"num": "338",
+		"name_fr": "Solaroc",
+		"name_en": "Solrock",
+		"type_1": "Roche",
+		"type_2": "Psy"
+	},
+	{
+		"num": "339",
+		"name_fr": "Barloche",
+		"name_en": "Barboach",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "340",
+		"name_fr": "Barbicha",
+		"name_en": "Whiscash",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "341",
+		"name_fr": "Écrapince",
+		"name_en": "Corphish",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "342",
+		"name_fr": "Colhomard",
+		"name_en": "Crawdaunt",
+		"type_1": "Eau",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "343",
+		"name_fr": "Balbuto",
+		"name_en": "Baltoy",
+		"type_1": "Sol",
+		"type_2": "Psy"
+	},
+	{
+		"num": "344",
+		"name_fr": "Kaorine",
+		"name_en": "Claydol",
+		"type_1": "Sol",
+		"type_2": "Psy"
+	},
+	{
+		"num": "345",
+		"name_fr": "Lilia",
+		"name_en": "Lileep",
+		"type_1": "Roche",
+		"type_2": "Plante"
+	},
+	{
+		"num": "346",
+		"name_fr": "Vacilys",
+		"name_en": "Cradily",
+		"type_1": "Roche",
+		"type_2": "Plante"
+	},
+	{
+		"num": "347",
+		"name_fr": "Anorith",
+		"name_en": "Anorith",
+		"type_1": "Roche",
+		"type_2": "Insecte"
+	},
+	{
+		"num": "348",
+		"name_fr": "Armaldo",
+		"name_en": "Armaldo",
+		"type_1": "Roche",
+		"type_2": "Insecte"
+	},
+	{
+		"num": "349",
+		"name_fr": "Barpau",
+		"name_en": "Feebas",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "350",
+		"name_fr": "Milobellus",
+		"name_en": "Milotic",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "351",
+		"name_fr": "Morphéo",
+		"name_en": "Castform",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "352",
+		"name_fr": "Kecleon",
+		"name_en": "Kecleon",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "353",
+		"name_fr": "Polichombr",
+		"name_en": "Shuppet",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "354",
+		"name_fr": "Branette",
+		"name_en": "Banette",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "355",
+		"name_fr": "Skelénox",
+		"name_en": "Duskull",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "356",
+		"name_fr": "Téraclope",
+		"name_en": "Dusclops",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "357",
+		"name_fr": "Tropius",
+		"name_en": "Tropius",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "358",
+		"name_fr": "Éoko",
+		"name_en": "Chimecho",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "359",
+		"name_fr": "Absol",
+		"name_en": "Absol",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "360",
+		"name_fr": "Okéoké",
+		"name_en": "Wynaut",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "361",
+		"name_fr": "Stalgamin",
+		"name_en": "Snorunt",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "362",
+		"name_fr": "Oniglali",
+		"name_en": "Glalie",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "363",
+		"name_fr": "Obalie",
+		"name_en": "Spheal",
+		"type_1": "Glace",
+		"type_2": "Eau"
+	},
+	{
+		"num": "364",
+		"name_fr": "Phogleur",
+		"name_en": "Sealeo",
+		"type_1": "Glace",
+		"type_2": "Eau"
+	},
+	{
+		"num": "365",
+		"name_fr": "Kaimorse",
+		"name_en": "Walrein",
+		"type_1": "Glace",
+		"type_2": "Eau"
+	},
+	{
+		"num": "366",
+		"name_fr": "Coquiperl",
+		"name_en": "Clamperl",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "367",
+		"name_fr": "Serpang",
+		"name_en": "Huntail",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "368",
+		"name_fr": "Rosabyss",
+		"name_en": "Gorebyss",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "369",
+		"name_fr": "Relicanth",
+		"name_en": "Relicanth",
+		"type_1": "Eau",
+		"type_2": "Roche"
+	},
+	{
+		"num": "370",
+		"name_fr": "Lovdisc",
+		"name_en": "Luvdisc",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "371",
+		"name_fr": "Draby",
+		"name_en": "Bagon",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "372",
+		"name_fr": "Drackhaus",
+		"name_en": "Shelgon",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "373",
+		"name_fr": "Drattak",
+		"name_en": "Salamence",
+		"type_1": "Dragon",
+		"type_2": "Vol"
+	},
+	{
+		"num": "374",
+		"name_fr": "Terhal",
+		"name_en": "Beldum",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "375",
+		"name_fr": "Métang",
+		"name_en": "Metang",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "376",
+		"name_fr": "Métalosse",
+		"name_en": "Metagross",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "377",
+		"name_fr": "Regirock",
+		"name_en": "Regirock",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "378",
+		"name_fr": "Regice",
+		"name_en": "Regice",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "379",
+		"name_fr": "Registeel",
+		"name_en": "Registeel",
+		"type_1": "Acier",
+		"type_2": ""
+	},
+	{
+		"num": "380",
+		"name_fr": "Latias",
+		"name_en": "Latias",
+		"type_1": "Dragon",
+		"type_2": "Psy"
+	},
+	{
+		"num": "381",
+		"name_fr": "Latios",
+		"name_en": "Latios",
+		"type_1": "Dragon",
+		"type_2": "Psy"
+	},
+	{
+		"num": "382",
+		"name_fr": "Kyogre",
+		"name_en": "Kyogre",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "383",
+		"name_fr": "Groudon",
+		"name_en": "Groudon",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "384",
+		"name_fr": "Rayquaza",
+		"name_en": "Rayquaza",
+		"type_1": "Dragon",
+		"type_2": "Vol"
+	},
+	{
+		"num": "385",
+		"name_fr": "Jirachi",
+		"name_en": "Jirachi",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "386",
+		"name_fr": "Deoxys",
+		"name_en": "Deoxys",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "387",
+		"name_fr": "Tortipouss",
+		"name_en": "Turtwig",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "388",
+		"name_fr": "Boskara",
+		"name_en": "Grotle",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "389",
+		"name_fr": "Torterra",
+		"name_en": "Torterra",
+		"type_1": "Plante",
+		"type_2": "Sol"
+	},
+	{
+		"num": "390",
+		"name_fr": "Ouisticram",
+		"name_en": "Chimchar",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "391",
+		"name_fr": "Chimpenfeu",
+		"name_en": "Monferno",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "392",
+		"name_fr": "Simiabraz",
+		"name_en": "Infernape",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "393",
+		"name_fr": "Tiplouf",
+		"name_en": "Piplup",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "394",
+		"name_fr": "Prinplouf",
+		"name_en": "Prinplup",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "395",
+		"name_fr": "Pingoléon",
+		"name_en": "Empoleon",
+		"type_1": "Eau",
+		"type_2": "Acier"
+	},
+	{
+		"num": "396",
+		"name_fr": "Étourmi",
+		"name_en": "Starly",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "397",
+		"name_fr": "Étourvol",
+		"name_en": "Staravia",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "398",
+		"name_fr": "Étouraptor",
+		"name_en": "Staraptor",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "399",
+		"name_fr": "Keunotor",
+		"name_en": "Bidoof",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "400",
+		"name_fr": "Castorno",
+		"name_en": "Bibarel",
+		"type_1": "Normal",
+		"type_2": "Eau"
+	},
+	{
+		"num": "401",
+		"name_fr": "Crikzik",
+		"name_en": "Kricketot",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "402",
+		"name_fr": "Mélokrik",
+		"name_en": "Kricketune",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "403",
+		"name_fr": "Lixy",
+		"name_en": "Shinx",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "404",
+		"name_fr": "Luxio",
+		"name_en": "Luxio",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "405",
+		"name_fr": "Luxray",
+		"name_en": "Luxray",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "406",
+		"name_fr": "Rozbouton",
+		"name_en": "Budew",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "407",
+		"name_fr": "Roserade",
+		"name_en": "Roserade",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "408",
+		"name_fr": "Kranidos",
+		"name_en": "Cranidos",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "409",
+		"name_fr": "Charkos",
+		"name_en": "Rampardos",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "410",
+		"name_fr": "Dinoclier",
+		"name_en": "Shieldon",
+		"type_1": "Roche",
+		"type_2": "Acier"
+	},
+	{
+		"num": "411",
+		"name_fr": "Bastiodon",
+		"name_en": "Bastiodon",
+		"type_1": "Roche",
+		"type_2": "Acier"
+	},
+	{
+		"num": "412",
+		"name_fr": "Cheniti",
+		"name_en": "Burmy",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "413",
+		"name_fr": "Cheniselle",
+		"name_en": "Wormadam",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "414",
+		"name_fr": "Papilord",
+		"name_en": "Mothim",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "415",
+		"name_fr": "Apitrini",
+		"name_en": "Combee",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "416",
+		"name_fr": "Apireine",
+		"name_en": "Vespiquen",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "417",
+		"name_fr": "Pachirisu",
+		"name_en": "Pachirisu",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "418",
+		"name_fr": "Mustébouée",
+		"name_en": "Buizel",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "419",
+		"name_fr": "Mustéflott",
+		"name_en": "Floatzel",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "420",
+		"name_fr": "Ceribou",
+		"name_en": "Cherubi",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "421",
+		"name_fr": "Ceriflor",
+		"name_en": "Cherrim",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "422",
+		"name_fr": "Sancoki",
+		"name_en": "Shellos",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "423",
+		"name_fr": "Tritosor",
+		"name_en": "Gastrodon",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "424",
+		"name_fr": "Capidextre",
+		"name_en": "Ambipom",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "425",
+		"name_fr": "Baudrive",
+		"name_en": "Drifloon",
+		"type_1": "Spectre",
+		"type_2": "Vol"
+	},
+	{
+		"num": "426",
+		"name_fr": "Grodrive",
+		"name_en": "Drifblim",
+		"type_1": "Spectre",
+		"type_2": "Vol"
+	},
+	{
+		"num": "427",
+		"name_fr": "Laporeille",
+		"name_en": "Buneary",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "428",
+		"name_fr": "Lockpin",
+		"name_en": "Lopunny",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "429",
+		"name_fr": "Magirêve",
+		"name_en": "Mismagius",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "430",
+		"name_fr": "Corboss",
+		"name_en": "Honchkrow",
+		"type_1": "Ténèbres",
+		"type_2": "Vol"
+	},
+	{
+		"num": "431",
+		"name_fr": "Chaglam",
+		"name_en": "Glameow",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "432",
+		"name_fr": "Chaffreux",
+		"name_en": "Purugly",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "433",
+		"name_fr": "Korillon",
+		"name_en": "Chingling",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "434",
+		"name_fr": "Moufouette",
+		"name_en": "Stunky",
+		"type_1": "Poison",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "435",
+		"name_fr": "Moufflair",
+		"name_en": "Skuntank",
+		"type_1": "Poison",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "436",
+		"name_fr": "Archéomire",
+		"name_en": "Bronzor",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "437",
+		"name_fr": "Archéodong",
+		"name_en": "Bronzong",
+		"type_1": "Acier",
+		"type_2": "Psy"
+	},
+	{
+		"num": "438",
+		"name_fr": "Manzaï",
+		"name_en": "Bonsly",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "439",
+		"name_fr": "MimeJr.",
+		"name_en": "MimeJr.",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "440",
+		"name_fr": "Ptiravi",
+		"name_en": "Happiny",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "441",
+		"name_fr": "Pijako",
+		"name_en": "Chatot",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "442",
+		"name_fr": "Spiritomb",
+		"name_en": "Spiritomb",
+		"type_1": "Spectre",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "443",
+		"name_fr": "Griknot",
+		"name_en": "Gible",
+		"type_1": "Dragon",
+		"type_2": "Sol"
+	},
+	{
+		"num": "444",
+		"name_fr": "Carmache",
+		"name_en": "Gabite",
+		"type_1": "Dragon",
+		"type_2": "Sol"
+	},
+	{
+		"num": "445",
+		"name_fr": "Carchacrok",
+		"name_en": "Garchomp",
+		"type_1": "Dragon",
+		"type_2": "Sol"
+	},
+	{
+		"num": "446",
+		"name_fr": "Goinfrex",
+		"name_en": "Munchlax",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "447",
+		"name_fr": "Riolu",
+		"name_en": "Riolu",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "448",
+		"name_fr": "Lucario",
+		"name_en": "Lucario",
+		"type_1": "Combat",
+		"type_2": "Acier"
+	},
+	{
+		"num": "449",
+		"name_fr": "Hippopotas",
+		"name_en": "Hippopotas",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "450",
+		"name_fr": "Hippodocus",
+		"name_en": "Hippowdon",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "451",
+		"name_fr": "Rapion",
+		"name_en": "Skorupi",
+		"type_1": "Poison",
+		"type_2": "Insecte"
+	},
+	{
+		"num": "452",
+		"name_fr": "Drascore",
+		"name_en": "Drapion",
+		"type_1": "Poison",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "453",
+		"name_fr": "Cradopaud",
+		"name_en": "Croagunk",
+		"type_1": "Poison",
+		"type_2": "Combat"
+	},
+	{
+		"num": "454",
+		"name_fr": "Coatox",
+		"name_en": "Toxicroak",
+		"type_1": "Poison",
+		"type_2": "Combat"
+	},
+	{
+		"num": "455",
+		"name_fr": "Vortente",
+		"name_en": "Carnivine",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "456",
+		"name_fr": "Écayon",
+		"name_en": "Finneon",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "457",
+		"name_fr": "Luminéon",
+		"name_en": "Lumineon",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "458",
+		"name_fr": "Babimanta",
+		"name_en": "Mantyke",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "459",
+		"name_fr": "Blizzi",
+		"name_en": "Snover",
+		"type_1": "Plante",
+		"type_2": "Glace"
+	},
+	{
+		"num": "460",
+		"name_fr": "Blizzaroi",
+		"name_en": "Abomasnow",
+		"type_1": "Plante",
+		"type_2": "Glace"
+	},
+	{
+		"num": "461",
+		"name_fr": "Dimoret",
+		"name_en": "Weavile",
+		"type_1": "Ténèbres",
+		"type_2": "Glace"
+	},
+	{
+		"num": "462",
+		"name_fr": "Magnézone",
+		"name_en": "Magnezone",
+		"type_1": "Électrik",
+		"type_2": "Acier"
+	},
+	{
+		"num": "463",
+		"name_fr": "Coudlangue",
+		"name_en": "Lickilicky",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "464",
+		"name_fr": "Rhinastoc",
+		"name_en": "Rhyperior",
+		"type_1": "Sol",
+		"type_2": "Roche"
+	},
+	{
+		"num": "465",
+		"name_fr": "Bouldeneu",
+		"name_en": "Tangrowth",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "466",
+		"name_fr": "Élekable",
+		"name_en": "Electivire",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "467",
+		"name_fr": "Maganon",
+		"name_en": "Magmortar",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "468",
+		"name_fr": "Togekiss",
+		"name_en": "Togekiss",
+		"type_1": "Fée",
+		"type_2": "Vol"
+	},
+	{
+		"num": "469",
+		"name_fr": "Yanmega",
+		"name_en": "Yanmega",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "470",
+		"name_fr": "Phyllali",
+		"name_en": "Leafeon",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "471",
+		"name_fr": "Givrali",
+		"name_en": "Glaceon",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "472",
+		"name_fr": "Scorvol",
+		"name_en": "Gliscor",
+		"type_1": "Sol",
+		"type_2": "Vol"
+	},
+	{
+		"num": "473",
+		"name_fr": "Mammochon",
+		"name_en": "Mamoswine",
+		"type_1": "Glace",
+		"type_2": "Sol"
+	},
+	{
+		"num": "474",
+		"name_fr": "Porygon-Z",
+		"name_en": "Porygon-Z",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "475",
+		"name_fr": "Gallame",
+		"name_en": "Gallade",
+		"type_1": "Psy",
+		"type_2": "Combat"
+	},
+	{
+		"num": "476",
+		"name_fr": "Tarinorme",
+		"name_en": "Probopass",
+		"type_1": "Roche",
+		"type_2": "Acier"
+	},
+	{
+		"num": "477",
+		"name_fr": "Noctunoir",
+		"name_en": "Dusknoir",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "478",
+		"name_fr": "Momartik",
+		"name_en": "Froslass",
+		"type_1": "Glace",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "479",
+		"name_fr": "Motisma",
+		"name_en": "Rotom",
+		"type_1": "Électrik",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "480",
+		"name_fr": "Créhelf",
+		"name_en": "Uxie",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "481",
+		"name_fr": "Créfollet",
+		"name_en": "Mesprit",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "482",
+		"name_fr": "Créfadet",
+		"name_en": "Azelf",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "483",
+		"name_fr": "Dialga",
+		"name_en": "Dialga",
+		"type_1": "Acier",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "484",
+		"name_fr": "Palkia",
+		"name_en": "Palkia",
+		"type_1": "Eau",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "485",
+		"name_fr": "Heatran",
+		"name_en": "Heatran",
+		"type_1": "Feu",
+		"type_2": "Acier"
+	},
+	{
+		"num": "486",
+		"name_fr": "Regigigas",
+		"name_en": "Regigigas",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "487",
+		"name_fr": "Giratina",
+		"name_en": "Giratina",
+		"type_1": "Spectre",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "488",
+		"name_fr": "Cresselia",
+		"name_en": "Cresselia",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "489",
+		"name_fr": "Phione",
+		"name_en": "Phione",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "490",
+		"name_fr": "Manaphy",
+		"name_en": "Manaphy",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "491",
+		"name_fr": "Darkrai",
+		"name_en": "Darkrai",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "492",
+		"name_fr": "Shaymin",
+		"name_en": "Shaymin",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "493",
+		"name_fr": "Arceus",
+		"name_en": "Arceus",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "494",
+		"name_fr": "Victini",
+		"name_en": "Victini",
+		"type_1": "Psy",
+		"type_2": "Feu"
+	},
+	{
+		"num": "495",
+		"name_fr": "Vipélierre",
+		"name_en": "Snivy",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "496",
+		"name_fr": "Lianaja",
+		"name_en": "Servine",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "497",
+		"name_fr": "Majaspic",
+		"name_en": "Serperior",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "498",
+		"name_fr": "Gruikui",
+		"name_en": "Tepig",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "499",
+		"name_fr": "Grotichon",
+		"name_en": "Pignite",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "500",
+		"name_fr": "Roitiflam",
+		"name_en": "Emboar",
+		"type_1": "Feu",
+		"type_2": "Combat"
+	},
+	{
+		"num": "501",
+		"name_fr": "Moustillon",
+		"name_en": "Oshawott",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "502",
+		"name_fr": "Mateloutre",
+		"name_en": "Dewott",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "503",
+		"name_fr": "Clamiral",
+		"name_en": "Samurott",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "504",
+		"name_fr": "Ratentif",
+		"name_en": "Patrat",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "505",
+		"name_fr": "Miradar",
+		"name_en": "Watchog",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "506",
+		"name_fr": "Ponchiot",
+		"name_en": "Lillipup",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "507",
+		"name_fr": "Ponchien",
+		"name_en": "Herdier",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "508",
+		"name_fr": "Mastouffe",
+		"name_en": "Stoutland",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "509",
+		"name_fr": "Chacripan",
+		"name_en": "Purrloin",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "510",
+		"name_fr": "Léopardus",
+		"name_en": "Liepard",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "511",
+		"name_fr": "Feuillajou",
+		"name_en": "Pansage",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "512",
+		"name_fr": "Feuiloutan",
+		"name_en": "Simisage",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "513",
+		"name_fr": "Flamajou",
+		"name_en": "Pansear",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "514",
+		"name_fr": "Flamoutan",
+		"name_en": "Simisear",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "515",
+		"name_fr": "Flotajou",
+		"name_en": "Panpour",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "516",
+		"name_fr": "Flotoutan",
+		"name_en": "Simipour",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "517",
+		"name_fr": "Munna",
+		"name_en": "Munna",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "518",
+		"name_fr": "Mushana",
+		"name_en": "Musharna",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "519",
+		"name_fr": "Poichigeon",
+		"name_en": "Pidove",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "520",
+		"name_fr": "Colombeau",
+		"name_en": "Tranquill",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "521",
+		"name_fr": "Déflaisan",
+		"name_en": "Unfezant",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "522",
+		"name_fr": "Zébibron",
+		"name_en": "Blitzle",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "523",
+		"name_fr": "Zéblitz",
+		"name_en": "Zebstrika",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "524",
+		"name_fr": "Nodulithe",
+		"name_en": "Roggenrola",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "525",
+		"name_fr": "Géolithe",
+		"name_en": "Boldore",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "526",
+		"name_fr": "Gigalithe",
+		"name_en": "Gigalith",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "527",
+		"name_fr": "Chovsourir",
+		"name_en": "Woobat",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "528",
+		"name_fr": "Rhinolove",
+		"name_en": "Swoobat",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "529",
+		"name_fr": "Rototaupe",
+		"name_en": "Drilbur",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "530",
+		"name_fr": "Minotaupe",
+		"name_en": "Excadrill",
+		"type_1": "Sol",
+		"type_2": "Acier"
+	},
+	{
+		"num": "531",
+		"name_fr": "Nanméouïe",
+		"name_en": "Audino",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "532",
+		"name_fr": "Charpenti",
+		"name_en": "Timburr",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "533",
+		"name_fr": "Ouvrifier",
+		"name_en": "Gurdurr",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "534",
+		"name_fr": "Bétochef",
+		"name_en": "Conkeldurr",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "535",
+		"name_fr": "Tritonde",
+		"name_en": "Tympole",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "536",
+		"name_fr": "Batracné",
+		"name_en": "Palpitoad",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "537",
+		"name_fr": "Crapustule",
+		"name_en": "Seismitoad",
+		"type_1": "Eau",
+		"type_2": "Sol"
+	},
+	{
+		"num": "538",
+		"name_fr": "Judokrak",
+		"name_en": "Throh",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "539",
+		"name_fr": "Karaclée",
+		"name_en": "Sawk",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "540",
+		"name_fr": "Larveyette",
+		"name_en": "Sewaddle",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "541",
+		"name_fr": "Couverdure",
+		"name_en": "Swadloon",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "542",
+		"name_fr": "Manternel",
+		"name_en": "Leavanny",
+		"type_1": "Insecte",
+		"type_2": "Plante"
+	},
+	{
+		"num": "543",
+		"name_fr": "Venipatte",
+		"name_en": "Venipede",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "544",
+		"name_fr": "Scobolide",
+		"name_en": "Whirlipede",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "545",
+		"name_fr": "Brutapode",
+		"name_en": "Scolipede",
+		"type_1": "Insecte",
+		"type_2": "Poison"
+	},
+	{
+		"num": "546",
+		"name_fr": "Doudouvet",
+		"name_en": "Cottonee",
+		"type_1": "Plante",
+		"type_2": "Fée"
+	},
+	{
+		"num": "547",
+		"name_fr": "Farfaduvet",
+		"name_en": "Whimsicott",
+		"type_1": "Plante",
+		"type_2": "Fée"
+	},
+	{
+		"num": "548",
+		"name_fr": "Chlorobule",
+		"name_en": "Petilil",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "549",
+		"name_fr": "Fragilady",
+		"name_en": "Lilligant",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "550",
+		"name_fr": "Bargantua",
+		"name_en": "Basculin",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "551",
+		"name_fr": "Mascaïman",
+		"name_en": "Sandile",
+		"type_1": "Sol",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "552",
+		"name_fr": "Escroco",
+		"name_en": "Krokorok",
+		"type_1": "Sol",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "553",
+		"name_fr": "Crocorible",
+		"name_en": "Krookodile",
+		"type_1": "Sol",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "554",
+		"name_fr": "Darumarond",
+		"name_en": "Darumaka",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "555",
+		"name_fr": "Darumacho",
+		"name_en": "Darmanitan",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "556",
+		"name_fr": "Maracachi",
+		"name_en": "Maractus",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "557",
+		"name_fr": "Crabicoque",
+		"name_en": "Dwebble",
+		"type_1": "Insecte",
+		"type_2": "Roche"
+	},
+	{
+		"num": "558",
+		"name_fr": "Crabaraque",
+		"name_en": "Crustle",
+		"type_1": "Insecte",
+		"type_2": "Roche"
+	},
+	{
+		"num": "559",
+		"name_fr": "Baggiguane",
+		"name_en": "Scraggy",
+		"type_1": "Ténèbres",
+		"type_2": "Combat"
+	},
+	{
+		"num": "560",
+		"name_fr": "Baggaïd",
+		"name_en": "Scrafty",
+		"type_1": "Ténèbres",
+		"type_2": "Combat"
+	},
+	{
+		"num": "561",
+		"name_fr": "Cryptéro",
+		"name_en": "Sigilyph",
+		"type_1": "Psy",
+		"type_2": "Vol"
+	},
+	{
+		"num": "562",
+		"name_fr": "Tutafeh",
+		"name_en": "Yamask",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "563",
+		"name_fr": "Tutankafer",
+		"name_en": "Cofagrigus",
+		"type_1": "Spectre",
+		"type_2": ""
+	},
+	{
+		"num": "564",
+		"name_fr": "Carapagos",
+		"name_en": "Tirtouga",
+		"type_1": "Eau",
+		"type_2": "Roche"
+	},
+	{
+		"num": "565",
+		"name_fr": "Mégapagos",
+		"name_en": "Carracosta",
+		"type_1": "Eau",
+		"type_2": "Roche"
+	},
+	{
+		"num": "566",
+		"name_fr": "Arkéapti",
+		"name_en": "Archen",
+		"type_1": "Roche",
+		"type_2": "Vol"
+	},
+	{
+		"num": "567",
+		"name_fr": "Aéroptéryx",
+		"name_en": "Archeops",
+		"type_1": "Roche",
+		"type_2": "Vol"
+	},
+	{
+		"num": "568",
+		"name_fr": "Miamiasme",
+		"name_en": "Trubbish",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "569",
+		"name_fr": "Miasmax",
+		"name_en": "Garbodor",
+		"type_1": "Poison",
+		"type_2": ""
+	},
+	{
+		"num": "570",
+		"name_fr": "Zorua",
+		"name_en": "Zorua",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "571",
+		"name_fr": "Zoroark",
+		"name_en": "Zoroark",
+		"type_1": "Ténèbres",
+		"type_2": ""
+	},
+	{
+		"num": "572",
+		"name_fr": "Chinchidou",
+		"name_en": "Minccino",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "573",
+		"name_fr": "Pashmilla",
+		"name_en": "Cinccino",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "574",
+		"name_fr": "Scrutella",
+		"name_en": "Gothita",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "575",
+		"name_fr": "Mesmérella",
+		"name_en": "Gothorita",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "576",
+		"name_fr": "Sidérella",
+		"name_en": "Gothitelle",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "577",
+		"name_fr": "Nucléos",
+		"name_en": "Solosis",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "578",
+		"name_fr": "Méios",
+		"name_en": "Duosion",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "579",
+		"name_fr": "Symbios",
+		"name_en": "Reuniclus",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "580",
+		"name_fr": "Couaneton",
+		"name_en": "Ducklett",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "581",
+		"name_fr": "Lakmécygne",
+		"name_en": "Swanna",
+		"type_1": "Eau",
+		"type_2": "Vol"
+	},
+	{
+		"num": "582",
+		"name_fr": "Sorbébé",
+		"name_en": "Vanillite",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "583",
+		"name_fr": "Sorboul",
+		"name_en": "Vanillish",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "584",
+		"name_fr": "Sorbouboul",
+		"name_en": "Vanilluxe",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "585",
+		"name_fr": "Vivaldaim",
+		"name_en": "Deerling",
+		"type_1": "Normal",
+		"type_2": "Plante"
+	},
+	{
+		"num": "586",
+		"name_fr": "Haydaim",
+		"name_en": "Sawsbuck",
+		"type_1": "Normal",
+		"type_2": "Plante"
+	},
+	{
+		"num": "587",
+		"name_fr": "Emolga",
+		"name_en": "Emolga",
+		"type_1": "Électrik",
+		"type_2": "Vol"
+	},
+	{
+		"num": "588",
+		"name_fr": "Carabing",
+		"name_en": "Karrablast",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "589",
+		"name_fr": "Lançargot",
+		"name_en": "Escavalier",
+		"type_1": "Insecte",
+		"type_2": "Acier"
+	},
+	{
+		"num": "590",
+		"name_fr": "Trompignon",
+		"name_en": "Foongus",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "591",
+		"name_fr": "Gaulet",
+		"name_en": "Amoonguss",
+		"type_1": "Plante",
+		"type_2": "Poison"
+	},
+	{
+		"num": "592",
+		"name_fr": "Viskuse",
+		"name_en": "Frillish",
+		"type_1": "Eau",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "593",
+		"name_fr": "Moyade",
+		"name_en": "Jellicent",
+		"type_1": "Eau",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "594",
+		"name_fr": "Mamanbo",
+		"name_en": "Alomomola",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "595",
+		"name_fr": "Statitik",
+		"name_en": "Joltik",
+		"type_1": "Insecte",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "596",
+		"name_fr": "Mygavolt",
+		"name_en": "Galvantula",
+		"type_1": "Insecte",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "597",
+		"name_fr": "Grindur",
+		"name_en": "Ferroseed",
+		"type_1": "Plante",
+		"type_2": "Acier"
+	},
+	{
+		"num": "598",
+		"name_fr": "Noacier",
+		"name_en": "Ferrothorn",
+		"type_1": "Plante",
+		"type_2": "Acier"
+	},
+	{
+		"num": "599",
+		"name_fr": "Tic",
+		"name_en": "Klink",
+		"type_1": "Acier",
+		"type_2": ""
+	},
+	{
+		"num": "600",
+		"name_fr": "Clic",
+		"name_en": "Klang",
+		"type_1": "Acier",
+		"type_2": ""
+	},
+	{
+		"num": "601",
+		"name_fr": "Cliticlic",
+		"name_en": "Klinklang",
+		"type_1": "Acier",
+		"type_2": ""
+	},
+	{
+		"num": "602",
+		"name_fr": "Anchwatt",
+		"name_en": "Tynamo",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "603",
+		"name_fr": "Lampéroie",
+		"name_en": "Eelektrik",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "604",
+		"name_fr": "Ohmassacre",
+		"name_en": "Eelektross",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "605",
+		"name_fr": "Lewsor",
+		"name_en": "Elgyem",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "606",
+		"name_fr": "Neitram",
+		"name_en": "Beheeyem",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "607",
+		"name_fr": "Funécire",
+		"name_en": "Litwick",
+		"type_1": "Spectre",
+		"type_2": "Feu"
+	},
+	{
+		"num": "608",
+		"name_fr": "Mélancolux",
+		"name_en": "Lampent",
+		"type_1": "Spectre",
+		"type_2": "Feu"
+	},
+	{
+		"num": "609",
+		"name_fr": "Lugulabre",
+		"name_en": "Chandelure",
+		"type_1": "Spectre",
+		"type_2": "Feu"
+	},
+	{
+		"num": "610",
+		"name_fr": "Coupenotte",
+		"name_en": "Axew",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "611",
+		"name_fr": "Incisache",
+		"name_en": "Fraxure",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "612",
+		"name_fr": "Tranchodon",
+		"name_en": "Haxorus",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "613",
+		"name_fr": "Polarhume",
+		"name_en": "Cubchoo",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "614",
+		"name_fr": "Polagriffe",
+		"name_en": "Beartic",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "615",
+		"name_fr": "Hexagel",
+		"name_en": "Cryogonal",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "616",
+		"name_fr": "Escargaume",
+		"name_en": "Shelmet",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "617",
+		"name_fr": "Limaspeed",
+		"name_en": "Accelgor",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "618",
+		"name_fr": "Limonde",
+		"name_en": "Stunfisk",
+		"type_1": "Sol",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "619",
+		"name_fr": "Kungfouine",
+		"name_en": "Mienfoo",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "620",
+		"name_fr": "Shaofouine",
+		"name_en": "Mienshao",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "621",
+		"name_fr": "Drakkarmin",
+		"name_en": "Druddigon",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "622",
+		"name_fr": "Gringolem",
+		"name_en": "Golett",
+		"type_1": "Sol",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "623",
+		"name_fr": "Golemastoc",
+		"name_en": "Golurk",
+		"type_1": "Sol",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "624",
+		"name_fr": "Scalpion",
+		"name_en": "Pawniard",
+		"type_1": "Ténèbres",
+		"type_2": "Acier"
+	},
+	{
+		"num": "625",
+		"name_fr": "Scalproie",
+		"name_en": "Bisharp",
+		"type_1": "Ténèbres",
+		"type_2": "Acier"
+	},
+	{
+		"num": "626",
+		"name_fr": "Frison",
+		"name_en": "Bouffalant",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "627",
+		"name_fr": "Furaiglon",
+		"name_en": "Rufflet",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "628",
+		"name_fr": "Gueriaigle",
+		"name_en": "Braviary",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "629",
+		"name_fr": "Vostourno",
+		"name_en": "Vullaby",
+		"type_1": "Ténèbres",
+		"type_2": "Vol"
+	},
+	{
+		"num": "630",
+		"name_fr": "Vaututrice",
+		"name_en": "Mandibuzz",
+		"type_1": "Ténèbres",
+		"type_2": "Vol"
+	},
+	{
+		"num": "631",
+		"name_fr": "Aflamanoir",
+		"name_en": "Heatmor",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "632",
+		"name_fr": "Fermite",
+		"name_en": "Durant",
+		"type_1": "Insecte",
+		"type_2": "Acier"
+	},
+	{
+		"num": "633",
+		"name_fr": "Solochi",
+		"name_en": "Deino",
+		"type_1": "Ténèbres",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "634",
+		"name_fr": "Diamat",
+		"name_en": "Zweilous",
+		"type_1": "Ténèbres",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "635",
+		"name_fr": "Trioxhydre",
+		"name_en": "Hydreigon",
+		"type_1": "Ténèbres",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "636",
+		"name_fr": "Pyronille",
+		"name_en": "Larvesta",
+		"type_1": "Insecte",
+		"type_2": "Feu"
+	},
+	{
+		"num": "637",
+		"name_fr": "Pyrax",
+		"name_en": "Volcarona",
+		"type_1": "Insecte",
+		"type_2": "Feu"
+	},
+	{
+		"num": "638",
+		"name_fr": "Cobaltium",
+		"name_en": "Cobalion",
+		"type_1": "Acier",
+		"type_2": "Combat"
+	},
+	{
+		"num": "639",
+		"name_fr": "Terrakium",
+		"name_en": "Terrakion",
+		"type_1": "Roche",
+		"type_2": "Combat"
+	},
+	{
+		"num": "640",
+		"name_fr": "Viridium",
+		"name_en": "Virizion",
+		"type_1": "Plante",
+		"type_2": "Combat"
+	},
+	{
+		"num": "641",
+		"name_fr": "Boréas",
+		"name_en": "Tornadus",
+		"type_1": "Vol",
+		"type_2": ""
+	},
+	{
+		"num": "642",
+		"name_fr": "Fulguris",
+		"name_en": "Thundurus",
+		"type_1": "Électrik",
+		"type_2": "Vol"
+	},
+	{
+		"num": "643",
+		"name_fr": "Reshiram",
+		"name_en": "Reshiram",
+		"type_1": "Dragon",
+		"type_2": "Feu"
+	},
+	{
+		"num": "644",
+		"name_fr": "Zekrom",
+		"name_en": "Zekrom",
+		"type_1": "Dragon",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "645",
+		"name_fr": "Démétéros",
+		"name_en": "Landorus",
+		"type_1": "Sol",
+		"type_2": "Vol"
+	},
+	{
+		"num": "646",
+		"name_fr": "Kyurem",
+		"name_en": "Kyurem",
+		"type_1": "Dragon",
+		"type_2": "Glace"
+	},
+	{
+		"num": "647",
+		"name_fr": "Keldeo",
+		"name_en": "Keldeo",
+		"type_1": "Eau",
+		"type_2": "Combat"
+	},
+	{
+		"num": "648",
+		"name_fr": "Meloetta",
+		"name_en": "Meloetta",
+		"type_1": "Normal",
+		"type_2": "Psy"
+	},
+	{
+		"num": "649",
+		"name_fr": "Genesect",
+		"name_en": "Genesect",
+		"type_1": "Insecte",
+		"type_2": "Acier"
+	},
+	{
+		"num": "650",
+		"name_fr": "Marisson",
+		"name_en": "Chespin",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "651",
+		"name_fr": "Boguérisse",
+		"name_en": "Quilladin",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "652",
+		"name_fr": "Blindépique",
+		"name_en": "Chesnaught",
+		"type_1": "Plante",
+		"type_2": "Combat"
+	},
+	{
+		"num": "653",
+		"name_fr": "Feunnec",
+		"name_en": "Fennekin",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "654",
+		"name_fr": "Roussil",
+		"name_en": "Braixen",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "655",
+		"name_fr": "Goupelin",
+		"name_en": "Delphox",
+		"type_1": "Feu",
+		"type_2": "Psy"
+	},
+	{
+		"num": "656",
+		"name_fr": "Grenousse",
+		"name_en": "Froakie",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "657",
+		"name_fr": "Croâporal",
+		"name_en": "Frogadier",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "658",
+		"name_fr": "Amphinobi",
+		"name_en": "Greninja",
+		"type_1": "Eau",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "659",
+		"name_fr": "Sapereau",
+		"name_en": "Bunnelby",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "660",
+		"name_fr": "Excavarenne",
+		"name_en": "Diggersby",
+		"type_1": "Normal",
+		"type_2": "Sol"
+	},
+	{
+		"num": "661",
+		"name_fr": "Passerouge",
+		"name_en": "Fletchling",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "662",
+		"name_fr": "Braisillon",
+		"name_en": "Fletchinder",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "663",
+		"name_fr": "Flambusard",
+		"name_en": "Talonflame",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "664",
+		"name_fr": "Lépidonille",
+		"name_en": "Scatterbug",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "665",
+		"name_fr": "Pérégrain",
+		"name_en": "Spewpa",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "666",
+		"name_fr": "Prismillon",
+		"name_en": "Vivillon",
+		"type_1": "Insecte",
+		"type_2": "Vol"
+	},
+	{
+		"num": "667",
+		"name_fr": "Hélionceau",
+		"name_en": "Litleo",
+		"type_1": "Feu",
+		"type_2": "Normal"
+	},
+	{
+		"num": "668",
+		"name_fr": "Némélios",
+		"name_en": "Pyroar",
+		"type_1": "Feu",
+		"type_2": "Normal"
+	},
+	{
+		"num": "669",
+		"name_fr": "Flabébé",
+		"name_en": "Flabébé",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "670",
+		"name_fr": "Floette",
+		"name_en": "Floette",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "671",
+		"name_fr": "Florges",
+		"name_en": "Florges",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "672",
+		"name_fr": "Cabriolaine",
+		"name_en": "Skiddo",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "673",
+		"name_fr": "Chevroum",
+		"name_en": "Gogoat",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "674",
+		"name_fr": "Pandespiègle",
+		"name_en": "Pancham",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "675",
+		"name_fr": "Pandarbare",
+		"name_en": "Pangoro",
+		"type_1": "Combat",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "676",
+		"name_fr": "Couafarel",
+		"name_en": "Furfrou",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "677",
+		"name_fr": "Psystigri",
+		"name_en": "Espurr",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "678",
+		"name_fr": "Mistigrix",
+		"name_en": "Meowstic",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "679",
+		"name_fr": "Monorpale",
+		"name_en": "Honedge",
+		"type_1": "Acier",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "680",
+		"name_fr": "Dimoclès",
+		"name_en": "Doublade",
+		"type_1": "Acier",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "681",
+		"name_fr": "Exagide",
+		"name_en": "Aegislash",
+		"type_1": "Acier",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "682",
+		"name_fr": "Fluvetin",
+		"name_en": "Spritzee",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "683",
+		"name_fr": "Cocotine",
+		"name_en": "Aromatisse",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "684",
+		"name_fr": "Sucroquin",
+		"name_en": "Swirlix",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "685",
+		"name_fr": "Cupcanaille",
+		"name_en": "Slurpuff",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "686",
+		"name_fr": "Sepiatop",
+		"name_en": "Inkay",
+		"type_1": "Ténèbres",
+		"type_2": "Psy"
+	},
+	{
+		"num": "687",
+		"name_fr": "Sepiatroce",
+		"name_en": "Malamar",
+		"type_1": "Ténèbres",
+		"type_2": "Psy"
+	},
+	{
+		"num": "688",
+		"name_fr": "Opermine",
+		"name_en": "Binacle",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "689",
+		"name_fr": "Golgopathe",
+		"name_en": "Barbaracle",
+		"type_1": "Roche",
+		"type_2": "Eau"
+	},
+	{
+		"num": "690",
+		"name_fr": "Venalgue",
+		"name_en": "Skrelp",
+		"type_1": "Poison",
+		"type_2": "Eau"
+	},
+	{
+		"num": "691",
+		"name_fr": "Kravarech",
+		"name_en": "Dragalge",
+		"type_1": "Poison",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "692",
+		"name_fr": "Flingouste",
+		"name_en": "Clauncher",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "693",
+		"name_fr": "Gamblast",
+		"name_en": "Clawitzer",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "694",
+		"name_fr": "Galvaran",
+		"name_en": "Helioptile",
+		"type_1": "Électrik",
+		"type_2": "Normal"
+	},
+	{
+		"num": "695",
+		"name_fr": "Iguolta",
+		"name_en": "Heliolisk",
+		"type_1": "Électrik",
+		"type_2": "Normal"
+	},
+	{
+		"num": "696",
+		"name_fr": "Ptyranidur",
+		"name_en": "Tyrunt",
+		"type_1": "Roche",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "697",
+		"name_fr": "Rexillius",
+		"name_en": "Tyrantrum",
+		"type_1": "Roche",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "698",
+		"name_fr": "Amagara",
+		"name_en": "Amaura",
+		"type_1": "Roche",
+		"type_2": "Glace"
+	},
+	{
+		"num": "699",
+		"name_fr": "Dragmara",
+		"name_en": "Aurorus",
+		"type_1": "Roche",
+		"type_2": "Glace"
+	},
+	{
+		"num": "700",
+		"name_fr": "Nymphali",
+		"name_en": "Sylveon",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "701",
+		"name_fr": "Brutalibré",
+		"name_en": "Hawlucha",
+		"type_1": "Combat",
+		"type_2": "Vol"
+	},
+	{
+		"num": "702",
+		"name_fr": "Dedenne",
+		"name_en": "Dedenne",
+		"type_1": "Électrik",
+		"type_2": "Fée"
+	},
+	{
+		"num": "703",
+		"name_fr": "Strassie",
+		"name_en": "Carbink",
+		"type_1": "Roche",
+		"type_2": "Fée"
+	},
+	{
+		"num": "704",
+		"name_fr": "Mucuscule",
+		"name_en": "Goomy",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "705",
+		"name_fr": "Colimucus",
+		"name_en": "Sliggoo",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "706",
+		"name_fr": "Muplodocus",
+		"name_en": "Goodra",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "707",
+		"name_fr": "Trousselin",
+		"name_en": "Klefki",
+		"type_1": "Acier",
+		"type_2": "Fée"
+	},
+	{
+		"num": "708",
+		"name_fr": "Brocélôme",
+		"name_en": "Phantump",
+		"type_1": "Spectre",
+		"type_2": "Plante"
+	},
+	{
+		"num": "709",
+		"name_fr": "Desséliande",
+		"name_en": "Trevenant",
+		"type_1": "Spectre",
+		"type_2": "Plante"
+	},
+	{
+		"num": "710",
+		"name_fr": "Pitrouille",
+		"name_en": "Pumpkaboo",
+		"type_1": "Spectre",
+		"type_2": "Plante"
+	},
+	{
+		"num": "711",
+		"name_fr": "Banshitrouye",
+		"name_en": "Gourgeist",
+		"type_1": "Spectre",
+		"type_2": "Plante"
+	},
+	{
+		"num": "712",
+		"name_fr": "Grelaçon",
+		"name_en": "Bergmite",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "713",
+		"name_fr": "Séracrawl",
+		"name_en": "Avalugg",
+		"type_1": "Glace",
+		"type_2": ""
+	},
+	{
+		"num": "714",
+		"name_fr": "Sonistrelle",
+		"name_en": "Noibat",
+		"type_1": "Vol",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "715",
+		"name_fr": "Bruyverne",
+		"name_en": "Noivern",
+		"type_1": "Vol",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "716",
+		"name_fr": "Xerneas",
+		"name_en": "Xerneas",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "717",
+		"name_fr": "Yveltal",
+		"name_en": "Yveltal",
+		"type_1": "Ténèbres",
+		"type_2": "Vol"
+	},
+	{
+		"num": "718",
+		"name_fr": "Zygarde",
+		"name_en": "Zygarde",
+		"type_1": "Dragon",
+		"type_2": "Sol"
+	},
+	{
+		"num": "719",
+		"name_fr": "Diancie",
+		"name_en": "Diancie",
+		"type_1": "Roche",
+		"type_2": "Fée"
+	},
+	{
+		"num": "720",
+		"name_fr": "Hoopa",
+		"name_en": "Hoopa",
+		"type_1": "Psy",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "721",
+		"name_fr": "Volcanion",
+		"name_en": "Volcanion",
+		"type_1": "Feu",
+		"type_2": "Eau"
+	},
+	{
+		"num": "722",
+		"name_fr": "Brindibou",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "723",
+		"name_fr": "Efflèche",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Vol"
+	},
+	{
+		"num": "724",
+		"name_fr": "Archéduc",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "725",
+		"name_fr": "Flamiaou",
+		"name_en": "",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "726",
+		"name_fr": "Matoufeu",
+		"name_en": "",
+		"type_1": "Feu",
+		"type_2": ""
+	},
+	{
+		"num": "727",
+		"name_fr": "Félinferno",
+		"name_en": "",
+		"type_1": "Feu",
+		"type_2": "Ténèbres"
+	},
+	{
+		"num": "728",
+		"name_fr": "Otaquin",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "729",
+		"name_fr": "Oterlette",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "730",
+		"name_fr": "Oratoria",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": "Fée"
+	},
+	{
+		"num": "731",
+		"name_fr": "Picassaut",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "732",
+		"name_fr": "Piclairon",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "733",
+		"name_fr": "Bazoucan",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Vol"
+	},
+	{
+		"num": "734",
+		"name_fr": "Manglouton",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "735",
+		"name_fr": "Argouste",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "736",
+		"name_fr": "Larvibule",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": ""
+	},
+	{
+		"num": "737",
+		"name_fr": "Chrysapile",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "738",
+		"name_fr": "Lucanon",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Électrik"
+	},
+	{
+		"num": "739",
+		"name_fr": "Crabagarre",
+		"name_en": "",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "740",
+		"name_fr": "Crabominable",
+		"name_en": "",
+		"type_1": "Combat",
+		"type_2": "Glace"
+	},
+	{
+		"num": "741",
+		"name_fr": "Plumeline",
+		"name_en": "",
+		"type_1": "Feu",
+		"type_2": "Vol"
+	},
+	{
+		"num": "742",
+		"name_fr": "Bombydou",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Fée"
+	},
+	{
+		"num": "743",
+		"name_fr": "Rubombelle",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Fée"
+	},
+	{
+		"num": "744",
+		"name_fr": "Rocabot",
+		"name_en": "",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "745",
+		"name_fr": "Lougaroc",
+		"name_en": "",
+		"type_1": "Roche",
+		"type_2": ""
+	},
+	{
+		"num": "746",
+		"name_fr": "Froussardine",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "747",
+		"name_fr": "Vorastérie",
+		"name_en": "",
+		"type_1": "Poison",
+		"type_2": "Eau"
+	},
+	{
+		"num": "748",
+		"name_fr": "Prédastérie",
+		"name_en": "",
+		"type_1": "Poison",
+		"type_2": "Eau"
+	},
+	{
+		"num": "749",
+		"name_fr": "Tiboudet",
+		"name_en": "",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "750",
+		"name_fr": "Bourrinos",
+		"name_en": "",
+		"type_1": "Sol",
+		"type_2": ""
+	},
+	{
+		"num": "751",
+		"name_fr": "Araqua",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": "Insecte"
+	},
+	{
+		"num": "752",
+		"name_fr": "Tarenbulle",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": "Insecte"
+	},
+	{
+		"num": "753",
+		"name_fr": "Mimantis",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "754",
+		"name_fr": "Floramantis",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "755",
+		"name_fr": "Spododo",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Fée"
+	},
+	{
+		"num": "756",
+		"name_fr": "Lampignon",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Fée"
+	},
+	{
+		"num": "757",
+		"name_fr": "Tritox",
+		"name_en": "",
+		"type_1": "Poison",
+		"type_2": "Feu"
+	},
+	{
+		"num": "758",
+		"name_fr": "Malamandre",
+		"name_en": "",
+		"type_1": "Poison",
+		"type_2": "Feu"
+	},
+	{
+		"num": "759",
+		"name_fr": "Nounourson",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Combat"
+	},
+	{
+		"num": "760",
+		"name_fr": "Chelours",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Combat"
+	},
+	{
+		"num": "761",
+		"name_fr": "Croquine",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "762",
+		"name_fr": "Candine",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "763",
+		"name_fr": "Sucreine",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": ""
+	},
+	{
+		"num": "764",
+		"name_fr": "Guérilande",
+		"name_en": "",
+		"type_1": "Fée",
+		"type_2": ""
+	},
+	{
+		"num": "765",
+		"name_fr": "Gouroutan",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Psy"
+	},
+	{
+		"num": "766",
+		"name_fr": "Quartermac",
+		"name_en": "",
+		"type_1": "Combat",
+		"type_2": ""
+	},
+	{
+		"num": "767",
+		"name_fr": "Sovkipou",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Eau"
+	},
+	{
+		"num": "768",
+		"name_fr": "Sarmuraï",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Eau"
+	},
+	{
+		"num": "769",
+		"name_fr": "Bacabouh",
+		"name_en": "",
+		"type_1": "Spectre",
+		"type_2": "Sol"
+	},
+	{
+		"num": "770",
+		"name_fr": "Trépassable",
+		"name_en": "",
+		"type_1": "Spectre",
+		"type_2": "Sol"
+	},
+	{
+		"num": "771",
+		"name_fr": "Concombaffe",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": ""
+	},
+	{
+		"num": "772",
+		"name_fr": "Type:0",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "773",
+		"name_fr": "Silvallié",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "774",
+		"name_fr": "Météno",
+		"name_en": "",
+		"type_1": "Roche",
+		"type_2": "Vol"
+	},
+	{
+		"num": "775",
+		"name_fr": "Dodoala",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": ""
+	},
+	{
+		"num": "776",
+		"name_fr": "Boumata",
+		"name_en": "",
+		"type_1": "Feu",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "777",
+		"name_fr": "Togedemaru",
+		"name_en": "",
+		"type_1": "Électrik",
+		"type_2": "Acier"
+	},
+	{
+		"num": "778",
+		"name_fr": "Mimiqui",
+		"name_en": "",
+		"type_1": "Spectre",
+		"type_2": "Fée"
+	},
+	{
+		"num": "779",
+		"name_fr": "Denticrisse",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": "Psy"
+	},
+	{
+		"num": "780",
+		"name_fr": "Draïeul",
+		"name_en": "",
+		"type_1": "Normal",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "781",
+		"name_fr": "Sinistrail",
+		"name_en": "",
+		"type_1": "Spectre",
+		"type_2": "Plante"
+	},
+	{
+		"num": "782",
+		"name_fr": "Bébécaille",
+		"name_en": "",
+		"type_1": "Dragon",
+		"type_2": ""
+	},
+	{
+		"num": "783",
+		"name_fr": "Écaïd",
+		"name_en": "",
+		"type_1": "Dragon",
+		"type_2": "Combat"
+	},
+	{
+		"num": "784",
+		"name_fr": "Ékaïser",
+		"name_en": "",
+		"type_1": "Dragon",
+		"type_2": "Combat"
+	},
+	{
+		"num": "785",
+		"name_fr": "Tokorico",
+		"name_en": "",
+		"type_1": "Électrik",
+		"type_2": "Fée"
+	},
+	{
+		"num": "786",
+		"name_fr": "Tokopiyon",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": "Fée"
+	},
+	{
+		"num": "787",
+		"name_fr": "Tokotoro",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Fée"
+	},
+	{
+		"num": "788",
+		"name_fr": "Tokopisco",
+		"name_en": "",
+		"type_1": "Eau",
+		"type_2": "Fée"
+	},
+	{
+		"num": "789",
+		"name_fr": "Cosmog",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "790",
+		"name_fr": "Cosmovum",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "791",
+		"name_fr": "Solgaleo",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": "Acier"
+	},
+	{
+		"num": "792",
+		"name_fr": "Lunala",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": "Spectre"
+	},
+	{
+		"num": "793",
+		"name_fr": "Zéroïd",
+		"name_en": "",
+		"type_1": "Roche",
+		"type_2": "Poison"
+	},
+	{
+		"num": "794",
+		"name_fr": "Mouscoto",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Combat"
+	},
+	{
+		"num": "795",
+		"name_fr": "Cancrelove",
+		"name_en": "",
+		"type_1": "Insecte",
+		"type_2": "Combat"
+	},
+	{
+		"num": "796",
+		"name_fr": "Câblifère",
+		"name_en": "",
+		"type_1": "Électrik",
+		"type_2": ""
+	},
+	{
+		"num": "797",
+		"name_fr": "Bamboiselle",
+		"name_en": "",
+		"type_1": "Acier",
+		"type_2": "Vol"
+	},
+	{
+		"num": "798",
+		"name_fr": "Katagami",
+		"name_en": "",
+		"type_1": "Plante",
+		"type_2": "Acier"
+	},
+	{
+		"num": "799",
+		"name_fr": "Engloutyran",
+		"name_en": "",
+		"type_1": "Ténèbres",
+		"type_2": "Dragon"
+	},
+	{
+		"num": "800",
+		"name_fr": "Necrozma",
+		"name_en": "",
+		"type_1": "Psy",
+		"type_2": ""
+	},
+	{
+		"num": "801",
+		"name_fr": "Magearna",
+		"name_en": "",
+		"type_1": "Acier",
+		"type_2": "Fée"
+	},
+	{
+		"num": "802",
+		"name_fr": "Marshadow",
+		"name_en": "",
+		"type_1": "Combat",
+		"type_2": "Spectre"
+	}
+]

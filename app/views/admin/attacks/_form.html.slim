@@ -1,0 +1,10 @@
+= simple_form_for(['admin', @item]) do |f|
+  == render 'fae/shared/form_header', header: @klass_name
+
+  main.content
+    = fae_radio f, :attack_category, type: 'inline', collection: ['Attaque rapide','Attaque chargée']
+    = fae_input f, :name
+    = fae_pulldown f, :type, search: true, collection: Type.all
+
+
+

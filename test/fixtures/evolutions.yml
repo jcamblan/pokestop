@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_form: 1
+  pokemon: one
+  after_evolution: 1
+  candies: 1
+  item: one
+  position: 1
+
+two:
+  first_form: 1
+  pokemon: two
+  after_evolution: 1
+  candies: 1
+  item: two
+  position: 1
