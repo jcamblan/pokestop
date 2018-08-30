@@ -10,6 +10,28 @@ class PokemonController < ApplicationController
 
   end
 
+
+  def evolutions_block(id)
+
+  	evolutions = Evolution.where(pokemon_id: id).first
+
+  	block_evolutions = Array.new
+
+  	unless evolutions.nil?
+
+  	  evolutions.each do |e|
+
+  	    evolution << {
+  	    	id: Evolution.where(pokemon_id: e.after_evolution).first.pokemon_id
+  	    } 
+  	  	
+  	  end
+  		
+  	end
+  	
+  end
+
+
   def show
 
   	pokemon = Pokemon.where(name: params[:name]).first
