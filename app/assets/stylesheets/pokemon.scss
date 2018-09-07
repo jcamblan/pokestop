@@ -4,6 +4,7 @@
 
 .pokemon {
   @extend .card;
+  margin:auto;
 }
 
 .pokemon__name {}
