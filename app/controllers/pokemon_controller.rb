@@ -40,10 +40,12 @@ class PokemonController < ApplicationController
   	@num = pokemon.num
   	@name = pokemon.name
   	@type_1 = Type.find(pokemon.type_1).name
+    @type_1_css = Type.find(pokemon.type_1).class_css
   	if pokemon.type_2.nil?
   	  @type_2 = ''
   	else
   	  @type_2 = Type.find(pokemon.type_2).name
+      @type_2_css = Type.find(pokemon.type_2).class_css
   	end
 
   	@evolution = Evolution.where(pokemon_id: pokemon.id).first.first_form

@@ -2,10 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pokemon {}
+.pokemon {
+  @extend .card;
+}
 
 .pokemon__name {}
 .pokemon__type {
   @extend .btn;
-  @extend .btn-success;
 }
+.pokemon__type--bug { background: #A8B820; }
+.pokemon__type--dark { background: #705848; }
+.pokemon__type--dragon { background: #7038F8; }
+.pokemon__type--electric { background: #F8D030; }
+.pokemon__type--fighting { background: #C03028; }
+.pokemon__type--fire { background: #F08030; }
+.pokemon__type--flying { background: #A890F0; }
+.pokemon__type--fairy { background: #68A090; }
+.pokemon__type--ground { background: #E0C068; }
+.pokemon__type--ghost { background: #705898; }
+.pokemon__type--grass { background: #78C850; }
+.pokemon__type--ice { background: #98D8D8; }
+.pokemon__type--normal { background: #A8A878; }
+.pokemon__type--psychic { background: #F85888; }
+.pokemon__type--poison { background: #A040A0; }
+.pokemon__type--rock { background: #B8A038; }
+.pokemon__type--steel { background: #B8B8D0; }
+.pokemon__type--water { background: #6890F0; }

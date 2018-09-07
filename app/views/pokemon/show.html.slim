@@ -1,7 +1,8 @@
-p = @id
-p = @num
-p = @name
-p 
-  .pokemon__type = @type_1
-p = @type_2
-p = @evolution
+.pokemon
+  .pokemon__name = @name
+  .pokemon__id = @id
+  .pokemon__types
+    .pokemon__type class=(@type_1_css) = @type_1
+    - if @type_2 != ''
+      .pokemon__type class=(@type_2_css) = @type_2
+  .pokemon__evolutions = @evolution
