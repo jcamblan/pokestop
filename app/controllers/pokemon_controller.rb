@@ -53,19 +53,9 @@ class PokemonController < ApplicationController
 
   def show
 
-  	pokemon = Pokemon.where(name: params[:name]).first
+  	@pokemon = Pokemon.where(name: params[:name]).first
 
-  	@id = pokemon.id
-  	@num = pokemon.num
-  	@name = pokemon.name
-  	@type_1 = Type.find(pokemon.type_1).name
-    @type_1_css = Type.find(pokemon.type_1).class_css
-  	unless pokemon.type_2.nil?
-  	  @type_2 = Type.find(pokemon.type_2).name
-      @type_2_css = Type.find(pokemon.type_2).class_css
-  	end
-
-  	@evolutions = evolutions_block(pokemon.id)
+  	@evolutions = evolutions_block(@pokemon.id)
 
 
   end

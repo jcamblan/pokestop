@@ -10,4 +10,6 @@ class Type < ApplicationRecord
     name
   end
 
+  has_and_belongs_to_many :pokemons
+
 end
