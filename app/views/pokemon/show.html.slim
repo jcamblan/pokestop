@@ -1,8 +1,9 @@
-.pokemon
-  .pokemon__name = @name
-  .pokemon__id = @id
-  .pokemon__types
-    .pokemon__type class=(@type_1_css) = @type_1
-    - if @type_2 != ''
-      .pokemon__type class=(@type_2_css) = @type_2
-  .pokemon__evolutions = @evolution
+.row
+  .pokemon.col-6.mh-auto
+    .pokemon__name = @name
+    .pokemon__num = @num
+    .pokemon__types
+      .pokemon__type class=(@type_1_css) = @type_1
+      - if @type_2
+        .pokemon__type class=(@type_2_css) = @type_2
+    .pokemon__evolutions = @evolution
