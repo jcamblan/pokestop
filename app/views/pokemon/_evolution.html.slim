@@ -1,0 +1,10 @@
+- evolutions.each do |evolution|
+  div style="border:2px solid black; margin: 5px;"
+    strong ID: 
+    = evolution[:id]
+    br
+    em NAME:
+    = evolution[:name]
+    br
+    - if evolution[:evolutions] != ''
+      = render 'evolution', evolutions: evolution[:evolutions]

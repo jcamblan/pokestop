@@ -6,4 +6,5 @@
       .pokemon__type class=(@type_1_css) = @type_1
       - if @type_2
         .pokemon__type class=(@type_2_css) = @type_2
-    .pokemon__evolutions = @evolution
+    .pokemon__evolutions
+        = render 'evolution', evolutions: @evolutions 

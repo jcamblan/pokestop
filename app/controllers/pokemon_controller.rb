@@ -65,7 +65,7 @@ class PokemonController < ApplicationController
       @type_2_css = Type.find(pokemon.type_2).class_css
   	end
 
-  	@evolution = evolutions_block(pokemon.id)
+  	@evolutions = evolutions_block(pokemon.id)
 
 
   end
