@@ -10,4 +10,5 @@ class Pokemon < ApplicationRecord
 
   belongs_to :generation
   has_and_belongs_to_many :types
+  has_many :evolutions
 end

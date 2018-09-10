@@ -13,15 +13,22 @@ class PokemonController < ApplicationController
 
   def evolutions_block(id)
 
-    evolutions = Evolution.where(pokemon_id: id)
+    block_evolutions = Array.new
 
-  	block_evolutions = Array.new
+    can_evolve = Evolution.where(pokemon_id: id).first
+    is_evolution = Evolution.where(after_evolution: id).first
 
-    block_evolutions << {
-      id: Evolution.where(pokemon_id: id).first.first_form,
-      name: Pokemon.where(id: Evolution.where(pokemon_id: id).first.first_form).first.name,
-      evolutions: get_evolutions(Evolution.where(pokemon_id: id).first.first_form)
-    }
+    if can_evolve || is_evolution
+
+      first_form = Evolution.where(pokemon_id: id).first.first_form
+
+      block_evolutions << {
+        id: first_form,
+        name: Pokemon.find(first_form).name,
+        evolutions: get_evolutions(first_form)
+      }
+
+    end
 
     return block_evolutions
   	
@@ -30,7 +37,6 @@ class PokemonController < ApplicationController
   def get_evolutions(id)
     evolutions = Evolution.where(pokemon_id: id)
 
-    block_evolutions = Array.new
     next_forms = Array.new
 
     unless evolutions.nil?
