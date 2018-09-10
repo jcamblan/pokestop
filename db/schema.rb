@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_201550) do
+ActiveRecord::Schema.define(version: 2018_09_10_125650) do
 
   create_table "alternative_skin_categories", force: :cascade do |t|
     t.string "name"
@@ -256,6 +256,13 @@ ActiveRecord::Schema.define(version: 2018_08_14_201550) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["generation_id"], name: "index_pokemons_on_generation_id"
+  end
+
+  create_table "pokemons_types", id: false, force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "type_id"
+    t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
+    t.index ["type_id"], name: "index_pokemons_types_on_type_id"
   end
 
   create_table "types", force: :cascade do |t|
