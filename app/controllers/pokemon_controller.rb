@@ -15,10 +15,9 @@ class PokemonController < ApplicationController
 
     block_evolutions = Array.new
 
-    can_evolve = Evolution.where(pokemon_id: id).first
-    is_evolution = Evolution.where(after_evolution: id).first
+    pokemon = Pokemon.find(id)
 
-    if can_evolve || is_evolution
+    if pokemon.can_evolve? || pokemon.is_evolution?
 
       first_form = Evolution.where(pokemon_id: id).first.first_form
 
