@@ -15,11 +15,11 @@ class PokemonController < ApplicationController
 
     block_evolutions = Array.new
 
-    pokemon = Pokemon.find(id)
+    pokemon = @pokemon
 
     if pokemon.can_evolve? || pokemon.is_evolution?
 
-      first_form = Evolution.where(pokemon_id: id).first.first_form
+      first_form = Evolution.where(pokemon_id: id).or(Evolution.where(after_evolution: id)).first.first_form
 
       block_evolutions << {
         id: first_form,
@@ -44,7 +44,7 @@ class PokemonController < ApplicationController
 
         next_forms << {
           id: e.after_evolution,
-          name: Pokemon.where(id: e.after_evolution).first.name,
+          name: Pokemon.find(e.after_evolution).name,
           evolutions: get_evolutions(e.after_evolution)
         } 
         

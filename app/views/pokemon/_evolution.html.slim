@@ -1,10 +1,13 @@
-- evolutions.each do |evolution|
-  div style="border:2px solid black; margin: 5px;"
-    strong ID: 
-    = evolution[:id]
-    br
-    em NAME:
-    = evolution[:name]
-    br
-    - if evolution[:evolutions] != ''
-      = render 'evolution', evolutions: evolution[:evolutions]
+.row.text-center
+  - evolutions.each do |evolution|
+    .col style="border:2px solid black;"
+      = image_tag 'arrow-down.png', width: '30px' if Pokemon.find(evolution[:id]).is_evolution?
+      br
+      strong ID: 
+      = evolution[:id]
+      br
+      em NAME:
+      = evolution[:name]
+      br
+      - if evolution[:evolutions] != ''
+        = render 'evolution', evolutions: evolution[:evolutions]
