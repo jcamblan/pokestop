@@ -1,13 +1,12 @@
 .row.text-center
   - evolutions.each do |evolution|
     .col style="border:2px solid black;"
-      = image_tag 'arrow-down.png', width: '30px' if Pokemon.find(evolution[:id]).is_evolution?
+      = image_tag 'arrow-down.png', width: '30px'
       br
       strong ID: 
-      = evolution[:id]
+      = evolution.id
       br
       em NAME:
-      = evolution[:name]
+      = evolution.name
       br
-      - if evolution[:evolutions] != ''
-        = render 'evolution', evolutions: evolution[:evolutions]
+      = render 'evolution', evolutions: evolution.evolutions_as_pokemons if evolution.can_evolve?
