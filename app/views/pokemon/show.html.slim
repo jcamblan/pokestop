@@ -7,4 +7,4 @@
         .pokemon__type class=(type.class_css) = type.name
     - if @evolutions
       .pokemon__evolutions
-        = render 'evolution', evolutions: @evolutions 
+        = render 'evolution', pokemons: @evolutions, evolutions: []

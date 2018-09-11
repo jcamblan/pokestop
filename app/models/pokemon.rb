@@ -9,15 +9,11 @@ class Pokemon < ApplicationRecord
   end
 
   def can_evolve?
-  	if Evolution.where(pokemon_id: id).first
-  	  return true
-  	end
+  	Evolution.where(pokemon_id: id).exists?
   end
 
   def is_evolution?
-  	if Evolution.where(after_evolution: id).first
-  	  return true
-  	end
+  	Evolution.where(after_evolution: id).exists?
   end
 
   def first_form
