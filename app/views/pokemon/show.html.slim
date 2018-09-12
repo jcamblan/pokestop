@@ -1,4 +1,6 @@
 .row
+  .col-3.text-center
+    p = link_to("<<", @pokemon.prev)
   .pokemon.col-6.mh-auto
     .pokemon__name = @pokemon.name
     .pokemon__num = @pokemon.num
@@ -8,3 +10,5 @@
     - if @evolutions
       .pokemon__evolutions
         = render 'evolution', pokemons: @evolutions, evolutions: []
+  .col-3.text-center
+    p = link_to(">>", @pokemon.next)

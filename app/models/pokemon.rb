@@ -1,8 +1,8 @@
 class Pokemon < ApplicationRecord
   include Fae::BaseModelConcern
 
-  acts_as_list add_new_at: :top
-  default_scope { order(:position) }
+  #acts_as_list add_new_at: :top
+  #default_scope { order(:position) }
 
   def fae_display_field
     name
@@ -29,6 +29,14 @@ class Pokemon < ApplicationRecord
       evolutions_array << Pokemon.find(e.after_evolution)
     end
     return evolutions_array
+  end
+
+  def prev
+    Pokemon.where("id < ?", id).order("id DESC").first || Pokemon.last
+  end
+  
+  def next
+    Pokemon.where("id > ?", id).order("id ASC").first || Pokemon.first
   end
 
   belongs_to :generation

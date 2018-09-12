@@ -12,7 +12,7 @@ class PokemonController < ApplicationController
 
   def show
 
-  	@pokemon = Pokemon.where(name: params[:name]).first
+  	@pokemon = Pokemon.find(params[:id])
 
   	@evolutions = @pokemon.first_form if @pokemon.can_evolve? || @pokemon.is_evolution?
 
