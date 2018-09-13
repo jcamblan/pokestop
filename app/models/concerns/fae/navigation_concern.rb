@@ -36,7 +36,8 @@ module Fae
           item('Alternative Skin Categories', path: admin_alternative_skin_categories_path),
           item('Alternative Skins', path: admin_alternative_skins_path)
         ]),
-        item('Events', path: admin_events_path)
+        item('Events', path: admin_events_path),
+        item('Candies', path: admin_candies_path),
         # scaffold inject marker
       ]
     end

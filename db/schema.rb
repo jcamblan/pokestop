@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_125650) do
+ActiveRecord::Schema.define(version: 2018_09_13_062144) do
 
   create_table "alternative_skin_categories", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 2018_09_10_125650) do
     t.integer "type"
     t.string "attack_category"
     t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "candies", force: :cascade do |t|
+    t.string "name"
+    t.string "primary_color"
+    t.string "secondary_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

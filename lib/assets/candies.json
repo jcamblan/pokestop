@@ -1,0 +1,1430 @@
+[
+  {
+    "id": 1,
+    "pokemon": "Bulbasaur",
+    "primaryColor": "#36C8A4",
+    "secondaryColor": "#A3FB83",
+    "verified": "TRUE"
+  },
+  {
+    "id": 2,
+    "pokemon": "Charmander",
+    "primaryColor": "#F09230",
+    "secondaryColor": "#FFE699",
+    "verified": "TRUE"
+  },
+  {
+    "id": 3,
+    "pokemon": "Squirtle",
+    "primaryColor": "#85C4D6",
+    "secondaryColor": "#F2E8BE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 4,
+    "pokemon": "Caterpie",
+    "primaryColor": "#A5CD87",
+    "secondaryColor": "#FAE3B1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 5,
+    "pokemon": "Weedle",
+    "primaryColor": "#E7BC83",
+    "secondaryColor": "#DB76AD",
+    "verified": "TRUE"
+  },
+  {
+    "id": 6,
+    "pokemon": "Pidgey",
+    "primaryColor": "#E9E0B7",
+    "secondaryColor": "#D29E65",
+    "verified": "TRUE"
+  },
+  {
+    "id": 7,
+    "pokemon": "Rattata",
+    "primaryColor": "#A989BA",
+    "secondaryColor": "#D9D7BE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 8,
+    "pokemon": "Spearow",
+    "primaryColor": "#EBB9A0",
+    "secondaryColor": "#FE5D6C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 9,
+    "pokemon": "Ekans",
+    "primaryColor": "#CBA8C9",
+    "secondaryColor": "#F1E090",
+    "verified": "TRUE"
+  },
+  {
+    "id": 10,
+    "pokemon": "Pikachu",
+    "primaryColor": "#F5D368",
+    "secondaryColor": "#E2A65D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 11,
+    "pokemon": "Sandshrew",
+    "primaryColor": "#E0D2A4",
+    "secondaryColor": "#C9B180",
+    "verified": "TRUE"
+  },
+  {
+    "id": 12,
+    "pokemon": "Nidoran♀",
+    "primaryColor": "#C5D3E4",
+    "secondaryColor": "#9697C5",
+    "verified": "TRUE"
+  },
+  {
+    "id": 13,
+    "pokemon": "Nidoran♂",
+    "primaryColor": "#D59FC1",
+    "secondaryColor": "#C37096",
+    "verified": "TRUE"
+  },
+  {
+    "id": 14,
+    "pokemon": "Clefairy",
+    "primaryColor": "#F1D3D1",
+    "secondaryColor": "#F1BFC0",
+    "verified": "TRUE"
+  },
+  {
+    "id": 15,
+    "pokemon": "Vulpix",
+    "primaryColor": "#F5865E",
+    "secondaryColor": "#F6D29C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 16,
+    "pokemon": "Jigglypuff",
+    "primaryColor": "#F1D2E1",
+    "secondaryColor": "#EAB9CE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 17,
+    "pokemon": "Zubat",
+    "primaryColor": "#478ABF",
+    "secondaryColor": "#DC8DD7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 18,
+    "pokemon": "Oddish",
+    "primaryColor": "#7095BF",
+    "secondaryColor": "#75C06B",
+    "verified": "TRUE"
+  },
+  {
+    "id": 19,
+    "pokemon": "Paras",
+    "primaryColor": "#F1873D",
+    "secondaryColor": "#FFD159",
+    "verified": "TRUE"
+  },
+  {
+    "id": 20,
+    "pokemon": "Venonat",
+    "primaryColor": "#998FD6",
+    "secondaryColor": "#E24379",
+    "verified": "TRUE"
+  },
+  {
+    "id": 21,
+    "pokemon": "Diglett",
+    "primaryColor": "#B08570",
+    "secondaryColor": "#EEC5DC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 22,
+    "pokemon": "Meowth",
+    "primaryColor": "#ECE0C4",
+    "secondaryColor": "#FFE28A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 23,
+    "pokemon": "Psyduck",
+    "primaryColor": "#F4C487",
+    "secondaryColor": "#EEEED8",
+    "verified": "TRUE"
+  },
+  {
+    "id": 24,
+    "pokemon": "Mankey",
+    "primaryColor": "#E5D6CB",
+    "secondaryColor": "#C3927F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 25,
+    "pokemon": "Growlithe",
+    "primaryColor": "#F3A056",
+    "secondaryColor": "#3F3D2A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 26,
+    "pokemon": "Poliwag",
+    "primaryColor": "#849FCA",
+    "secondaryColor": "#ECECF6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 27,
+    "pokemon": "Abra",
+    "primaryColor": "#E5CE5C",
+    "secondaryColor": "#8E7994",
+    "verified": "TRUE"
+  },
+  {
+    "id": 28,
+    "pokemon": "Machop",
+    "primaryColor": "#A1BBDE",
+    "secondaryColor": "#DCCEB1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 29,
+    "pokemon": "Bellsprout",
+    "primaryColor": "#EBE16E",
+    "secondaryColor": "#AFD57E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 30,
+    "pokemon": "Tentacool",
+    "primaryColor": "#71ACD8",
+    "secondaryColor": "#C24589",
+    "verified": "TRUE"
+  },
+  {
+    "id": 31,
+    "pokemon": "Geodude",
+    "primaryColor": "#ACA078",
+    "secondaryColor": "#756108",
+    "verified": "TRUE"
+  },
+  {
+    "id": 32,
+    "pokemon": "Ponyta",
+    "primaryColor": "#EDE7C7",
+    "secondaryColor": "#F59062",
+    "verified": "TRUE"
+  },
+  {
+    "id": 33,
+    "pokemon": "Slowpoke",
+    "primaryColor": "#DFA1B9",
+    "secondaryColor": "#EEE1C7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 34,
+    "pokemon": "Magnemite",
+    "primaryColor": "#D0DAE0",
+    "secondaryColor": "#92B6C6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 35,
+    "pokemon": "Farfetch'd",
+    "primaryColor": "#AC9E95",
+    "secondaryColor": "#95FB97",
+    "verified": "TRUE"
+  },
+  {
+    "id": 36,
+    "pokemon": "Doduo",
+    "primaryColor": "#C89462",
+    "secondaryColor": "#AF755F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 37,
+    "pokemon": "Seel",
+    "primaryColor": "#C7DFE8",
+    "secondaryColor": "#B6CAED",
+    "verified": "TRUE"
+  },
+  {
+    "id": 38,
+    "pokemon": "Grimer",
+    "primaryColor": "#BFA4C7",
+    "secondaryColor": "#5F5370",
+    "verified": "TRUE"
+  },
+  {
+    "id": 39,
+    "pokemon": "Shellder",
+    "primaryColor": "#AB9CC5",
+    "secondaryColor": "#E0B5B3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 40,
+    "pokemon": "Gastly",
+    "primaryColor": "#242223",
+    "secondaryColor": "#9B7FB7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 41,
+    "pokemon": "Onix",
+    "primaryColor": "#B5B6B8",
+    "secondaryColor": "#626264",
+    "verified": "TRUE"
+  },
+  {
+    "id": 42,
+    "pokemon": "Drowzee",
+    "primaryColor": "#F8CB58",
+    "secondaryColor": "#AF7961",
+    "verified": "TRUE"
+  },
+  {
+    "id": 43,
+    "pokemon": "Krabby",
+    "primaryColor": "#EB9063",
+    "secondaryColor": "#EDD9CE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 44,
+    "pokemon": "Voltorb",
+    "primaryColor": "#B64656",
+    "secondaryColor": "#F0E5EA",
+    "verified": "TRUE"
+  },
+  {
+    "id": 45,
+    "pokemon": "Exeggcute",
+    "primaryColor": "#F4DDE7",
+    "secondaryColor": "#EFC3C1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 46,
+    "pokemon": "Cubone",
+    "primaryColor": "#D4D5D6",
+    "secondaryColor": "#CBB57A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 47,
+    "pokemon": "Hitmonlee",
+    "primaryColor": "#BD9F88",
+    "secondaryColor": "#EEE1C7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 48,
+    "pokemon": "Hitmonchan",
+    "primaryColor": "#C8ABBB",
+    "secondaryColor": "#E4643B",
+    "verified": "TRUE"
+  },
+  {
+    "id": 49,
+    "pokemon": "Lickitung",
+    "primaryColor": "#E3AEB9",
+    "secondaryColor": "#F0E4CA",
+    "verified": "TRUE"
+  },
+  {
+    "id": 50,
+    "pokemon": "Koffing",
+    "primaryColor": "#8B8FAE",
+    "secondaryColor": "#DEE0BF",
+    "verified": "TRUE"
+  },
+  {
+    "id": 51,
+    "pokemon": "Rhyhorn",
+    "primaryColor": "#BCBDBF",
+    "secondaryColor": "#959CA2",
+    "verified": "TRUE"
+  },
+  {
+    "id": 52,
+    "pokemon": "Chansey",
+    "primaryColor": "#E0AEB2",
+    "secondaryColor": "#C68D87",
+    "verified": "TRUE"
+  },
+  {
+    "id": 53,
+    "pokemon": "Tangela",
+    "primaryColor": "#666C9D",
+    "secondaryColor": "#E46E8C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 54,
+    "pokemon": "Kangaskhan",
+    "primaryColor": "#978781",
+    "secondaryColor": "#E3DDB8",
+    "verified": "TRUE"
+  },
+  {
+    "id": 55,
+    "pokemon": "Horsea",
+    "primaryColor": "#9FCFE9",
+    "secondaryColor": "#FCF7D7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 56,
+    "pokemon": "Goldeen",
+    "primaryColor": "#E6E6E7",
+    "secondaryColor": "#F38469",
+    "verified": "TRUE"
+  },
+  {
+    "id": 57,
+    "pokemon": "Staryu",
+    "primaryColor": "#B49569",
+    "secondaryColor": "#F5E688",
+    "verified": "TRUE"
+  },
+  {
+    "id": 58,
+    "pokemon": "Mr.Mime",
+    "primaryColor": "#E56387",
+    "secondaryColor": "#FFCED5",
+    "verified": "TRUE"
+  },
+  {
+    "id": 59,
+    "pokemon": "Scyther",
+    "primaryColor": "#92C587",
+    "secondaryColor": "#F6F0CF",
+    "verified": "TRUE"
+  },
+  {
+    "id": 60,
+    "pokemon": "Jynx",
+    "primaryColor": "#C44552",
+    "secondaryColor": "#643187",
+    "verified": "TRUE"
+  },
+  {
+    "id": 61,
+    "pokemon": "Electabuzz",
+    "primaryColor": "#F5DB77",
+    "secondaryColor": "#14175E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 62,
+    "pokemon": "Magmar",
+    "primaryColor": "#F5D477",
+    "secondaryColor": "#F0664E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 63,
+    "pokemon": "Pinsir",
+    "primaryColor": "#BCB1AB",
+    "secondaryColor": "#CFD4D8",
+    "verified": "TRUE"
+  },
+  {
+    "id": 64,
+    "pokemon": "Tauros",
+    "primaryColor": "#D8A058",
+    "secondaryColor": "#887E6F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 65,
+    "pokemon": "Magikarp",
+    "primaryColor": "#E87839",
+    "secondaryColor": "#F6F0CF",
+    "verified": "TRUE"
+  },
+  {
+    "id": 66,
+    "pokemon": "Lapras",
+    "primaryColor": "#6BA7D4",
+    "secondaryColor": "#FFF0DA",
+    "verified": "TRUE"
+  },
+  {
+    "id": 67,
+    "pokemon": "Ditto",
+    "primaryColor": "#F2ABC0",
+    "secondaryColor": "#DA74AC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 68,
+    "pokemon": "Eevee",
+    "primaryColor": "#CA9761",
+    "secondaryColor": "#7E5621",
+    "verified": "TRUE"
+  },
+  {
+    "id": 69,
+    "pokemon": "Porygon",
+    "primaryColor": "#E7757C",
+    "secondaryColor": "#6BC7C5",
+    "verified": "TRUE"
+  },
+  {
+    "id": 70,
+    "pokemon": "Omanyte",
+    "primaryColor": "#DDDCCC",
+    "secondaryColor": "#73CEE2",
+    "verified": "TRUE"
+  },
+  {
+    "id": 71,
+    "pokemon": "Kabuto",
+    "primaryColor": "#C18335",
+    "secondaryColor": "#4E4E48",
+    "verified": "TRUE"
+  },
+  {
+    "id": 72,
+    "pokemon": "Aerodactyl",
+    "primaryColor": "#D4BAD3",
+    "secondaryColor": "#B196C5",
+    "verified": "TRUE"
+  },
+  {
+    "id": 73,
+    "pokemon": "Snorlax",
+    "primaryColor": "#326583",
+    "secondaryColor": "#E3DACE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 74,
+    "pokemon": "Articuno",
+    "primaryColor": "#8EBFE3",
+    "secondaryColor": "#599CBC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 75,
+    "pokemon": "Zapdos",
+    "primaryColor": "#FADE87",
+    "secondaryColor": "#B3975E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 76,
+    "pokemon": "Moltres",
+    "primaryColor": "#F9CE7B",
+    "secondaryColor": "#F38469",
+    "verified": "TRUE"
+  },
+  {
+    "id": 77,
+    "pokemon": "Dratini",
+    "primaryColor": "#90AED4",
+    "secondaryColor": "#EFEAE6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 78,
+    "pokemon": "Mewtwo",
+    "primaryColor": "#C5D4E8",
+    "secondaryColor": "#9195B5",
+    "verified": "TRUE"
+  },
+  {
+    "id": 79,
+    "pokemon": "Mew",
+    "primaryColor": "#eedfe9",
+    "secondaryColor": "#e7bbce",
+    "verified": "TRUE"
+  },
+  {
+    "id": 80,
+    "pokemon": "Chikorita",
+    "primaryColor": "#CBDAAE",
+    "secondaryColor": "#86C07C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 81,
+    "pokemon": "Cyndaquil",
+    "primaryColor": "#185E62",
+    "secondaryColor": "#EED9AC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 82,
+    "pokemon": "Totodile",
+    "primaryColor": "#96B8C1",
+    "secondaryColor": "#BF8390",
+    "verified": "TRUE"
+  },
+  {
+    "id": 83,
+    "pokemon": "Sentret",
+    "primaryColor": "#AA8374",
+    "secondaryColor": "#FDFAEE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 84,
+    "pokemon": "Hoothoot",
+    "primaryColor": "#A88F77",
+    "secondaryColor": "#3A3836",
+    "verified": "TRUE"
+  },
+  {
+    "id": 85,
+    "pokemon": "Ledyba",
+    "primaryColor": "#E4845F",
+    "secondaryColor": "#291F1D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 86,
+    "pokemon": "Spinarak",
+    "primaryColor": "#A4D08C",
+    "secondaryColor": "#F6DA8C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 87,
+    "pokemon": "Chinchou",
+    "primaryColor": "#728ABD",
+    "secondaryColor": "#EEDC9D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 88,
+    "pokemon": "Togepi",
+    "primaryColor": "#EADEB2",
+    "secondaryColor": "#BDC4CE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 89,
+    "pokemon": "Natu",
+    "primaryColor": "#85BD57",
+    "secondaryColor": "#E9CA67",
+    "verified": "TRUE"
+  },
+  {
+    "id": 90,
+    "pokemon": "Mareep",
+    "primaryColor": "#F2E5C2",
+    "secondaryColor": "#5A84B1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 91,
+    "pokemon": "Marill",
+    "primaryColor": "#52B3E4",
+    "secondaryColor": "#E1F4F6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 92,
+    "pokemon": "Sudowoodo",
+    "primaryColor": "#AE9F85",
+    "secondaryColor": "#88AB72",
+    "verified": "TRUE"
+  },
+  {
+    "id": 93,
+    "pokemon": "Hoppip",
+    "primaryColor": "#EB92A8",
+    "secondaryColor": "#A8CF86",
+    "verified": "TRUE"
+  },
+  {
+    "id": 94,
+    "pokemon": "Aipom",
+    "primaryColor": "#BA9DB7",
+    "secondaryColor": "#DBC4B1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 95,
+    "pokemon": "Sunkern",
+    "primaryColor": "#EAD887",
+    "secondaryColor": "#83B177",
+    "verified": "TRUE"
+  },
+  {
+    "id": 96,
+    "pokemon": "Yanma",
+    "primaryColor": "#BC836F",
+    "secondaryColor": "#A6AD72",
+    "verified": "TRUE"
+  },
+  {
+    "id": 97,
+    "pokemon": "Wooper",
+    "primaryColor": "#97C3DA",
+    "secondaryColor": "#B593A0",
+    "verified": "TRUE"
+  },
+  {
+    "id": 98,
+    "pokemon": "Murkrow",
+    "primaryColor": "#3B5670",
+    "secondaryColor": "#F0D3A4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 99,
+    "pokemon": "Misdreavus",
+    "primaryColor": "#8994A0",
+    "secondaryColor": "#B97F85",
+    "verified": "TRUE"
+  },
+  {
+    "id": 100,
+    "pokemon": "Unown",
+    "primaryColor": "#51626E",
+    "secondaryColor": "#CED6E0",
+    "verified": "TRUE"
+  },
+  {
+    "id": 101,
+    "pokemon": "Wobbuffet",
+    "primaryColor": "#54ADC9",
+    "secondaryColor": "#2E2F33",
+    "verified": "TRUE"
+  },
+  {
+    "id": 102,
+    "pokemon": "Girafarig",
+    "primaryColor": "#E7AB3D",
+    "secondaryColor": "#39281F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 103,
+    "pokemon": "Pineco",
+    "primaryColor": "#1A4146",
+    "secondaryColor": "#8FABA0",
+    "verified": "TRUE"
+  },
+  {
+    "id": 104,
+    "pokemon": "Dunsparce",
+    "primaryColor": "#F2DF93",
+    "secondaryColor": "#4B908C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 105,
+    "pokemon": "Gligar",
+    "primaryColor": "#D18EB2",
+    "secondaryColor": "#598ABC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 106,
+    "pokemon": "Snubbull",
+    "primaryColor": "#E78C96",
+    "secondaryColor": "#3B2F2D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 107,
+    "pokemon": "Qwilfish",
+    "primaryColor": "#4A7471",
+    "secondaryColor": "#E5EAB4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 108,
+    "pokemon": "Shuckle",
+    "primaryColor": "#942D2B",
+    "secondaryColor": "#F5CF6C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 109,
+    "pokemon": "Heracross",
+    "primaryColor": "#2B5978",
+    "secondaryColor": "#93AFC1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 110,
+    "pokemon": "Sneasel",
+    "primaryColor": "#5F8795",
+    "secondaryColor": "#D76B68",
+    "verified": "TRUE"
+  },
+  {
+    "id": 111,
+    "pokemon": "Teddiursa",
+    "primaryColor": "#E09659",
+    "secondaryColor": "#FBE699",
+    "verified": "TRUE"
+  },
+  {
+    "id": 112,
+    "pokemon": "Slugma",
+    "primaryColor": "#E69881",
+    "secondaryColor": "#F4CC94",
+    "verified": "TRUE"
+  },
+  {
+    "id": 113,
+    "pokemon": "Swinub",
+    "primaryColor": "#B28B73",
+    "secondaryColor": "#D88C89",
+    "verified": "TRUE"
+  },
+  {
+    "id": 114,
+    "pokemon": "Corsola",
+    "primaryColor": "#E697A2",
+    "secondaryColor": "#CCD5DB",
+    "verified": "TRUE"
+  },
+  {
+    "id": 115,
+    "pokemon": "Remoraid",
+    "primaryColor": "#AEC8B7",
+    "secondaryColor": "#709687",
+    "verified": "TRUE"
+  },
+  {
+    "id": 116,
+    "pokemon": "Delibird",
+    "primaryColor": "#AA493D",
+    "secondaryColor": "#F3F1F6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 117,
+    "pokemon": "Mantine",
+    "primaryColor": "#425161",
+    "secondaryColor": "#EDDEE8",
+    "verified": "TRUE"
+  },
+  {
+    "id": 118,
+    "pokemon": "Skarmory",
+    "primaryColor": "#D2D9E9",
+    "secondaryColor": "#923A3B",
+    "verified": "TRUE"
+  },
+  {
+    "id": 119,
+    "pokemon": "Houndour",
+    "primaryColor": "#575553",
+    "secondaryColor": "#D28F74",
+    "verified": "TRUE"
+  },
+  {
+    "id": 120,
+    "pokemon": "Phanpy",
+    "primaryColor": "#9CCFCF",
+    "secondaryColor": "#D06D52",
+    "verified": "TRUE"
+  },
+  {
+    "id": 121,
+    "pokemon": "Stantler",
+    "primaryColor": "#BB9780",
+    "secondaryColor": "#EDDE9A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 122,
+    "pokemon": "Smeargle",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "TRUE"
+  },
+  {
+    "id": 123,
+    "pokemon": "Tyrogue",
+    "primaryColor": "#D7C1D0",
+    "secondaryColor": "#926E4A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 124,
+    "pokemon": "Miltank",
+    "primaryColor": "#F1BABE",
+    "secondaryColor": "#EEE0B7",
+    "verified": "TRUE"
+  },
+  {
+    "id": 125,
+    "pokemon": "Raikou",
+    "primaryColor": "#EFC978",
+    "secondaryColor": "#BC96A4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 126,
+    "pokemon": "Entei",
+    "primaryColor": "#925836",
+    "secondaryColor": "#A43937",
+    "verified": "TRUE"
+  },
+  {
+    "id": 127,
+    "pokemon": "Suicune",
+    "primaryColor": "#7EB0B7",
+    "secondaryColor": "#997AA1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 128,
+    "pokemon": "Larvitar",
+    "primaryColor": "#B5BF96",
+    "secondaryColor": "#595755",
+    "verified": "TRUE"
+  },
+  {
+    "id": 129,
+    "pokemon": "Lugia",
+    "primaryColor": "#F2F5F9",
+    "secondaryColor": "#96B0D3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 130,
+    "pokemon": "Ho-Oh",
+    "primaryColor": "#BC4235",
+    "secondaryColor": "#EDB86A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 131,
+    "pokemon": "Celebi",
+    "primaryColor": "#D1E0BF",
+    "secondaryColor": "#96B87C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 132,
+    "pokemon": "Treecko",
+    "primaryColor": "#B4CF82",
+    "secondaryColor": "#EEB2C0",
+    "verified": "TRUE"
+  },
+  {
+    "id": 133,
+    "pokemon": "Torchic",
+    "primaryColor": "#EEB95F",
+    "secondaryColor": "#FEF783",
+    "verified": "TRUE"
+  },
+  {
+    "id": 134,
+    "pokemon": "Mudkip",
+    "primaryColor": "#89C5F0",
+    "secondaryColor": "#F9A343",
+    "verified": "TRUE"
+  },
+  {
+    "id": 135,
+    "pokemon": "Poochyena",
+    "primaryColor": "#9E9EA2",
+    "secondaryColor": "#626466",
+    "verified": "TRUE"
+  },
+  {
+    "id": 136,
+    "pokemon": "Zigzagoon",
+    "primaryColor": "#6F5F52",
+    "secondaryColor": "#FBE8D3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 137,
+    "pokemon": "Wurmple",
+    "primaryColor": "#DA726D",
+    "secondaryColor": "#F7F3E9",
+    "verified": "TRUE"
+  },
+  {
+    "id": 138,
+    "pokemon": "Lotad",
+    "primaryColor": "#6782B4",
+    "secondaryColor": "#A8D266",
+    "verified": "TRUE"
+  },
+  {
+    "id": 139,
+    "pokemon": "Seedot",
+    "primaryColor": "#796851",
+    "secondaryColor": "#BCB5A3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 140,
+    "pokemon": "Taillow",
+    "primaryColor": "#4D547F",
+    "secondaryColor": "#F19AAE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 141,
+    "pokemon": "Wingull",
+    "primaryColor": "#E9F0FA",
+    "secondaryColor": "#A7DBFC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 142,
+    "pokemon": "Ralts",
+    "primaryColor": "#ADDBB5",
+    "secondaryColor": "#EA9CA1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 143,
+    "pokemon": "Surskit",
+    "primaryColor": "#81B7E3",
+    "secondaryColor": "#FCFEB4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 144,
+    "pokemon": "Shroomish",
+    "primaryColor": "#F5E5B9",
+    "secondaryColor": "#9BBC99",
+    "verified": "TRUE"
+  },
+  {
+    "id": 145,
+    "pokemon": "Slakoth",
+    "primaryColor": "#F6E8C4",
+    "secondaryColor": "#B0987F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 146,
+    "pokemon": "Nincada",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 147,
+    "pokemon": "Whismur",
+    "primaryColor": "#F0D8F1",
+    "secondaryColor": "#FAE1A3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 148,
+    "pokemon": "Makuhita",
+    "primaryColor": "#F5E79A",
+    "secondaryColor": "#979597",
+    "verified": "TRUE"
+  },
+  {
+    "id": 149,
+    "pokemon": "Nosepass",
+    "primaryColor": "#93ABD9",
+    "secondaryColor": "#B7565E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 150,
+    "pokemon": "Skitty",
+    "primaryColor": "#CC9A9E",
+    "secondaryColor": "#DFD8B6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 151,
+    "pokemon": "Sableye",
+    "primaryColor": "#9C8BDC",
+    "secondaryColor": "#752728",
+    "verified": "TRUE"
+  },
+  {
+    "id": 152,
+    "pokemon": "Mawile",
+    "primaryColor": "#5C5E5C",
+    "secondaryColor": "#E5D287",
+    "verified": "TRUE"
+  },
+  {
+    "id": 153,
+    "pokemon": "Aron",
+    "primaryColor": "#D4DDE4",
+    "secondaryColor": "#393C3E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 154,
+    "pokemon": "Meditite",
+    "primaryColor": "#E5E5E9",
+    "secondaryColor": "#80BAE3",
+    "verified": "TRUE"
+  },
+  {
+    "id": 155,
+    "pokemon": "Electrike",
+    "primaryColor": "#B1CF99",
+    "secondaryColor": "#E9CD7D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 156,
+    "pokemon": "Plusle",
+    "primaryColor": "#F6EDAE",
+    "secondaryColor": "#D46662",
+    "verified": "TRUE"
+  },
+  {
+    "id": 157,
+    "pokemon": "Minun",
+    "primaryColor": "#F6EDAE",
+    "secondaryColor": "#82C7E4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 158,
+    "pokemon": "Volbeat",
+    "primaryColor": "#D4E1E5",
+    "secondaryColor": "#F0716A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 159,
+    "pokemon": "Illumise",
+    "primaryColor": "#B0D7F1",
+    "secondaryColor": "#C1A2D1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 160,
+    "pokemon": "Roselia",
+    "primaryColor": "#AC5158",
+    "secondaryColor": "#42519D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 161,
+    "pokemon": "Gulpin",
+    "primaryColor": "#AFD89C",
+    "secondaryColor": "#FEF98D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 162,
+    "pokemon": "Carvanha",
+    "primaryColor": "#387BAF",
+    "secondaryColor": "#D46866",
+    "verified": "TRUE"
+  },
+  {
+    "id": 163,
+    "pokemon": "Wailmer",
+    "primaryColor": "#436F92",
+    "secondaryColor": "#E9E2BC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 164,
+    "pokemon": "Numel",
+    "primaryColor": "#DDBB77",
+    "secondaryColor": "#ABD39A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 165,
+    "pokemon": "Torkoal",
+    "primaryColor": "#F6AB74",
+    "secondaryColor": "#B2B198",
+    "verified": "TRUE"
+  },
+  {
+    "id": 166,
+    "pokemon": "Spoink",
+    "primaryColor": "#B4BAC1",
+    "secondaryColor": "#EFAFBE",
+    "verified": "TRUE"
+  },
+  {
+    "id": 167,
+    "pokemon": "Spinda",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 168,
+    "pokemon": "Trapinch",
+    "primaryColor": "#F3A073",
+    "secondaryColor": "#A39689",
+    "verified": "TRUE"
+  },
+  {
+    "id": 169,
+    "pokemon": "Cacnea",
+    "primaryColor": "#B2D594",
+    "secondaryColor": "#679161",
+    "verified": "TRUE"
+  },
+  {
+    "id": 170,
+    "pokemon": "Swablu",
+    "primaryColor": "#7FC9E0",
+    "secondaryColor": "#ECF9FF",
+    "verified": "TRUE"
+  },
+  {
+    "id": 171,
+    "pokemon": "Zangoose",
+    "primaryColor": "#DBE1E5",
+    "secondaryColor": "#D5767A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 172,
+    "pokemon": "Seviper",
+    "primaryColor": "#5B788C",
+    "secondaryColor": "#F8E38C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 173,
+    "pokemon": "Lunatone",
+    "primaryColor": "#E1CD9A",
+    "secondaryColor": "#C35B50",
+    "verified": "TRUE"
+  },
+  {
+    "id": 174,
+    "pokemon": "Solrock",
+    "primaryColor": "#ED9B52",
+    "secondaryColor": "#FADD91",
+    "verified": "TRUE"
+  },
+  {
+    "id": 175,
+    "pokemon": "Barboach",
+    "primaryColor": "#C0CACF",
+    "secondaryColor": "#82BFF1",
+    "verified": "TRUE"
+  },
+  {
+    "id": 176,
+    "pokemon": "Corphish",
+    "primaryColor": "#E58965",
+    "secondaryColor": "#C0B09D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 177,
+    "pokemon": "Baltoy",
+    "primaryColor": "#DEE3B8",
+    "secondaryColor": "#D28473",
+    "verified": "TRUE"
+  },
+  {
+    "id": 178,
+    "pokemon": "Lileep",
+    "primaryColor": "#9E97D2",
+    "secondaryColor": "#DDA3B2",
+    "verified": "TRUE"
+  },
+  {
+    "id": 179,
+    "pokemon": "Anorith",
+    "primaryColor": "#A5BEA5",
+    "secondaryColor": "#E7817F",
+    "verified": "TRUE"
+  },
+  {
+    "id": 180,
+    "pokemon": "Feebas",
+    "primaryColor": "#6A84A3",
+    "secondaryColor": "#F7D99D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 181,
+    "pokemon": "Castform",
+    "primaryColor": "#CDD7E5",
+    "secondaryColor": "#EA33DB",
+    "verified": "TRUE"
+  },
+  {
+    "id": 182,
+    "pokemon": "Kecleon",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 183,
+    "pokemon": "Shuppet",
+    "primaryColor": "#5B6485",
+    "secondaryColor": "#B9E3FC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 184,
+    "pokemon": "Duskull",
+    "primaryColor": "#7C7E7B",
+    "secondaryColor": "#F6F8EC",
+    "verified": "TRUE"
+  },
+  {
+    "id": 185,
+    "pokemon": "Tropius",
+    "primaryColor": "#BAA48F",
+    "secondaryColor": "#7EC17A",
+    "verified": "TRUE"
+  },
+  {
+    "id": 186,
+    "pokemon": "Chimecho",
+    "primaryColor": "#C6D5E2",
+    "secondaryColor": "#D3606D",
+    "verified": "TRUE"
+  },
+  {
+    "id": 187,
+    "pokemon": "Absol",
+    "primaryColor": "#E3E8F3",
+    "secondaryColor": "#7486BA",
+    "verified": "TRUE"
+  },
+  {
+    "id": 188,
+    "pokemon": "Snorunt",
+    "primaryColor": "#E7D191",
+    "secondaryColor": "#4C4B48",
+    "verified": "TRUE"
+  },
+  {
+    "id": 189,
+    "pokemon": "Spheal",
+    "primaryColor": "#89A8D5",
+    "secondaryColor": "#ECE9CF",
+    "verified": "TRUE"
+  },
+  {
+    "id": 190,
+    "pokemon": "Clamperl",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 191,
+    "pokemon": "Relicanth",
+    "primaryColor": "#4E4643",
+    "secondaryColor": "#D8C09C",
+    "verified": "TRUE"
+  },
+  {
+    "id": 192,
+    "pokemon": "Luvdisc",
+    "primaryColor": "#EBB9C8",
+    "secondaryColor": "#D08A8E",
+    "verified": "TRUE"
+  },
+  {
+    "id": 193,
+    "pokemon": "Bagon",
+    "primaryColor": "#7998B5",
+    "secondaryColor": "#DAE3E4",
+    "verified": "TRUE"
+  },
+  {
+    "id": 194,
+    "pokemon": "Beldum",
+    "primaryColor": "#5F8CA8",
+    "secondaryColor": "#2F4B71",
+    "verified": "TRUE"
+  },
+  {
+    "id": 195,
+    "pokemon": "Regirock",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 196,
+    "pokemon": "Regice",
+    "primaryColor": "#6CA3C8",
+    "secondaryColor": "#94BFD6",
+    "verified": "TRUE"
+  },
+  {
+    "id": 197,
+    "pokemon": "Registeel",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 198,
+    "pokemon": "Latias",
+    "primaryColor": "#D8E2EB",
+    "secondaryColor": "#E47E85",
+    "verified": "TRUE"
+  },
+  {
+    "id": 199,
+    "pokemon": "Latios",
+    "primaryColor": "#D8E2EB",
+    "secondaryColor": "#4CA2D8",
+    "verified": "TRUE"
+  },
+  {
+    "id": 200,
+    "pokemon": "Kyogre",
+    "primaryColor": "#366EC5",
+    "secondaryColor": "#7E2532",
+    "verified": "TRUE"
+  },
+  {
+    "id": 201,
+    "pokemon": "Groudon",
+    "primaryColor": "#D04431",
+    "secondaryColor": "#363533",
+    "verified": "TRUE"
+  },
+  {
+    "id": 202,
+    "pokemon": "Rayquaza",
+    "primaryColor": "#5DA483",
+    "secondaryColor": "#DB7C80",
+    "verified": "TRUE"
+  },
+  {
+    "id": 203,
+    "pokemon": "Jirachi",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  },
+  {
+    "id": 204,
+    "pokemon": "Deoxys",
+    "primaryColor": "#FFFFFF",
+    "secondaryColor": "#000000",
+    "verified": "FALSE"
+  }
+]

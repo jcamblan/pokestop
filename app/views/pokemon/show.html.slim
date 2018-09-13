@@ -2,7 +2,9 @@
   .col-3.text-center
     p = link_to("<<", @pokemon.prev)
   .pokemon.col-6.mh-auto
+    .pokemon__sprite = display_sprite(@pokemon)
     .pokemon__name = @pokemon.name
+    .pokemon__candy = @pokemon.candy_image
     .pokemon__num = @pokemon.num
     .pokemon__types
       - @pokemon.types.each do |type|

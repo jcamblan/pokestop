@@ -23,7 +23,7 @@ class Pokemon < ApplicationRecord
   end
 
   def evolutions_as_pokemons
-    evolutions = Evolution.where(pokemon_id: id)
+    evolutions = Evolution.where(pokemon_id: id).order(:pokemon_id)
     evolutions_array = Array.new
     evolutions.each do |e|
       evolutions_array << Pokemon.find(e.after_evolution)

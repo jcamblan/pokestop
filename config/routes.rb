@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :pokemon
 
   namespace :admin do
+    resources :candies
     resources :events
     resources :alternative_skins
     resources :alternative_skin_categories
