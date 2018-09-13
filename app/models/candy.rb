@@ -4,4 +4,10 @@ class Candy < ApplicationRecord
     name
   end
 
+  def image_path
+
+  	return "candy/#{id}.png"
+
+  end
+
 end

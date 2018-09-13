@@ -5,7 +5,7 @@
         = display_sprite(pokemon)
       - if pokemon.is_evolution?
         .evolution__candies
-          span Bonbons : 
+          span = image_tag pokemon.candy.image_path, width: "30px"
           = evolution.candies
         - if evolution.item_id
           .evolution__item
