@@ -7,28 +7,63 @@
   margin:auto;
 }
 
+.pokemon__header {
+  @extend .row;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  background: grey;
+  //background: linear-gradient(to bottom right, $poison, $grass);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.pokemon__generation {
+  @extend .px-3;
+  @extend .py-1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  border-bottom-left-radius: 10px;
+}
+
+.pokemon__ball {
+  @extend .flex-column;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  background-color: $white;
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
 .pokemon__name {}
 .pokemon__type {
   @extend .btn;
 }
-.pokemon__type--bug { background: #A8B820; }
-.pokemon__type--dark { background: #705848; }
-.pokemon__type--dragon { background: #7038F8; }
-.pokemon__type--electric { background: #F8D030; }
-.pokemon__type--fighting { background: #C03028; }
-.pokemon__type--fire { background: #F08030; }
-.pokemon__type--flying { background: #A890F0; }
-.pokemon__type--fairy { background: #68A090; }
-.pokemon__type--ground { background: #E0C068; }
-.pokemon__type--ghost { background: #705898; }
-.pokemon__type--grass { background: #78C850; }
-.pokemon__type--ice { background: #98D8D8; }
-.pokemon__type--normal { background: #A8A878; }
-.pokemon__type--psychic { background: #F85888; }
-.pokemon__type--poison { background: #A040A0; }
-.pokemon__type--rock { background: #B8A038; }
-.pokemon__type--steel { background: #B8B8D0; }
-.pokemon__type--water { background: #6890F0; }
+.pokemon__type--bug      { background: $bug     ; }
+.pokemon__type--dark     { background: $dark    ; }
+.pokemon__type--dragon   { background: $dragon  ; }
+.pokemon__type--electric { background: $electric; }
+.pokemon__type--fighting { background: $fighting; }
+.pokemon__type--fire     { background: $fire    ; }
+.pokemon__type--flying   { background: $flying  ; }
+.pokemon__type--fairy    { background: $fairy   ; }
+.pokemon__type--ground   { background: $ground  ; }
+.pokemon__type--ghost    { background: $ghost   ; }
+.pokemon__type--grass    { background: $grass   ; }
+.pokemon__type--ice      { background: $ice     ; }
+.pokemon__type--normal   { background: $normal  ; }
+.pokemon__type--psychic  { background: $psychic ; }
+.pokemon__type--poison   { background: $poison  ; }
+.pokemon__type--rock     { background: $rock    ; }
+.pokemon__type--steel    { background: $steel   ; }
+.pokemon__type--water    { background: $water   ; }
 
 .pokemon_sprite--gray {
   -webkit-filter: grayscale(100%) opacity(20%);
@@ -49,8 +84,12 @@
   border-bottom-right-radius: 50px;
   margin: 5px;
   height: 60px;
-  width: 300px;
-  flex: 1 1 0;
+  width: 150px;
+}
+@media (min-width: 768px) {
+  .evolution {
+    width: 300px;
+  }
 }
 .evolution_sprite {
   @extend .d-flex;
@@ -61,6 +100,10 @@
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+}
+.evolution_name {
+  @extend .d-none;
+  @extend .d-md-block;
 }
 .evolution_sprite img {
   width: 50px;

@@ -1,9 +1,14 @@
-.row
-  .col-1.text-center
-    p = link_to("<<", @pokemon.prev)
-  .pokemon.col-6.mh-auto
-    .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
-    .pokemon__name = @pokemon.name
+.row.container-fluid
+  .pokemon.col.col-md-6.mh-auto
+    .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
+      .pokemon__generation
+        | Gen #
+        = @pokemon.generation.id
+        |  : 
+        = @pokemon.generation.name
+      .pokemon__ball
+        .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
+        .pokemon__name = @pokemon.name
     .pokemon__candy = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
     .pokemon__num = @pokemon.num
     .pokemon__types
@@ -12,5 +17,3 @@
     - if @evolutions
       .pokemon__evolutions
         = render 'evolution', pokemons: @evolutions, evolutions: []
-  .col-1.text-center
-    p = link_to(">>", @pokemon.next)
