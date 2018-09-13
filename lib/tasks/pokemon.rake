@@ -53,7 +53,6 @@ namespace :pokemons do
       if check_db.empty? #il faut vérifier que les évolutions qu'on va ajouter n'existent pas déjà
 
         next_evos.each do |e| 
-
           Evolution.create(pokemon_id: pokemon_id, after_evolution: after_evolution)
 
         end
