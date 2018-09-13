@@ -13,4 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery.min.js
+//= require jquery.easy-autocomplete
 //= require_tree .

@@ -4,9 +4,9 @@ class Scrapper
 
   def get_pokemon(num)
 
-  	pokemon = Pokemon.where(num: num).first
+    pokemon = Pokemon.where(num: num).first
 
-  	url =  Addressable::URI.normalized_encode("https://www.pokebip.com/pokedex/6G_p#{num}_#{pokemon.name}.html")
+    url =  Addressable::URI.normalized_encode("https://www.pokebip.com/pokedex/6G_p#{num}_#{pokemon.name}.html")
 
     doc = Nokogiri::HTML(open(url))
 
@@ -24,7 +24,7 @@ class Scrapper
         evol_id = Pokemon.where(num: evol_num).first.id
 
         pokemon_name = pokemon.name
-  		evol_name = Pokemon.find(evol_id).name
+        evol_name = Pokemon.find(evol_id).name
 
         title = "#{pokemon_name} > #{evol_name}"
 
@@ -37,7 +37,7 @@ class Scrapper
         end
 
       end
-    	
+    
     end
 
   end

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  get :search, controller: :main
+
   get 'pokedex/json', to: 'pokemon#share'
   resources :pokemon
+  resources :item
+  resources :generation
 
   namespace :admin do
     resources :candies
