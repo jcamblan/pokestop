@@ -8,7 +8,9 @@ class Evolution < ApplicationRecord
     title
   end
 
+  def item
+    return Item.find(item_id)
+  end
+
   belongs_to :pokemon
-  belongs_to :item
-  # belongs_to :item
 end

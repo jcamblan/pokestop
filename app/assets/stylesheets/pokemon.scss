@@ -48,18 +48,19 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   margin: 5px;
-  width: 400px;
   height: 60px;
+  width: 300px;
+  flex: 1 1 0;
 }
 .evolution_sprite {
   @extend .d-flex;
   @extend .align-items-center;
-  @extend .col-8;
   @extend .text-left;
   background: linear-gradient(to right, #a2db95, #24ccaa);
   border-radius: 50px;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
 }
 .evolution_sprite img {
   width: 50px;
@@ -71,4 +72,9 @@
   @extend .d-flex;
   @extend .align-items-center;
   @extend .mx-auto;
+  @extend .px-3
+}
+.evolution__evolutions {
+  @extend .d-flex;
+  @extend .justify-content-center;
 }

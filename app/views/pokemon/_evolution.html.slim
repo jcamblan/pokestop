@@ -1,18 +1,21 @@
 .row.text-center
   - pokemons.zip(evolutions) do |pokemon, evolution|
     .col.pokemon__evolution
+
       .evolution
         .evolution_sprite class=("evolution_sprite--gray" unless pokemon.generation.on_prod)
           = display_sprite(pokemon)
           = link_to pokemon.name, pokemon
-        - if pokemon.is_evolution?
+        - if pokemon.is_evolution? && evolution.candies
           .evolution__candies
-            span = image_tag pokemon.candy.image_path, width: "30px" if pokemon.candy
+            = image_tag pokemon.candy.image_path, width: "30px" if pokemon.candy
             = evolution.candies if evolution.candies && evolution.candies > 0
             - if evolution.item_id
               | &nbsp;
               = image_tag evolution.item.illustration.asset.url, width: "25px", height: "25px"
-              span &nbsp; 1
+              | &nbsp;1
+      = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?
       - if pokemon.can_evolve?
         .evolution__evolutions
           = render 'evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions
+
