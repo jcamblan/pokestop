@@ -15,4 +15,16 @@ class MainController < ApplicationController
     end 
   end
 
+  def export
+
+    @generations = Generation.all
+    @types = Type.all
+    @candies = Candy.all
+    @pokemons = Pokemon.all.order(:num)
+    @evolutions = Evolution.all
+    @item_categories = ItemCategory.all
+    @items = Item.all
+
+  end
+
 end

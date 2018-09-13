@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_073304) do
+ActiveRecord::Schema.define(version: 2018_09_13_073232) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "alternative_skin_categories", force: :cascade do |t|
     t.string "name"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
 
   create_table "alternative_skins", force: :cascade do |t|
     t.string "name"
-    t.integer "pokemon_id"
-    t.integer "alternative_skin_category_id"
+    t.bigint "pokemon_id"
+    t.bigint "alternative_skin_category_id"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,10 +64,10 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
 
   create_table "evolutions", force: :cascade do |t|
     t.integer "first_form"
-    t.integer "pokemon_id"
+    t.bigint "pokemon_id"
     t.integer "after_evolution"
     t.integer "candies"
-    t.integer "item_id"
+    t.bigint "item_id"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["pokemon_id"], name: "index_evolutions_on_pokemon_id"
   end
 
-  create_table "fae_changes", force: :cascade do |t|
+  create_table "fae_changes", id: :serial, force: :cascade do |t|
     t.integer "changeable_id"
     t.string "changeable_type"
     t.integer "user_id"
@@ -86,7 +89,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["user_id"], name: "index_fae_changes_on_user_id"
   end
 
-  create_table "fae_files", force: :cascade do |t|
+  create_table "fae_files", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "asset"
     t.string "fileable_type"
@@ -103,7 +106,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["fileable_type", "fileable_id"], name: "index_fae_files_on_fileable_type_and_fileable_id"
   end
 
-  create_table "fae_images", force: :cascade do |t|
+  create_table "fae_images", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "asset"
     t.string "imageable_type"
@@ -122,7 +125,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["imageable_type", "imageable_id"], name: "index_fae_images_on_imageable_type_and_imageable_id"
   end
 
-  create_table "fae_options", force: :cascade do |t|
+  create_table "fae_options", id: :serial, force: :cascade do |t|
     t.string "title"
     t.string "time_zone"
     t.string "colorway"
@@ -134,14 +137,14 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["singleton_guard"], name: "index_fae_options_on_singleton_guard", unique: true
   end
 
-  create_table "fae_roles", force: :cascade do |t|
+  create_table "fae_roles", id: :serial, force: :cascade do |t|
     t.string "name"
     t.integer "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "fae_static_pages", force: :cascade do |t|
+  create_table "fae_static_pages", id: :serial, force: :cascade do |t|
     t.string "title"
     t.integer "position", default: 0
     t.boolean "on_stage", default: true
@@ -152,7 +155,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["slug"], name: "index_fae_static_pages_on_slug"
   end
 
-  create_table "fae_text_areas", force: :cascade do |t|
+  create_table "fae_text_areas", id: :serial, force: :cascade do |t|
     t.string "label"
     t.text "content"
     t.integer "position", default: 0
@@ -171,7 +174,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["position"], name: "index_fae_text_areas_on_position"
   end
 
-  create_table "fae_text_fields", force: :cascade do |t|
+  create_table "fae_text_fields", id: :serial, force: :cascade do |t|
     t.string "contentable_type"
     t.integer "contentable_id"
     t.string "attached_as"
@@ -189,7 +192,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.index ["position"], name: "index_fae_text_fields_on_position"
   end
 
-  create_table "fae_users", force: :cascade do |t|
+  create_table "fae_users", id: :serial, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -240,7 +243,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.string "name"
     t.text "desc"
     t.integer "position"
-    t.integer "item_category_id"
+    t.bigint "item_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_category_id"], name: "index_items_on_item_category_id"
@@ -251,13 +254,13 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.string "num"
     t.integer "type_1"
     t.integer "type_2"
-    t.integer "candy_id"
+    t.string "candy_id"
     t.integer "candy_distance"
     t.integer "pc_min"
     t.integer "pc_max"
     t.integer "pv_min"
     t.integer "pv_max"
-    t.integer "generation_id"
+    t.bigint "generation_id"
     t.text "pokedex_entry"
     t.text "comment"
     t.integer "position"
@@ -267,8 +270,8 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
   end
 
   create_table "pokemons_types", id: false, force: :cascade do |t|
-    t.integer "pokemon_id"
-    t.integer "type_id"
+    t.bigint "pokemon_id"
+    t.bigint "type_id"
     t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
     t.index ["type_id"], name: "index_pokemons_types_on_type_id"
   end
@@ -281,4 +284,10 @@ ActiveRecord::Schema.define(version: 2018_09_13_073304) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "alternative_skins", "alternative_skin_categories"
+  add_foreign_key "alternative_skins", "pokemons"
+  add_foreign_key "evolutions", "items"
+  add_foreign_key "evolutions", "pokemons"
+  add_foreign_key "items", "item_categories"
+  add_foreign_key "pokemons", "generations"
 end

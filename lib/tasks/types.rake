@@ -1,23 +1,19 @@
 namespace :types do
   desc "TODO"
 
-  task update: :environment do
-    pokedex = Pokemon.all
+  task create: :environment do
+    types_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_types.json'))))
 
-    pokedex.each do |pokemon|
+    types_file.each do |t|
 
-      type1 = Type.find(pokemon.type_1)
-      if pokemon.type_2
-        type2 = Type.find(pokemon.type_2)
-      end
+      check_db = Type.where(name: t.dig('fr'))
 
-      pokemon.types << type1 unless type1.nil?
-
-      if type2
-        pokemon.types << type2
+      if check_db.empty?
+        Type.create(name: t.dig('fr'))
       end
 
     end
+
   end
 
 end

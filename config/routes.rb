@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get :search, controller: :main
+  get :export, controller: :main
 
   get 'pokedex/json', to: 'pokemon#share'
   resources :pokemon

@@ -76,7 +76,7 @@ class Scrapper
 
   	evolutions.each do |e|
 
-  	  if e.first_form == 0
+  	  if e.first_form.nil?
 
   	  	pokemon_num = Pokemon.find(e.pokemon_id).num
 

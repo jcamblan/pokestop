@@ -13,7 +13,7 @@
     .pokemon__num = @pokemon.num
     .pokemon__types
       - @pokemon.types.each do |type|
-        .pokemon__type class=(type.class_css) = type.name
+        .pokemon__type class=("pokemon__type--#{type.name.downcase}") = type.name
     - if @evolutions
       .pokemon__evolutions
         = render 'evolution', pokemons: @evolutions, evolutions: []

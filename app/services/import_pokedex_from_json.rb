@@ -1,64 +1,64 @@
 class ImportPokedexFromJson
 
-  def update_gen
+  # def update_gen
 
-    pokedex = Pokemon.all
+  #   pokedex = Pokemon.all
 
-    pokedex.each do |p|
+  #   pokedex.each do |p|
 
-      if p.id >= 1 && p.id <= 151
-        generation_id = 1
-      elsif p.id >= 152 && p.id <= 251
-        generation_id = 2
-      elsif p.id >= 252 && p.id <= 386
-        generation_id = 3
-      elsif p.id >= 387 && p.id <= 493
-        generation_id = 4
-      elsif p.id >= 494 && p.id <= 649
-        generation_id = 5
-      elsif p.id >= 650 && p.id <= 721
-        generation_id = 6
-      elsif p.id >= 722 && p.id <= 807
-        generation_id = 7
-      end
+  #     if p.id >= 1 && p.id <= 151
+  #       generation_id = 1
+  #     elsif p.id >= 152 && p.id <= 251
+  #       generation_id = 2
+  #     elsif p.id >= 252 && p.id <= 386
+  #       generation_id = 3
+  #     elsif p.id >= 387 && p.id <= 493
+  #       generation_id = 4
+  #     elsif p.id >= 494 && p.id <= 649
+  #       generation_id = 5
+  #     elsif p.id >= 650 && p.id <= 721
+  #       generation_id = 6
+  #     elsif p.id >= 722 && p.id <= 807
+  #       generation_id = 7
+  #     end
 
-      p.generation_id = generation_id
-      p.save
+  #     p.generation_id = generation_id
+  #     p.save
 
-    end
+  #   end
 
-  end
+  # end
 
-  def get_pokemons
-    pokedex_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_megapokedex.json'))))
+  # def get_pokemons
+  #   pokedex_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_megapokedex.json'))))
 
-    pokedex_file.each do |p|
+  #   pokedex_file.each do |p|
 
-      #byebug
+  #     #byebug
 
-      check_db = Pokemon.where(num: p.dig('num'))
+  #     check_db = Pokemon.where(num: p.dig('num'))
 
-      if check_db.empty?
+  #     if check_db.empty?
 
-        type_1 = Type.where(name: p.dig('type_1')).first.id
+  #       type_1 = Type.where(name: p.dig('type_1')).first.id
 
         
 
-        if p.dig('type_2') == ""
-          type_2 = ""
+  #       if p.dig('type_2') == ""
+  #         type_2 = ""
           
-        else
+  #       else
           
-          type_2 = Type.where(name: p.dig('type_2')).first.id
-        end
+  #         type_2 = Type.where(name: p.dig('type_2')).first.id
+  #       end
 
-        Pokemon.create(name: p.dig('name_fr'), num: p.dig('num'), type_1: type_1, type_2: type_2, generation_id: 1)
+  #       Pokemon.create(name: p.dig('name_fr'), num: p.dig('num'), type_1: type_1, type_2: type_2, generation_id: 1)
 
-      end
+  #     end
 
-    end
+  #   end
 
-  end
+  # end
 
   def update_pokemons
 
@@ -83,20 +83,20 @@ class ImportPokedexFromJson
 
   end
 
-  def get_types
-    types_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_types.json'))))
+  # def get_types
+  #   types_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_types.json'))))
 
-    types_file.each do |t|
+  #   types_file.each do |t|
 
-      check_db = Type.where(name: t.dig('fr'))
+  #     check_db = Type.where(name: t.dig('fr'))
 
-      if check_db.empty?
-        Type.create(name: t.dig('fr'))
-      end
+  #     if check_db.empty?
+  #       Type.create(name: t.dig('fr'))
+  #     end
 
-    end
+  #   end
 
-  end
+  # end
 
   def get_evolutions # sauf candies et item
 

@@ -49,10 +49,10 @@ namespace :candies do
 
       if Candy.where(name: "Bonbon #{pokemon.name}").first
         pokemon.candy_id = Candy.where(name: "Bonbon #{pokemon.name}").first.id
-      elsif Candy.where(name: "Bonbon #{pokemon.first_form.first.name}").first
-        pokemon.candy_id = Candy.where(name: "Bonbon #{pokemon.first_form.first.name}").first.id
+      elsif Candy.where(name: "Bonbon #{pokemon.first_form.name}").first
+        pokemon.candy_id = Candy.where(name: "Bonbon #{pokemon.first_form.name}").first.id
       else
-        pokemon.candy_id = nil
+        pokemon.candy_id = 1
       end
 
       pokemon.save

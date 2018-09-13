@@ -9,7 +9,7 @@ class Evolution < ApplicationRecord
   end
 
   def item
-    return Item.find(item_id)
+    return Item.find(item_id) if item_id
   end
 
   belongs_to :pokemon
