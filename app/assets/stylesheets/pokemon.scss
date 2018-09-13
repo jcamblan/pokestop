@@ -29,3 +29,10 @@
 .pokemon__type--rock { background: #B8A038; }
 .pokemon__type--steel { background: #B8B8D0; }
 .pokemon__type--water { background: #6890F0; }
+
+.pokemon_sprite--gray {
+  -webkit-filter: grayscale(100%) opacity(20%);
+}
+.evolution_sprite--gray {
+  @extend .pokemon_sprite--gray;
+}

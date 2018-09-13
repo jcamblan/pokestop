@@ -2,7 +2,7 @@
   .col-3.text-center
     p = link_to("<<", @pokemon.prev)
   .pokemon.col-6.mh-auto
-    .pokemon__sprite = display_sprite(@pokemon)
+    .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
     .pokemon__name = @pokemon.name
     .pokemon__candy = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
     .pokemon__num = @pokemon.num
