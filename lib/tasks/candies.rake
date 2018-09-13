@@ -41,4 +41,25 @@ namespace :candies do
 
   end
 
+  task assign_pokemons: :environment do
+
+    pokemons = Pokemon.all
+
+    pokemons.each do |pokemon|
+
+      if Candy.where(name: "Bonbon #{pokemon.name}").first
+        pokemon.candy_id = Candy.where(name: "Bonbon #{pokemon.name}").first.id
+      elsif Candy.where(name: "Bonbon #{pokemon.first_form.first.name}").first
+        pokemon.candy_id = Candy.where(name: "Bonbon #{pokemon.first_form.first.name}").first.id
+      else
+        pokemon.candy_id = nil
+      end
+
+      pokemon.save
+
+    end
+
+
+  end
+
 end
