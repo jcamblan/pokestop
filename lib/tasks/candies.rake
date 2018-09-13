@@ -25,9 +25,9 @@ namespace :candies do
     candies.each do |candy|
 
       first_image  = MiniMagick::Image.open(File.join(Rails.root, 'app', 'assets', 'images', 'candy', "candy_base_color.png"))
-      first_image.merge! ["-fill", candy.primary_color, "-colorize", "50%"]
+      first_image.merge! ["-fill", candy.primary_color, "-colorize", "100%"]
       second_image = MiniMagick::Image.open(File.join(Rails.root, 'app', 'assets', 'images', 'candy', "candy_secondary_color.png"))
-      second_image.merge! ["-fill", candy.secondary_color, "-colorize", "50%"]
+      second_image.merge! ["-fill", candy.secondary_color, "-colorize", "100%"]
       third_image = MiniMagick::Image.open(File.join(Rails.root, 'app', 'assets', 'images', 'candy', "candy_highlight.png"))
       first_step = first_image.composite(second_image) do |c|
         c.compose "Over"
