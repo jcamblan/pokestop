@@ -8,14 +8,10 @@ namespace :candies do
 
     candies_file.each do |candy|
 
-      name_en = candy['pokemon']
-      name_fr = pokedex_file.select { |p| p['name_en'] == name_en}.first['name_fr']
-      primary_color = candy['primaryColor']
-      secondary_color = candy['secondaryColor']
-
+      name_fr = pokedex_file.select { |p| p['name_en'] == candy['pokemon']}.first['name_fr']
 
       unless Candy.where(name: "Bonbon #{name_fr}").first
-        Candy.create(name: "Bonbon #{name_fr}", primary_color: primary_color, secondary_color: secondary_color)
+        Candy.create(name: "Bonbon #{name_fr}", primary_color: candy['primaryColor'], secondary_color: candy['secondaryColor'])
       end
 
     end 
@@ -34,10 +30,10 @@ namespace :candies do
       second_image.merge! ["-fill", candy.secondary_color, "-colorize", "50%"]
       third_image = MiniMagick::Image.open(File.join(Rails.root, 'app', 'assets', 'images', 'candy', "candy_highlight.png"))
       first_step = first_image.composite(second_image) do |c|
-        c.compose "Over"    # OverCompositeOp
+        c.compose "Over"
       end
       result = first_step.composite(third_image) do |c|
-        c.compose "Over"    # OverCompositeOp
+        c.compose "Over"
       end
       result.write "#{Rails.root}/app/assets/images/candy/#{candy.id}.png"
 
