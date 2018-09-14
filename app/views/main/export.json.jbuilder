@@ -5,6 +5,14 @@ json.generations do
   end
 end
 
+json.candies do 
+  json.array!(@candies) do |candy|
+    json.name candy.name
+    json.primary_color candy.primary_color
+    json.secondary_color candy.secondary_color
+  end
+end
+
 json.types do 
   json.array!(@types) do |type|
     json.name type.name
@@ -31,11 +39,9 @@ json.pokemons do
     json.num pokemon.num
     json.type_1 pokemon.types.first.name
     json.type_2 pokemon.types.second.name if pokemon.types.second
-    json.candy pokemon.candy.name
+    json.candy pokemon.candy.name if pokemon.candy
     json.candy_distance pokemon.candy_distance
-    json.pc_min pokemon.pc_min
     json.pc_max pokemon.pc_max
-    json.pv_min pokemon.pv_min
     json.pv_max pokemon.pv_max
     json.generation pokemon.generation_id
     json.pokedex_entry pokemon.pokedex_entry
