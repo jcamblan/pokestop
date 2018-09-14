@@ -51,7 +51,7 @@ end
 
 json.evolutions do 
   json.array!(@evolutions) do |evolution|
-    json.name evolution.title
+    json.title evolution.title
     json.first_form Pokemon.find(evolution.first_form).name
     json.before_evolution Pokemon.find(evolution.pokemon_id).name
     json.after_evolution Pokemon.find(evolution.after_evolution).name
