@@ -12,7 +12,7 @@ class Import
 
 
   def import_everything
-    create_generation
+    create_generations
     create_candies
     create_types
     create_items_categories
