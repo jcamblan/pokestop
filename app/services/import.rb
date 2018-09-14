@@ -111,7 +111,7 @@ class Import
 
   def create_evolutions
   	@@evolutions.each do |evolution|
-      create_evolution(evolution) unless Evolution.where(name: evolution['title']).first
+      create_evolution(evolution) unless Evolution.where(title: evolution['title']).first
   	end
   end
 
