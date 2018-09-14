@@ -1,5 +1,9 @@
 class MainController < ApplicationController
 
+  def index
+  
+  end
+
   def search
     @pokemons = Pokemon.ransack(name_cont: params[:q]).result(distinct: true)
     @items = Item.ransack(name_cont: params[:q]).result(distinct: true)
@@ -16,7 +20,6 @@ class MainController < ApplicationController
   end
 
   def export
-
     @generations = Generation.all
     @types = Type.all
     @candies = Candy.all
@@ -24,7 +27,6 @@ class MainController < ApplicationController
     @evolutions = Evolution.all
     @item_categories = ItemCategory.all
     @items = Item.all
-
   end
 
 end

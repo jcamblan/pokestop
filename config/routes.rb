@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+  root to: 'main#index'
+
   get :search, controller: :main
   get :export, controller: :main
 
-  get 'pokedex/json', to: 'pokemon#share'
-  resources :pokemon
-  resources :item
-  resources :generation
+  resources :pokemon, only: [:index, :show]
+  resources :item, only: [:index, :show]
+  resources :generation, only: [:index, :show]
 
   namespace :admin do
     resources :candies

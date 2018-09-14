@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_073232) do
+ActiveRecord::Schema.define(version: 2018_09_14_113339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
   end
 
   create_table "candies", force: :cascade do |t|
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.string "secondary_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
   end
 
   create_table "events", force: :cascade do |t|
@@ -72,6 +74,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.string "title_en"
     t.index ["item_id"], name: "index_evolutions_on_item_id"
     t.index ["pokemon_id"], name: "index_evolutions_on_pokemon_id"
   end
@@ -237,6 +240,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
   end
 
   create_table "items", force: :cascade do |t|
@@ -246,6 +250,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.bigint "item_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
     t.index ["item_category_id"], name: "index_items_on_item_category_id"
   end
 
@@ -266,6 +271,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
     t.index ["generation_id"], name: "index_pokemons_on_generation_id"
   end
 
@@ -282,6 +288,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_073232) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_en"
   end
 
   add_foreign_key "alternative_skins", "alternative_skin_categories"

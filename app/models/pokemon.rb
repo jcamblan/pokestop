@@ -19,7 +19,7 @@ class Pokemon < ApplicationRecord
   def first_form
     if can_evolve? || is_evolution?
       first_form_id = Evolution.where(pokemon_id: id).or(Evolution.where(after_evolution: id)).first.first_form
-      pokemon = Pokemon.where(id: first_form_id)
+      pokemon = Pokemon.where(id: first_form_id) #le where à la place du find est voulu pour pouvoir lancer un .each dans le partial _evolution
       return pokemon
     end
   end

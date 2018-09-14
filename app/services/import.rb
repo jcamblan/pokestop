@@ -42,7 +42,7 @@ class Import
   end
 
   def get_candy(candy)
-    Candy.create(name: candy['name'], primary_color: candy['primary_color'], secondary_color: candy['secondary_color'])
+    Candy.create(name: candy['name'], name_en: candy['name_en'], primary_color: candy['primary_color'], secondary_color: candy['secondary_color'])
   end
 
 ## PUIS LES TYPES DE POKEMONS
@@ -54,7 +54,7 @@ class Import
   end
 
   def create_type(type)
-    Type.create(name: type['name'])
+    Type.create(name: type['name'], name_en: type['name_en'])
   end
 
 ## PUIS LES CATEGORIES D'OBJETS
@@ -66,7 +66,7 @@ class Import
   end
 
   def create_item_category(item_category)
-    ItemCategory.create(name: item_category['name'])
+    ItemCategory.create(name: item_category['name'], name_en: item_category['name_en'])
   end
 
 ## PUIS LES OBJETS
@@ -80,6 +80,7 @@ class Import
   def create_item(item)
     Item.create(
       name: item['name'],
+      name_en: item['name_en'],
       desc: item['description'],
       category_id: Category.where(name: item['category']).first.id)
   end
@@ -95,6 +96,7 @@ class Import
   def create_pokemon(pokemon)
     p = Pokemon.new
     p.name = pokemon['name']
+    p.name_en = pokemon['name_en']
     p.num = pokemon['num']
     p.candy_id = Candy.where(name: pokemon['candy']).first.id if pokemon['candy']
     p.candy_distance = pokemon['candy_distance']
@@ -118,14 +120,13 @@ class Import
   def create_evolution(evolution)
     e = Evolution.new
     e.title = evolution['title']
-    e.first_form = Pokemon.where(name: evolution['first_form']).first.id
-    e.pokemon_id = Pokemon.where(name: evolution['before_evolution']).first.id
-    e.after_evolution = Pokemon.where(name: evolution['after_evolution']).first.id
+    e.title_en = evolution['title_en']
+    e.first_form = Pokemon.where(num: evolution['first_form']).first.id
+    e.pokemon_id = Pokemon.where(num: evolution['before_evolution']).first.id
+    e.after_evolution = Pokemon.where(num: evolution['after_evolution']).first.id
     e.candies = evolution['candies']
     e.item = Item.where(name: evolution['item']).first.id if evolution['item']
     e.save
   end
-
-
 
 end

@@ -8,6 +8,7 @@ end
 json.candies do 
   json.array!(@candies) do |candy|
     json.name candy.name
+    json.name_en candy.name_en
     json.primary_color candy.primary_color
     json.secondary_color candy.secondary_color
   end
@@ -16,6 +17,7 @@ end
 json.types do 
   json.array!(@types) do |type|
     json.name type.name
+    json.name_en type.name_en
   end
 end
 
@@ -28,6 +30,7 @@ end
 json.items do 
   json.array!(@items) do |item|
     json.name item.name
+    json.name_en item.name_en
     json.description item.desc
     json.category item.category.name
   end
@@ -36,6 +39,7 @@ end
 json.pokemons do 
   json.array!(@pokemons) do |pokemon|
     json.name pokemon.name
+    json.name_en pokemon.name_en
     json.num pokemon.num
     json.type_1 pokemon.types.first.name
     json.type_2 pokemon.types.second.name if pokemon.types.second
@@ -52,9 +56,10 @@ end
 json.evolutions do 
   json.array!(@evolutions) do |evolution|
     json.title evolution.title
-    json.first_form Pokemon.find(evolution.first_form).name
-    json.before_evolution Pokemon.find(evolution.pokemon_id).name
-    json.after_evolution Pokemon.find(evolution.after_evolution).name
+    json.title_en evolution.title_en
+    json.first_form Pokemon.find(evolution.first_form).num
+    json.before_evolution Pokemon.find(evolution.pokemon_id).num
+    json.after_evolution Pokemon.find(evolution.after_evolution).num
     json.candies evolution.candies
     json.item evolution.item.name if evolution.item
   end
