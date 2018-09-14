@@ -103,7 +103,7 @@ class Import
     p.generation_id = pokemon['generation']
     p.pokedex_entry = pokemon['pokedex_entry']
     p.comment = pokemon['comment']
-    p.types << Type.where(name: pokemon['type_1']).or(Type.where(name: pokemon['type_2'])
+    p.types << Type.where(name: pokemon['type_1']).or(Type.where(name: pokemon['type_2']))
     p.save
   end
 
