@@ -12,20 +12,20 @@ class Import
 
 
   def import_everything
-    create_generations
-    create_candies
-    create_types
-    create_items_categories
-    create_items
-    create_pokemons
-    create_evolutions
+    create_generations if @@generations
+    create_candies if @@candies
+    create_types if @@types
+    create_items_categories if @@items_categories
+    create_items if @@items
+    create_pokemons if @@pokemons
+    create_evolutions if @@evolutions
   end 
 
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
 
   def create_generations
   	@@generations.each do |generation|
-      create_generation(generation)
+      create_generation(generation) unless Generation.where(name: generation['name']).first
   	end
   end
 
@@ -37,7 +37,7 @@ class Import
 
   def create_candies
   	@@candies.each do |candy|
-      get_candy(candy)
+      get_candy(candy) unless Candy.where(name: candy['name']).first
   	end
   end
 
@@ -49,7 +49,7 @@ class Import
 
   def create_types
   	@@types.each do |type|
-      create_type(type)
+      create_type(type) unless Type.where(name: type['name']).first
   	end
   end
 
@@ -61,7 +61,7 @@ class Import
 
   def create_items_categories
   	@@items_categories.each do |item_category|
-      create_item_category(item_category)
+      create_item_category(item_category) unless ItemCategory.where(name: item_category['name']).first
   	end
   end
 
@@ -73,7 +73,7 @@ class Import
 
   def create_items
   	@@items.each do |item|
-      create_item(item)
+      create_item(item) unless Item.where(name: item['name']).first
   	end
   end
 
@@ -88,7 +88,7 @@ class Import
 
   def create_pokemons
   	@@pokemons.each do |pokemon|
-      create_pokemon(pokemon)
+      create_pokemon(pokemon) unless Pokemon.where(name: pokemon['name']).first
   	end
   end
 
@@ -111,7 +111,7 @@ class Import
 
   def create_evolutions
   	@@evolutions.each do |evolution|
-      create_evolution(evolution)
+      create_evolution(evolution) unless Evolution.where(name: evolution['title']).first
   	end
   end
 
