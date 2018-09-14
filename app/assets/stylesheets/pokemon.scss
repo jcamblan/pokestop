@@ -91,7 +91,7 @@
     width: 300px;
   }
 }
-.evolution_sprite {
+.evolution__sprite {
   @extend .d-flex;
   @extend .align-items-center;
   @extend .text-left;
@@ -101,11 +101,11 @@
   padding-right: 15px;
   width: 100%;
 }
-.evolution_name {
+.evolution__name {
   @extend .d-none;
   @extend .d-md-block;
 }
-.evolution_sprite img {
+.evolution__sprite img {
   width: 50px;
 }
 .evolution_sprite--gray {

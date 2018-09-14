@@ -17,9 +17,11 @@ class Pokemon < ApplicationRecord
   end
 
   def first_form
-    first_form_id = Evolution.where(pokemon_id: id).or(Evolution.where(after_evolution: id)).first.first_form
-    pokemon = Pokemon.where(id: first_form_id)
-    return pokemon
+    if can_evolve? || is_evolution?
+      first_form_id = Evolution.where(pokemon_id: id).or(Evolution.where(after_evolution: id)).first.first_form
+      pokemon = Pokemon.where(id: first_form_id)
+      return pokemon
+    end
   end
 
   def evolutions_as_pokemons
@@ -39,8 +41,12 @@ class Pokemon < ApplicationRecord
     Pokemon.where("id > ?", id).order("id ASC").first || Pokemon.first
   end
 
+  def candy
+    Candy.find(candy_id) if candy_id
+  end
+
   belongs_to :generation
   has_and_belongs_to_many :types
   has_many :evolutions
-  belongs_to :candy
+  #belongs_to :candy
 end

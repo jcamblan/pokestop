@@ -41,26 +41,26 @@ namespace :pokemons do
 
   end
 
-  task get_evolutions: :environment do
-    pokedex_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_pokedex.json'))))    
+  # task get_evolutions: :environment do
+  #   pokedex_file = JSON.parse(File.read(File.open(File.join(Rails.root, 'lib', 'assets', '_pokedex.json'))))    
 
-    pokedex_file.reverse_each do |p|
+  #   pokedex_file.reverse_each do |p|
 
-      pokemon = Pokemon.where(num: p.dig('num')).first
-      check_db = Evolution.where(pokemon_id: pokemon.id)
-      next_evos = p.dig('next_evolution')
+  #     pokemon = Pokemon.where(num: p.dig('num')).first
+  #     check_db = Evolution.where(pokemon_id: pokemon.id)
+  #     next_evos = p.dig('next_evolution')
 
-      if check_db.empty? #il faut vérifier que les évolutions qu'on va ajouter n'existent pas déjà
+  #     if check_db.empty? #il faut vérifier que les évolutions qu'on va ajouter n'existent pas déjà
 
-        next_evos.each do |e| 
-          Evolution.create(pokemon_id: pokemon_id, after_evolution: after_evolution)
+  #       next_evos.each do |e| 
+  #         Evolution.create(pokemon_id: pokemon_id, after_evolution: after_evolution)
 
-        end
+  #       end
 
-      end
+  #     end
 
-    end
-  end
+  #   end
+  # end
 
   task update_types: :environment do
     pokedex = Pokemon.all

@@ -6,7 +6,7 @@
     = fae_input f, :num
     = fae_pulldown f, :type_1, search: true, collection: Type.order(:name)
     = fae_pulldown f, :type_2, search: true, collection: Type.order(:name)
-    = fae_pulldown f, :candy, search: true, collection: Candy.order(:name)
+    = fae_pulldown f, :candy_id, search: true, collection: Candy.order(:name)
     = fae_input f, :candy_distance
     = fae_input f, :pc_min
     = fae_input f, :pc_max
