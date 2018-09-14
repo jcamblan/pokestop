@@ -24,9 +24,9 @@ class Import
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
 
   def create_generations
-  	@@generations.each do |generation|
+    @@generations.each do |generation|
       create_generation(generation) unless Generation.where(name: generation['name']).first
-  	end
+    end
   end
 
   def create_generation(generation)
@@ -36,9 +36,9 @@ class Import
 ## PUIS LES BONBONS
 
   def create_candies
-  	@@candies.each do |candy|
+    @@candies.each do |candy|
       get_candy(candy) unless Candy.where(name: candy['name']).first
-  	end
+    end
   end
 
   def get_candy(candy)
@@ -48,9 +48,9 @@ class Import
 ## PUIS LES TYPES DE POKEMONS
 
   def create_types
-  	@@types.each do |type|
+    @@types.each do |type|
       create_type(type) unless Type.where(name: type['name']).first
-  	end
+    end
   end
 
   def create_type(type)
@@ -60,9 +60,9 @@ class Import
 ## PUIS LES CATEGORIES D'OBJETS
 
   def create_items_categories
-  	@@items_categories.each do |item_category|
+    @@items_categories.each do |item_category|
       create_item_category(item_category) unless ItemCategory.where(name: item_category['name']).first
-  	end
+    end
   end
 
   def create_item_category(item_category)
@@ -72,9 +72,9 @@ class Import
 ## PUIS LES OBJETS
 
   def create_items
-  	@@items.each do |item|
+    @@items.each do |item|
       create_item(item) unless Item.where(name: item['name']).first
-  	end
+    end
   end
 
   def create_item(item)
@@ -87,9 +87,9 @@ class Import
 ## PUIS LES POKEMONS
 
   def create_pokemons
-  	@@pokemons.each do |pokemon|
+    @@pokemons.each do |pokemon|
       create_pokemon(pokemon) unless Pokemon.where(name: pokemon['name']).first
-  	end
+    end
   end
 
   def create_pokemon(pokemon)
@@ -110,9 +110,9 @@ class Import
 ## PUIS LES EVOLUTIONS
 
   def create_evolutions
-  	@@evolutions.each do |evolution|
+    @@evolutions.each do |evolution|
       create_evolution(evolution) unless Evolution.where(title: evolution['title']).first
-  	end
+    end
   end
 
   def create_evolution(evolution)

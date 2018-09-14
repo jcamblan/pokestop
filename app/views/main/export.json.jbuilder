@@ -35,7 +35,7 @@ end
 
 json.pokemons do 
   json.array!(@pokemons) do |pokemon|
-  	json.name pokemon.name
+    json.name pokemon.name
     json.num pokemon.num
     json.type_1 pokemon.types.first.name
     json.type_2 pokemon.types.second.name if pokemon.types.second

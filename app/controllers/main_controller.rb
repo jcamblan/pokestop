@@ -1,11 +1,11 @@
 class MainController < ApplicationController
 
   def search
-  	@pokemons = Pokemon.ransack(name_cont: params[:q]).result(distinct: true)
-  	@items = Item.ransack(name_cont: params[:q]).result(distinct: true)
-  	@generations = Generation.ransack(name_cont: params[:q]).result(distinct: true)
+    @pokemons = Pokemon.ransack(name_cont: params[:q]).result(distinct: true)
+    @items = Item.ransack(name_cont: params[:q]).result(distinct: true)
+    @generations = Generation.ransack(name_cont: params[:q]).result(distinct: true)
 
-  	respond_to do |format| 
+    respond_to do |format| 
       format.html {}
       format.json {
         @pokemons = @pokemons.limit(5)
