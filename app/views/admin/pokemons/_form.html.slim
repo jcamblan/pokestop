@@ -3,6 +3,7 @@
 
   main.content
     = fae_input f, :name
+    = fae_input f, :name_en
     = fae_input f, :num
     = fae_pulldown f, :type_1, search: true, collection: Type.order(:name)
     = fae_pulldown f, :type_2, search: true, collection: Type.order(:name)

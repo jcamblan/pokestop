@@ -24,6 +24,7 @@ end
 json.item_categories do 
   json.array!(@item_categories) do |item_category|
     json.name item_category.name
+    json.name_en item_category.name_en
   end
 end
 
@@ -32,7 +33,7 @@ json.items do
     json.name item.name
     json.name_en item.name_en
     json.description item.desc
-    json.category item.category.name
+    json.category item.item_category.name
   end
 end
 

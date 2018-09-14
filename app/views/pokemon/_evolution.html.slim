@@ -11,9 +11,9 @@
           .evolution__candies
             = image_tag pokemon.candy.image_path, width: "30px" if pokemon.candy
             = evolution.candies if evolution.candies && evolution.candies > 0
-            - if evolution.item_id
+            - if evolution.item_id &&  evolution.item.illustration.asset.url
               | &nbsp;
-              = image_tag evolution.item.illustration.asset.url, width: "25px", height: "25px"
+              = image_tag evolution.item.illustration.asset.url, width: "30px", height: "30px"
               | &nbsp;1
       = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?
       - if pokemon.can_evolve?

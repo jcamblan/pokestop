@@ -3,6 +3,7 @@
 
   main.content
     = fae_input f, :title
+    = fae_input f, :title_en
     = fae_pulldown f, :first_form, search:true, collection: Pokemon.order(:num)
     = fae_pulldown f, :after_evolution, search:true, collection: Pokemon.order(:num)
     = fae_input f, :candies

@@ -4,6 +4,7 @@
   main.content
     = fae_radio f, :attack_category, type: 'inline', collection: ['Attaque rapide','Attaque chargée']
     = fae_input f, :name
+    = fae_input f, :name_en
     = fae_pulldown f, :type, search: true, collection: Type.all
 
 
