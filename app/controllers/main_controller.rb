@@ -21,12 +21,12 @@ class MainController < ApplicationController
 
   def export
     @generations = Generation.all
-    @types = Type.all
-    @candies = Candy.all
+    @types = Type.all.order(:name)
+    @candies = Candy.all.order(:name)
     @pokemons = Pokemon.all.order(:num)
     @evolutions = Evolution.all
-    @item_categories = ItemCategory.all
-    @items = Item.all
+    @item_categories = ItemCategory.all.order(:name)
+    @items = Item.all.order(:item_category_id)
   end
 
 end
