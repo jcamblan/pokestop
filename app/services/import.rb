@@ -121,7 +121,7 @@ class Import
     e.first_form = Pokemon.where(name: evolution['first_form']).first.id
     e.pokemon_id = Pokemon.where(name: evolution['before_evolution']).first.id
     e.after_evolution = Pokemon.where(name: evolution['after_evolution']).first.id
-    e.candies: evolution['candies']
+    e.candies = evolution['candies']
     e.item = Item.where(name: evolution['item']).first.id if evolution['item']
     e.save
   end
