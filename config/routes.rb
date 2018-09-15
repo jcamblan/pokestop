@@ -18,7 +18,10 @@ Rails.application.routes.draw do
     resources :items
     resources :item_categories
     resources :pokemons
-    resources :attacks
+    resources :attacks do
+      post 'filter', on: :collection
+    end
+    resources :attack_categories
     resources :types
     resources :generations
   end

@@ -21,6 +21,25 @@ json.types do
   end
 end
 
+json.attack_categories do 
+  json.array!(@attack_categories) do |attack_category|
+    json.name attack_category.name
+    json.name_en attack_category.name_en
+  end
+end
+
+json.attacks do 
+  json.array!(@attacks) do |attack|
+    json.name attack.name
+    json.name_en attack.name_en
+    json.attack_category attack.attack_category.name
+    json.power attack.power
+    json.cast_time attack.cast_time
+    json.energy_bars attack.energy_bars if attack.energy_bars
+    json.epu attack.epu if attack.epu
+  end
+end
+
 json.item_categories do 
   json.array!(@item_categories) do |item_category|
     json.name item_category.name

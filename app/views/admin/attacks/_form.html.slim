@@ -2,10 +2,14 @@
   == render 'fae/shared/form_header', header: @klass_name
 
   main.content
-    = fae_radio f, :attack_category, type: 'inline', collection: ['Attaque rapide','Attaque chargée']
+    = fae_radio f, :attack_category, type: 'inline', collection: AttackCategory.all
     = fae_input f, :name
     = fae_input f, :name_en
-    = fae_pulldown f, :type, search: true, collection: Type.all
+    = fae_pulldown f, :type_id, search: true, collection: Type.all
+    = fae_input f, :power
+    = fae_input f, :epu if @item.attack_category.name_en == 'Fast Attack'
+    = fae_pulldown f, :energy_bars, collection: ['0','1','2','3'] if @item.attack_category.name_en == 'Charge Attack'
+    = fae_suffix f, :cast_time, suffix: 'ms'
 
 
 

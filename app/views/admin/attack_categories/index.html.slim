@@ -1,11 +1,7 @@
 == render 'fae/shared/index_header', title: @klass_humanized.pluralize.titleize
 
 main.content
-
-  == fae_filter_form search: false do
-    == fae_filter_select :attack_category
-
-  table.js-sort-column
+  table.js-sort-row
     thead
       tr
         th.th-sortable-handle
@@ -18,7 +14,7 @@ main.content
         - @items.each do |item|
           tr id=fae_sort_id(item)
             td.sortable-handle: i.icon-sort
-            td = link_to item.fae_display_field, edit_admin_attack_path(item)
+            td = link_to item.fae_display_field, edit_admin_attack_category_path(item)
             td = fae_date_format item.updated_at
             td = fae_delete_button item
       - else

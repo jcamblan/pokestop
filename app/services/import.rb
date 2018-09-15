@@ -5,11 +5,12 @@ class Import
   @@generations = @backup_file.dig('generations')
   @@candies = @backup_file.dig('candies')
   @@types = @backup_file.dig('types')
+  @@attack_categories = @backup_file.dig('attack_categories')
+  @@attacks = @backup_file.dig('attacks')
   @@items_categories = @backup_file.dig('items_categories')
   @@items = @backup_file.dig('items')
   @@pokemons = @backup_file.dig('pokemons')
   @@evolutions = @backup_file.dig('evolutions')
-
 
   def import_everything
     create_generations if @@generations
@@ -57,6 +58,38 @@ class Import
     Type.create(name: type['name'], name_en: type['name_en'])
   end
 
+## PUIS LES CATEGORIES D'ATTAQUES
+
+  def create_attack_categories
+    @@attack_categories.each do |attack_category|
+      create_attack_category(attack_category) unless AttackCategory.where(name: attack_category['name']).first
+    end
+  end
+
+  def create_type(attack_category)
+    AttackCategory.create(name: attack_category['name'], name_en: attack_category['name_en'])
+  end
+
+## PUIS LES ATTAQUES
+
+  def create_attacks
+    @@attacks.each do |attack|
+      create_attack(attack) unless Attack.where(name: attack['name']).first
+    end
+  end
+
+  def create_attack(attack)
+    a = Attack.new
+    a.name = attack['name'],
+    a.name_en = attack['name_en'],
+    a.power = attack['power'],
+    a.cast_time = attack['cast_time'],
+    a.epu = attack['epu'] if attack['epu'],
+    a.energy_bars = attack['energy_bars'] if attack['energy_bars']
+    a.attack_category_id = Category.where(name: attack['attack_category']).first.id
+    a.save
+  end
+
 ## PUIS LES CATEGORIES D'OBJETS
 
   def create_items_categories
@@ -82,7 +115,7 @@ class Import
       name: item['name'],
       name_en: item['name_en'],
       desc: item['description'],
-      category_id: Category.where(name: item['category']).first.id)
+      item_category_id: ItemCategory.where(name: item['category']).first.id)
   end
 
 ## PUIS LES POKEMONS
