@@ -68,7 +68,7 @@ class Import
     end
   end
 
-  def create_type(attack_category)
+  def create_attack_category(attack_category)
     AttackCategory.create(name: attack_category['name'], name_en: attack_category['name_en'])
   end
 
