@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get :search, controller: :main
   get :export, controller: :main
-
+  
   resources :pokemon, only: [:index, :show]
   resources :item, only: [:index, :show]
   resources :generation, only: [:index, :show]
