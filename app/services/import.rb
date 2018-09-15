@@ -88,7 +88,7 @@ class Import
     a.cast_time = attack['cast_time']
     a.epu = attack['epu'] if attack['epu']
     a.energy_bars = attack['energy_bars'] if attack['energy_bars']
-    a.attack_category_id = Category.where(name: attack['attack_category']).first.id
+    a.attack_category_id = AttackCategory.where(name: attack['attack_category']).first.id
     a.save
   end
 
