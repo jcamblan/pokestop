@@ -7,7 +7,7 @@ class Import
   @@types = @backup_file.dig('types')
   @@attack_categories = @backup_file.dig('attack_categories')
   @@attacks = @backup_file.dig('attacks')
-  @@items_categories = @backup_file.dig('items_categories')
+  @@item_categories = @backup_file.dig('item_categories')
   @@items = @backup_file.dig('items')
   @@pokemons = @backup_file.dig('pokemons')
   @@evolutions = @backup_file.dig('evolutions')
@@ -18,7 +18,7 @@ class Import
     create_types if @@types
     create_attack_categories if @@attack_categories
     create_attacks if @@attacks
-    create_items_categories if @@items_categories
+    create_item_categories if @@item_categories
     create_items if @@items
     create_pokemons if @@pokemons
     create_evolutions if @@evolutions
@@ -94,8 +94,8 @@ class Import
 
 ## PUIS LES CATEGORIES D'OBJETS
 
-  def create_items_categories
-    @@items_categories.each do |item_category|
+  def create_item_categories
+    @@item_categories.each do |item_category|
       create_item_category(item_category) unless ItemCategory.where(name: item_category['name']).first
     end
   end
