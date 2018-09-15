@@ -16,6 +16,8 @@ class Import
     create_generations if @@generations
     create_candies if @@candies
     create_types if @@types
+    create_attack_categories if @@attack_categories
+    create_attacks if @@attacks
     create_items_categories if @@items_categories
     create_items if @@items
     create_pokemons if @@pokemons
@@ -80,11 +82,11 @@ class Import
 
   def create_attack(attack)
     a = Attack.new
-    a.name = attack['name'],
-    a.name_en = attack['name_en'],
-    a.power = attack['power'],
-    a.cast_time = attack['cast_time'],
-    a.epu = attack['epu'] if attack['epu'],
+    a.name = attack['name']
+    a.name_en = attack['name_en']
+    a.power = attack['power']
+    a.cast_time = attack['cast_time']
+    a.epu = attack['epu'] if attack['epu']
     a.energy_bars = attack['energy_bars'] if attack['energy_bars']
     a.attack_category_id = Category.where(name: attack['attack_category']).first.id
     a.save
