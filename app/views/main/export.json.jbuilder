@@ -70,6 +70,12 @@ json.pokemons do
     json.generation pokemon.generation_id
     json.pokedex_entry pokemon.pokedex_entry
     json.comment pokemon.comment
+    json.attacks do
+      json.array!(pokemon.attacks) do |a|
+        json.name_fr a.name
+        json.name_en a.name_en
+      end
+    end
   end
 end
 
