@@ -1,3 +1,31 @@
-p = @pokemons.ids
-p = @items.ids
-p = @generations.ids
+.search
+  - unless @pokemons.empty?
+    .search__results
+      h2 Pokémons
+      ul
+        - @pokemons.each do |result|
+          = render 'searchresult', result: result
+  - unless @item_categories.empty?
+    .search__results
+      h2 Catégories d'objets
+      ul
+        - @item_categories.each do |result|
+          = render 'searchresult', result: result
+  - unless @items.empty?
+    .search__results
+      h2 Objets :
+      ul
+        - @items.each do |result|
+          = render 'searchresult', result: result
+  - unless @generations.empty?
+    .search__results
+      h2 Générations :
+      ul
+        - @generations.each do |result|
+          = render 'searchresult', result: result
+  - unless @attacks.empty?
+    .search__results
+      h2 Attaques :
+      ul
+        - @attacks.each do |result|
+          = render 'searchresult', result: result
