@@ -84,6 +84,7 @@ class Import
     a = Attack.new
     a.name = attack['name']
     a.name_en = attack['name_en']
+    a.type_id = Type.where(name: attack['type']).first.id if attack['type']
     a.power = attack['power']
     a.cast_time = attack['cast_time']
     a.epu = attack['epu'] if attack['epu']

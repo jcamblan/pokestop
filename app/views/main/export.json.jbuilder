@@ -33,6 +33,7 @@ json.attacks do
     json.name attack.name
     json.name_en attack.name_en
     json.attack_category attack.attack_category.name
+    json.type Type.find(attack.type_id).name
     json.power attack.power
     json.cast_time attack.cast_time
     json.energy_bars attack.energy_bars if attack.energy_bars

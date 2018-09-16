@@ -25,22 +25,30 @@ module Fae
 
     def structure
       [
-        item('Pokedex', subitems: [
+        item('Datas', subitems: [
           item('Generations', path: admin_generations_path),
           item('Types', path: admin_types_path),
-          item('Attacks', path: admin_attacks_path),
+          item('Candies', path: admin_candies_path)
+        ]),
+        item('Attaques', subitems: [
+          item("Catégories", path: admin_attack_categories_path),
+          item('Attaques', path: admin_attacks_path)
+        ]),
+        item('Pokedex', subitems: [
           item('Pokemons', path: admin_pokemons_path),
-          item('Item Categories', path: admin_item_categories_path),
-          item('Items', path: admin_items_path),
           item('Evolutions', path: admin_evolutions_path),
           item('Alternative Skin Categories', path: admin_alternative_skin_categories_path),
           item('Alternative Skins', path: admin_alternative_skins_path)
         ]),
-        item('Events', path: admin_events_path),
-        item('Candies', path: admin_candies_path),
-        item('Articles', path: admin_articles_path),
-        item('Article Categories', path: admin_article_categories_path),
-        # scaffold inject marker
+        item('Objets', subitems: [
+          item('Catégories', path: admin_item_categories_path),
+          item('Objets', path: admin_items_path)
+        ]),
+        item('Communication', subitems: [
+          item('Events', path: admin_events_path),
+          item('Articles', path: admin_articles_path),
+          item('Article Categories', path: admin_article_categories_path)
+        ])
       ]
     end
 
