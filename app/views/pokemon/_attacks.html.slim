@@ -1,0 +1,10 @@
+.attacks__fast
+  strong Attaques rapides
+  ul
+    - pokemon.fast_attacks.each do |attack|
+      = render 'attack', attack: attack
+.attacks__charged
+  strong Attaques chargées
+  ul
+    - pokemon.charge_attacks.each do |attack|
+      = render 'attack', attack: attack

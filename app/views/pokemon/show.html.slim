@@ -1,19 +1,25 @@
-.row.container-fluid
-  .pokemon.col.col-md-6.mh-auto
-    .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
-      .pokemon__generation
-        | Gen #
-        = @pokemon.generation.id
-        |  : 
-        = @pokemon.generation.name
-      .pokemon__ball
-        .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
-        .pokemon__name = @pokemon.name
-    .pokemon__candy = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
-    .pokemon__num = @pokemon.num
-    .pokemon__types
-      - @pokemon.types.each do |type|
-        .pokemon__type class=("pokemon__type--#{type.name.downcase}") = type.name
+.pokemon.col.mh-auto
+  .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
+    .pokemon__generation
+      | Gen #
+      = @pokemon.generation.id
+      |  : 
+      = @pokemon.generation.name
+    .pokemon__ball
+      .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
+      .pokemon__name = @pokemon.name
+  .pokemon__cards
+    .pokemon__card
+      .pokemon__candy = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
+      .pokemon__num = @pokemon.num
+      .pokemon__types
+        - @pokemon.types.each do |type|
+          .pokemon__type class=("pokemon__type--#{type.name.downcase}") = type.name
     - if @evolutions
-      .pokemon__evolutions
-        = render 'evolution', pokemons: @evolutions, evolutions: []
+      .pokemon__card.col.mh-auto
+        .pokemon__evolutions
+          = render 'evolution', pokemons: @evolutions, evolutions: []
+    - if @pokemon.attacks
+      .pokemon__card.col.mh-auto
+        .pokemon__attacks.attacks
+          = render 'attacks', pokemon: @pokemon

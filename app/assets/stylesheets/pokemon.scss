@@ -3,9 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .pokemon {
-  @extend .card;
+  @extend .container-fluid;
   margin:auto;
 }
+
+.pokemon__cards {
+  @extend .row;
+}
+
+.pokemon__card {
+  @extend .card;
+}
+
 
 .pokemon__header {
   @extend .row;
@@ -71,40 +80,15 @@
 
 .pokemon__evolutions { }
 
-.pokemon__evolution {
-}
+.pokemon__evolution {}
 
 .evolution {
   @extend .d-flex;
-  @extend .mx-auto;
-  background-color: #e8f0e1;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  margin: 5px;
-  height: 60px;
-  width: 150px;
+  @extend .flex-column;
 }
-@media (min-width: 768px) {
-  .evolution {
-    width: 300px;
-  }
-}
-.evolution__sprite {
-  @extend .d-flex;
-  @extend .align-items-center;
-  @extend .text-left;
-  background: linear-gradient(to right, #a2db95, #24ccaa);
-  border-radius: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-}
-.evolution__name {
-  @extend .d-none;
-  @extend .d-md-block;
-}
+
+.evolution__sprite {}
+.evolution__name {}
 .evolution__sprite img {
   width: 50px;
 }

@@ -45,6 +45,14 @@ class Pokemon < ApplicationRecord
     Candy.find(candy_id) if candy_id
   end
 
+  def charge_attacks
+    self.attacks.where(attack_category_id: 2)
+  end
+  
+  def fast_attacks
+    self.attacks.where(attack_category_id: 1)
+  end
+
   belongs_to :generation
   has_and_belongs_to_many :types
   has_and_belongs_to_many :attacks
