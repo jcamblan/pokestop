@@ -275,7 +275,7 @@ ActiveRecord::Schema.define(version: 2018_09_16_113620) do
     t.string "num"
     t.integer "type_1"
     t.integer "type_2"
-    t.string "candy_id"
+    t.integer "candy_id"
     t.integer "candy_distance"
     t.integer "pc_min"
     t.integer "pc_max"

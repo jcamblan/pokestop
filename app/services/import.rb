@@ -137,11 +137,25 @@ class Import
     p.candy_distance = pokemon['candy_distance']
     p.pc_max = pokemon['pc_max']
     p.pv_max = pokemon['pv_max']
+    p.atk = pokemon['atk']
+    p.def = pokemon['def']
+    p.sta = pokemon['sta']
+    p.flee_rate = pokemon['flee_rate']
+    p.capture_rate = pokemon['capture_rate']
     p.generation_id = pokemon['generation']
     p.pokedex_entry = pokemon['pokedex_entry']
     p.comment = pokemon['comment']
     p.types << Type.where(name: pokemon['type_1']).or(Type.where(name: pokemon['type_2']))
+    p.attacks << pokemon_attacks_list(pokemon['attacks'])
     p.save
+  end
+
+  def pokemon_attacks_list(attacks)
+    attacks_array = Array.new
+    attacks.each do |a|
+      attacks_array << Attack.where(name_en: a['name_en']).first
+    end
+    return attacks_array
   end
 
 ## PUIS LES EVOLUTIONS
@@ -160,7 +174,7 @@ class Import
     e.pokemon_id = Pokemon.where(num: evolution['before_evolution']).first.id
     e.after_evolution = Pokemon.where(num: evolution['after_evolution']).first.id
     e.candies = evolution['candies']
-    e.item = Item.where(name: evolution['item']).first.id if evolution['item']
+    e.item_id = Item.where(name: evolution['item']).first.id if evolution['item']
     e.save
   end
 

@@ -29,9 +29,21 @@
           = render 'attacks', pokemon: @pokemon
   .pokemon__cards
     .pokemon__card
-      p = @pokemon.atk
-      p = @pokemon.def
-      p = @pokemon.sta
-      p = @pokemon.pc_max
-      p = @pokemon.flee_rate
-      p = @pokemon.capture_rate
+      p 
+        | Attaque max : 
+        = @pokemon.atk
+      p 
+        | Défense max : 
+        = @pokemon.def
+      p 
+        | Endurance max : 
+        = @pokemon.sta
+      p 
+        | PC max : 
+        = @pokemon.pc_max
+      p 
+        | Taux de fuite : 
+        = @pokemon.flee_rate
+      p 
+        | Chances de capture : 
+        = @pokemon.capture_rate
