@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_16_113620) do
+ActiveRecord::Schema.define(version: 2018_09_16_204547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(version: 2018_09_16_113620) do
     t.datetime "updated_at", null: false
     t.index ["alternative_skin_category_id"], name: "index_alternative_skins_on_alternative_skin_category_id"
     t.index ["pokemon_id"], name: "index_alternative_skins_on_pokemon_id"
+  end
+
+  create_table "article_categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "article_categories_articles", id: false, force: :cascade do |t|
+    t.integer "article_category_id"
+    t.integer "article_id"
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "header"
+    t.text "body"
+    t.integer "position"
+    t.boolean "published"
+    t.boolean "homepage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "attack_categories", force: :cascade do |t|

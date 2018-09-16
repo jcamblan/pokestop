@@ -38,6 +38,8 @@ module Fae
         ]),
         item('Events', path: admin_events_path),
         item('Candies', path: admin_candies_path),
+        item('Articles', path: admin_articles_path),
+        item('Article Categories', path: admin_article_categories_path),
         # scaffold inject marker
       ]
     end

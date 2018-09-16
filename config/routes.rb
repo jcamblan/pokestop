@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :attack, only: [:index, :show]
 
   namespace :admin do
+    resources :article_categories
+    resources :articles
     resources :candies
     resources :events
     resources :alternative_skins

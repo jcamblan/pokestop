@@ -9,7 +9,7 @@ class Candy < ApplicationRecord
   end
 
   def image_name
-    return name_en.downcase.gsub(' ', '_')
+    return name_en.parameterize
   end
 
 end
