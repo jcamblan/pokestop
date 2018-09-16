@@ -1,7 +1,10 @@
 doctype html
 html
   head
-    title Pokestop
+    title
+      - if content_for?(:title)
+        = yield(:title) + ' | '
+      | Pokestop
     = csrf_meta_tags
     = csp_meta_tag
     

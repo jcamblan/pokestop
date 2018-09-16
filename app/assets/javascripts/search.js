@@ -14,12 +14,20 @@ $().ready(
           header: "<strong>Pokemons</strong>",
         },
         {
+          listLocation: "item_categories",
+          header: "<strong>Catégories d'objets</strong>",
+        },
+        {
           listLocation: "items",
-          header: "<strong>Items</strong>",
+          header: "<strong>Objets</strong>",
         },
         {
           listLocation: "generations",
-          header: "<strong>Generations</strong>",
+          header: "<strong>Générations</strong>",
+        },
+        {
+          listLocation: "attacks",
+          header: "<strong>Attaques</strong>",
         }
       ],
       list: {

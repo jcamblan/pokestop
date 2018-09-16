@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get :export, controller: :main
   
   resources :pokemon, only: [:index, :show]
+  resources :item_category, only: [:index, :show]
   resources :item, only: [:index, :show]
   resources :generation, only: [:index, :show]
+  resources :attack, only: [:index, :show]
 
   namespace :admin do
     resources :candies

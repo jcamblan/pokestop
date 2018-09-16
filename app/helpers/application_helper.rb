@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def pokemon_name_by_id(id)
-  	Pokemon.find(id).name
+  def title(text)
+    content_for :title, text
   end
 end
