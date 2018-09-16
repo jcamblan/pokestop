@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projet de site Rails dédié à Pokémon mais surtout à mon apprentissage
 
-Things you may want to cover:
+A l'initialisation du projet :
 
-* Ruby version
+rake db:migrate
+rake fae:seed_db
+rake import:everything
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+En ligne sur heroku : https://sheltered-lowlands-20217.herokuapp.com

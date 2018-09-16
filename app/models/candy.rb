@@ -5,9 +5,11 @@ class Candy < ApplicationRecord
   end
 
   def image_path
+  	return "candy/#{self.image_name}.png"
+  end
 
-  	return "candy/#{id}.png"
-
+  def image_name
+    return name_en.downcase.gsub(' ', '_')
   end
 
 end
