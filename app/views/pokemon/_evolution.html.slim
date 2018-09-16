@@ -1,6 +1,6 @@
 .row.text-center
   - pokemons.zip(evolutions) do |pokemon, evolution|
-    .col.pokemon__evolutio
+    .col.pokemon__evolution
       .evolution
         .evolution__sprite class=("evolution_sprite--gray" unless pokemon.generation.on_prod)
           = link_to display_sprite(pokemon), pokemon

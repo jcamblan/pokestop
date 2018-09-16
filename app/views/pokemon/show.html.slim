@@ -1,5 +1,9 @@
 .pokemon.col.mh-auto
   .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
+    .pokemon__prev
+      = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev
+    .pokemon__next
+      = link_to "#{@pokemon.next.name} (##{@pokemon.next.num}) >>", @pokemon.next
     .pokemon__generation
       | Gen #
       = @pokemon.generation.id
@@ -14,7 +18,7 @@
       .pokemon__num = @pokemon.num
       .pokemon__types
         - @pokemon.types.each do |type|
-          .pokemon__type class=("pokemon__type--#{type.name.downcase}") = type.name
+          .pokemon__type class=("pokemon__type--#{type.name_en.downcase}") = type.name
     - if @evolutions
       .pokemon__card.col.mh-auto
         .pokemon__evolutions
@@ -23,3 +27,11 @@
       .pokemon__card.col.mh-auto
         .pokemon__attacks.attacks
           = render 'attacks', pokemon: @pokemon
+  .pokemon__cards
+    .pokemon__card
+      p = @pokemon.atk
+      p = @pokemon.def
+      p = @pokemon.sta
+      p = @pokemon.pc_max
+      p = @pokemon.flee_rate
+      p = @pokemon.capture_rate

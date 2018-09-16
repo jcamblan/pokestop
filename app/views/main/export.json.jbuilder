@@ -67,6 +67,11 @@ json.pokemons do
     json.candy_distance pokemon.candy_distance
     json.pc_max pokemon.pc_max
     json.pv_max pokemon.pv_max
+    json.atk pokemon.atk
+    json.def pokemon.def
+    json.sta pokemon.sta
+    json.flee_rate pokemon.flee_rate
+    json.capture_rate pokemon.capture_rate
     json.generation pokemon.generation_id
     json.pokedex_entry pokemon.pokedex_entry
     json.comment pokemon.comment

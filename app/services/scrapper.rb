@@ -1,31 +1,33 @@
 class Scrapper
 
-  def get_pokemon_datas(num)
-    pokemon = Pokemon.where(num: num).first
-    url =  Addressable::URI.normalized_encode("https://www.pokebip.com/pokedex/6G_p#{num}_#{pokemon.name}.html")
+  def get_pokemon_datas(pokemon)
+    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/pokemon/#{pokemon.id}")
     doc = Nokogiri::HTML(open(url))
-    evols = doc.css('div#g6_genealogie table tr[3] td[3] div.g6_evos')
-    evols.each do |e|
-      evol = e.css('div.g6_evos_p a')
-      unless evol.empty?
-        evol_num = evol[0]['href'].gsub(/6G_p(.*)_(.*)/, '\1').to_s.rjust(3, "0")
-        evol_name = evol[1].text
-        evol_id = Pokemon.where(num: evol_num).first.id
-        pokemon_name = pokemon.name
-        evol_name = Pokemon.find(evol_id).name
-        title = "#{pokemon_name} > #{evol_name}"
-        check_db = Evolution.where(after_evolution: evol_id).first
-        if check_db.nil?
-          Evolution.create(pokemon_id: pokemon.id, after_evolution: evol_id, title: title)
-        end
+    evolution_requirements = doc.css('div#evolution-requirements table tr')
+    evolution_requirements.each do |er|
+      if er.css('td')[0].text == 'Flee Rate'
+        pokemon.flee_rate = er.css('td')[1].text.gsub(' %', '').to_f
+      elsif er.css('td')[0].text == 'Capture Rate'
+        pokemon.capture_rate = er.css('td')[1].text.gsub(' km', '').to_i
+      elsif er.css('td')[0].text == 'Buddy Distance'
+        pokemon.candy_distance = er.css('td')[1].text.gsub(' %', '').to_f
       end
     end
+    pokemon_stats = doc.css('div#pokemon-stats')
+    pokemon.pc_max = pokemon_stats.css('span.max-cp-number').text.to_i
+    stats = pokemon_stats.css('div.stats-container div.pokemon-stats div.header-stats')
+    pokemon.atk = stats[0].css('span').text.gsub('ATK', '').to_i
+    pokemon.def = stats[1].css('span').text.gsub('DEF', '').to_i
+    pokemon.sta = stats[2].css('span').text.gsub('STA', '').to_i
+    pokemon.save
   end
 
-  def get_pokemons_datas(gen)
-    pokedex = Pokemon.where(generation_id: gen)
-    pokedex.each do |p|
-      get_pokemon(p.num)
+  def get_pokemons_datas
+    generations = Generation.where(on_prod: true)
+    generations.each do |g|
+      g.pokemons.each do |p|
+        get_pokemon_datas(p)
+      end
     end
   end
 

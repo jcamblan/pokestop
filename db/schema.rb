@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_15_170107) do
+ActiveRecord::Schema.define(version: 2018_09_16_113620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -288,6 +288,11 @@ ActiveRecord::Schema.define(version: 2018_09_15_170107) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name_en"
+    t.integer "atk"
+    t.integer "def"
+    t.integer "sta"
+    t.decimal "flee_rate"
+    t.decimal "capture_rate"
     t.index ["generation_id"], name: "index_pokemons_on_generation_id"
   end
 

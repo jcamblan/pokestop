@@ -13,6 +13,8 @@
 
 .pokemon__card {
   @extend .card;
+  @extend .col-12;
+  @extend .col-sm-4
 }
 
 
@@ -21,19 +23,33 @@
   @extend .d-flex;
   @extend .justify-content-center;
   @extend .align-items-center;
+  position: relative;
   background: grey;
   //background: linear-gradient(to bottom right, $poison, $grass);
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.pokemon__generation {
+.pokemon__generation, .pokemon__prev, .pokemon__next {
   @extend .px-3;
   @extend .py-1;
   position: absolute;
+  background-color: $white;
+}
+
+.pokemon__generation {
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+}
+.pokemon__prev {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 10px;
+}
+.pokemon__next {
   top: 0;
   right: 0;
-  background-color: $white;
   border-bottom-left-radius: 10px;
 }
 
@@ -55,24 +71,24 @@
 .pokemon__type {
   @extend .btn;
 }
-.pokemon__type--insecte      { background: $bug     ; }
-.pokemon__type--tenebres     { background: $dark    ; }
+.pokemon__type--bug      { background: $bug     ; }
+.pokemon__type--dark     { background: $dark    ; }
 .pokemon__type--dragon   { background: $dragon  ; }
-.pokemon__type--electrik { background: $electric; }
-.pokemon__type--combat { background: $fighting; }
-.pokemon__type--feu     { background: $fire    ; }
-.pokemon__type--vol   { background: $flying  ; }
-.pokemon__type--fee    { background: $fairy   ; }
-.pokemon__type--sol   { background: $ground  ; }
-.pokemon__type--spectre    { background: $ghost   ; }
-.pokemon__type--plante    { background: $grass   ; }
-.pokemon__type--glace      { background: $ice     ; }
+.pokemon__type--electric { background: $electric; }
+.pokemon__type--fighting { background: $fighting; }
+.pokemon__type--fire     { background: $fire    ; }
+.pokemon__type--flying   { background: $flying  ; }
+.pokemon__type--fairy    { background: $fairy   ; }
+.pokemon__type--ground   { background: $ground  ; }
+.pokemon__type--ghost    { background: $ghost   ; }
+.pokemon__type--grass    { background: $grass   ; }
+.pokemon__type--ice      { background: $ice     ; }
 .pokemon__type--normal   { background: $normal  ; }
-.pokemon__type--psy  { background: $psychic ; }
+.pokemon__type--psychic  { background: $psychic ; }
 .pokemon__type--poison   { background: $poison  ; }
-.pokemon__type--roche     { background: $rock    ; }
-.pokemon__type--acier    { background: $steel   ; }
-.pokemon__type--eau    { background: $water   ; }
+.pokemon__type--rock     { background: $rock    ; }
+.pokemon__type--steel    { background: $steel   ; }
+.pokemon__type--water    { background: $water   ; }
 
 .pokemon_sprite--gray {
   -webkit-filter: grayscale(100%) opacity(20%);
