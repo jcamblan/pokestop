@@ -30,15 +30,18 @@
           = render 'attacks', pokemon: @pokemon
   .pokemon__cards
     .pokemon__card
-      p 
-        | Attaque max : 
-        = @pokemon.atk
-      p 
-        | Défense max : 
-        = @pokemon.def
-      p 
-        | Endurance max : 
-        = @pokemon.sta
+      .progress.my-1 style="height: 30px"
+        .progress-bar.bg-success aria-valuemax=(@pokemon.max_atk) aria-valuemin="0" aria-valuenow=(@pokemon.atk) role="progressbar" style=("width: #{@pokemon.atk.to_f/@pokemon.max_atk*100}%")
+          | Attaque : 
+          = @pokemon.atk
+      .progress.my-1 style="height: 30px"
+        .progress-bar.bg-info aria-valuemax=(@pokemon.max_def) aria-valuemin="0" aria-valuenow=(@pokemon.def) role="progressbar" style=("width: #{@pokemon.def.to_f/@pokemon.max_def*100}%")
+          | Défense : 
+          = @pokemon.def
+      .progress.my-1 style="height: 30px;"
+        .progress-bar.bg-alert aria-valuemax=(@pokemon.max_sta) aria-valuemin="0" aria-valuenow=(@pokemon.sta) role="progressbar" style=("width: #{@pokemon.sta.to_f/@pokemon.max_sta*100}%; text-align: left;")
+          | Endurance : 
+          = @pokemon.sta
       p 
         | PC max : 
         = @pokemon.pc_max
@@ -48,3 +51,6 @@
       p 
         | Chances de capture : 
         = @pokemon.capture_rate
+
+        .progress
+  .progress-bar.w-75 aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" 

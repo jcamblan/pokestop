@@ -1,5 +1,5 @@
 nav.navbar.navbar-light.bg-light.justify-content-between
-  a.navbar-brand Pokestop
+  = link_to 'Pokestop'.upcase, root_path, class: 'navbar-brand'
   = form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form|
     = form.text_field :q, placeholder: "Search", data: { behavior: 'autocomplete' }, class: "form-control mr-sm-2"
     = form.button "Search", class: "btn btn btn-outline-success my-2 my-sm-0"

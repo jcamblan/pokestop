@@ -45,6 +45,18 @@ class Pokemon < ApplicationRecord
     Candy.find(candy_id) if candy_id
   end
 
+  def max_atk
+    Pokemon.where("atk > 0").order(:atk).last.atk
+  end
+
+  def max_def
+    Pokemon.where("def > 0").order(:def).last.def
+  end
+
+  def max_sta
+    Pokemon.where("sta > 0").order(:sta).last.sta
+  end
+
   def charge_attacks
     self.attacks.where(attack_category_id: 2)
   end

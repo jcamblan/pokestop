@@ -12,6 +12,13 @@
  *
  */
 @import 'bootstrap4';
-@import 'pokemon';
-@import 'main';
-@import 'easy-autocomplete'
+@import 'pokemon/pokemon';
+@import 'pokemon/evolution';
+@import 'search/search';
+@import 'easy-autocomplete';
+@import 'home/home';
+
+html,body {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,23 @@
+.evolution {
+  @extend .d-flex;
+  @extend .flex-column;
+}
+
+.evolution__sprite {}
+.evolution__name {}
+.evolution__sprite img {
+  width: 50px;
+}
+.evolution_sprite--gray {
+  @extend .pokemon_sprite--gray;
+}
+.evolution__candies {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .mx-auto;
+  @extend .px-3
+}
+.evolution__evolutions {
+  @extend .d-flex;
+  @extend .justify-content-center;
+}
