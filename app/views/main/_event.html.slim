@@ -1,0 +1,13 @@
+- if event.illustration.asset.url
+  li
+    figure.snip1529
+      = image_tag event.illustration.asset.url, class: 'pr-sample13'
+      .date
+        span.day = event.created_at.strftime('%d') 
+        span.month = event.created_at.strftime('%b')
+      figcaption
+        h3 = event.title
+        p = event.headline
+      .hover
+        i.ion-android-open
+      //= link_to '', article_path(article.id)

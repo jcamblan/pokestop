@@ -1,25 +1,13 @@
 - title("#{@pokemon.name} (##{@pokemon.num})")
-.pokemon.col.mh-auto
+.pokemon
   .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
-    .pokemon__prev
-      = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev
-    .pokemon__next
-      = link_to "#{@pokemon.next.name} (##{@pokemon.next.num}) >>", @pokemon.next
-    .pokemon__generation
-      | Gen #
-      = @pokemon.generation.id
-      |  : 
-      = @pokemon.generation.name
-    .pokemon__ball
-      .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
-      .pokemon__name = @pokemon.name
+    = render 'header'
+  .pokemon__types
+    - @pokemon.types.each do |type|
+      = type_image(type)
+  .pokemon__stats.stats
+    = render 'stats'
   .pokemon__cards
-    .pokemon__card
-      .pokemon__candy = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
-      .pokemon__num = @pokemon.num
-      .pokemon__types
-        - @pokemon.types.each do |type|
-          .pokemon__type class=("pokemon__type--#{type.name_en.downcase}") = type.name
     - if @evolutions
       .pokemon__card.col.mh-auto
         .pokemon__evolutions
@@ -28,29 +16,3 @@
       .pokemon__card.col.mh-auto
         .pokemon__attacks.attacks
           = render 'attacks', pokemon: @pokemon
-  .pokemon__cards
-    .pokemon__card
-      .progress.my-1 style="height: 30px"
-        .progress-bar.bg-success aria-valuemax=(@pokemon.max_atk) aria-valuemin="0" aria-valuenow=(@pokemon.atk) role="progressbar" style=("width: #{@pokemon.atk.to_f/@pokemon.max_atk*100}%")
-          | Attaque : 
-          = @pokemon.atk
-      .progress.my-1 style="height: 30px"
-        .progress-bar.bg-info aria-valuemax=(@pokemon.max_def) aria-valuemin="0" aria-valuenow=(@pokemon.def) role="progressbar" style=("width: #{@pokemon.def.to_f/@pokemon.max_def*100}%")
-          | Défense : 
-          = @pokemon.def
-      .progress.my-1 style="height: 30px;"
-        .progress-bar.bg-alert aria-valuemax=(@pokemon.max_sta) aria-valuemin="0" aria-valuenow=(@pokemon.sta) role="progressbar" style=("width: #{@pokemon.sta.to_f/@pokemon.max_sta*100}%; text-align: left;")
-          | Endurance : 
-          = @pokemon.sta
-      p 
-        | PC max : 
-        = @pokemon.pc_max
-      p 
-        | Taux de fuite : 
-        = @pokemon.flee_rate
-      p 
-        | Chances de capture : 
-        = @pokemon.capture_rate
-
-        .progress
-  .progress-bar.w-75 aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" 

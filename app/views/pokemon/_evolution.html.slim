@@ -8,11 +8,11 @@
             = link_to pokemon.name, pokemon
         - if pokemon.is_evolution? && evolution.candies
           .evolution__candies
-            = image_tag pokemon.candy.image_path, width: "30px" if pokemon.candy
+            = image_tag pokemon.candy.image_path, width: "30px", alt: pokemon.candy.name, title: pokemon.candy.name if pokemon.candy
             = evolution.candies if evolution.candies && evolution.candies > 0
             - if evolution.item_id
               | &nbsp;
-              = image_tag evolution.item.illustration.asset.url, width: "30px", height: "30px" if evolution.item.illustration
+              = image_tag evolution.item.illustration.asset.url, width: "30px", height: "30px", alt: evolution.item.name, title: evolution.item.name if evolution.item.illustration
               = "[#{evolution.item.name}]" unless evolution.item.illustration
               | &nbsp;1
       = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?

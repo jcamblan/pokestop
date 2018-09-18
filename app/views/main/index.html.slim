@@ -1,5 +1,5 @@
 .home
-  .home__events
-  .home__articles
-    - @articles.each do |a|
-      = render 'article', article: a
+  .home__events.events
+    = render 'events', events: @events
+  .home__articles.articles
+    = render 'articles', articles: @articles

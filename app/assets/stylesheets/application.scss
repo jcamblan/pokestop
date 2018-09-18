@@ -17,8 +17,8 @@
 @import 'search/search';
 @import 'easy-autocomplete';
 @import 'home/home';
+@import 'home/events';
 
-html,body {
-  margin: 0;
-  padding: 0;
+.navbar {
+  z-index: 200;
 }

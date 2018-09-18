@@ -1,12 +1,6 @@
-- if article.illustration.asset.url
-  figure.snip1529
-    = image_tag article.illustration.asset.url, class: 'pr-sample13'
-    .date
-      span.day = article.created_at.strftime('%d') 
-      span.month = article.created_at.strftime('%b')
-    figcaption
-      h3 = article.title
-      p = article.header
-    .hover
-      i.ion-android-open
-    = link_to '', article_path(article.id)
+.card.article
+  .card-body
+    h5.card-title = article.title
+    p.card-text = article.header
+    a.btn.btn-primary href="#"  Go somewhere
+  .card-footer.text-muted = article.created_at

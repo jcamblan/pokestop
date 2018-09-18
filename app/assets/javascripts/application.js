@@ -27,4 +27,6 @@
 //= require bootstrap4/tab
 //= require bootstrap4/tooltip
 //= require bootstrap4/util
+//= require jquery.jcarousel
+//= require jcarousel.responsive
 //= require_tree .

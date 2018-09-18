@@ -1,0 +1,8 @@
+.events_carousel.carousel
+  ul
+    - events.each do |e|
+      = render 'event', event: e
+- if events.count
+  a.events__control-prev href="#"  &lsaquo;
+  a.events__control-next href="#"  &rsaquo;
+  p.events__pagination

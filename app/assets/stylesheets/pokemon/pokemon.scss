@@ -26,7 +26,7 @@
   padding-bottom: 50px;
 }
 
-.pokemon__generation, .pokemon__prev, .pokemon__next {
+.pokemon__generation, .pokemon__prev, .pokemon__next{
   @extend .px-3;
   @extend .py-1;
   position: absolute;
@@ -49,6 +49,17 @@
   border-bottom-left-radius: 10px;
 }
 
+.pokemon__types {
+  @extend .mx-auto;
+  @extend .py-2;
+  @extend .text-center;
+}
+
+.pokemon__types img {
+  @extend .mx-2;
+}
+
+
 .pokemon__ball {
   @extend .flex-column;
   @extend .d-flex;
@@ -62,6 +73,35 @@
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
+
+.stats__progress {
+  @extend .progress;
+  @extend .my-1;
+  height: 30px;
+}
+
+.stats__progress-bar {
+  @extend .progress-bar;
+  text-align: left;
+}
+.stats__progress-bar--pc_max {
+  @extend .bg-secondary;
+}
+.stats__progress-bar--atk {
+  @extend .bg-danger;
+}
+.stats__progress-bar--def {
+  @extend .bg-primary;
+}
+.stats__progress-bar--sta {
+  @extend .bg-success;
+}
+
+.stats__progress span {
+  margin-left: 10px;
+}
+
+
 
 .pokemon__name {}
 .pokemon__type {

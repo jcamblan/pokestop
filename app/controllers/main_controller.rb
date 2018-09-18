@@ -2,7 +2,7 @@ class MainController < ApplicationController
 
   def index
     @events = Event.where(on_prod: true)
-    @articles = Article.where(published: true).where(homepage: true)
+    @articles = Article.where(published: true).where(homepage: true).order(:created_at)
   end
 
   def search
