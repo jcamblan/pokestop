@@ -25,11 +25,11 @@ class MainController < ApplicationController
   end
 
   def export
-    @generations = Generation.all
+    @generations = Generation.all.order(:id)
     @types = Type.all.order(:name)
     @candies = Candy.all.order(:name)
     @pokemons = Pokemon.all.order(:num)
-    @evolutions = Evolution.all
+    @evolutions = Evolution.all.order(:pokemon_id)
     @item_categories = ItemCategory.all.order(:name)
     @items = Item.all.order(:item_category_id)
     @attack_categories = AttackCategory.all
