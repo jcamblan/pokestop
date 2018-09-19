@@ -1,27 +1,25 @@
 .row
-  .col-12.col-sm-6
-    h2 Caractéristiques
-    = stat_bar('pc_max',@pokemon.pc_max,@pokemon.max_pc_max)
-    = stat_bar('atk',@pokemon.atk,@pokemon.max_atk)
-    = stat_bar('def',@pokemon.def,@pokemon.max_def)
-    = stat_bar('sta',@pokemon.sta,@pokemon.max_sta)
-  .col.col-sm-6
-    h2 Caractéristiques
-    ul.list-group
-      li.list-group-item 
-        | Distance à parcourir pour 1 
-        = image_tag @pokemon.candy.image_path, width: "30px"
-        = " : "
-        = @pokemon.candy_distance
-        = " km"
-      li.list-group-item
-        | Taux de fuite : 
-        = @pokemon.flee_rate
-        = "%"
-      li.list-group-item
-        | Chances de capture : 
-        = @pokemon.capture_rate
-        = "%"
-
+  .pokemon__card.col-12
+    .card-header.row
+      h2 Caractéristiques
+    .card-body
+      h3 machin
+      = stat_bar('pc_max',@pokemon.pc_max,@pokemon.max_pc_max)
+      = stat_bar('atk',@pokemon.atk,@pokemon.max_atk)
+      = stat_bar('def',@pokemon.def,@pokemon.max_def)
+      = stat_bar('sta',@pokemon.sta,@pokemon.max_sta)
+      h3 truc
+      ul.list-group
+        li.list-group-item.stats__types
+          | Type(s) : 
+          - @pokemon.types.each do |type|
+           = type_image(type)
+           = type.name
+        li.list-group-item 
+          = "Distance à parcourir pour 1 "
+          = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy
+          = " : #{@pokemon.candy_distance} km"
+        li.list-group-item = "Taux de fuite : #{@pokemon.flee_rate}%"
+        li.list-group-item = "Chances de capture : #{@pokemon.capture_rate}%"
 
 

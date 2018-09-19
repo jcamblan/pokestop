@@ -5,12 +5,13 @@
 
 .pokemon__cards {
   @extend .row;
+  @extend .justify-content-around;
+  @extend .pt-4;
 }
 
 .pokemon__card {
   @extend .card;
-  @extend .col-12;
-  @extend .col-sm-4
+  @extend .mb-3;
 }
 
 
@@ -19,6 +20,7 @@
   @extend .d-flex;
   @extend .justify-content-center;
   @extend .align-items-center;
+  @extend .mb-4;
   position: relative;
   background: grey;
   //background: linear-gradient(to bottom right, $poison, $grass);
@@ -42,21 +44,18 @@
   top: 0;
   left: 0;
   border-bottom-right-radius: 10px;
+  background-color: $light;
 }
 .pokemon__next {
   top: 0;
   right: 0;
   border-bottom-left-radius: 10px;
+  background-color: $light;
 }
 
-.pokemon__types {
-  @extend .mx-auto;
-  @extend .py-2;
-  @extend .text-center;
-}
-
-.pokemon__types img {
-  @extend .mx-2;
+.stats__types img {
+  width: 30px;
+  @extend .mx-1;
 }
 
 

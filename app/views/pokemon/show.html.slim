@@ -2,17 +2,22 @@
 .pokemon
   .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
     = render 'header'
-  .pokemon__types
-    - @pokemon.types.each do |type|
-      = type_image(type)
-  .pokemon__stats.stats
-    = render 'stats'
-  .pokemon__cards
-    - if @evolutions
-      .pokemon__card.col.mh-auto
-        .pokemon__evolutions
-          = render 'evolution', pokemons: @evolutions, evolutions: []
-    - if @pokemon.attacks
-      .pokemon__card.col.mh-auto
-        .pokemon__attacks.attacks
-          = render 'attacks', pokemon: @pokemon
+  .row.justify-content-around
+    .col-12.col-sm-6
+      .pokemon__stats.stats
+        = render 'stats'
+    .col-12.col-sm-5
+      - if @evolutions
+        .pokemon__card.col.mh-auto
+          .pokemon__evolutions
+            .card-header.row
+              h2 Evolutions
+            .card-body
+              = render 'evolution', pokemons: @evolutions, evolutions: []
+      - if @pokemon.attacks
+        .pokemon__card.col.mh-auto
+          .pokemon__attacks.attacks
+            .card-header.row
+              h2 Attaques
+            .card-body
+              = render 'attacks', pokemon: @pokemon
