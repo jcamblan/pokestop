@@ -1,1 +1,8 @@
-li = attack.name
+.attack
+  .attack__type
+    = type_image(attack.type)
+  .attack__infos
+    h4 = attack.name
+    p = energy_bars(attack) if attack.energy_bars
+    p = "Génère #{attack.epu} points d'énergie" if attack.epu
+  .attack__power = attack.power.to_i

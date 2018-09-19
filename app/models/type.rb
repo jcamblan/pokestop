@@ -11,5 +11,6 @@ class Type < ApplicationRecord
   end
 
   has_and_belongs_to_many :pokemons
+  has_many :attacks
 
 end

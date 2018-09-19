@@ -23,4 +23,7 @@ module PokemonHelper
     end
   end
 
+  def energy_bars(attack)
+    image_tag "attacks/#{attack.energy_bars}-energy.png"
+  end
 end

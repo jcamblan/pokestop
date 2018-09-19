@@ -62,11 +62,11 @@ class Pokemon < ApplicationRecord
   end
 
   def charge_attacks
-    self.attacks.where(attack_category_id: 2)
+    self.attacks.where(attack_category_id: 1)
   end
   
   def fast_attacks
-    self.attacks.where(attack_category_id: 1)
+    self.attacks.where(attack_category_id: 2)
   end
 
   belongs_to :generation

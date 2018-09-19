@@ -82,4 +82,35 @@ class Scrapper
       pokemon.attacks << Attack.where(name_en: scrapped_name).first if Attack.where(name_en: scrapped_name)
     end
   end
+
+
+  def get_attacks_type
+    #url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/charge-moves")
+    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/fast-moves")
+    doc = Nokogiri::HTML(open(url))
+    attacks = doc.css('div.view-moves div.view-content table#sort-table tbody tr').each do |a|
+      type = a.attribute('class').value
+      attack_name_en = a.css('td')[0].css('a').text
+      if Attack.where(name_en: attack_name_en).first
+        attack = Attack.where(name_en: attack_name_en).first
+        attack.type_id = Type.where(name_en: type).first.id
+        attack.save
+      end
+    end
+  end
+
+  def get_attacks_power
+    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/charge-moves")
+    #url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/fast-moves")
+    doc = Nokogiri::HTML(open(url))
+    attacks = doc.css('div.view-moves div.view-content table#sort-table tbody tr').each do |a|
+      power = a.css('td')[3].text
+      attack_name_en = a.css('td')[0].css('a').text
+      if Attack.where(name_en: attack_name_en).first
+        attack = Attack.where(name_en: attack_name_en).first
+        attack.power = power.to_i
+        attack.save
+      end
+    end
+  end
 end

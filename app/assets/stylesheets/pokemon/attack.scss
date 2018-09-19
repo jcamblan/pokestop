@@ -1,0 +1,46 @@
+.attack {
+  @extend .card;
+  @extend .p-2;
+  @extend .mb-1;
+  @extend .d-flex;
+  @extend .flex-row;
+  position: relative;
+  background-color: $light;
+}
+
+.attack__type img {
+  width: 30px;
+}
+
+.attack__infos {
+   @extend .pl-2;
+
+   p {
+     margin: 0;
+     padding: 0;
+   }
+}
+
+
+.attack__power {
+  @extend .d-none;
+  @extend .d-sm-block;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: 800;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 10px 0;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+}
+
+@media (min-width: 576px) {
+  .attack__type img {
+    width: 64px;
+  }
+}

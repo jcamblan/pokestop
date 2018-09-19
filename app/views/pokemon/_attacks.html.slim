@@ -1,10 +1,8 @@
+h3 Attaques rapides
 .attacks__fast
-  strong Attaques rapides
-  ul
-    - pokemon.fast_attacks.each do |attack|
-      = render 'attack', attack: attack
+  - pokemon.fast_attacks.each do |attack|
+    = render 'attack', attack: attack
+h3 Attaques chargées
 .attacks__charged
-  strong Attaques chargées
-  ul
-    - pokemon.charge_attacks.each do |attack|
-      = render 'attack', attack: attack
+  - pokemon.charge_attacks.each do |attack|
+    = render 'attack', attack: attack
