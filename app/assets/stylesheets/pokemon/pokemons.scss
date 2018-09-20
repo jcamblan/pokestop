@@ -1,0 +1,18 @@
+.pokemons {
+  @extend .py-5;
+}
+
+.pokemons__list {
+  @extend .card;
+  @extend .col-md-10;
+  @extend .mx-auto;
+  @extend .py-5;
+
+  img {
+    width: 40px;
+  }
+
+  nav {
+    @extend .mx-auto;
+  }
+}

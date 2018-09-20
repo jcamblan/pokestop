@@ -13,8 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery.min.js
+//= require jquery.min
 //= require jquery.easy-autocomplete
+//= require popper.min
 //= require bootstrap4/alert
 //= require bootstrap4/button
 //= require bootstrap4/carousel
@@ -29,4 +30,5 @@
 //= require bootstrap4/util
 //= require jquery.jcarousel
 //= require jcarousel.responsive
+//= require search
 //= require_tree .

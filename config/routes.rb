@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   resources :item, only: [:index, :show]
   resources :generation, only: [:index, :show]
   resources :attack, only: [:index, :show]
-  resources :articles
-  resources :events
+  resources :type, only: [:index, :show]
+  resources :article
+  resources :event
 
   namespace :admin do
     resources :article_categories
