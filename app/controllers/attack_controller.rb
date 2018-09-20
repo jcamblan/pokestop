@@ -1,0 +1,2 @@
+class AttackController < ApplicationController
+end

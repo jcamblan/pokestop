@@ -1,0 +1,2 @@
+class GenerationController < ApplicationController
+end
