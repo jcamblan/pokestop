@@ -1,0 +1,25 @@
+.row
+  .col-6
+    .pokemons
+      .pokemons__list
+        h1 = @type.name
+  .col-6
+    .pokemons
+      .pokemons__list
+        h2 Pokemons utilisant cette compétence :
+        = paginate @pokemons
+        table.table
+          thead
+            tr
+              th scope="col"
+              th scope="col"  Nom
+              th scope="col"  Type(s)
+          tbody
+            - @pokemons.each do |p|
+              tr class=("pokemon_sprite--gray" unless p.generation.on_prod)
+                td = link_to display_sprite(p), p
+                td = link_to p.name, p
+                td 
+                  - p.types.each do |t|
+                     = link_to type_image(t), t
+        = paginate @pokemons

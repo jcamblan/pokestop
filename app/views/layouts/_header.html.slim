@@ -1,5 +1,16 @@
-nav.navbar.navbar-light.bg-light.justify-content-between
+nav.navbar.navbar-light.bg-light.justify-content-between.navbar-expand-md
   = link_to 'Pokestop'.upcase, root_path, class: 'navbar-brand'
+  #navbarNav.navbar-collapse.collapse
+    ul.navbar-nav
+      li.nav-item
+        = link_to "Pokemons", pokemon_index_path, class: 'nav-link'
+      li.nav-item
+        = link_to "Types", type_index_path, class: 'nav-link'
+      li.nav-item
+        = link_to "Compétences", attacks_path, class: 'nav-link'
+      li.nav-item
+        = link_to "Générations", generations_path, class: 'nav-link'
+
   = form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form|
     = form.text_field :q, placeholder: "Search", data: { behavior: 'autocomplete' }, class: "form-control mr-sm-2"
     = form.button "Search", class: "btn btn btn-outline-success my-2 my-sm-0"

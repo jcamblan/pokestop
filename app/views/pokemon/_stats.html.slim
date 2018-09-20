@@ -13,8 +13,8 @@
         li.list-group-item.stats__types
           | Type(s) : 
           - @pokemon.types.each do |type|
-           = type_image(type)
-           = type.name
+           = link_to link_to type_image(type), type
+           = link_to type.name, type
         li.list-group-item 
           = "Distance à parcourir pour 1 "
           = image_tag @pokemon.candy.image_path, width: "30px" if @pokemon.candy

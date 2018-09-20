@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   get :search, controller: :main
   get :export, controller: :main
   
+  get 'gen/', to: 'generation#index', as: 'generations'
+  get 'gen/:id', to: 'generation#show', as: 'generation'
+  get 'comp', to: 'attack#index', as: 'attacks'
+  get 'comp/:id', to: 'attack#show', as: 'attack'
+
   resources :pokemon, only: [:index, :show]
   resources :item_category, only: [:index, :show]
   resources :item, only: [:index, :show]
-  resources :generation, only: [:index, :show]
   resources :attack, only: [:index, :show]
   resources :type, only: [:index, :show]
   resources :article

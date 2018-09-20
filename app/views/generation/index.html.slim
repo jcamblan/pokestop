@@ -1,0 +1,20 @@
+.pokemons
+  .pokemons__list
+    table.table
+      thead
+        tr
+          th scope="col"  #
+          th scope="col"  Nom
+          th scope="col"  Premier pokémon
+          th scope="col"  Dernier pokémon
+      tbody
+        - @generations.each do |g|
+          tr
+            td = link_to g.id, g
+            td = link_to g.name, g
+            td 
+              = link_to display_sprite(g.pokemons.order(:num).first), g.pokemons.order(:num).first
+              = link_to "#{g.pokemons.order(:num).first.name} (##{g.pokemons.order(:num).first.num})", g.pokemons.order(:num).first
+            td 
+              = link_to display_sprite(g.pokemons.order(:num).last), g.pokemons.order(:num).last
+              = link_to "#{g.pokemons.order(:num).last.name} (##{g.pokemons.order(:num).last.num})", g.pokemons.order(:num).last

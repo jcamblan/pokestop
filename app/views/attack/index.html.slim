@@ -1,0 +1,16 @@
+.pokemons
+  .pokemons__list
+    = paginate @attacks
+    table.table
+      thead
+        tr
+          th scope="col"  Nom
+          th scope="col"  Type(s)
+          th scope="col"  Catégorie
+      tbody
+        - @attacks.each do |a|
+          tr
+            td = link_to a.name, a
+            td = link_to type_image(a.type), a.type
+            td = a.attack_category.name
+    = paginate @attacks
