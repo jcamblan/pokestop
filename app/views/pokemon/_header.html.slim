@@ -1,7 +1,7 @@
 .pokemon__prev
-  = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev
+  = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev.num
 .pokemon__next
-  = link_to "#{@pokemon.next.name} (##{@pokemon.next.num}) >>", @pokemon.next
+  = link_to "#{@pokemon.next.name} (##{@pokemon.next.num}) >>", @pokemon.next.num
 .pokemon__generation
   = link_to "Gen ##{@pokemon.generation.id} : #{@pokemon.generation.name}", @pokemon.generation
 .pokemon__ball

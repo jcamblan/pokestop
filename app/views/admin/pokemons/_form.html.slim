@@ -3,7 +3,7 @@
 
   main.content
     = fae_pulldown f, :generation, search: true, collection: Generation.order(:name)
-    = fae_prefix f, :num, prefix: '#'
+    = fae_input f, :num, prefix: '#'
     = fae_input f, :name
     = fae_input f, :name_en
     = fae_input f, :pokedex_entry

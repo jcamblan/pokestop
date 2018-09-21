@@ -49,11 +49,11 @@ class Pokemon < ApplicationRecord
   #------------------------------------------------------------------------
 
   def prev
-    Pokemon.where("id < ?", id).order("id DESC").first || Pokemon.last
+    Pokemon.where("num < ?", num).order("num DESC").first || Pokemon.last
   end
   
   def next
-    Pokemon.where("id > ?", id).order("id ASC").first || Pokemon.first
+    Pokemon.where("num > ?", num).order("num ASC").first || Pokemon.first
   end
 
   #------------------------------------------------------------------------
