@@ -1,8 +1,9 @@
 class ItemCategory < ApplicationRecord
   include Fae::BaseModelConcern
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
+  #------------------------------------------------------------------------
+  # variable d'affichage pour l'admin FAE CMS
+  #------------------------------------------------------------------------
 
   def fae_display_field
     name

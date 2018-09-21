@@ -1,16 +1,16 @@
 class Type < ApplicationRecord
   include Fae::BaseModelConcern
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
-
+  has_and_belongs_to_many :pokemons
+  has_many :attacks
   has_fae_image :logo
+
+  #------------------------------------------------------------------------
+  # variable d'affichage pour l'admin FAE CMS
+  #------------------------------------------------------------------------
 
   def fae_display_field
     name
   end
-
-  has_and_belongs_to_many :pokemons
-  has_many :attacks
 
 end

@@ -3,8 +3,9 @@ class AttackCategory < ApplicationRecord
 
   has_many :attacks
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
+  #------------------------------------------------------------------------
+  # variable d'affichage pour l'admin FAE CMS
+  #------------------------------------------------------------------------
 
   def fae_display_field
     name

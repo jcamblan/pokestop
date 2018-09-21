@@ -1,16 +1,22 @@
 class Evolution < ApplicationRecord
   include Fae::BaseModelConcern
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
+  belongs_to :pokemon
 
-  def fae_display_field
-    title
-  end
+  #------------------------------------------------------------------------
+  # retourne l'objet évolutif associé à l'évolution si il y en a un
+  #------------------------------------------------------------------------
 
   def item
     return Item.find(item_id) if item_id
   end
 
-  belongs_to :pokemon
+  #------------------------------------------------------------------------
+  # variable d'affichage pour l'admin FAE CMS
+  #------------------------------------------------------------------------
+
+  def fae_display_field
+    title
+  end
+
 end

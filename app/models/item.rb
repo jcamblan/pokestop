@@ -1,14 +1,15 @@
 class Item < ApplicationRecord
   include Fae::BaseModelConcern
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
-
+  belongs_to :item_category
   has_fae_image :illustration
+
+  #------------------------------------------------------------------------
+  # variable d'affichage pour l'admin FAE CMS
+  #------------------------------------------------------------------------
 
   def fae_display_field
     name
   end
 
-  belongs_to :item_category
 end
