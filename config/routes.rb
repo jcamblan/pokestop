@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'comp', to: 'attack#index', as: 'attacks'
   get 'comp/:id', to: 'attack#show', as: 'attack'
 
-  resources :pokemon, only: [:index, :show]
+  resources :pokemon, only: [:index, :show], param: :num
   resources :item_category, only: [:index, :show]
   resources :item, only: [:index, :show]
   resources :attack, only: [:index, :show]
