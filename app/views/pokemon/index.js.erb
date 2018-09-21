@@ -1,0 +1,4 @@
+<% js = escape_javascript(
+  render(partial: 'pokemon/list', locals: { pokemons: @pokemons })
+) %>
+$("#filterrific_results").html("<%= js %>");

@@ -1,8 +1,59 @@
 class Pokemon < ApplicationRecord
   include Fae::BaseModelConcern
 
-  #acts_as_list add_new_at: :top
-  #default_scope { order(:position) }
+  filterrific(
+    default_filter_params: { sorted_by: 'num_asc' },
+    available_filters: [
+      :sorted_by,
+      :search_query,
+      :with_generation_id,
+      :with_on_prod
+    ]
+  )
+
+  scope :sorted_by, lambda { |sort_option|
+    direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
+    case sort_option.to_s
+    when /^num_/
+      order("pokemons.num #{ direction }")
+    when /^name_/
+      order("LOWER(pokemons.name) #{ direction }")
+    when /^atk_/
+      order("pokemons.atk #{ direction }")
+    when /^def_/
+      order("pokemons.def #{ direction }")
+    when /^sta_/
+      order("pokemons.sta #{ direction }")
+    when /^pc_max_/
+      order("pokemons.pc_max #{ direction }")
+    else
+      raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
+    end
+  }
+
+  scope :with_generation_id, lambda { |generation_ids|
+    where(:generation_id => [*generation_ids])
+  }
+
+  scope :with_on_prod, lambda { |select|
+    where(:generation_id => Generation.where(on_prod: true).ids)
+  }
+
+  def self.options_for_sorted_by
+    [
+      ['Name (a-z)', 'name_asc'],
+      ['Name (a-a)', 'name_desc'],
+      ['Num', 'num_asc'],
+      ['Attaque asc', 'atk_asc'],
+      ['Attaque desc', 'atk_desc'],
+      ['Défense asc', 'def_asc'],
+      ['Défense desc', 'def_desc'],
+      ['Endurance asc', 'sta_asc'],
+      ['Endurance desc', 'sta_desc'],
+      ['PC asc', 'pc_max_asc'],
+      ['PC desc', 'pc_max_desc']
+    ]
+  end
 
   def fae_display_field
     name

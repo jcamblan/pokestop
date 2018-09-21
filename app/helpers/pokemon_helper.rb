@@ -23,6 +23,14 @@ module PokemonHelper
     end
   end
 
+  def small_stat_bar(stat_name,stat,stat_max)
+    content_tag :div, class: 'stats__progress' do
+      content_tag :div, class: "stats__progress-bar stats__progress-bar--#{stat_name}", style: "width: #{stat.to_f/stat_max*100}%", role: 'progressbar', aria: {valuemin: '0', valuemax: stat_max, valuenow: stat} do
+        content_tag :span, stat.to_s
+      end
+    end
+  end
+
   def energy_bars(attack)
     image_tag "attacks/#{attack.energy_bars}-energy.png"
   end

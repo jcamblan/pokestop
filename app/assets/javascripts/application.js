@@ -31,4 +31,5 @@
 //= require jquery.jcarousel
 //= require jcarousel.responsive
 //= require search
+//= require filterrific/filterrific-jquery
 //= require_tree .
