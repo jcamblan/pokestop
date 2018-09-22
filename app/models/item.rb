@@ -8,7 +8,7 @@ class Item < ApplicationRecord
     item_pokemons = Array.new
     if Evolution.where(item_id: self.id)
       Evolution.where(item_id: self.id).each do |e|
-        item_pokemons << Pokemon.find(e.pokemon_id)
+        item_pokemons << Pokemon.find(e.after_evolution)
       end
     end
     return item_pokemons

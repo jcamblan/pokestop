@@ -6,15 +6,16 @@ Rails.application.routes.draw do
   get :export, controller: :main
   get :calendar, controller: :event
   
-  get 'gen/', to: 'generation#index', as: 'generations'
+  get 'generations', to: 'generation#index', as: 'generations'
+  get 'gen/', to: redirect('/generations')
   get 'gen/:id', to: 'generation#show', as: 'generation'
-  get 'comp', to: 'attack#index', as: 'attacks'
-  get 'comp/:id', to: 'attack#show', as: 'attack'
+  get 'attaques/', to: 'attack#index', as: 'attacks'
+  get 'attaque/', to: redirect('/attaques')
+  get 'attaque/:id', to: 'attack#show', as: 'attack'
 
   resources :pokemon, only: [:index, :show], param: :num
   resources :item_category, only: [:index, :show]
   resources :item, only: [:index, :show]
-  resources :attack, only: [:index, :show]
   resources :type, only: [:index, :show]
   resources :article
   resources :event

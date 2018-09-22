@@ -3,6 +3,10 @@ class Generation < ApplicationRecord
 
   has_many :pokemons
 
+
+  def to_param
+    "#{self.id}-#{self.name.parameterize}"
+  end
   #------------------------------------------------------------------------
   # variable d'affichage pour l'admin FAE CMS
   #------------------------------------------------------------------------

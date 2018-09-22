@@ -5,6 +5,10 @@ class Type < ApplicationRecord
   has_many :attacks
   has_fae_image :logo
 
+  def to_param
+    "#{self.id}-#{self.name.parameterize}"
+  end
+  
   #------------------------------------------------------------------------
   # variable d'affichage pour l'admin FAE CMS
   #------------------------------------------------------------------------

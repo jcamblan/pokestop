@@ -1,8 +1,6 @@
 class PokemonController < ApplicationController
 
   def index
-    #@pokemons = Pokemon.all.order(params[:order]).page(params[:page]).per(25)
-
     @filterrific = initialize_filterrific(
       Pokemon,
       params[:filterrific],
