@@ -1,0 +1,6 @@
+- @items_categories.each do |items_category|
+  .item-category.container-fluid
+    h2 = items_category.name
+    .row
+      - items_category.items.each do |item|
+        = render 'item', item: item

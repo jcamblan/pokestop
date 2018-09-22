@@ -1,0 +1,8 @@
+.card
+  .card-body
+    h3 = item.name
+    p.card-text = item.desc
+    - unless item.pokemons.empty?
+      ul
+        - item.pokemons.each do |p|
+          li = p.name
