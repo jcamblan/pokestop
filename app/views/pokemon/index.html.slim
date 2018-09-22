@@ -1,14 +1,16 @@
 .pokemons
   .pokemons__list
-    h1 Pokemons
-    = form_for_filterrific @filterrific do |f|
-      div
-        | Gen
-        = f.select(:with_generation_id, @filterrific.select_options[:with_generation_id], { include_blank: '- Any -' })
-      div
-        | On prod ?
-        = f.select(:with_on_prod, @filterrific.select_options[:with_on_prod], { include_blank: '- Any -' })
-      div
-        = link_to 'Reset filters', reset_filterrific_url
-      = render_filterrific_spinner
-= render 'list', pokemons: @pokemons
+    .jumbotron.jumbotron-fluid
+      .container
+        h1 Pokemons
+        = form_for_filterrific @filterrific do |f|
+          div
+            | Gen
+            = f.select(:with_generation_id, @filterrific.select_options[:with_generation_id], { include_blank: '- Any -' })
+          div
+            | On prod ?
+            = f.select(:with_on_prod, @filterrific.select_options[:with_on_prod], { include_blank: '- Any -' })
+          div
+            = link_to 'Reset filters', reset_filterrific_url
+          = render_filterrific_spinner
+    = render 'list', pokemons: @pokemons

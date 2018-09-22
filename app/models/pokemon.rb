@@ -5,6 +5,7 @@ class Pokemon < ApplicationRecord
   has_and_belongs_to_many :types
   has_and_belongs_to_many :attacks
   has_many :evolutions
+  has_and_belongs_to_many :eggs
 
   #------------------------------------------------------------------------
   # On vérifie si le pokémon peut évoluer ou s'il est lui-même l'évolution d'un autre pokémon
@@ -49,7 +50,7 @@ class Pokemon < ApplicationRecord
   #------------------------------------------------------------------------
 
   def prev
-    Pokemon.where("num < ?", num).order("num DESC").first || Pokemon.last
+    Pokemon.where("num < ?", num).order("num DESC").first || Pokemon.order("num DESC").first
   end
   
   def next

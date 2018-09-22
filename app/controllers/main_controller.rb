@@ -34,6 +34,7 @@ class MainController < ApplicationController
     @items = Item.all.order(:item_category_id)
     @attack_categories = AttackCategory.all
     @attacks = Attack.all.order(:attack_category_id)
+    @eggs = Egg.all.order(:id)
   end
 
 end

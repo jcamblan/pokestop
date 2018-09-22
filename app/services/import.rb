@@ -10,6 +10,7 @@ class Import
   @@item_categories = @backup_file.dig('item_categories')
   @@items = @backup_file.dig('items')
   @@pokemons = @backup_file.dig('pokemons')
+  @@eggs = @backup_file.dig('eggs')
   @@evolutions = @backup_file.dig('evolutions')
 
   def import_everything
@@ -21,6 +22,7 @@ class Import
     create_item_categories if @@item_categories
     create_items if @@items
     create_pokemons if @@pokemons
+    create_eggs if @@eggs
     create_evolutions if @@evolutions
   end 
 
@@ -157,6 +159,24 @@ class Import
       attacks_array << Attack.where(name_en: a['name_en']).first
     end
     return attacks_array
+  end
+
+## PUIS LES OEUFS
+
+  def create_eggs
+    @@eggs.each do |egg|
+      create_egg(egg) unless Egg.where(name: egg['name']).first
+    end
+  end
+
+  def create_egg(egg)
+    e = Egg.new
+    e.name = egg['name']
+    e.desc = egg['desc']
+    egg['pokemons'].each do |p|
+      e.pokemons << Pokemon.where(num: p['num']).first
+    end
+    e.save
   end
 
 ## PUIS LES EVOLUTIONS

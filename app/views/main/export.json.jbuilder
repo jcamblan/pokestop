@@ -1,3 +1,16 @@
+json.eggs do 
+  json.array!(@eggs) do |egg|
+    json.name egg.name
+    json.desc egg.desc
+    json.pokemons do
+      json.array!(egg.pokemons.order(:num)) do |e|
+        json.name e.name
+        json.num e.num
+      end
+    end
+  end
+end
+
 json.generations do 
   json.array!(@generations) do |generation|
     json.id generation.id

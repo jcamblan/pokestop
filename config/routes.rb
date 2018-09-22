@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get :search, controller: :main
   get :export, controller: :main
+  get :calendar, controller: :event
   
   get 'gen/', to: 'generation#index', as: 'generations'
   get 'gen/:id', to: 'generation#show', as: 'generation'
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   resources :event
 
   namespace :admin do
+    resources :eggs
     resources :article_categories
     resources :articles
     resources :candies

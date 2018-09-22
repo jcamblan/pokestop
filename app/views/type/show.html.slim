@@ -1,9 +1,9 @@
 .row
-  .col-6
+  .col-12.col-md-6
     .pokemons
       .pokemons__list
         h1 = @type.name
-  .col-6
+  .col-12.col-md-6
     .pokemons
       .pokemons__list
         h2 Pokemons utilisant cette compétence :
@@ -17,8 +17,8 @@
           tbody
             - @pokemons.each do |p|
               tr class=("pokemon_sprite--gray" unless p.generation.on_prod)
-                td = link_to display_sprite(p), p
-                td = link_to p.name, p
+                td = link_to display_sprite(p), pokemon_path(p.num)
+                td = link_to p.name, pokemon_path(p.num)
                 td 
                   - p.types.each do |t|
                      = link_to type_image(t), t

@@ -1,5 +1,8 @@
-.home
-  .home__events.events
-    = render 'events', events: @events
-  .home__articles.articles
-    = render 'articles', articles: @articles
+.home.row.justify-content-center
+  .col-10.col-md-5.order-md-2
+    .card
+      .card-body
+        #calendar
+  .col-10.col-md-6.order-md-1
+    .home__articles.articles
+      = render 'articles', articles: @articles

@@ -1,23 +1,20 @@
 .home {
-  @extend .container-fluid;
+  @extend .pt-3;
+}
+
+.fc-basic-view .fc-body .fc-row {
+  min-height: 0 !important;
 }
 
 .home__events {
   @extend .row;
-  @extend .py-3;
 }
 
 .home__articles {
-  @extend .row;
-  @extend .justify-content-center;
-  @extend .py-3;
-  @extend .flex-column;
-  @extend .col-8;
   // background: linear-gradient(to bottom right, $white, $electric);
 }
 
 .article {
-  @extend .row;
   @extend .mb-2;
 }
 

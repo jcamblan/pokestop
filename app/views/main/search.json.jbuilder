@@ -1,7 +1,7 @@
 json.pokemons do 
   json.array!(@pokemons) do |pokemon|
   	json.name pokemon.name
-  	json.url pokemon_path(pokemon)
+  	json.url pokemon_path(pokemon.num)
   end
 end
 

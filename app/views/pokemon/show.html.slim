@@ -6,6 +6,9 @@
     .col-12.col-sm-6
       .pokemon__stats.stats
         = render 'stats'
+      - unless @pokemon.eggs.empty?
+        .pokemon__stats.stats
+          = render 'eggs'
     .col-12.col-sm-5
       - if @evolutions
         .pokemon__card.col.mh-auto
