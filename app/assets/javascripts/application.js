@@ -38,7 +38,7 @@
 //= require filterrific/filterrific-jquery
 //= require_tree .
 
-$(function() {
+document.addEventListener("turbolinks:load", function() {
 
   // page is now ready, initialize the calendar...
 
