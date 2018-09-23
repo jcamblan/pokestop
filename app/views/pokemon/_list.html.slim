@@ -2,13 +2,13 @@
   = paginate pokemons
   table.table
     tr
-      th = filterrific_sorting_link(@filterrific, :name)
-      th = filterrific_sorting_link(@filterrific, :num)
-      th = filterrific_sorting_link(@filterrific, :pc_max)
-      th = filterrific_sorting_link(@filterrific, :atk)
-      th = filterrific_sorting_link(@filterrific, :def)
-      th = filterrific_sorting_link(@filterrific, :sta)
-      th Type(s)
+      th = sanitize filterrific_sorting_link(@filterrific, :name).gsub('Name', 'NOM')
+      th = sanitize filterrific_sorting_link(@filterrific, :num).gsub('Num','#')
+      th = sanitize filterrific_sorting_link(@filterrific, :pc_max).gsub('Pc max', 'PC')
+      th = sanitize filterrific_sorting_link(@filterrific, :atk).gsub('Atk', 'ATT')
+      th = sanitize filterrific_sorting_link(@filterrific, :def).gsub('Def', 'DEF')
+      th = sanitize filterrific_sorting_link(@filterrific, :sta).gsub('Sta', 'END')
+      th TYPE(S)
     - pokemons.each do |pokemon|
       tr
         td 
