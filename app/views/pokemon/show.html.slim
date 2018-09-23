@@ -3,24 +3,26 @@
   .pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
     = render 'header'
   .row.justify-content-around
-    .col-12.col-sm-6
+    .col-12.col-lg-6
       .pokemon__stats.stats
         = render 'stats'
       - unless @pokemon.eggs.empty?
         .pokemon__stats.stats
           = render 'eggs'
-    .col-12.col-sm-5
+    .col-12.col-lg-5
       - if @evolutions
-        .pokemon__card.col.mh-auto
-          .pokemon__evolutions
-            .card-header.row
-              h2 Evolutions
-            .card-body
-              = render 'evolution', pokemons: @evolutions, evolutions: []
+        .row
+          .pokemon__card.mh-auto.col-12
+            .pokemon__evolutions
+              .card-header.row
+                h2 Evolutions
+              .card-body
+                = render 'evolution', pokemons: @evolutions, evolutions: []
       - if @pokemon.attacks
-        .pokemon__card.col.mh-auto
-          .pokemon__attacks.attacks
-            .card-header.row
-              h2 Capacités :
-            .card-body
-              = render 'attacks', pokemon: @pokemon
+        .row
+          .pokemon__card.mh-auto.col-12
+            .pokemon__attacks.attacks
+              .card-header.row
+                h2 Capacités :
+              .card-body
+                = render 'attacks', pokemon: @pokemon

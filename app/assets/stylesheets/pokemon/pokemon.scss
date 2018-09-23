@@ -1,6 +1,10 @@
 .pokemon {
-  @extend .container-fluid;
+  @extend .container;
   margin:auto;
+  @extend .mt-3;
+  border: 1px solid lightgrey;
+  background: white;
+
 }
 
 .pokemon__cards {
@@ -22,7 +26,6 @@
   @extend .align-items-center;
   @extend .mb-4;
   position: relative;
-  background: grey;
   //background: linear-gradient(to bottom right, $poison, $grass);
   padding-top: 50px;
   padding-bottom: 50px;

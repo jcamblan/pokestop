@@ -1,5 +1,5 @@
 - @items_categories.each do |items_category|
-  .item-category.container-fluid
+  .item-category.container-fluid class=("item-category--#{items_category.name_en.parameterize}")
     h2 = items_category.name
     .row
       - items_category.items.each do |item|
