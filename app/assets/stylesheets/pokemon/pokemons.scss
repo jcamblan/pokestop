@@ -16,3 +16,12 @@
     @extend .mx-auto;
   }
 }
+
+#filterrific_results {
+  @extend .d-flex;
+  @extend .flex-column;
+}
+
+ul.pagination {
+  @extend .mx-auto;
+}
