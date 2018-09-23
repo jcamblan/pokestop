@@ -5,8 +5,8 @@ class PokemonController < ApplicationController
       Pokemon,
       params[:filterrific],
       :select_options => {
-        sorted_by: Pokemon.options_for_sorted_by,
         with_generation_id: Generation.options_for_select,
+        with_type_id: Type.options_for_select,
         with_on_prod: ['Filtrer']
       }
     ) or return

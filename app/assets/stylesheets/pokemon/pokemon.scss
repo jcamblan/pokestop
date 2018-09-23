@@ -10,12 +10,13 @@
 .pokemon__cards {
   @extend .row;
   @extend .justify-content-around;
-  @extend .pt-4;
+  @extend .mt-4;
 }
 
 .pokemon__card {
   @extend .card;
   @extend .mb-3;
+  @extend .col-12;
 }
 
 
@@ -26,7 +27,6 @@
   @extend .align-items-center;
   @extend .mb-4;
   position: relative;
-  //background: linear-gradient(to bottom right, $poison, $grass);
   padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: 1px solid lightgrey;
@@ -135,4 +135,6 @@
 
 .pokemon__evolutions { }
 
-.pokemon__evolution {}
+.pokemon__evolution {
+  @extend .col;
+}

@@ -17,4 +17,11 @@ class Type < ApplicationRecord
     name
   end
 
+  #------------------------------------------------------------------------
+  # pour la gem filterrific
+  #------------------------------------------------------------------------
+
+  def self.options_for_select
+    order('id').map { |e| [e.name, e.id] }
+  end
 end

@@ -115,6 +115,7 @@ class Pokemon < ApplicationRecord
       :sorted_by,
       :search_query,
       :with_generation_id,
+      :with_type_id,
       :with_on_prod
     ]
   )
@@ -140,26 +141,16 @@ class Pokemon < ApplicationRecord
   }
 
   scope :with_generation_id, lambda { |generation_ids|
-    where(:generation_id => [*generation_ids])
+    where(:generation_id => [*generation_ids]).order(:num)
   }
 
-  scope :with_on_prod, lambda { |select|
-    where(:generation_id => Generation.where(on_prod: true).ids)
+  scope :with_type_id, lambda { |type_id|
+    where(:id => Type.find(type_id).pokemons.ids).order(:num)
   }
 
-  def self.options_for_sorted_by
-    [
-      ['Name (a-z)', 'name_asc'],
-      ['Name (a-a)', 'name_desc'],
-      ['Num', 'num_asc'],
-      ['Attaque asc', 'atk_asc'],
-      ['Attaque desc', 'atk_desc'],
-      ['Défense asc', 'def_asc'],
-      ['Défense desc', 'def_desc'],
-      ['Endurance asc', 'sta_asc'],
-      ['Endurance desc', 'sta_desc'],
-      ['PC asc', 'pc_max_asc'],
-      ['PC desc', 'pc_max_desc']
-    ]
-  end
+  scope :with_on_prod, lambda { |check|
+    return nil if 0 == check # checkbox unchecked
+    where(:generation_id => Generation.where(on_prod: true).ids).order(:num)
+  }
+
 end

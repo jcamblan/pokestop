@@ -1,10 +1,24 @@
 .pokemons {
-  @extend .pt-5;
+  @extend .container;
+  margin:auto;
+  @extend .mt-3;
+  border: 1px solid lightgrey;
+  background: white;
+}
+
+.pokemons__header {
+  @extend .row;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .mb-4;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .pokemons__list {
-  @extend .card;
-  @extend .col-md-10;
   @extend .mx-auto;
   @extend .py-5;
 
@@ -17,7 +31,15 @@
   }
 }
 
-#filterrific_results {
+.list__filters {
+  @extend .rounded;
+  @extend .p-3;
+  @extend .mb-2;
+  @extend .border;
+  @extend .border-secondary;
+}
+
+.list__results {
   @extend .d-flex;
   @extend .flex-column;
 }

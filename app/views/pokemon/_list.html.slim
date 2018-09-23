@@ -1,5 +1,5 @@
-#filterrific_results
-  = paginate pokemons
+.list__results#filterrific_results
+  = paginate @pokemons
   table.table
     thead.thead-light
       tr
@@ -10,7 +10,7 @@
         th = sanitize filterrific_sorting_link(@filterrific, :def).gsub('Def', 'DEF')
         th = sanitize filterrific_sorting_link(@filterrific, :sta).gsub('Sta', 'END')
         th TYPE(S)
-    - pokemons.each do |pokemon|
+    - @pokemons.each do |pokemon|
       tr
         td 
           = link_to display_sprite(pokemon), pokemon_path(pokemon.num)
@@ -23,4 +23,4 @@
         td 
           - pokemon.types.each do |t|
             = link_to type_image(t), t
-  = paginate pokemons
+  = paginate @pokemons

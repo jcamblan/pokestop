@@ -33,3 +33,9 @@ body {
 
 header {
 }
+
+footer {
+  height: 200px;
+  @extend .bg-info;
+  @extend .mt-5;
+}
