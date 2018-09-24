@@ -32,6 +32,23 @@
 
 fr:
   views:
+    attacks:
+      index:
+      show: 
+        stats:
+          h2: "Caractéristiques de l'attaque %{attack}"
+        pokemons:
+          h2: "%{count} pokémons utilisent cette attaque:"
+    generations:
+      index:
+        col_num: "#"
+        col_name: "Nom"
+        col_first: "Premier pokémon"
+        col_last: "Dernier pokémon"
+      show:
+        col_num: "#"
+        col_name: "Nom"
+        col_types: "Type(s)"
     layouts:
       header:
         pokemons: "Pokémons"
@@ -78,6 +95,21 @@ fr:
         capture_rate: "Chances de capture :"
         buddy_distance: "Distance à parcourir pour 1 %{candy} :"
         english_name: "Nom anglais :"
+    types:
+      index:
+        col_name: "Nom"
+        col_nb_pokemon: "Nombre de pokémons"
+      show:
+        attacks:
+          h2: "Attaques de type %{type} :"
+          col_name: "Nom"
+          col_type: "Type"
+          col_cat: "Catégorie"
+        pokemons:
+          h2: "Pokemons de type %{type} :"
+          col_num: "#"
+          col_name: "Nom"
+          col_types: "Type(s)"
   helpers:
     page_entries_info:
       one_page:

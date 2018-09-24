@@ -1,12 +1,13 @@
+- title("Liste des générations")
 .pokemons
   .pokemons__list
     table.table
       thead
         tr
-          th scope="col"  #
-          th scope="col"  Nom
-          th scope="col"  Premier pokémon
-          th scope="col"  Dernier pokémon
+          th scope="col" = t('views.generations.index.col_num')
+          th scope="col" = t('views.generations.index.col_name')
+          th scope="col" = t('views.generations.index.col_first')
+          th scope="col" = t('views.generations.index.col_last')
       tbody
         - @generations.each do |g|
           tr

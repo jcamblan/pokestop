@@ -1,15 +1,16 @@
-.pokemons
+- title("Type : #{@type.name}")
+.container
   .row
     .col-12.col-md-6
       .pokemons
         .pokemons__list
-          h1 = @type.name
+          h2 = t('views.types.show.attacks.h2', type: @type.name)
           table.table
             thead
               tr
-                th scope="col"  Nom
-                th scope="col"  Type(s)
-                th scope="col"  Catégorie
+                th scope="col" = t('views.types.show.attacks.col_name')
+                th scope="col" = t('views.types.show.attacks.col_type')
+                th scope="col" = t('views.types.show.attacks.col_cat')
             tbody
               - @attacks.each do |a|
                 tr
@@ -19,15 +20,15 @@
     .col-12.col-md-6
       .pokemons
         .pokemons__list
-          h2 = "Pokemons de type #{@type.name} :"
+          h2 = t('views.types.show.pokemons.h2', type: @type.name)
           = paginate @pokemons
           table.table
             thead
               tr
                 th scope="col"
-                th scope="col"  #
-                th scope="col"  Nom
-                th scope="col"  Type(s)
+                th scope="col" = t('views.types.show.pokemons.col_num')
+                th scope="col" = t('views.types.show.pokemons.col_name')
+                th scope="col" = t('views.types.show.pokemons.col_types')
             tbody
               - @pokemons.each do |p|
                 tr class=("pokemon_sprite--gray" unless p.generation.on_prod)

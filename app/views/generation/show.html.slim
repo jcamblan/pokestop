@@ -1,3 +1,4 @@
+- title("Génération ##{@generation.id} : #{@generation.name}")
 .pokemons
   .pokemons__list
     = paginate @pokemons
@@ -5,9 +6,9 @@
       thead
         tr
           th scope="col"
-          th scope="col"  #
-          th scope="col"  Nom
-          th scope="col"  Type(s)
+          th scope="col" = t('views.generations.show.col_num')
+          th scope="col" = t('views.generations.show.col_name')
+          th scope="col" = t('views.generations.show.col_types')
       tbody
         - @pokemons.each do |p|
           tr class=("pokemon_sprite--gray" unless p.generation.on_prod)

@@ -1,10 +1,12 @@
-.row
-  .col-12.col-md-6
-    .pokemons
-      .pokemons__list
-        h1 = @attack.name
-  .col-12.col-md-6
-    .pokemons
-      .pokemons__list
-        h2 Pokemons utilisant cette compétence :
-        = render 'pokemon/list'
+- title("#{@attack.attack_category.name} : #{@attack.name}")
+.container
+  .row
+    .col-12.col-md-6
+      .pokemons
+        .pokemons__list
+          h2 = t('views.attacks.show.stats.h2', attack: @attack.name)
+    .col-12.col-md-6
+      .pokemons
+        .pokemons__list
+          h2 = t('views.attacks.show.pokemons.h2', count: @attack.pokemons.count)
+          = render 'pokemon/list'
