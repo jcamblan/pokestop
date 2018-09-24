@@ -1,5 +1,4 @@
 class Pokemon < ApplicationRecord
-  include Fae::BaseModelConcern
 
   belongs_to :generation
   has_and_belongs_to_many :types
@@ -95,14 +94,6 @@ class Pokemon < ApplicationRecord
   
   def fast_attacks
     self.attacks.where(attack_category_id: 2)
-  end
-
-  #------------------------------------------------------------------------
-  # variable d'affichage pour l'admin FAE CMS
-  #------------------------------------------------------------------------
-
-  def fae_display_field
-    name
   end
 
   #------------------------------------------------------------------------

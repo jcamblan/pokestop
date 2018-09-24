@@ -1,5 +1,4 @@
 class Candy < ApplicationRecord
-  include Fae::BaseModelConcern
 
   #------------------------------------------------------------------------
   # récupération du nom et du chemin des images de bonbons.
@@ -13,14 +12,5 @@ class Candy < ApplicationRecord
   def image_name
     return name_en.parameterize
   end
-
-  #------------------------------------------------------------------------
-  # variable d'affichage pour l'admin FAE CMS
-  #------------------------------------------------------------------------
-
-  def fae_display_field
-    name
-  end
-
 
 end

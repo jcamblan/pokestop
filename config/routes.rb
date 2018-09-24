@@ -20,28 +20,4 @@ Rails.application.routes.draw do
   resources :article
   resources :event
 
-  namespace :admin do
-    resources :eggs
-    resources :article_categories
-    resources :articles
-    resources :candies
-    resources :events
-    resources :alternative_skins
-    resources :alternative_skin_categories
-    resources :evolutions
-    resources :items
-    resources :item_categories
-    resources :pokemons
-    resources :attacks do
-      post 'filter', on: :collection
-    end
-    resources :attack_categories
-    resources :types
-    resources :generations
-  end
-  # mount Fae below your admin namespec
-  mount Fae::Engine => '/admin'
-
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
