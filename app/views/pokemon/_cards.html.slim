@@ -6,5 +6,5 @@
   .col-12.col-lg-5
     - if @evolutions
       = render 'pokemon/cards/evolutions'
-    - if @pokemon.attacks
+    - if @pokemon.attacks.present?
       = render 'pokemon/cards/attacks'

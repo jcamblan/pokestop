@@ -4,5 +4,5 @@
   .attack__infos
     h4 = link_to attack.name, attack
     p = energy_bars(attack) if attack.energy_bars
-    p = "Génère #{attack.epu} points d'énergie" if attack.epu
+    p = t('views.pokemon.show.attack.energy_generated', epu: attack.epu) if attack.epu
   .attack__power = attack.power.to_i

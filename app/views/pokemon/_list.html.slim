@@ -3,15 +3,15 @@
   table.table
     thead.thead-light
       tr
-        th = sanitize filterrific_sorting_link(@filterrific, :name).gsub('Name', 'NOM')
-        th = sanitize filterrific_sorting_link(@filterrific, :num).gsub('Num','#')
-        th = sanitize filterrific_sorting_link(@filterrific, :pc_max).gsub('Pc max', 'PC')
-        th = sanitize filterrific_sorting_link(@filterrific, :atk).gsub('Atk', 'ATT')
-        th = sanitize filterrific_sorting_link(@filterrific, :def).gsub('Def', 'DEF')
-        th = sanitize filterrific_sorting_link(@filterrific, :sta).gsub('Sta', 'END')
-        th TYPE(S)
+        th = sanitize filterrific_sorting_link(@filterrific, :name).gsub('Name', t('views.pokemon.list.name'))
+        th = sanitize filterrific_sorting_link(@filterrific, :num).gsub('Num', t('views.pokemon.list.num'))
+        th = sanitize filterrific_sorting_link(@filterrific, :pc_max).gsub('Pc max', t('views.pokemon.list.pc_max'))
+        th = sanitize filterrific_sorting_link(@filterrific, :atk).gsub('Atk', t('views.pokemon.list.atk'))
+        th = sanitize filterrific_sorting_link(@filterrific, :def).gsub('Def', t('views.pokemon.list.def'))
+        th = sanitize filterrific_sorting_link(@filterrific, :sta).gsub('Sta', t('views.pokemon.list.sta'))
+        th = t('views.pokemon.list.types')
     - @pokemons.each do |pokemon|
-      tr
+      tr class=("list__tr--gray" unless pokemon.generation.on_prod)
         td 
           = link_to display_sprite(pokemon), pokemon_path(pokemon.num)
           = link_to pokemon.name, pokemon_path(pokemon.num)

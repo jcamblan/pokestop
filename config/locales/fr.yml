@@ -32,12 +32,52 @@
 
 fr:
   views:
+    layouts:
+      header:
+        pokemons: "Pokémons"
+        types: "Types"
+        attacks: "Attaques"
+        generations: "Générations"
+        search: "Rechercher"
+        search_placeholder: "Pokémon, objet, attaque..."
     pagination:
       first: "&laquo;"
       last: "&raquo;"
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+    pokemon:
+      list:
+        name: "NOM"
+        num: "#"
+        pc_max: "PC"
+        atk: "ATT"
+        def: "DEF"
+        sta: "END"
+        types: "TYPE(S)"
+        filters:
+          generation: "Génération :"
+          g_all: "- Toutes -"
+          types: "Type :"
+          t_all: "- Tous -"
+          on_prod: "Pokémon GO uniquement"
+          reset: "Réinitialiser les filtres"
+      show:
+        caracs: "Caractéristiques :"
+        evolutions: "Evolutions :"
+        main_stats: "Statistiques principales :"
+        type: "Type(s) :"
+        secondary_stats: "Données annexes :"
+        abilities: "Capacités :"
+        fast_moves: "Attaques rapides :"
+        charge_moves: "Attaques chargées :"
+        attack:
+          energy_generated: "Génère %{epu} points d'énergie"
+        eggs: "Oeufs :"
+        flee_rate: "Taux de fuite :"
+        capture_rate: "Chances de capture :"
+        buddy_distance: "Distance à parcourir pour 1 %{candy} :"
+        english_name: "Nom anglais :"
   helpers:
     page_entries_info:
       one_page:

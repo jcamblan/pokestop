@@ -1,13 +1,13 @@
 .row
   .pokemon__card
     .card-header.row
-      h2 Capacités :
+      h2 = t('views.pokemon.show.abilities')
     .card-body
-      h3 Attaques rapides
+      h3 = t('views.pokemon.show.fast_moves')
       .attacks__fast
         - @pokemon.fast_attacks.each do |attack|
           = render 'pokemon/cards/attack', attack: attack
-      h3 Attaques chargées
+      h3 = t('views.pokemon.show.charge_moves')
       .attacks__charged
         - @pokemon.charge_attacks.each do |attack|
           = render 'pokemon/cards/attack', attack: attack

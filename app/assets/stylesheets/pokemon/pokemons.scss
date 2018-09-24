@@ -44,6 +44,12 @@
   @extend .flex-column;
 }
 
+.list__tr {}
+
+.list__tr--gray {
+  -webkit-filter: grayscale(100%) opacity(20%);
+}
+
 ul.pagination {
   @extend .mx-auto;
 }
