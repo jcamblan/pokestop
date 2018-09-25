@@ -1,12 +1,13 @@
 class Evolution < ApplicationRecord
 
   belongs_to :pokemon
+  belongs_to :item
 
   #------------------------------------------------------------------------
   # retourne l'objet évolutif associé à l'évolution si il y en a un
   #------------------------------------------------------------------------
 
-  def item
+  def self.item
     return Item.find(item_id) if item_id
   end
 

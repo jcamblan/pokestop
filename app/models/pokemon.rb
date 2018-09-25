@@ -5,6 +5,7 @@ class Pokemon < ApplicationRecord
   has_and_belongs_to_many :attacks
   has_many :evolutions
   has_and_belongs_to_many :eggs
+  belongs_to :candy
 
   #------------------------------------------------------------------------
   # On vérifie si le pokémon peut évoluer ou s'il est lui-même l'évolution d'un autre pokémon
