@@ -4,7 +4,7 @@
       h2 = t('views.pokemon.show.caracs')
     .card-body
       - unless @pokemon.types.empty?
-        h3 = t('views.pokemon.show.type')
+        h3 = t('views.pokemon.show.type').pluralize(@pokemon.types.count)
         - @pokemon.types.each do |type|
           .pokemon__type
             = link_to link_to type_image(type), type

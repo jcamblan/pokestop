@@ -83,7 +83,7 @@ fr:
         caracs: "Caractéristiques :"
         evolutions: "Evolutions :"
         main_stats: "Statistiques principales :"
-        type: "Type(s) :"
+        type: "Type"
         secondary_stats: "Données annexes :"
         abilities: "Capacités :"
         fast_moves: "Attaques rapides :"
