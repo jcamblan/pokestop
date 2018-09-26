@@ -14,10 +14,12 @@ Rails.application.routes.draw do
   get 'attaque/:id', to: 'attack#show', as: 'attack'
 
   resources :pokemon, only: [:index, :show], param: :num
-  resources :item_category, only: [:index, :show]
   resources :item, only: [:index, :show]
   resources :type, only: [:index, :show]
   resources :article
   resources :event
+  get '/signup', to: 'users#new'
+  post '/signup',  to: 'users#create'
+  resources :users
 
 end
