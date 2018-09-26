@@ -2,6 +2,16 @@ Rails.application.routes.draw do
 
   root to: 'main#index'
 
+  # Gestion des utilisateurs ----------------------------------------------------
+
+  get '/signup', to: 'users#new'
+  post '/signup',  to: 'users#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  resources :users
+
+
   get :search, controller: :main
   get :export, controller: :main
   get :calendar, controller: :event
@@ -18,8 +28,5 @@ Rails.application.routes.draw do
   resources :type, only: [:index, :show]
   resources :article
   resources :event
-  get '/signup', to: 'users#new'
-  post '/signup',  to: 'users#create'
-  resources :users
 
 end
