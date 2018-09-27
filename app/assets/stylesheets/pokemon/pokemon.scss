@@ -1,16 +1,13 @@
 .pokemon {
-  @extend .row;
-  @extend .flex-column;
   margin:auto;
 }
 
 /* POKEMON HEADER */
 
 .pokemon__header {
-  @extend .row;
-  @extend .d-flex;
-  @extend .justify-content-center;
-  @extend .align-items-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @extend .mb-4;
   @extend .shadow-sm;
   position: relative;
@@ -51,10 +48,10 @@
 }
 
 .pokemon__ball {
-  @extend .flex-column;
-  @extend .d-flex;
-  @extend .justify-content-center;
-  @extend .align-items-center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $white;
   width: 200px;
   height: 200px;
@@ -66,13 +63,9 @@
 
 /* POKEMON MAIN CONTENT */
 
-.pokemon__cards {
-  @extend .row;
-  @extend .justify-content-around;
+.pokemon__blocks {
+  justify-content: space-around;
   @extend .mt-4;
-}
-
-.pokemon__block {
 }
 
 .stats__types img {
@@ -107,6 +100,15 @@
   margin-left: 10px;
 }
 
+ul.eggs__list {
+  display: flex;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+  }
+}
+
 
 
 .pokemon__name {}
@@ -139,5 +141,4 @@
 .pokemon__evolutions { }
 
 .pokemon__evolution {
-  @extend .col;
 }

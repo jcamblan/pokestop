@@ -1,0 +1,5 @@
+- if @evolutions
+  .pokemon__block.block
+    h2 = t('.evolutions')
+    = render 'pokemons/blocks/evolution', pokemons: @evolutions, evolutions: []
+

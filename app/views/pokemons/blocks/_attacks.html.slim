@@ -1,0 +1,11 @@
+- if @pokemon.attacks.present?
+  .pokemon__block.block
+    h2 = t('.abilities')
+    h3 = t('.fast_moves')
+    .attacks__fast
+      - @pokemon.fast_attacks.each do |attack|
+        = render 'pokemons/blocks/attack', attack: attack
+    h3 = t('.charge_moves')
+    .attacks__charged
+      - @pokemon.charge_attacks.each do |attack|
+        = render 'pokemons/blocks/attack', attack: attack

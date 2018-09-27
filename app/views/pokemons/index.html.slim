@@ -1,7 +1,8 @@
 - title("Liste des pokémons")
-.pokemons
-  .pokemons__header
-    h1 Pokemons
-  .pokemons__list.list
-    = render 'filters'
-    = render 'list'
+.pokemons.row.flex-column
+  = render 'index_header'
+  .pokemons__block.block
+    h2 Liste des Pokémons
+    .pokemons__list.list
+      = render 'filters'
+      = render 'list'

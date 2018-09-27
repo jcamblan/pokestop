@@ -1,6 +1,6 @@
 .row.text-center
   - pokemons.zip(evolutions) do |pokemon, evolution|
-    .pokemon__evolution
+    .pokemon__evolution.col
       .evolution
         .evolution__sprite class=("evolution_sprite--gray" unless pokemon.generation.on_prod)
           = link_to display_sprite(pokemon), pokemon.num
@@ -18,4 +18,4 @@
       = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?
       - if pokemon.can_evolve?
         .evolution__evolutions
-          = render 'pokemons/cards/evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions
+          = render 'pokemons/blocks/evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions

@@ -31,85 +31,29 @@
 
 
 fr:
-  views:
-    attacks:
-      index:
-      show: 
-        stats:
-          h2: "Caractéristiques de l'attaque %{attack}"
-        pokemons:
-          h2: "%{count} pokémons utilisent cette attaque:"
-    generations:
-      index:
-        col_num: "#"
-        col_name: "Nom"
-        col_first: "Premier pokémon"
-        col_last: "Dernier pokémon"
-      show:
-        col_num: "#"
-        col_name: "Nom"
-        col_types: "Type(s)"
-    layouts:
-      header:
-        pokemons: "Pokémons"
-        types: "Types"
-        attacks: "Attaques"
-        generations: "Générations"
-        search: "Rechercher"
-        search_placeholder: "Pokémon, objet, attaque..."
-    pagination:
-      first: "&laquo;"
-      last: "&raquo;"
-      previous: "&lsaquo;"
-      next: "&rsaquo;"
-      truncate: "&hellip;"
-    pokemon:
-      list:
-        name: "NOM"
-        num: "#"
-        pc_max: "PC"
-        atk: "ATT"
-        def: "DEF"
-        sta: "END"
-        types: "TYPE(S)"
-        filters:
-          generation: "Génération :"
-          g_all: "- Toutes -"
-          types: "Type :"
-          t_all: "- Tous -"
-          on_prod: "Pokémon GO uniquement"
-          reset: "Réinitialiser les filtres"
-      show:
-        caracs: "Caractéristiques :"
-        evolutions: "Evolutions :"
-        main_stats: "Statistiques principales :"
-        type: "Type"
-        secondary_stats: "Données annexes :"
-        abilities: "Capacités :"
-        fast_moves: "Attaques rapides :"
+  pokemons:
+    blocks:
+      attacks:
+        abilities: "Compétences"
         charge_moves: "Attaques chargées :"
-        attack:
-          energy_generated: "Génère %{epu} points d'énergie"
-        eggs: "Oeufs :"
-        flee_rate: "Taux de fuite :"
-        capture_rate: "Chances de capture :"
+        fast_moves: "Attaques rapides :"
+      attack:
+        energy_generated: "Gènère %{epu} points d'énergie"
+      eggs:
+        eggs: "Œuf"
+        can_be_obtained: "Ce pokémon peut être obtenu dans le(s) oeuf(s) suivant(s) :"
+      evolutions:
+        evolutions: "Evolutions"
+      primary_stats:
+        primary_stats: "Stats principales"
+      secondary_stats:
         buddy_distance: "Distance à parcourir pour 1 %{candy} :"
+        capture_rate: "Chances de capture :"
         english_name: "Nom anglais :"
-    types:
-      index:
-        col_name: "Nom"
-        col_nb_pokemon: "Nombre de pokémons"
-      show:
-        attacks:
-          h2: "Attaques de type %{type} :"
-          col_name: "Nom"
-          col_type: "Type"
-          col_cat: "Catégorie"
-        pokemons:
-          h2: "Pokemons de type %{type} :"
-          col_num: "#"
-          col_name: "Nom"
-          col_types: "Type(s)"
+        flee_rate: "Chances de fuite :"
+        secondary_stats: "Stats secondaires"
+      types:
+        types: "Type"
   helpers:
     page_entries_info:
       one_page:

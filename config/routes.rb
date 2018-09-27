@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   resources :generations, only: [:index, :show]
   resources :articles
   resources :events
+  resources :eggs
 
 end

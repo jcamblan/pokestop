@@ -1,4 +1,4 @@
-.pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
+.row.pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
   .pokemon__prev
     = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev.num
   .pokemon__next
@@ -7,5 +7,6 @@
     = link_to "Gen ##{@pokemon.generation.id} : #{@pokemon.generation.name}", @pokemon.generation
   .pokemon__ball
     .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
-    .pokemon__name = @pokemon.name
+    .pokemon__name 
+      h1 = @pokemon.name
     .pokemon__num = "##{@pokemon.num}"

@@ -1,26 +1,31 @@
 .pokemons {
-  @extend .container;
-  margin:auto;
-  @extend .mt-3;
-  border: 1px solid lightgrey;
-  background: white;
 }
 
 .pokemons__header {
+  background: image-url('fight.jpg');
+  background-size: cover;
+  height: 250px;
   @extend .row;
   @extend .d-flex;
   @extend .justify-content-center;
   @extend .align-items-center;
   @extend .mb-4;
+  @extend .shadow-sm;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  text-transform: uppercase;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pokemons__block {
+  @extend .mt-5;
 }
 
 .pokemons__list {
   @extend .mx-auto;
-  @extend .py-5;
 
   img {
     width: 40px;
