@@ -1,9 +1,7 @@
 .row
-  .pokemon__card.col-12
-    .card-header.row
-      h2 Oeufs
-    .card-body
-      p Ce pokémon peut être obtenu dans les oeufs suivants :
-      ul
-        - @pokemon.eggs.each do |e|
-          li = e.name
+  .pokemon__block.block
+    h2 Oeufs
+    p Ce pokémon peut être obtenu dans les oeufs suivants :
+    ul
+      - @pokemon.eggs.each do |e|
+        li = e.name

@@ -1,10 +1,10 @@
 .pokemon__cards
   .col-12.col-lg-6
-    = render 'pokemon/cards/stats'
+    = render 'pokemons/cards/stats'
     - unless @pokemon.eggs.empty?
-      = render 'eggs'
+      = render 'pokemons/cards/eggs'
   .col-12.col-lg-5
     - if @evolutions
-      = render 'pokemon/cards/evolutions'
+      = render 'pokemons/cards/evolutions'
     - if @pokemon.attacks.present?
-      = render 'pokemon/cards/attacks'
+      = render 'pokemons/cards/attacks'

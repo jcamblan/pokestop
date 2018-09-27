@@ -18,4 +18,4 @@
       = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?
       - if pokemon.can_evolve?
         .evolution__evolutions
-          = render 'pokemon/cards/evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions
+          = render 'pokemons/cards/evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions
