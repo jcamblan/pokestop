@@ -1,24 +1,10 @@
 .pokemon {
-  @extend .container;
-  margin:auto;
-  @extend .mt-3;
-  border: 1px solid lightgrey;
-  background: white;
-
-}
-
-.pokemon__cards {
   @extend .row;
-  @extend .justify-content-around;
-  @extend .mt-4;
+  @extend .flex-column;
+  margin:auto;
 }
 
-.pokemon__card {
-  @extend .card;
-  @extend .mb-3;
-  @extend .col-12;
-}
-
+/* POKEMON HEADER */
 
 .pokemon__header {
   @extend .row;
@@ -26,10 +12,14 @@
   @extend .justify-content-center;
   @extend .align-items-center;
   @extend .mb-4;
+  @extend .shadow-sm;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  border-bottom: 1px solid lightgrey;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .pokemon__generation, .pokemon__prev, .pokemon__next{
@@ -43,25 +33,22 @@
   bottom: 0;
   right: 0;
   border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .pokemon__prev {
   top: 0;
   left: 0;
+  border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: $light;
 }
 .pokemon__next {
   top: 0;
   right: 0;
+  border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: $light;
 }
-
-.stats__types img {
-  width: 30px;
-  @extend .mx-1;
-}
-
 
 .pokemon__ball {
   @extend .flex-column;
@@ -75,6 +62,22 @@
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
+}
+
+/* POKEMON MAIN CONTENT */
+
+.pokemon__cards {
+  @extend .row;
+  @extend .justify-content-around;
+  @extend .mt-4;
+}
+
+.pokemon__block {
+}
+
+.stats__types img {
+  width: 30px;
+  @extend .mx-1;
 }
 
 .stats__progress {
@@ -130,7 +133,7 @@
 .pokemon__type--water    { background: $water   ; }
 
 .pokemon_sprite--gray {
-  -webkit-filter: grayscale(100%) opacity(20%);
+  @extend .content--gray;
 }
 
 .pokemon__evolutions { }

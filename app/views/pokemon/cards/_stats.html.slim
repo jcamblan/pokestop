@@ -1,33 +1,32 @@
 .row
-  .pokemon__card
-    .card-header.row
+  .pokemon__block.block.text-center
+    h2 = t('.type')
+    - unless @pokemon.types.empty?
+      - @pokemon.types.each do |type|
+        .pokemon__type
+          = link_to link_to type_image(type), type
+          br
+          = link_to type.name, type
+  - if @pokemon.pc_max || @pokemon.atk || @pokemon.def || @pokemon.sta
+    .pokemon__block.block
       h2 = t('views.pokemon.show.caracs')
-    .card-body
-      - unless @pokemon.types.empty?
-        h3 = t('views.pokemon.show.type').pluralize(@pokemon.types.count)
-        - @pokemon.types.each do |type|
-          .pokemon__type
-            = link_to link_to type_image(type), type
-            br
-            = link_to type.name, type
-      - if @pokemon.pc_max || @pokemon.atk || @pokemon.def || @pokemon.sta
-        h3 = t('views.pokemon.show.main_stats')
-        = stat_bar('pc_max',@pokemon.pc_max,@pokemon.max_pc_max)
-        = stat_bar('atk',@pokemon.atk,@pokemon.max_atk)
-        = stat_bar('def',@pokemon.def,@pokemon.max_def)
-        = stat_bar('sta',@pokemon.sta,@pokemon.max_sta)
-      - if @pokemon.candy_distance || @pokemon.flee_rate || @pokemon.capture_rate || @pokemon.name_en.present?
-        h3 = t('views.pokemon.show.secondary_stats')
-        ul.list-group
-          - if @pokemon.candy && @pokemon.candy_distance
-            li.list-group-item
-              = sanitize t('views.pokemon.show.buddy_distance', candy: (image_tag @pokemon.candy.image_path, width: "30px")) if @pokemon.candy
-              = " #{@pokemon.candy_distance} km"
-          - if @pokemon.flee_rate
-            li.list-group-item = "#{t('views.pokemon.show.flee_rate')} #{@pokemon.flee_rate}%"
-          - if @pokemon.capture_rate
-            li.list-group-item = "#{t('views.pokemon.show.capture_rate')} #{@pokemon.capture_rate}%"
-          - if @pokemon.name_en.present?
-            li.list-group-item = "#{t('views.pokemon.show.english_name')} #{@pokemon.name_en}"
+      = stat_bar('pc_max',@pokemon.pc_max,@pokemon.max_pc_max)
+      = stat_bar('atk',@pokemon.atk,@pokemon.max_atk)
+      = stat_bar('def',@pokemon.def,@pokemon.max_def)
+      = stat_bar('sta',@pokemon.sta,@pokemon.max_sta)
+  - if @pokemon.candy_distance || @pokemon.flee_rate || @pokemon.capture_rate || @pokemon.name_en.present?
+    .pokemon__block.block
+      h2 = t('.secondary_stats')
+      ul.list-group
+        - if @pokemon.candy && @pokemon.candy_distance
+          li.list-group-item
+            = sanitize t('views.pokemon.show.buddy_distance', candy: (image_tag @pokemon.candy.image_path, width: "30px")) if @pokemon.candy
+            = " #{@pokemon.candy_distance} km"
+        - if @pokemon.flee_rate
+          li.list-group-item = "#{t('views.pokemon.show.flee_rate')} #{@pokemon.flee_rate}%"
+        - if @pokemon.capture_rate
+          li.list-group-item = "#{t('views.pokemon.show.capture_rate')} #{@pokemon.capture_rate}%"
+        - if @pokemon.name_en.present?
+          li.list-group-item = "#{t('views.pokemon.show.english_name')} #{@pokemon.name_en}"
 
 

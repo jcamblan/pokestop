@@ -1,5 +1,5 @@
 header
-  nav.navbar.navbar-dark.bg-primary.justify-content-between.navbar-expand-md style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
+  nav.navbar.navbar-dark.justify-content-between.navbar-expand-md style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
     = link_to 'Pokestop'.upcase, root_path, class: 'navbar-brand'
     #navbarNav.navbar-collapse.collapse
       ul.navbar-nav

@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  */
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 @import 'bootstrap4';
+@import "block";
 @import 'pokemon/pokemon';
 @import 'pokemon/evolution';
 @import 'pokemon/attack';
@@ -33,10 +35,17 @@ body {
 }
 
 header {
+  nav {
+    background-color: #7998B5;
+  }
 }
 
 footer {
   height: 200px;
-  @extend .bg-info;
+  background-color: #DAE3E4;
   @extend .mt-5;
+}
+
+.content--gray {
+  -webkit-filter: grayscale(100%) opacity(20%);
 }
