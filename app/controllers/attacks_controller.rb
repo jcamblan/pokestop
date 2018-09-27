@@ -1,4 +1,4 @@
-class AttackController < ApplicationController
+class AttacksController < ApplicationController
   def show
     @attack = Attack.find(params[:id])
     @filterrific = initialize_filterrific(
