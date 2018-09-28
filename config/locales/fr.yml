@@ -32,6 +32,12 @@
 
 fr:
   layouts:
+    footer:
+      pokemons: "Pokémons"
+      types: "Types"
+      attacks: "Compétences"
+      generations: "Générations"
+      eggs: "Œufs"
     header:
       search: "Rechercher"
       search_placeholder: "Pokémon, objet, attaque..."

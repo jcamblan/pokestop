@@ -5,16 +5,18 @@
       .footer__desc
         = image_tag 'pokestop.png', class: "pokestop__logo"
         p Pokéstop était à l'origine un simple projet pédagodique pour me former au framework Ruby on Rails. Mais après avoir passé des semaines dessus et agrégé un paquet de données, je me suis dit que ça valait le coup de les partager.
-        div
-          | Icons made by
-          a href="https://www.flaticon.com/authors/roundicons-freebies" title=("Roundicons Freebies")  Roundicons Freebies
-          | from
-          a href="https://www.flaticon.com/" title="Flaticon"  www.flaticon.com
-          | is licensed by
-          a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title=("Creative Commons BY 3.0")  CC 3.0 BY
-
+      .footer__social
+        ul
+          li 
+            = link_to "http://www.github.com/jcamblan/pokestop" do
+              i.fab.fa-github-square.fa-2x
+          li 
+            = link_to "http://www.twitter.com/Sylfaen" do
+              i.fab.fa-twitter-square.fa-2x
     .col-12.col-sm-3
       .footer__links
+        p
+          strong Plan du site :
         ul
           li = link_to t('.pokemons'), pokemons_path
           li = link_to t('.types'), types_path
@@ -22,11 +24,5 @@
           li = link_to t('.generations'), generations_path
           li = link_to t('.eggs'), eggs_path
     .col-12.col-sm-3
-      .footer__social
-        ul
-          li 
-            i.fab.fa-github-square.fa-2x
-            | github.com/jcamblan/pokestop
-          li 
-            i.fab.fa-twitter-square.fa-2x
-            | twitter.com/Sylfaen
+    .footer__copyrights
+      = render 'layouts/copyrights'
