@@ -37,13 +37,42 @@ body {
 
 header {
   nav {
-    background-color: #7998B5;
-  }
+    background-color: #f8e9a4;
 
-  img.pokestop__logo {
-    height: 40px;
+    img.pokestop__logo {
+      height: 40px;
+    }
   }
 }
+
+.root {
+  text-align: center;
+  background-color: #f8e9a4;
+  padding: 50px 0 50px 0;
+  /* Source background : https://pokewalls.wordpress.com/2011/04/24/175-togepi/ */
+  background-image: image-url("bg_togepi.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto;
+
+  img.pokestop__logo {
+    width: 500px;
+  }
+
+  .search {
+    margin: auto;
+
+    form {
+      margin: auto;
+
+      button {
+        margin-top: 5px;
+      }
+    }
+  }
+
+}
+
 
 .content--gray {
   -webkit-filter: grayscale(100%) opacity(20%);

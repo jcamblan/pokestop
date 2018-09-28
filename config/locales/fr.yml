@@ -35,6 +35,9 @@ fr:
     header:
       search: "Rechercher"
       search_placeholder: "Pokémon, objet, attaque..."
+    root_header:
+      search: "Rechercher"
+      search_placeholder: "Pokémon, objet, attaque..."
   pokemons:
     blocks:
       attacks:

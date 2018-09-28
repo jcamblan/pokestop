@@ -1,0 +1,9 @@
+header.root
+    = image_tag 'pokestop.png', class: "pokestop__logo"
+
+    p Base de données & actualités sur Pokémon GO
+
+    .search
+      = form_with url: search_path, local: true, method: :get, html: { class: "form" } do |form|
+        = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control"
+        = form.button t('.search'), class: "btn btn-outline-success"
