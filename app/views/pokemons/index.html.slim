@@ -2,7 +2,7 @@
 .pokemons.row.flex-column
   = render 'index_header'
   .pokemons__block.block
-    h2 Liste des Pokémons
+    h2 = t('.pokemons_list')
     .pokemons__list.list
       = render 'filters'
       = render 'list'

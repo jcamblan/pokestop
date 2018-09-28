@@ -2,14 +2,14 @@
   = form_for_filterrific @filterrific, html: { class: 'filter form' } do |f|
     .form-row
       .col
-        label = t('views.pokemon.list.filters.generation')
+        label = t('.generation')
         = f.select(:with_generation_id, @filterrific.select_options[:with_generation_id], { include_blank: '- Toutes -' })
       .col
-        label = t('views.pokemon.list.filters.type')
+        label = t('.type')
         = f.select(:with_type_id, @filterrific.select_options[:with_type_id], { include_blank: '- Tous -' })
       .col
         = f.check_box(:with_on_prod)
-        label = t('views.pokemon.list.filters.on_prod')
+        label = t('.on_prod')
       .col
-        = link_to button_tag(t('views.pokemon.list.filters.reset'), class: 'btn btn-secondary btn-sm'), reset_filterrific_url
+        = link_to button_tag(t('.reset'), class: 'btn btn-secondary btn-sm'), reset_filterrific_url
     = render_filterrific_spinner

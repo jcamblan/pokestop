@@ -31,6 +31,10 @@
 
 
 fr:
+  layouts:
+    header:
+      search: "Rechercher"
+      search_placeholder: "Pokémon, objet, attaque..."
   pokemons:
     blocks:
       attacks:
@@ -54,6 +58,21 @@ fr:
         secondary_stats: "Stats secondaires"
       types:
         types: "Type"
+    filters:
+      generation: "Génération :"
+      on_prod: "Pokémon GO seulement"
+      reset: "Réinitialiser les filtres"
+      type: "Type :"
+    index: 
+      pokemons_list: "Liste des pokémons"
+    list:
+      name: "NOM"
+      num: "#"
+      pc_max: "PC"
+      atk: "ATT"
+      def: "DEF"
+      sta: "END"
+      types: "TYPE(S)"
   helpers:
     page_entries_info:
       one_page:
@@ -63,3 +82,10 @@ fr:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"

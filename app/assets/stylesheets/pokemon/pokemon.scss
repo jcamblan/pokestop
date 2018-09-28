@@ -8,20 +8,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @extend .mb-4;
-  @extend .shadow-sm;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
 }
 
-.pokemon__generation, .pokemon__prev, .pokemon__next{
-  @extend .px-3;
-  @extend .py-1;
+.pokemon__generation, .pokemon__prev, .pokemon__next {
+  padding: 4px;
   position: absolute;
   background-color: $white;
 }
@@ -55,27 +51,24 @@
   background-color: $white;
   width: 200px;
   height: 200px;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 100px;
 }
 
 /* POKEMON MAIN CONTENT */
 
 .pokemon__blocks {
   justify-content: space-around;
-  @extend .mt-4;
+  margin-top: 40px;
 }
 
 .stats__types img {
   width: 30px;
-  @extend .mx-1;
+  margin: 2px;
 }
 
 .stats__progress {
   @extend .progress;
-  @extend .my-1;
+  margin: 3px 0 3px 0;
   height: 30px;
 }
 

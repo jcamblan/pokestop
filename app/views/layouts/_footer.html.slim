@@ -1,2 +1,32 @@
-footer style=("background-color: #{@pokemon.candy.secondary_color} ! important;" if @pokemon && @pokemon.candy)
-  = debug(params) if Rails.env.development?
+= debug(params) if Rails.env.development?
+.container-fluid
+  footer.row
+    .col-12.col-sm-5
+      .footer__desc
+        = image_tag 'pokestop.png', class: "pokestop__logo"
+        p Pokéstop était à l'origine un simple projet pédagodique pour me former au framework Ruby on Rails. Mais après avoir passé des semaines dessus et agrégé un paquet de données, je me suis dit que ça valait le coup de les partager.
+        div
+          | Icons made by
+          a href="https://www.flaticon.com/authors/roundicons-freebies" title=("Roundicons Freebies")  Roundicons Freebies
+          | from
+          a href="https://www.flaticon.com/" title="Flaticon"  www.flaticon.com
+          | is licensed by
+          a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title=("Creative Commons BY 3.0")  CC 3.0 BY
+
+    .col-12.col-sm-3
+      .footer__links
+        ul
+          li = link_to t('.pokemons'), pokemons_path
+          li = link_to t('.types'), types_path
+          li = link_to t('.attacks'), attacks_path
+          li = link_to t('.generations'), generations_path
+          li = link_to t('.eggs'), eggs_path
+    .col-12.col-sm-3
+      .footer__social
+        ul
+          li 
+            i.fab.fa-github-square.fa-2x
+            | github.com/jcamblan/pokestop
+          li 
+            i.fab.fa-twitter-square.fa-2x
+            | twitter.com/Sylfaen

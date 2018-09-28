@@ -24,6 +24,7 @@
 @import 'home/events';
 @import 'fullcalendar/fullcalendar';
 @import 'users';
+@import 'footer';
 
 .navbar {
   z-index: 200;
@@ -38,12 +39,10 @@ header {
   nav {
     background-color: #7998B5;
   }
-}
 
-footer {
-  height: 200px;
-  background-color: #DAE3E4;
-  @extend .mt-5;
+  img.pokestop__logo {
+    height: 40px;
+  }
 }
 
 .content--gray {

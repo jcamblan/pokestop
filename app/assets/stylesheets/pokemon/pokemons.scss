@@ -5,56 +5,46 @@
   background: image-url('fight.jpg');
   background-size: cover;
   height: 250px;
-  @extend .row;
-  @extend .d-flex;
-  @extend .justify-content-center;
-  @extend .align-items-center;
-  @extend .mb-4;
-  @extend .shadow-sm;
+  margin-bottom: 40px;
+  box-shadow: $box-shadow;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
 }
 
 .pokemons__block {
-  @extend .mt-5;
+
 }
 
 .pokemons__list {
-  @extend .mx-auto;
+  margin: 0 auto 0 auto;
 
   img {
     width: 40px;
   }
 
   nav {
-    @extend .mx-auto;
+    margin: 0 auto 0 auto;
   }
 }
 
 .list__filters {
-  @extend .rounded;
-  @extend .p-3;
-  @extend .mb-2;
-  @extend .border;
-  @extend .border-secondary;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .list__results {
-  @extend .d-flex;
-  @extend .flex-column;
+  display: flex;
+  flex-direction: column;
 }
 
 .list__tr {}
 
 .list__tr--gray {
-  -webkit-filter: grayscale(100%) opacity(20%);
+  @extend .content--gray;
 }
 
 ul.pagination {
-  @extend .mx-auto;
+  margin: 10px auto 10px auto;
 }

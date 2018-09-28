@@ -1,0 +1,27 @@
+footer {
+  background-color: #f86821;
+  /* Source background : https://pokewalls.wordpress.com/2011/02/12/129-magikarp/ */
+  background-image: image-url("bg_magicarpe.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-top: 50px;
+  padding: 50px 0 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: $white;
+
+  a, a:hover {
+    color: inherit;
+  }
+
+  img.pokestop__logo {
+    width: 300px;
+    margin: auto;
+    display: block;
+  }
+}
+
+.footer__desc, .footer__social, .footer__links {
+  padding: 10px;
+}

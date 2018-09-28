@@ -1,25 +1,8 @@
 header
   nav.navbar.navbar-dark.justify-content-between.navbar-expand-md style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
-    = link_to 'Pokestop'.upcase, root_path, class: 'navbar-brand'
-    #navbarNav.navbar-collapse.collapse
-      ul.navbar-nav
-        li.nav-item
-          = link_to t('views.layouts.header.pokemons'), pokemons_path, class: 'nav-link'
-        li.nav-item
-          = link_to t('views.layouts.header.types'), types_path, class: 'nav-link'
-        li.nav-item
-          = link_to t('views.layouts.header.attacks'), attacks_path, class: 'nav-link'
-        li.nav-item
-          = link_to t('views.layouts.header.generations'), generations_path, class: 'nav-link'
-        li.nav-item
-          - if logged_in?
-            = link_to "Profil", current_user, class: 'nav-link'
-          - else
-            = link_to "Se connecter", login_path, class: 'nav-link'
-        - if logged_in?
-          li.nav-item
-            = link_to "Log out", logout_path, method: :delete, class: 'nav-link'
+    = link_to root_path, class: 'navbar-brand' do
+      = image_tag 'pokestop.png', class: "pokestop__logo"
 
     = form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form|
-      = form.text_field :q, placeholder: t('views.layouts.header.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control mr-sm-2"
-      = form.button t('views.layouts.header.search'), class: "btn btn btn-light ml-1 my-2 my-sm-0"
+      = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control mr-sm-2"
+      = form.button t('.search'), class: "btn btn btn-light ml-1 my-2 my-sm-0"

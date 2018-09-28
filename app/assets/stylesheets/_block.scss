@@ -1,13 +1,10 @@
 .block {
-  @extend .py-3;
-  @extend .mb-5;
-  @extend .col-12;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 15px;
   background-color: $white;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  @extend .shadow;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
   position: relative;
 
   h2 {
@@ -15,10 +12,15 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    display: inline;
-    top: -25px;
+    top: -20px;
     right: 30px;
     color: grey;
-    @extend .p-1;
+  }
+
+  h3 {
+    font-family: 'Bangers', cursive;
+    padding: 0;
+    margin: 0;
+    color: grey;
   }
 }
