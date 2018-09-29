@@ -16,16 +16,15 @@
             th Types
         tbody
           - @pokemons.each do |pokemon|
-            - cache pokemon
-              tr
-                td = link_to pokemon.id, edit_admin_pokemon_path(pokemon)
-                td = pokemon.num
-                td = pokemon.name
-                td = pokemon.name_en
-                td = "#{pokemon.generation_id} : #{pokemon.generation.name}"
-                td 
-                  - pokemon.types.each do |t|
-                    = t.name
-                    = ", " unless t == pokemon.types.last
+            tr
+              td = link_to pokemon.id, edit_admin_pokemon_path(pokemon)
+              td = pokemon.num
+              td = pokemon.name
+              td = pokemon.name_en
+              td = "#{pokemon.generation_id} : #{pokemon.generation.name}"
+              td 
+                - pokemon.types.each do |t|
+                  = t.name
+                  = ", " unless t == pokemon.types.last
 
   .card-footer.small.text-muted Updated yesterday at 11:59 PM
