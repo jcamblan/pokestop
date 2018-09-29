@@ -4,7 +4,13 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for @pokemon, url: admin_pokemons_path(@pokemon) do |f|
+= form_for pokemon, url: admin_pokemon_path(pokemon) do |f|
+  - if pokemon.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(pokemon.errors.count, "error")}"
+      ul
+      - pokemon.errors.full_messages.each do |msg|
+        li = msg
   .row
     .col-12.col-md-6
       .card.mb-3
@@ -69,11 +75,11 @@ script
             br
             = f.collection_select :candy_id, Candy.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
           .form-group
-            = f.label :types, "Types :"
+            = f.label :type_ids, "Types :"
             br
             = f.collection_select :type_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
           .form-group
-            = f.label :attacks, "Attaques :"
+            = f.label :attack_ids, "Attaques :"
             br
             = f.collection_select :attack_ids, Attack.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
           .form-group
@@ -90,3 +96,5 @@ script
           .form-group
             = f.label :comment, "Commentaires :"
             = f.text_area :comment, {:class => 'form-control'}
+  .row
+    = f.submit "Valider", class: "btn btn-primary"

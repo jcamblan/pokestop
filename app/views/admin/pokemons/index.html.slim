@@ -18,7 +18,7 @@
           - @pokemons.each do |pokemon|
             - cache pokemon
               tr
-                td = link_to pokemon.id, admin_pokemon_path(pokemon)
+                td = link_to pokemon.id, edit_admin_pokemon_path(pokemon)
                 td = pokemon.num
                 td = pokemon.name
                 td = pokemon.name_en
