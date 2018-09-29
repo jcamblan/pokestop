@@ -15,7 +15,6 @@ class Admin::PokemonsController < ApplicationController
 
   def update
     @pokemon = Pokemon.find(params[:id])
-    @pokemon.update(pokemon_params)
     if @pokemon.update(pokemon_params)
       redirect_to admin_pokemons_path
     else
@@ -28,7 +27,7 @@ class Admin::PokemonsController < ApplicationController
     def pokemon_params
       params.require(:pokemon).permit(:num, :name, :name_en, :atk, :def, :sta, :pc_max,
                                       :generation_id, :candy_id, :candy_distance,
-                                      :capture_rate, :flee_rate, :egg_ids, :type_ids, :attack_ids,
+                                      :capture_rate, :flee_rate, {:egg_ids => []}, {:type_ids => []}, {:attack_ids => []},
                                       :pokedex_entry, :comment)
     end
 end
