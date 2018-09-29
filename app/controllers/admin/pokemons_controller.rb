@@ -9,4 +9,8 @@ class Admin::PokemonsController < ApplicationController
     @pokemon = Pokemon.find(params[:id])
   end
 
+  def new
+    @pokemon = Pokemon.new
+  end
+
 end
