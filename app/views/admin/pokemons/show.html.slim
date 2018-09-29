@@ -12,4 +12,4 @@
       | truc
     .card-body
       = f.label :types, "Types :"
-      = f.collection_select :types, Type.all, :id, :name, {}, {multiple: true}
+      = f.collection_select :type_ids, Type.all, :id, :name, {}, {multiple: true}
