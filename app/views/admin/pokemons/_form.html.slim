@@ -4,12 +4,12 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for pokemon, url: admin_pokemon_path(pokemon) do |f|
-  - if pokemon.errors.any?
+= form_for @pokemon, url: admin_pokemon_path(@pokemon) do |f|
+  - if @pokemon.errors.any?
     #error_explanation
-      .alert.alert-danger = "The form contains #{pluralize(pokemon.errors.count, "error")}"
+      .alert.alert-danger = "The form contains #{pluralize(@pokemon.errors.count, "error")}"
       ul
-      - pokemon.errors.full_messages.each do |msg|
+      - @pokemon.errors.full_messages.each do |msg|
         li = msg
   .row
     .col-12.col-md-6
