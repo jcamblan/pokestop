@@ -19,7 +19,7 @@ footer {
   }
 
   img.pokestop__logo {
-    width: 300px;
+    width: 200px;
     margin: 0 auto 30px auto;
     display: block;
   }
@@ -73,5 +73,11 @@ footer {
     background-image: image-url("bg_magicarpe.jpg");
     background-repeat: no-repeat;
     background-position: right bottom;
+
+    img.pokestop__logo {
+      width: 300px;
+      margin: 0 auto 30px auto;
+      display: block;
+    }
   }
 }

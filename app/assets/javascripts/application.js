@@ -13,8 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery.min
-//= require jquery.easy-autocomplete
+//= require jquery/jquery.min
+//= require jquery/jquery.easy-autocomplete
 //= require moment-with-locales
 //= require popper.min
 //= require fullcalendar/fullcalendar.min
@@ -32,8 +32,8 @@
 //= require bootstrap4/tooltip
 //= require bootstrap4/popover
 //= require bootstrap4/util
-//= require jquery.jcarousel
-//= require jcarousel.responsive
+//= require jquery/jquery.jcarousel
+//= require jquery/jcarousel.responsive
 //= require search
 //= require filterrific/filterrific-jquery
 //= require_tree .

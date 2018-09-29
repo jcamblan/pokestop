@@ -13,6 +13,8 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 @import 'bootstrap4';
+@import 'fullcalendar/fullcalendar';
+@import 'datatables/dataTables.bootstrap4.min'
 @import "block";
 @import 'pokemon/pokemon';
 @import 'pokemon/evolution';
@@ -22,7 +24,6 @@
 @import 'easy-autocomplete';
 @import 'home/home';
 @import 'home/events';
-@import 'fullcalendar/fullcalendar';
 @import 'users';
 @import 'header';
 @import 'footer';
