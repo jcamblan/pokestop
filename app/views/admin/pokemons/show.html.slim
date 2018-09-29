@@ -1,0 +1,15 @@
+= form_for(@pokemon, url: admin_pokemons_path(@pokemon)) do |f|
+
+  .card.mb-3
+    .card-header
+      | truc
+    .card-body
+      = f.label :name, "Nom :"
+      = f.text_field :name
+
+  .card.mb-3
+    .card-header
+      | truc
+    .card-body
+      = f.label :types, "Types :"
+      = f.collection_select :types, Type.all, :id, :name, {}, {multiple: true}

@@ -1,0 +1,117 @@
+doctype html
+html
+  head
+    title
+      - if content_for?(:title)
+        = yield(:title) + ' | '
+      | Pokestop
+    = csrf_meta_tags
+    = csp_meta_tag
+    meta content="width=device-width,initial-scale=1.0" name="viewport" /
+
+    link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet" /
+
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
+
+  body
+    nav.navbar.navbar-expand.navbar-dark.bg-dark.static-top
+      a.navbar-brand.mr-1 href="index.html"  Start Bootstrap
+      button#sidebarToggle.btn.btn-link.btn-sm.text-white.order-1.order-sm-0 href="#" 
+        i.fas.fa-bars
+      /! Navbar Search
+      form.d-none.d-md-inline-block.form-inline.ml-auto.mr-0.mr-md-3.my-2.my-md-0
+        .input-group
+          input.form-control aria-describedby="basic-addon2" aria-label="Search" placeholder=("Search for...") type="text" /
+          .input-group-append
+            button.btn.btn-primary type="button" 
+              i.fas.fa-search
+      /! Navbar
+      ul.navbar-nav.ml-auto.ml-md-0
+        li.nav-item.dropdown.no-arrow.mx-1
+          a#alertsDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fas.fa-bell.fa-fw
+            span.badge.badge-danger 9+
+          .dropdown-menu.dropdown-menu-right aria-labelledby="alertsDropdown" 
+            a.dropdown-item href="#"  Action
+            a.dropdown-item href="#"  Another action
+            .dropdown-divider
+            a.dropdown-item href="#"  Something else here
+        li.nav-item.dropdown.no-arrow.mx-1
+          a#messagesDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fas.fa-envelope.fa-fw
+            span.badge.badge-danger 7
+          .dropdown-menu.dropdown-menu-right aria-labelledby="messagesDropdown" 
+            a.dropdown-item href="#"  Action
+            a.dropdown-item href="#"  Another action
+            .dropdown-divider
+            a.dropdown-item href="#"  Something else here
+        li.nav-item.dropdown.no-arrow
+          a#userDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fas.fa-user-circle.fa-fw
+          .dropdown-menu.dropdown-menu-right aria-labelledby="userDropdown" 
+            a.dropdown-item href="#"  Settings
+            a.dropdown-item href="#"  Activity Log
+            .dropdown-divider
+            a.dropdown-item data-target="#logoutModal" data-toggle="modal" href="#"  Logout
+    #wrapper
+      /! Sidebar
+      ul.sidebar.navbar-nav
+        li.nav-item.active
+          a.nav-link href="index.html" 
+            i.fas.fa-fw.fa-tachometer-alt
+            span Dashboard
+        li.nav-item.dropdown
+          a#pagesDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fas.fa-fw.fa-folder
+            span Pages
+          .dropdown-menu aria-labelledby="pagesDropdown" 
+            h6.dropdown-header Login Screens:
+            a.dropdown-item href="login.html"  Login
+            a.dropdown-item href="register.html"  Register
+            a.dropdown-item href="forgot-password.html"  Forgot Password
+            .dropdown-divider
+            h6.dropdown-header Other Pages:
+            a.dropdown-item href="404.html"  404 Page
+            a.dropdown-item href="blank.html"  Blank Page
+        li.nav-item
+          a.nav-link href="charts.html" 
+            i.fas.fa-fw.fa-chart-area
+            span Charts
+        li.nav-item
+          a.nav-link href="tables.html" 
+            i.fas.fa-fw.fa-table
+            span Tables
+      #content-wrapper
+        .container-fluid
+          /! Breadcrumbs
+          ol.breadcrumb
+            li.breadcrumb-item
+              a href="#"  Dashboard
+            li.breadcrumb-item.active Overview
+
+          = yield
+
+        /! /.container-fluid
+        /! Sticky Footer
+        footer.sticky-footer
+          .container.my-auto
+            .copyright.text-center.my-auto
+              span Copyright © Your Website 2018
+      /! /.content-wrapper
+    /! /#wrapper
+    /! Scroll to Top Button
+    a.scroll-to-top.rounded href="#page-top" 
+      i.fas.fa-angle-up
+    /! Logout Modal
+    #logoutModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" 
+      .modal-dialog role="document" 
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Ready to Leave?
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span aria-hidden="true"  ×
+          .modal-body Select "Logout" below if you are ready to end your current session.
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Cancel
+            a.btn.btn-primary href="login.html"  Logout

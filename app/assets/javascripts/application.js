@@ -14,12 +14,15 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery/jquery.min
-//= require jquery/jquery.easy-autocomplete
+//= require jquery-easy-autocomplete/jquery.easy-autocomplete
 //= require moment-with-locales
 //= require popper.min
 //= require fullcalendar/fullcalendar.min
 //= require fullcalendar/gcal.min
 //= require fullcalendar/fr
+//= require filterrific/filterrific-jquery
+//= require datatables/jquery.dataTables.min
+//= require datatables/dataTables.bootstrap4.min
 //= require bootstrap4/alert
 //= require bootstrap4/button
 //= require bootstrap4/carousel
@@ -32,11 +35,7 @@
 //= require bootstrap4/tooltip
 //= require bootstrap4/popover
 //= require bootstrap4/util
-//= require jquery/jquery.jcarousel
-//= require jquery/jcarousel.responsive
 //= require search
-//= require filterrific/filterrific-jquery
-//= require_tree .
 
 document.addEventListener("turbolinks:load", function() {
 
