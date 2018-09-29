@@ -1,15 +1,92 @@
-= form_for(@pokemon, url: admin_pokemons_path(@pokemon)) do |f|
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
 
-  .card.mb-3
-    .card-header
-      | truc
-    .card-body
-      = f.label :name, "Nom :"
-      = f.text_field :name
-
-  .card.mb-3
-    .card-header
-      | truc
-    .card-body
-      = f.label :types, "Types :"
-      = f.collection_select :type_ids, Type.all, :id, :name, {}, {multiple: true}
+= form_for @pokemon, url: admin_pokemons_path(@pokemon) do |f|
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :num, "Num :"
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon1.input-group-text #
+              = f.text_field :num, {:class => 'form-control'}
+          .form-group
+            = f.label :name, "Nom FR :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :name_en, "Nom EN :"
+            = f.text_field :name_en, {:class => 'form-control'}
+      .card.mb-3
+        .card-header
+          | Statistiques principales
+        .card-body
+          .form-group
+            = f.label :pc_max, "PC MAX :"
+            = f.text_field :pc_max, {:class => 'form-control'}
+          .form-group
+            = f.label :atk, "ATT MAX :"
+            = f.text_field :atk, {:class => 'form-control'}
+          .form-group
+            = f.label :def, "DEF MAX :"
+            = f.text_field :def, {:class => 'form-control'}
+          .form-group
+            = f.label :sta, "END MAX :"
+            = f.text_field :sta, {:class => 'form-control'}
+      .card.mb-3
+        .card-header
+          | Statistiques secondaires
+        .card-body
+          .form-group
+            = f.label :candy_distance, "Distance à parcourir pour un bonbon :"
+            .input-group.mb-3
+              = f.text_field :candy_distance, {:class => 'form-control'}
+              .input-group-append
+                span#basic-addon1.input-group-text KM
+          .form-group
+            = f.label :capture_rate, "Chances de capture :"
+            = f.text_field :capture_rate, {:class => 'form-control'}
+          .form-group
+            = f.label :flee_rate, "Taux de fuite :"
+            = f.text_field :flee_rate, {:class => 'form-control'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :generation_id, "Génération :"
+            br
+            = f.collection_select :generation_id, Generation.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :candy_id, "Bonbon :"
+            br
+            = f.collection_select :candy_id, Candy.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :types, "Types :"
+            br
+            = f.collection_select :type_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :attacks, "Attaques :"
+            br
+            = f.collection_select :attack_ids, Attack.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :egg_ids, "Oeufs :"
+            br
+            = f.collection_select :egg_ids, Egg.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+      .card.mb-3
+        .card-header
+          | Textes
+        .card-body
+          .form-group
+            = f.label :pokedex_entry, "Texte du pokédex :"
+            = f.text_area :pokedex_entry, {:class => 'form-control'}
+          .form-group
+            = f.label :comment, "Commentaires :"
+            = f.text_area :comment, {:class => 'form-control'}
