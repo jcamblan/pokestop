@@ -5,7 +5,7 @@ class Admin::PokemonsController < ApplicationController
   breadcrumb 'Pokemons', :admin_pokemons_path
 
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.all.order(:num)
   end
 
   def edit

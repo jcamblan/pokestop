@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#index'
   namespace :admin do
     resources :pokemons
+    resources :generations
+    resources :items
+    resources :types
   end
 
 end

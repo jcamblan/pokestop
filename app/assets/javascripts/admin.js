@@ -23,3 +23,4 @@
 //= require bootstrap4/popover
 //= require bootstrap4/util
 //= require admin/sb-admin
+//= require admin/datatables
