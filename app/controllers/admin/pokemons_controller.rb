@@ -1,12 +1,16 @@
 class Admin::PokemonsController < ApplicationController
   layout 'admin'
 
+  breadcrumb 'Admin', :admin_path
+  breadcrumb 'Pokemons', :admin_pokemons_path
+
   def index
     @pokemons = Pokemon.all
   end
 
   def edit
     @pokemon = Pokemon.find(params[:id])
+    breadcrumb @pokemon.name, edit_admin_pokemon_path(@pokemon)
   end
 
   def new
