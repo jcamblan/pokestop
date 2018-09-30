@@ -24,3 +24,4 @@
 //= require bootstrap4/util
 //= require admin/sb-admin
 //= require admin/datatables
+//= require trix

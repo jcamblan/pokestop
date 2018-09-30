@@ -2,6 +2,7 @@ class Generation < ApplicationRecord
   
   has_many :pokemons
 
+  validates :name, presence: true
 
   def to_param
     "#{self.id}-#{self.name.parameterize}"
