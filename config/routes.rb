@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :generations
     resources :items
     resources :types
+    resources :attacks
   end
 
 end

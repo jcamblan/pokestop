@@ -1,0 +1,55 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for @attack, url: admin_attack_path(@attack) do |f|
+  - if @attack.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@attack.errors.count, "error")}"
+      ul
+      - @attack.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom FR :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :name_en, "Nom EN :"
+            = f.text_field :name_en, {:class => 'form-control'}
+      .card.mb-3
+        .card-header
+          | Statistiques
+        .card-body
+          .form-group
+            = f.label :power, "Puissance :"
+            = f.text_field :power, {:class => 'form-control'}
+          .form-group
+            = f.label :cast_time, "Durée d'incantation :"
+            = f.text_field :cast_time, {:class => 'form-control'}
+          .form-group
+            = f.label :epu, "Energie par utilisation (attaque rapide) :"
+            = f.text_field :epu, {:class => 'form-control'}
+          .form-group
+            = f.label :energy_bars, "Barres d'énergie (attaque chargée) :"
+            = f.text_field :energy_bars, {:class => 'form-control'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :attack_category_id, "Catégorie :"
+            = f.collection_select :attack_category_id, AttackCategory.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :type_id, "Type :"
+            = f.collection_select :type_id, Type.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}

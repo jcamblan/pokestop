@@ -1,0 +1,36 @@
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Attaques rapides
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom FR
+            th Nom EN
+        tbody
+          - @fast_attacks.each do |attack|
+            tr
+              td = link_to attack.id, edit_admin_attack_path(attack)
+              td = attack.name
+              td = attack.name_en
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Attaques chargées
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom FR
+            th Nom EN
+        tbody
+          - @charge_attacks.each do |attack|
+            tr
+              td = link_to attack.id, edit_admin_attack_path(attack)
+              td = attack.name
+              td = attack.name_en

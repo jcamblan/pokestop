@@ -12,6 +12,9 @@ script
       - @pokemon.errors.full_messages.each do |msg|
         li = msg
   .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
     .col-12.col-md-6
       .card.mb-3
         .card-header
@@ -96,5 +99,3 @@ script
           .form-group
             = f.label :comment, "Commentaires :"
             = f.text_area :comment, {:class => 'form-control'}
-  .row
-    = f.submit "Valider", class: "btn btn-primary"
