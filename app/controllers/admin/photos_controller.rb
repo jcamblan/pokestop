@@ -30,7 +30,7 @@ class Admin::PhotosController < ApplicationController
     respond_to do |format|
       if @photo.save
         format.html { redirect_to admin_photo_path(@photo), notice: 'Photo was successfully created.' }
-        format.json { render :show, status: :created, location: @photo }
+        format.json { render :show, status: :created, location: admin_photo_path(@photo) }
       else
         format.html { render :new }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
@@ -44,7 +44,7 @@ class Admin::PhotosController < ApplicationController
     respond_to do |format|
       if @photo.update(photo_params)
         format.html { redirect_to admin_photo_path(@photo), notice: 'Photo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @photo }
+        format.json { render :show, status: :ok, location: admin_photo_path(@photo) }
       else
         format.html { render :edit }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
