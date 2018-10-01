@@ -1,0 +1,31 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for @generation, url: admin_generation_path(@generation) do |f|
+  - if @generation.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@generation.errors.count, "error")}"
+      ul
+      - @generation.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :on_prod, "Génération intégrée en jeu :"
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :on_prod, {:class => 'form-control'}
+              span.slider.round

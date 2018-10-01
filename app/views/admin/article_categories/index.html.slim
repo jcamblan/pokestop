@@ -1,0 +1,16 @@
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des générations
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+        tbody
+          - @article_categorys.each do |article_category|
+            tr
+              td = link_to article_category.id, edit_admin_article_category_path(article_category)
+              td = article_category.name

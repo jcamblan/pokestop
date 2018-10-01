@@ -1,0 +1,20 @@
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des générations
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+            th on_prod
+        tbody
+          - @generations.each do |generation|
+            tr
+              td = link_to generation.id, edit_admin_generation_path(generation)
+              td = generation.name
+              td = generation.on_prod
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM

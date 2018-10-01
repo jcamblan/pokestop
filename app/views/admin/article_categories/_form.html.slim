@@ -1,0 +1,25 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for @article_category, url: admin_article_category_path(@article_category) do |f|
+  - if @article_category.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@article_category.errors.count, "error")}"
+      ul
+      - @article_category.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom :"
+            = f.text_field :name, {:class => 'form-control'}
