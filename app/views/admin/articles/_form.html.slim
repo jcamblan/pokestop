@@ -4,12 +4,12 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for @generation, url: admin_generation_path(@generation) do |f|
-  - if @generation.errors.any?
+= form_for @article, url: admin_article_path(@article) do |f|
+  - if @article.errors.any?
     #error_explanation
-      .alert.alert-danger = "The form contains #{pluralize(@generation.errors.count, "error")}"
+      .alert.alert-danger = "The form contains #{pluralize(@article.errors.count, "error")}"
       ul
-      - @generation.errors.full_messages.each do |msg|
+      - @article.errors.full_messages.each do |msg|
         li = msg
   .row
     .py-3.ml-auto.mr-3
@@ -21,11 +21,24 @@ script
           | Carte d'identité
         .card-body
           .form-group
-            = f.label :name, "Nom :"
-            = f.text_field :name, {:class => 'form-control'}
+            = f.label :title, "Titre :"
+            = f.text_field :title, {:class => 'form-control'}
           .form-group
-            = f.label :on_prod, "Génération intégrée en jeu :"
+            = f.label :header, "Entête :"
+            = f.hidden_field :header, {:class => 'form-control'}
+            trix-editor input=("article_header")
+          .form-group
+            = f.label :body, "Corps :"
+            = f.text_area :body, {:class => 'form-control'}
+            trix-editor input=("article_body")
+          .form-group
+            = f.label :article_category_ids, "Catégories :"
             br
-            = content_tag :label, '', {:class => 'switch'} do
-              = f.check_box :on_prod, {:class => 'form-control'}
-              span.slider.round
+            = f.collection_select :article_category_ids, ArticleCategory.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :images, "Images :"
+            = f.file_field :images, multiple: true, direct_upload: true
+  .row
+    - if @article.images.attached?
+      - @article.images.each do |image|
+        = image_tag image

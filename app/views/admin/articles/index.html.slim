@@ -9,12 +9,14 @@
           tr
             th id
             th Nom
-            th on_prod
+            th published
+            th homepage
         tbody
-          - @generations.each do |generation|
+          - @articles.each do |article|
             tr
-              td = link_to generation.id, edit_admin_generation_path(generation)
-              td = generation.name
-              td = generation.on_prod
+              td = link_to article.id, edit_admin_article_path(article)
+              td = article.title
+              td = article.published
+              td = article.homepage
 
   .card-footer.small.text-muted Updated yesterday at 11:59 PM

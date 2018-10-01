@@ -32,6 +32,7 @@ Rails.application.routes.draw do
     resources :items
     resources :types
     resources :attacks
+    resources :articles
   end
 
 end

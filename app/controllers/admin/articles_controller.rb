@@ -1,0 +1,39 @@
+class Admin::ArticlesController < ApplicationController
+  layout 'admin'
+
+  breadcrumb 'Admin', :admin_path
+  breadcrumb 'Articles', :admin_articles_path
+
+  def index
+    @articles = Article.all
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+    breadcrumb @article.title, edit_admin_article_path(@article)
+  end
+
+  def new
+    @article = Article.new
+  end
+
+  def create
+    @article = Article.create!(article_params)
+    redirect_to @article
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to admin_articles_path
+    else
+      render 'edit'
+    end
+  end
+
+  private
+
+    def article_params
+      params.require(:article).permit(:title, :header, :body, :published, :homepage, {:article_category_ids => []}, {images: []})
+    end
+end
