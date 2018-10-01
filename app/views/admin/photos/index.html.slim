@@ -1,0 +1,24 @@
+h1 Listing photos
+
+table
+  thead
+    tr
+      th Image data
+      th
+      th
+      th
+
+  tbody
+    - @photos.each do |photo|
+      tr
+        - if photo.image.attached?
+          td = image_tag photo.image.variant(resize: '100x100')
+        - else
+          td 
+        td = link_to 'Show', admin_photo_path(photo)
+        td = link_to 'Edit', edit_admin_photo_path(photo)
+        td = link_to 'Destroy', admin_photo_path(photo), data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Photo', new_admin_photo_path

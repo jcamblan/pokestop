@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :types
     resources :attacks
     resources :articles
+    resources :photos
   end
 
 end

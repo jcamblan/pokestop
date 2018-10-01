@@ -1,0 +1,12 @@
+= form_for [:admin, @photo] do |f|
+  - if @photo.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:"
+      ul
+        - @photo.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :image_data
+    = f.file_field :image, direct_upload: true
+  .actions = f.submit

@@ -25,3 +25,4 @@
 //= require admin/sb-admin
 //= require admin/datatables
 //= require trix
+//= require trix_uploads
