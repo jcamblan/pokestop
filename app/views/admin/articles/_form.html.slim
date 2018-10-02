@@ -32,12 +32,21 @@ script
             = f.text_area :body, {:class => 'form-control'}
             trix-editor input=("article_body")
           .form-group
-            = f.label :article_category_ids, "Catégories :"
+            = f.label :tag_ids, "Tags :"
             br
-            = f.collection_select :article_category_ids, ArticleCategory.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+            = f.collection_select :tag_ids, Tag.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
           .form-group
-            = f.label :images, "Images :"
-            = f.file_field :images, multiple: true, direct_upload: true
+            = f.label :published, "Publier ?"
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :published, {:class => 'form-control'}
+              span.slider.round
+          .form-group
+            = f.label :homepage, "Afficher sur la page d'accueil ?"
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :homepage, {:class => 'form-control'}
+              span.slider.round
   .row
     - if @article.images.attached?
       - @article.images.each do |image|

@@ -1,9 +1,9 @@
-= form_for [:admin, @photo] do |f|
-  - if @photo.errors.any?
+= form_for [:admin, @image] do |f|
+  - if @image.errors.any?
     #error_explanation
-      .alert.alert-danger = "#{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:"
+      .alert.alert-danger = "#{pluralize(@image.errors.count, "error")} prohibited this image from being saved:"
       ul
-        - @photo.errors.full_messages.each do |message|
+        - @image.errors.full_messages.each do |message|
           li = message
   .row
     .py-3.ml-auto.mr-3
@@ -14,8 +14,8 @@
         .card-header
           | Image
         .card-body
-          - if @photo.image.attached?
-            = image_tag @photo.image
+          - if @image.image.attached?
+            = image_tag @image.image
           .form-group
             = f.label :image
             = f.file_field :image, direct_upload: true

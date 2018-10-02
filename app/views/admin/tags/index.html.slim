@@ -1,8 +1,11 @@
 .card.mb-3
   .card-header
     i.fas.fa-table
-    | Liste des générations
+    | Liste des tags
   .card-body
+    div
+      = link_to new_admin_tag_path do
+        button Ajouter
     .table-responsive
       table.dataTable.table.table-sm cellspacing="0" width="100%" 
         thead
@@ -10,7 +13,7 @@
             th id
             th Nom
         tbody
-          - @article_categorys.each do |article_category|
+          - @tags.each do |tag|
             tr
-              td = link_to article_category.id, edit_admin_article_category_path(article_category)
-              td = article_category.name
+              td = link_to tag.id, edit_admin_tag_path(tag)
+              td = tag.name

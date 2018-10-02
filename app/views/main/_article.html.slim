@@ -1,5 +1,5 @@
-.card.article
-  .card-body
-    h5.card-title = article.title
-    p.card-text = article.header
-  .card-footer.text-muted = article.created_at
+.block.article
+  .block__body
+    h2.card-title = article.title
+    p.card-text = sanitize article.header
+  .block__footer = article.created_at

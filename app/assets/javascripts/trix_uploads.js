@@ -9,11 +9,11 @@ function uploadAttachment(attachment) {
   var file = attachment.file;
   var form = new FormData;
   form.append("Content-Type", file.type);
-  form.append("photo[image]", file);
+  form.append("image[image]", file);
 
 // Create our XHR request
   var xhr = new XMLHttpRequest;
-  xhr.open("POST", "/admin/photos.json", true);
+  xhr.open("POST", "/admin/images.json", true);
   xhr.setRequestHeader("X-CSRF-Token", Rails.csrfToken());
 
 // Report file uploads back to Trix

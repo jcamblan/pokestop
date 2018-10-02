@@ -4,12 +4,12 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for [:admin, @article_category] do |f|
-  - if @article_category.errors.any?
+= form_for [:admin, @tag] do |f|
+  - if @tag.errors.any?
     #error_explanation
-      .alert.alert-danger = "The form contains #{pluralize(@article_category.errors.count, "error")}"
+      .alert.alert-danger = "The form contains #{pluralize(@tag.errors.count, "error")}"
       ul
-      - @article_category.errors.full_messages.each do |msg|
+      - @tag.errors.full_messages.each do |msg|
         li = msg
   .row
     .py-3.ml-auto.mr-3

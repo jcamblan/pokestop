@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_135117) do
+ActiveRecord::Schema.define(version: 2018_10_02_171437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,18 +54,6 @@ ActiveRecord::Schema.define(version: 2018_10_01_135117) do
     t.index ["pokemon_id"], name: "index_alternative_skins_on_pokemon_id"
   end
 
-  create_table "article_categories", force: :cascade do |t|
-    t.string "name"
-    t.integer "position"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "article_categories_articles", id: false, force: :cascade do |t|
-    t.integer "article_category_id"
-    t.integer "article_id"
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "header"
@@ -75,6 +63,11 @@ ActiveRecord::Schema.define(version: 2018_10_01_135117) do
     t.boolean "homepage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "articles_tags", id: false, force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "article_id"
   end
 
   create_table "attack_categories", force: :cascade do |t|
@@ -160,6 +153,12 @@ ActiveRecord::Schema.define(version: 2018_10_01_135117) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.text "image_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "item_categories", force: :cascade do |t|
     t.string "name"
     t.integer "position"
@@ -177,12 +176,6 @@ ActiveRecord::Schema.define(version: 2018_10_01_135117) do
     t.datetime "updated_at", null: false
     t.string "name_en"
     t.index ["item_category_id"], name: "index_items_on_item_category_id"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.text "image_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "pokemons", force: :cascade do |t|
@@ -216,6 +209,13 @@ ActiveRecord::Schema.define(version: 2018_10_01_135117) do
     t.bigint "type_id"
     t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
     t.index ["type_id"], name: "index_pokemons_types_on_type_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "types", force: :cascade do |t|
