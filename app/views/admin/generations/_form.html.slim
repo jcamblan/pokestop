@@ -4,7 +4,7 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for @generation, url: admin_generation_path(@generation) do |f|
+= form_for [:admin, @generation] do |f|
   - if @generation.errors.any?
     #error_explanation
       .alert.alert-danger = "The form contains #{pluralize(@generation.errors.count, "error")}"

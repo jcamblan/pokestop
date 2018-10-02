@@ -4,7 +4,7 @@ script
   | $('.single-select').select2();
   | });
 
-= form_for @article, url: admin_article_path(@article) do |f|
+= form_for [:admin, @article] do |f|
   - if @article.errors.any?
     #error_explanation
       .alert.alert-danger = "The form contains #{pluralize(@article.errors.count, "error")}"

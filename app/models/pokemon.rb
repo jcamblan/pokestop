@@ -9,13 +9,13 @@ class Pokemon < ApplicationRecord
 
   validates :name, presence: true
   validates :num, presence: true
-  validates :pc_max, numericality: { only_integer: true }
-  validates :atk, numericality: { only_integer: true }
-  validates :def, numericality: { only_integer: true }
-  validates :sta, numericality: { only_integer: true }
-  validates :candy_distance, numericality: { only_integer: true }
-  validates :flee_rate, numericality: true
-  validates :capture_rate, numericality: true
+  validates :pc_max, numericality: { only_integer: true }, :allow_nil => true
+  validates :atk, numericality: { only_integer: true }, :allow_nil => true
+  validates :def, numericality: { only_integer: true }, :allow_nil => true
+  validates :sta, numericality: { only_integer: true }, :allow_nil => true
+  validates :candy_distance, numericality: { only_integer: true }, :allow_nil => true
+  validates :flee_rate, numericality: true, :allow_nil => true
+  validates :capture_rate, numericality: true, :allow_nil => true
 
   #------------------------------------------------------------------------
   # On vérifie si le pokémon peut évoluer ou s'il est lui-même l'évolution d'un autre pokémon

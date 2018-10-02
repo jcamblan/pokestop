@@ -26,6 +26,15 @@ class Admin::PokemonsController < ApplicationController
     end
   end
 
+  def create
+    @pokemon = Pokemon.new(pokemon_params)
+    if @pokemon.save
+      redirect_to admin_pokemons_path
+    else
+      render 'new'
+    end  
+  end
+
   private
 
     def pokemon_params

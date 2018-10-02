@@ -1,5 +1,7 @@
 class Admin::PhotosController < ApplicationController
   layout 'admin'
+  breadcrumb 'Admin', :admin_path
+  breadcrumb 'Images', :admin_photos_path
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /photos
@@ -20,6 +22,8 @@ class Admin::PhotosController < ApplicationController
 
   # GET /photos/1/edit
   def edit
+    @photo = Photo.find(params[:id])
+    breadcrumb @photo.id.to_s, edit_admin_photo_path(@photo)
   end
 
   # POST /photos

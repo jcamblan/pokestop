@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     resources :types
     resources :attacks
     resources :articles
-    resources :photos
+    resources :images, controller: 'photos', as: :photos
   end
 
 end
