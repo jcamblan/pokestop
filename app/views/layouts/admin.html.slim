@@ -4,7 +4,7 @@ html
     title
       - if content_for?(:title)
         = yield(:title) + ' | '
-      | Pokestop
+      | Admin | Pokestop
     = csrf_meta_tags
     = csp_meta_tag
     meta content="width=device-width,initial-scale=1.0" name="viewport" /
@@ -35,6 +35,7 @@ html
         = nav_link("Dashboard", admin_path, "fa-tachometer-alt")
         = nav_link("Pokemons", admin_pokemons_path, "fa-dizzy")
         = nav_link("Générations", admin_generations_path)
+        = nav_link("Types", admin_types_path)
         = nav_link("Attaques", admin_attacks_path)
         = nav_link("Articles", admin_articles_path)
         = nav_link("Tags", admin_tags_path)

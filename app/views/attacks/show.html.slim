@@ -1,12 +1,11 @@
-- title("#{@attack.attack_category.name} : #{@attack.name}")
-.container
-  .row
-    .col-12.col-md-6
-      .pokemons
-        .pokemons__list
-          h2 = t('views.attacks.show.stats.h2', attack: @attack.name)
-    .col-12.col-md-6
-      .pokemons
-        .pokemons__list
-          h2 = t('views.attacks.show.pokemons.h2', count: @attack.pokemons.count)
-          = render 'pokemon/list'
+- title("#{@attack.name} (#{@attack.attack_category.name})")
+.row
+  .col-12.col-md-6
+    .block
+      .list
+        h2 = @attack.name
+  .col-12.col-md-6
+    .block
+      .list
+        h2 = t('pokemons_count', count: @attack.pokemons.count)
+        = render 'pokemons/list'

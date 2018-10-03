@@ -23,6 +23,31 @@ class Type < ApplicationRecord
     "#{self.id}-#{self.name.parameterize}"
   end
 
+
+  def weak_against
+    types = Array.new
+    Type.connection.select_all("SELECT type_id FROM strengths_types WHERE strength_id = #{self.id}").each do |t|
+      types << Type.find(t['type_id'])
+    end
+    return types
+  end
+
+  def strong_against
+    types = Array.new
+    Type.connection.select_all("SELECT type_id FROM types_weaknesses WHERE weakness_id = #{self.id}").each do |t|
+      types << Type.find(t['type_id'])
+    end
+    return types
+  end
+
+  def very_strong_against
+    types = Array.new
+    Type.connection.select_all("SELECT type_id FROM extreme_weaknesses_types WHERE extreme_weakness_id = #{self.id}").each do |t|
+      types << Type.find(t['type_id'])
+    end
+    return types
+  end
+
   #------------------------------------------------------------------------
   # pour la gem filterrific
   #------------------------------------------------------------------------

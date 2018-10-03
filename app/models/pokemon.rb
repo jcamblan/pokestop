@@ -107,6 +107,40 @@ class Pokemon < ApplicationRecord
     self.attacks.where(attack_category_id: 2)
   end
 
+
+
+  def types_very_strong_against_it
+    very_strong_types = Array.new
+    if self.types.count > 1
+      type1_weaknesses = self.types.first.weak_against
+      type2_weaknesses = self.types.last.weak_against
+      strong_types = type1_weaknesses + type2_weaknesses
+      strong_types.uniq.each do |t|
+        if type1_weaknesses.include?(t) && type2_weaknesses.include?(t)
+          very_strong_types << t
+        end
+      end
+    end
+    return very_strong_types
+  end
+
+  def types_strong_against_it
+    type1_weaknesses = self.types.first.weak_against
+    if self.types.count == 1
+      strong_types = type1_weaknesses
+      return strong_types
+    else
+      type2_weaknesses = self.types.last.weak_against
+      strong_types = type1_weaknesses + type2_weaknesses
+      less_than_very_strong_types = Array.new
+      strong_types.uniq.each do |t|
+        unless type1_weaknesses.include?(t) && type2_weaknesses.include?(t)
+          less_than_very_strong_types << t
+        end
+      end
+      return less_than_very_strong_types
+    end
+  end
   #------------------------------------------------------------------------
   # Définition des filtres et des critères de tri pour la gem filterrific
   #------------------------------------------------------------------------

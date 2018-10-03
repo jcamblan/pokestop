@@ -2,8 +2,25 @@
 .container
   .row
     .col-12.col-md-6
-      .pokemons
-        .pokemons__list
+      .block
+        h2 trucs
+        - unless @type.strengths.empty?
+          h3 Super efficace contre :
+          ul.list-inline
+            - @type.strengths.each do |t|
+              li.list-inline-item = link_to type_image(t), t
+        - unless @type.weaknesses.empty?
+          h3 Pas très efficace contre :
+          ul.list-inline
+            - @type.weaknesses.each do |t|
+              li.list-inline-item = link_to type_image(t), t
+        - unless @type.extreme_weaknesses.empty?
+          h3 Sans effet contre :
+          ul.list-inline
+            - @type.extreme_weaknesses.each do |t|
+              li.list-inline-item = link_to type_image(t), t
+      .block
+        .list
           h2 = t('views.types.show.attacks.h2', type: @type.name)
           table.table
             thead
@@ -18,8 +35,8 @@
                   td = link_to type_image(a.type), a.type
                   td = a.attack_category.name
     .col-12.col-md-6
-      .pokemons
-        .pokemons__list
+      .block
+        .list
           h2 = t('views.types.show.pokemons.h2', type: @type.name)
           = paginate @pokemons
           table.table
