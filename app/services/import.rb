@@ -17,6 +17,7 @@ class Import
     create_generations if @@generations
     create_candies if @@candies
     create_types if @@types
+    give_types_strengths_and_weaknesses if @@types
     create_attack_categories if @@attack_categories
     create_attacks if @@attacks
     create_item_categories if @@item_categories
@@ -60,6 +61,30 @@ class Import
 
   def create_type(type)
     Type.create(name: type['name'], name_en: type['name_en'])
+  end
+
+## ASSOCIATION DES TYPES PAR FORCES/FAIBLESSES
+
+  def give_types_strengths_and_weaknesses
+    @@types.each do |type|
+      give_type_strengths_and_weaknesses(type) if Type.find_by(name_en: type['name_en'])
+    end
+  end
+
+  def give_type_strengths_and_weaknesses(type)
+    t = Type.find_by(name_en: type['name_en'])
+    t.strengths << type_types_list(type['strengths'])
+    t.weaknesses << type_types_list(type['weaknesses'])
+    t.extreme_weaknesses << type_types_list(type['extreme_weaknesses'])
+    t.save
+  end
+
+  def type_types_list(types)
+    types_array = Array.new
+    types.each do |t|
+      types_array << Type.find_by(name_en: t['name_en'])
+    end
+    return types_array
   end
 
 ## PUIS LES CATEGORIES D'ATTAQUES
