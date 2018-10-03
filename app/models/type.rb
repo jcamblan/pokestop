@@ -32,7 +32,7 @@ class Type < ApplicationRecord
     return types
   end
 
-  def strong_against
+  def tough_against
     types = Array.new
     Type.connection.select_all("SELECT type_id FROM types_weaknesses WHERE weakness_id = #{self.id}").each do |t|
       types << Type.find(t['type_id'])
@@ -40,7 +40,7 @@ class Type < ApplicationRecord
     return types
   end
 
-  def very_strong_against
+  def very_tough_against
     types = Array.new
     Type.connection.select_all("SELECT type_id FROM extreme_weaknesses_types WHERE extreme_weakness_id = #{self.id}").each do |t|
       types << Type.find(t['type_id'])

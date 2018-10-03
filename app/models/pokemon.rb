@@ -107,45 +107,66 @@ class Pokemon < ApplicationRecord
     self.attacks.where(attack_category_id: 2)
   end
 
+  #------------------------------------------------------------------------
+  # Ces méthodes permettent de récupérer les types + ou - efficaces contre le pokémon
+  #------------------------------------------------------------------------
 
-
+  # Ici, on vérifie si le pokémon possède plus d'un type (donc deux). Si oui, on va récupérer les
+  # types qui contrent à la fois les deux
   def types_very_strong_against_it
-    very_strong_types = Array.new
     if self.types.count > 1
-      type1_weaknesses = self.types.first.weak_against
-      type2_weaknesses = self.types.last.weak_against
-      strong_types = type1_weaknesses + type2_weaknesses
-      strong_types.uniq.each do |t|
-        if type1_weaknesses.include?(t) && type2_weaknesses.include?(t)
-          very_strong_types << t
-        end
-      end
+      return get_very_strong_types_array(self.types.first.weak_against,self.types.last.weak_against)
     end
-    return very_strong_types
   end
 
-  def types_strong_against_it
-    type1_weaknesses = self.types.first.weak_against
-    if self.types.count == 1
-      strong_types = type1_weaknesses
-      return strong_types
-    else
-      type2_weaknesses = self.types.last.weak_against
-      type1_strengths = self.types.first.strong_against + self.types.first.very_strong_against
-      type2_strengths = self.types.last.strong_against + self.types.last.very_strong_against
-      weak_types = type1_strengths + type2_strengths
-      strong_types = type1_weaknesses + type2_weaknesses
-      less_than_very_strong_types = Array.new
-      strong_types.uniq.each do |t|
-        unless type1_weaknesses.include?(t) && type2_weaknesses.include?(t)
-          unless weak_types.include?(t)
-            less_than_very_strong_types << t
-          end
-        end
+  # On crée le tableau contenant les types forts contre les deux types du pokémon
+  def get_very_strong_types_array(type1_weaknesses,type2_weaknesses)
+    array = Array.new
+    dangerous_types_list = type1_weaknesses + type2_weaknesses
+    dangerous_types_list.uniq.each do |type|
+      if type1_weaknesses.include?(type) && type2_weaknesses.include?(type)
+        array << type
       end
-      return less_than_very_strong_types
+    end
+    return array
+  end
+
+  # Si le pokémon n'a qu'un seul type, on récupère facilement les types forts contre celui-ci
+  # S'il en a deux, on appelle la génération d'un tableau listant les types fort contre
+  # l'un ou l'autre de ses deux types (mais pas contre les deux)
+  def types_strong_against_it
+    if self.types.count == 1
+      return self.types.first.weak_against
+    else
+      return get_strong_types_array(self.types.first.weak_against,self.types.last.weak_against)
     end
   end
+
+  # On crée le tableau contenant les types fort contre l'un ou l'autre des types du pokémon
+  def get_strong_types_array(type1_weaknesses,type2_weaknesses)
+    array = Array.new
+    dangerous_types_list = type1_weaknesses + type2_weaknesses
+    dangerous_types_list.uniq.each do |type|
+      unless type1_weaknesses.include?(type) && type2_weaknesses.include?(type)
+        unless get_weak_types_array.include?(type)
+          array << type
+        end
+      end
+    end
+    return array
+  end
+
+  # On génère un tableau listant les types faibles ou très faibles contre les types du pokémon
+  # de manière à les soustraire au tableau généré par get_strong_types_array
+  def get_weak_types_array
+    array = Array.new
+    self.types.each do |type|
+      array << type.tough_against
+      array << type.very_tough_against
+    end
+    return array.uniq
+  end
+
   #------------------------------------------------------------------------
   # Définition des filtres et des critères de tri pour la gem filterrific
   #------------------------------------------------------------------------
