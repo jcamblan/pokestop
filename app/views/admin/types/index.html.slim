@@ -1,0 +1,18 @@
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des générations
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+        tbody
+          - @types.each do |type|
+            tr
+              td = link_to type.id, edit_admin_type_path(type)
+              td = type.name
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM

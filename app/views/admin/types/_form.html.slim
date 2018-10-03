@@ -1,0 +1,38 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @type] do |f|
+  - if @type.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@type.errors.count, "error")}"
+      ul
+      - @type.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Type
+        .card-body
+          .form-group
+            = f.label :name, "Nom :"
+            = f.text_field :name, {:class => 'form-control'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :strength_ids, "Fort contre les types :"
+            br
+            = f.collection_select :strength_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :weakness_ids, "Faible contre les types :"
+            br
+            = f.collection_select :weakness_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
