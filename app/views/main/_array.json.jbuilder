@@ -31,6 +31,24 @@ json.types do
   json.array!(@types) do |type|
     json.name type.name
     json.name_en type.name_en
+    json.strengths do
+      json.array!(type.strengths) do |t|
+        json.name_fr t.name
+        json.name_en t.name_en
+      end
+    end
+    json.weaknesses do
+      json.array!(type.weaknesses) do |t|
+        json.name_fr t.name
+        json.name_en t.name_en
+      end
+    end
+    json.extreme_weaknesses do
+      json.array!(type.extreme_weaknesses) do |t|
+        json.name_fr t.name
+        json.name_en t.name_en
+      end
+    end
   end
 end
 
@@ -80,7 +98,6 @@ json.pokemons do
     json.candy pokemon.candy.name if pokemon.candy
     json.candy_distance pokemon.candy_distance
     json.pc_max pokemon.pc_max
-    json.pv_max pokemon.pv_max
     json.atk pokemon.atk
     json.def pokemon.def
     json.sta pokemon.sta

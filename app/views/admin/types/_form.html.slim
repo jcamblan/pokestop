@@ -21,18 +21,25 @@ script
           | Type
         .card-body
           .form-group
-            = f.label :name, "Nom :"
+            = f.label :name, "Nom FR :"
             = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :name_en, "Nom EN :"
+            = f.text_field :name_en, {:class => 'form-control'}
     .col-12.col-md-6
       .card.mb-3
         .card-header
           | Associations
         .card-body
           .form-group
-            = f.label :strength_ids, "Fort contre les types :"
+            = f.label :strength_ids, "Super efficace contre :"
             br
             = f.collection_select :strength_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
           .form-group
-            = f.label :weakness_ids, "Faible contre les types :"
+            = f.label :weakness_ids, "Pas très efficace contre :"
             br
             = f.collection_select :weakness_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :extreme_weakness_ids, "Aucun effet contre :"
+            br
+            = f.collection_select :extreme_weakness_ids, Type.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}

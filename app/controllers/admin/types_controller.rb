@@ -38,6 +38,6 @@ class Admin::TypesController < ApplicationController
   private
 
     def type_params
-      params.require(:type).permit(:name,{:strength_ids => []},{:weakness_ids => []})
+      params.require(:type).permit(:name,:name_en,{:strength_ids => []},{:weakness_ids => []},{:extreme_weakness_ids => []})
     end
 end
