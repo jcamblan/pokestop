@@ -1,21 +1,22 @@
 - title("Liste des générations")
-.pokemons
-  .pokemons__list
-    table.table
-      thead
-        tr
-          th scope="col" = t('views.generations.index.col_num')
-          th scope="col" = t('views.generations.index.col_name')
-          th scope="col" = t('views.generations.index.col_first')
-          th scope="col" = t('views.generations.index.col_last')
-      tbody
-        - @generations.each do |g|
+.generations
+  .block
+    .list
+      table.table
+        thead
           tr
-            td = link_to g.id, g
-            td = link_to g.name, g
-            td 
-              = link_to display_sprite(g.pokemons.order(:num).first), pokemon_path(g.pokemons.order(:num).first.num)
-              = link_to "#{g.pokemons.order(:num).first.name} (##{g.pokemons.order(:num).first.num})", pokemon_path(g.pokemons.order(:num).first.num)
-            td 
-              = link_to display_sprite(g.pokemons.order(:num).last), pokemon_path(g.pokemons.order(:num).last.num)
-              = link_to "#{g.pokemons.order(:num).last.name} (##{g.pokemons.order(:num).last.num})", pokemon_path(g.pokemons.order(:num).last.num)
+            th scope="col" = t('views.generations.index.col_num')
+            th scope="col" = t('views.generations.index.col_name')
+            th scope="col" = t('views.generations.index.col_first')
+            th scope="col" = t('views.generations.index.col_last')
+        tbody
+          - @generations.each do |g|
+            tr
+              td = link_to g.id, g
+              td = link_to g.name, g
+              td 
+                = link_to display_sprite(g.pokemons.order(:num).first), pokemon_path(g.pokemons.order(:num).first.num)
+                = link_to "#{g.pokemons.order(:num).first.name} (##{g.pokemons.order(:num).first.num})", pokemon_path(g.pokemons.order(:num).first.num)
+              td 
+                = link_to display_sprite(g.pokemons.order(:num).last), pokemon_path(g.pokemons.order(:num).last.num)
+                = link_to "#{g.pokemons.order(:num).last.name} (##{g.pokemons.order(:num).last.num})", pokemon_path(g.pokemons.order(:num).last.num)

@@ -13,38 +13,3 @@
   border-radius: 10px;
 }
 
-.pokemons__block {
-
-}
-
-.pokemons__list {
-  margin: 0 auto 0 auto;
-
-  img {
-    width: 40px;
-  }
-
-  nav {
-    margin: 0 auto 0 auto;
-  }
-}
-
-.list__filters {
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.list__results {
-  display: flex;
-  flex-direction: column;
-}
-
-.list__tr {}
-
-.list__tr--gray {
-  @extend .content--gray;
-}
-
-ul.pagination {
-  margin: 10px auto 10px auto;
-}

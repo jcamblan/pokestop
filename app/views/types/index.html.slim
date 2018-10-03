@@ -1,15 +1,16 @@
 - title("Types")
-.pokemons
-  .pokemons__list
-    table.table
-      thead
-        tr
-          th scope="col"
-          th scope="col" = t('views.types.index.col_name')
-          th scope="col" = t('views.types.index.col_nb_pokemon')
-      tbody
-        - @types.each do |t|
+.types
+  .block
+    .list
+      table.table
+        thead
           tr
-            td = link_to type_image(t), t
-            td = link_to t.name, t
-            td = t.pokemons.count
+            th scope="col"
+            th scope="col" = t('views.types.index.col_name')
+            th scope="col" = t('views.types.index.col_nb_pokemon')
+        tbody
+          - @types.each do |t|
+            tr
+              td = link_to type_image(t), t
+              td = link_to t.name, t
+              td = t.pokemons.count
