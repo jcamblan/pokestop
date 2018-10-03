@@ -87,10 +87,10 @@ class Import
     a.name = attack['name']
     a.name_en = attack['name_en']
     a.type_id = Type.where(name: attack['type']).first.id if attack['type']
-    a.power = attack['power']
-    a.cast_time = attack['cast_time']
-    a.epu = attack['epu'] if attack['epu']
-    a.energy_bars = attack['energy_bars'] if attack['energy_bars']
+    a.power = attack['power'].to_f
+    a.cast_time = attack['cast_time'].to_f
+    a.epu = attack['epu'].to_f if attack['epu']
+    a.energy_bars = attack['energy_bars'].to_i if attack['energy_bars']
     a.attack_category_id = AttackCategory.where(name: attack['attack_category']).first.id
     a.save
   end
@@ -139,7 +139,6 @@ class Import
     p.candy_id = Candy.where(name: pokemon['candy']).first.id if pokemon['candy']
     p.candy_distance = pokemon['candy_distance']
     p.pc_max = pokemon['pc_max']
-    p.pv_max = pokemon['pv_max']
     p.atk = pokemon['atk']
     p.def = pokemon['def']
     p.sta = pokemon['sta']
