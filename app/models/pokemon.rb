@@ -131,11 +131,16 @@ class Pokemon < ApplicationRecord
       return strong_types
     else
       type2_weaknesses = self.types.last.weak_against
+      type1_strengths = self.types.first.strong_against + self.types.first.very_strong_against
+      type2_strengths = self.types.last.strong_against + self.types.last.very_strong_against
+      weak_types = type1_strengths + type2_strengths
       strong_types = type1_weaknesses + type2_weaknesses
       less_than_very_strong_types = Array.new
       strong_types.uniq.each do |t|
         unless type1_weaknesses.include?(t) && type2_weaknesses.include?(t)
-          less_than_very_strong_types << t
+          unless weak_types.include?(t)
+            less_than_very_strong_types << t
+          end
         end
       end
       return less_than_very_strong_types
