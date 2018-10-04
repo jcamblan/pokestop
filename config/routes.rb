@@ -1,16 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'admin/index'
+  devise_for :users
   root to: 'main#index'
-
-  # Gestion des utilisateurs ----------------------------------------------------
-
-  get '/signup', to: 'users#new'
-  post '/signup',  to: 'users#create'
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-  resources :users
 
   get :search, controller: :main
   get :export, controller: :main
