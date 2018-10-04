@@ -1,16 +1,41 @@
 - title("Types")
 .types
-  .block
-    .list
-      table.table
-        thead
-          tr
-            th scope="col"
-            th scope="col" = t('views.types.index.col_name')
-            th scope="col" = t('views.types.index.col_nb_pokemon')
-        tbody
-          - @types.each do |t|
+  .row
+    .types__strengths.mx-auto.d-flex
+      .block
+        h2 Forces et faiblesses
+        .col.mx-auto
+          table.table-responsive-sm
+            thead
+              tr
+                th 
+                - @types.each do |tx|
+                  th = link_to type_image(tx), tx
+            tbody
+              - @types.each do |ty|
+                tr
+                  th = link_to type_image(ty), ty
+                  - @types.each do |tx|
+                    - if ty.strengths.include?(tx)
+                      td.bg-success.rounded-circle x2
+                    - elsif ty.weaknesses.include?(tx)
+                      td.bg-warning.rounded-circle x0.5
+                    - elsif ty.extreme_weaknesses.include?(tx)
+                      td.bg-dark.text-light.rounded-circle x0
+                    - else
+                      td.text-secondary x1
+  .row
+    .block
+      .list
+        table.table
+          thead
             tr
-              td = link_to type_image(t), t
-              td = link_to t.name, t
-              td = t.pokemons.count
+              th scope="col"
+              th scope="col" = t('views.types.index.col_name')
+              th scope="col" = t('views.types.index.col_nb_pokemon')
+          tbody
+            - @types.each do |t|
+              tr
+                td = link_to type_image(t), t
+                td = link_to t.name, t
+                td = t.pokemons.count
