@@ -1,5 +1,5 @@
 class Pokemon < ApplicationRecord
-
+  resourcify
   belongs_to :generation
   has_and_belongs_to_many :types
   has_and_belongs_to_many :attacks

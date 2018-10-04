@@ -1,5 +1,6 @@
 class Admin::ImagesController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Images', :admin_images_path
   before_action :set_image, only: [:show, :edit, :update, :destroy]
@@ -67,6 +68,11 @@ class Admin::ImagesController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_image
       @image = Image.find(params[:id])

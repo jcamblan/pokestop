@@ -1,5 +1,6 @@
 class Admin::TagsController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Tags', :admin_tags_path
@@ -36,6 +37,10 @@ class Admin::TagsController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def tag_params
       params.require(:tag).permit(:name)

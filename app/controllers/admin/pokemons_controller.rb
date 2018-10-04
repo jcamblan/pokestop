@@ -1,11 +1,13 @@
 class Admin::PokemonsController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Pokemons', :admin_pokemons_path
 
   def index
     @pokemons = Pokemon.all.order(:num)
+
   end
 
   def edit
@@ -36,6 +38,10 @@ class Admin::PokemonsController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def pokemon_params
       params.require(:pokemon).permit(:num, :name, :name_en, :atk, :def, :sta, :pc_max,

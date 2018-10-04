@@ -1,5 +1,6 @@
 class Admin::TypesController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Types', :admin_types_path
@@ -36,6 +37,10 @@ class Admin::TypesController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def type_params
       params.require(:type).permit(:name,:name_en,{:strength_ids => []},{:weakness_ids => []},{:extreme_weakness_ids => []})

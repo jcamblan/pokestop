@@ -44,6 +44,8 @@ gem 'trix'
 gem 'devise'
 # gestion des permissions
 gem 'cancancan'
+# gestion des rôles
+gem 'rolify'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

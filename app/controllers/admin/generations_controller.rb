@@ -1,5 +1,6 @@
 class Admin::GenerationsController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Générations', :admin_generations_path
@@ -27,6 +28,10 @@ class Admin::GenerationsController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def generation_params
       params.require(:generation).permit(:name, :on_prod)

@@ -1,5 +1,6 @@
 class Admin::AttacksController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Attaques', :admin_attacks_path
@@ -28,6 +29,10 @@ class Admin::AttacksController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def attack_params
       params.require(:attack).permit(:name, :name_en, :type_id, :attack_category_id, 

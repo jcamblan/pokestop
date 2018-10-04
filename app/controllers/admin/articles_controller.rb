@@ -1,5 +1,6 @@
 class Admin::ArticlesController < ApplicationController
   layout 'admin'
+  load_and_authorize_resource
 
   breadcrumb 'Admin', :admin_path
   breadcrumb 'Articles', :admin_articles_path
@@ -32,6 +33,10 @@ class Admin::ArticlesController < ApplicationController
   end
 
   private
+
+    def current_ability
+      @current_ability ||= AdminAbility.new(current_user)
+    end
 
     def article_params
       params.require(:article).permit(:title, :header, :body, :published, :homepage, {:article_category_ids => []}, {images: []})

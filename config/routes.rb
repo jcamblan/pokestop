@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get :search, controller: :main
   get :export, controller: :main
-  get :calendar, controller: :event
+  get :calendar, controller: :events
 
   resources :pokemons, only: [:index, :show], param: :num
   resources :items, only: [:index, :show]
