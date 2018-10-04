@@ -128,7 +128,7 @@ class Pokemon < ApplicationRecord
         array << type
       end
     end
-    return array
+    return array unless array.empty?
   end
 
   # Si le pokémon n'a qu'un seul type, on récupère facilement les types forts contre celui-ci
@@ -153,7 +153,7 @@ class Pokemon < ApplicationRecord
         end
       end
     end
-    return array
+    return array unless array.empty?
   end
 
   # On génère un tableau listant les types faibles ou très faibles contre les types du pokémon
