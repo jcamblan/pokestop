@@ -42,6 +42,8 @@ gem 'loaf'
 gem 'trix'
 # pour l'identification des utilisateurs et me compliquer la vie avec le RGPD
 gem 'devise'
+# gestion des permissions
+gem 'cancancan'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
