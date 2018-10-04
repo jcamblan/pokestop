@@ -1,6 +1,6 @@
 header {
   nav {
-    background-color: #f8e9a4;
+    background-color: #91c9be;
 
     img.pokestop__logo {
       height: 40px;
@@ -10,7 +10,7 @@ header {
 
 .root {
   text-align: center;
-  background-color: #f8e9a4;
+  background-color: #91c9be;
   padding: 50px 0 50px 0;
   /* Source background : https://pokewalls.wordpress.com/2011/04/24/175-togepi/ */
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ header {
 
 @media (min-width: 576px) {
   .root {
-    background-image: image-url("bg_togepi.jpg");
+    background-image: image-url("bg_bulbizarre.jpg");
 
     img.pokestop__logo {
       width: 500px;
