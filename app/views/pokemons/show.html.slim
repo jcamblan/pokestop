@@ -1,7 +1,4 @@
-
 - title("#{@pokemon.name} (##{@pokemon.num})")
-- if user_signed_in?
-  - if can? :read, @pokemon
-    .pokemon.row.flex-column
-      = render 'show_header'
-      = render 'blocks'
+  .pokemon.row.flex-column
+    = render 'show_header'
+    = render 'blocks'
