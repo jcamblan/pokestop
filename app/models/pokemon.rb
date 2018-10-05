@@ -5,6 +5,7 @@ class Pokemon < ApplicationRecord
   has_many :evolutions
   has_and_belongs_to_many :eggs
   belongs_to :candy, required: false
+  has_many :movesets
 
   validates :name, presence: true
   validates :num, presence: true

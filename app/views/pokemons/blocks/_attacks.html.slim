@@ -25,9 +25,9 @@
             br
             | DPS
       tbody
-        - @combo_list.each do |combo|
+        - @movesets.each do |moveset|
           tr
-            td = combo[:fast_attack].name_en
-            td = combo[:charge_attack].name_en
-            td = combo[:att_dps]
-            td = combo[:def_dps]
+            td = moveset.fast_attack.name
+            td = moveset.charge_attack.name
+            td = moveset.raw_attacking_dps
+            td = moveset.raw_defending_dps

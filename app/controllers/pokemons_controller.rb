@@ -21,7 +21,7 @@ class PokemonsController < ApplicationController
   def show
     @pokemon = Pokemon.find_by(num: params[:num])
     @evolutions = @pokemon.first_form if @pokemon.can_evolve? || @pokemon.is_evolution?
-    @combo_list = AttacksCombo.new.get_combos_array(@pokemon)
+    @movesets = @pokemon.movesets.order(raw_attacking_dps: :desc)
   end
 
 end

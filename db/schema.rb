@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_181035) do
+ActiveRecord::Schema.define(version: 2018_10_05_143259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -168,6 +168,14 @@ ActiveRecord::Schema.define(version: 2018_10_04_181035) do
     t.bigint "item_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "movesets", force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "fast_attack_id"
+    t.integer "charge_attack_id"
+    t.decimal "raw_attacking_dps"
+    t.decimal "raw_defending_dps"
   end
 
   create_table "pokemons", force: :cascade do |t|
