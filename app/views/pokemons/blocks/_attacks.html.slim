@@ -4,8 +4,8 @@
     h3 = t('.fast_moves')
     .attacks__fast
       - @pokemon.fast_attacks.each do |attack|
-        = render 'pokemons/blocks/attack', attack: attack
+        = render 'pokemons/blocks/attack', attack: attack, pokemon: @pokemon
     h3 = t('.charge_moves')
     .attacks__charged
       - @pokemon.charge_attacks.each do |attack|
-        = render 'pokemons/blocks/attack', attack: attack
+        = render 'pokemons/blocks/attack', attack: attack, pokemon: @pokemon

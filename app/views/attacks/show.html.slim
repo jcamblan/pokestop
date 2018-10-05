@@ -4,6 +4,12 @@
     .block
       .list
         h2 = @attack.name
+        ul
+          li = "Power : #{@attack.power.to_i}"
+          li = "Cast time : #{@attack.cast_time}"
+          li = "EPU : #{@attack.epu}"
+          li = "E. Bars : #{@attack.energy_bars}"
+          li = "DPS : #{@attack.dps}"
   .col-12.col-md-6
     .block
       .list
