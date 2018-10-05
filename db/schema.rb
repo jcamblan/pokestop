@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_143259) do
+ActiveRecord::Schema.define(version: 2018_10_05_153437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -176,6 +176,8 @@ ActiveRecord::Schema.define(version: 2018_10_05_143259) do
     t.integer "charge_attack_id"
     t.decimal "raw_attacking_dps"
     t.decimal "raw_defending_dps"
+    t.decimal "fast_attack_raw_dps"
+    t.decimal "charge_attack_raw_dps"
   end
 
   create_table "pokemons", force: :cascade do |t|

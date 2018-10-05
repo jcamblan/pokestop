@@ -16,18 +16,14 @@
         tr
           th Fast Attack
           th Charge Attack
-          th 
-            | ATT
-            br
-            | DPS
-          th 
-            | DEF
-            br
-            | DPS
+          th ATT
+          th DEF
       tbody
         - @movesets.each do |moveset|
           tr
             td = moveset.fast_attack.name
             td = moveset.charge_attack.name
-            td = moveset.raw_attacking_dps
+            td 
+              = (moveset.raw_attacking_dps / @movesets.first.raw_attacking_dps * 100).round
+              | %
             td = moveset.raw_defending_dps
