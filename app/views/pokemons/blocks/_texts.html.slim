@@ -1,8 +1,8 @@
-- unless @pokemon.pokedex_entry.nil? || @pokemon.pokedex_entry.empty?
+- unless pokemon.pokedex_entry.nil? || pokemon.pokedex_entry.empty?
   .pokemon__block.block
     h2 = t('.pokedex_entry')
-    = sanitize @pokemon.pokedex_entry
-- unless @pokemon.comment.nil? || @pokemon.comment.empty?
+    = sanitize pokemon.pokedex_entry
+- unless pokemon.comment.nil? || pokemon.comment.empty?
   .pokemon__block.block
     h2 = t('.comment')
-    = sanitize @pokemon.comment
+    = sanitize pokemon.comment

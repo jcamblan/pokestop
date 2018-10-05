@@ -1,9 +1,9 @@
-- unless @pokemon.types.empty?
+- unless pokemon.types.empty?
   .pokemon__block.block.text-center
-    h2 = t('.types').pluralize(@pokemon.types.count)
-    - @pokemon.types.each do |type|
+    h2 = t('.types').pluralize(pokemon.types.count)
+    - pokemon.types.each do |type|
       .pokemon__type
         = link_to link_to type_image(type), type
         br
         = link_to type.name, type
-    = render 'pokemons/blocks/strong_types'
+    = render 'pokemons/blocks/strong_types', pokemon: pokemon

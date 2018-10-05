@@ -1,7 +1,7 @@
-- if @pokemon.pc_max || @pokemon.atk || @pokemon.def || @pokemon.sta
+- if pokemon.pc_max || pokemon.atk || pokemon.def || pokemon.sta
   .pokemon__block.block
     h2 = t('.primary_stats')
-    = stat_bar('pc_max',@pokemon.pc_max,@pokemon.max_pc_max)
-    = stat_bar('atk',@pokemon.atk,@pokemon.max_atk)
-    = stat_bar('def',@pokemon.def,@pokemon.max_def)
-    = stat_bar('sta',@pokemon.sta,@pokemon.max_sta)
+    = stat_bar('pc_max',pokemon.pc_max,pokemon.max_pc_max)
+    = stat_bar('atk',pokemon.atk,pokemon.max_atk)
+    = stat_bar('def',pokemon.def,pokemon.max_def)
+    = stat_bar('sta',pokemon.sta,pokemon.max_sta)

@@ -1,14 +1,14 @@
-- if @pokemon.candy_distance || @pokemon.flee_rate || @pokemon.capture_rate || @pokemon.name_en.present?
+- if pokemon.candy_distance || pokemon.flee_rate || pokemon.capture_rate || pokemon.name_en.present?
   .pokemon__block.block
     h2 = t('.secondary_stats')
     ul.list-group
-      - if @pokemon.candy && @pokemon.candy_distance
+      - if pokemon.candy && pokemon.candy_distance
         li.list-group-item
-          = sanitize t('.buddy_distance', candy: (image_tag @pokemon.candy.image_path, width: "30px")) if @pokemon.candy
-          = " #{@pokemon.candy_distance} km"
-      - if @pokemon.flee_rate
-        li.list-group-item = "#{t('.flee_rate')} #{@pokemon.flee_rate}%"
-      - if @pokemon.capture_rate
-        li.list-group-item = "#{t('.capture_rate')} #{@pokemon.capture_rate}%"
-      - if @pokemon.name_en.present?
-        li.list-group-item = "#{t('.english_name')} #{@pokemon.name_en}"
+          = sanitize t('.buddy_distance', candy: (image_tag pokemon.candy.image_path, width: "30px")) if pokemon.candy
+          = " #{pokemon.candy_distance} km"
+      - if pokemon.flee_rate
+        li.list-group-item = "#{t('.flee_rate')} #{pokemon.flee_rate}%"
+      - if pokemon.capture_rate
+        li.list-group-item = "#{t('.capture_rate')} #{pokemon.capture_rate}%"
+      - if pokemon.name_en.present?
+        li.list-group-item = "#{t('.english_name')} #{pokemon.name_en}"

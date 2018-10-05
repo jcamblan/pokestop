@@ -1,9 +1,9 @@
-- unless @pokemon.eggs.empty?
+- unless pokemon.eggs.empty?
   .pokemon__block.block.eggs
-    h2 = t('.eggs').pluralize(@pokemon.eggs.count)
+    h2 = t('.eggs').pluralize(pokemon.eggs.count)
     p = t('.can_be_obtained')
     ul.eggs__list
-      - @pokemon.eggs.each do |e|
+      - pokemon.eggs.each do |e|
         li 
           = link_to e do
             = image_tag "egg/#{e.name.parameterize}.png", alt: e.name

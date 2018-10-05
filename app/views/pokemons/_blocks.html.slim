@@ -1,12 +1,12 @@
 .pokemon__blocks.row
   .col-12.col-lg-6
     .row
-      = render 'pokemons/blocks/types'
-      = render 'pokemons/blocks/primary_stats'
-      = render 'pokemons/blocks/secondary_stats'
-      = render 'pokemons/blocks/eggs'
-      = render 'pokemons/blocks/texts'
+      = render 'pokemons/blocks/types', pokemon: pokemon
+      = render 'pokemons/blocks/primary_stats', pokemon: pokemon
+      = render 'pokemons/blocks/secondary_stats', pokemon: pokemon
+      = render 'pokemons/blocks/eggs', pokemon: pokemon
+      = render 'pokemons/blocks/texts', pokemon: pokemon
   .col-12.col-lg-5
     .row
-      = render 'pokemons/blocks/evolutions'
-      = render 'pokemons/blocks/attacks'
+      = render 'pokemons/blocks/evolutions', pokemon: pokemon
+      = render 'pokemons/blocks/attacks', pokemon: pokemon

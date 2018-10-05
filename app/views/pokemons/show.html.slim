@@ -1,4 +1,4 @@
 - title("#{@pokemon.name} (##{@pokemon.num})")
 .pokemon.row.flex-column
-  = render 'show_header'
-  = render 'blocks'
+  = render 'show_header', pokemon: @pokemon
+  = render 'blocks', pokemon: @pokemon

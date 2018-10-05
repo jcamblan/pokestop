@@ -1,12 +1,12 @@
-.row.pokemon__header style=("background: linear-gradient(to bottom right, #{@pokemon.candy.primary_color}, #{@pokemon.candy.secondary_color});" if @pokemon.candy)
+.row.pokemon__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
   .pokemon__prev
-    = link_to "<< #{@pokemon.prev.name} (##{@pokemon.prev.num})", @pokemon.prev.num
+    = link_to "<< #{pokemon.prev.name} (##{pokemon.prev.num})", pokemon.prev.num
   .pokemon__next
-    = link_to "#{@pokemon.next.name} (##{@pokemon.next.num}) >>", @pokemon.next.num
+    = link_to "#{pokemon.next.name} (##{pokemon.next.num}) >>", pokemon.next.num
   .pokemon__generation
-    = link_to "Gen ##{@pokemon.generation.id} : #{@pokemon.generation.name}", @pokemon.generation
+    = link_to "Gen ##{pokemon.generation.id} : #{pokemon.generation.name}", pokemon.generation
   .pokemon__ball
-    .pokemon__sprite class=("pokemon_sprite--gray" unless @pokemon.generation.on_prod) = display_sprite(@pokemon)
+    .pokemon__sprite class=("pokemon_sprite--gray" unless pokemon.generation.on_prod) = display_sprite(pokemon)
     .pokemon__name 
-      h1 = @pokemon.name
-    .pokemon__num = "##{@pokemon.num}"
+      h1 = pokemon.name
+    .pokemon__num = "##{pokemon.num}"
