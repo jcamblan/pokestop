@@ -11,5 +11,23 @@
         = render 'pokemons/blocks/attack', attack: attack, pokemon: pokemon
   .block
     h2 test combos
-    - @combo_list.each do |combo|
-      p = "#{combo[:fast_attack].name_en} + #{combo[:charge_attack].name_en} : #{combo[:dps]}"
+    table.dataTable.table.table-sm cellspacing="0" width="100%"
+      thead
+        tr
+          th Fast Attack
+          th Charge Attack
+          th 
+            | ATT
+            br
+            | DPS
+          th 
+            | DEF
+            br
+            | DPS
+      tbody
+        - @combo_list.each do |combo|
+          tr
+            td = combo[:fast_attack].name_en
+            td = combo[:charge_attack].name_en
+            td = combo[:att_dps]
+            td = combo[:def_dps]

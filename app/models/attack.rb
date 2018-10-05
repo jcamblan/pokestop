@@ -16,7 +16,7 @@ class Attack < ApplicationRecord
   def dps(*stab_test)
     dps = (self.power / self.cast_time)
     dps = dps *= 1.2 if stab_test.first && stab_test.first.types.include?(self.type)
-    return dps.round(1)
+    return dps.round(2)
   end
 
 end

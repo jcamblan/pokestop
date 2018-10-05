@@ -7,23 +7,30 @@ class AttacksCombo
         combo = {
           fast_attack: fast_attack,
           charge_attack: charge_attack,
-          dps: get_combo_dps(fast_attack, charge_attack, pokemon)
+          att_dps: get_attacking_combo_dps(fast_attack, charge_attack, pokemon),
+          def_dps: get_defending_combo_dps(fast_attack, charge_attack, pokemon)
         }
         array << combo
       end
     end
-    return array
+    return array.sort_by { |c| -c[:att_dps] }
   end
 
-  def get_combo_dps(fast_attack,charge_attack,pokemon)
+  def get_attacking_combo_dps(fast_attack,charge_attack,pokemon)
     fa_damages = get_attack_damages(fast_attack,pokemon)
     ca_damages = get_attack_damages(charge_attack,pokemon)
     ca_energy_cost = get_energy_cost(charge_attack.energy_bars)
-
-    get_dps_from_simulation(fa_damages,fast_attack.cast_time,fast_attack.epu,ca_damages,charge_attack.cast_time,ca_energy_cost,100)
+    get_dps_if_attacking(fa_damages,fast_attack.cast_time,fast_attack.epu,ca_damages,charge_attack.cast_time,ca_energy_cost,100)
   end
 
-  def get_dps_from_simulation(fa_damages,fa_cast_time,fa_epu,ca_damages,ca_cast_time,ca_energy_cost,duration)
+  def get_defending_combo_dps(fast_attack,charge_attack,pokemon)
+    fa_damages = get_attack_damages(fast_attack,pokemon)
+    ca_damages = get_attack_damages(charge_attack,pokemon)
+    ca_energy_cost = get_energy_cost(charge_attack.energy_bars)
+    get_dps_if_defending(fa_damages,fast_attack.cast_time,fast_attack.epu,ca_damages,charge_attack.cast_time,ca_energy_cost,100)
+  end
+
+  def get_dps_if_attacking(fa_damages,fa_cast_time,fa_epu,ca_damages,ca_cast_time,ca_energy_cost,duration)
     timer = 0
     damage_done = 0
     energy = 0
@@ -36,8 +43,47 @@ class AttacksCombo
         next
       elsif (timer + fa_cast_time) < duration
         damage_done += fa_damages
-        energy += fa_epu
+        if energy + fa_epu <= 100 # En attaque, l'énergie des pokémons est capée à 100
+          energy += fa_epu
+        else
+          energy = 100
+        end
         timer += fa_cast_time
+        next
+      end
+      timer += 1
+    end
+
+    return (damage_done / timer).round(1)
+  end
+
+  def get_dps_if_defending(fa_damages,fa_cast_time,fa_epu,ca_damages,ca_cast_time,ca_energy_cost,duration)
+    timer = 0
+    damage_done = 0
+    energy = 0
+
+    while timer < duration do 
+      if timer == 0
+        timer += 1
+        next
+      elsif timer == 1
+        damage_done += fa_damages
+        energy += fa_epu
+        timer += 1
+        next
+      elsif ca_energy_cost <= energy && (timer + ca_cast_time) < duration
+        damage_done += ca_damages
+        timer += (ca_cast_time + 2)
+        energy -= ca_energy_cost
+        next
+      elsif (timer + fa_cast_time) < duration
+        damage_done += fa_damages
+        if energy + fa_epu <= 200 # En défense, l'énergie des pokémons est capée à 200
+          energy += fa_epu
+        else
+          energy = 200
+        end
+        timer += (fa_cast_time + 2)
         next
       end
       timer += 1

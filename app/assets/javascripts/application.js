@@ -36,6 +36,8 @@
 //= require bootstrap4/popover
 //= require bootstrap4/util
 //= require search
+//= require admin/datatables
+
 
 document.addEventListener("turbolinks:load", function() {
 
