@@ -2,6 +2,15 @@ header
   nav.navbar.navbar-dark.justify-content-between.navbar-expand-md style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
     = link_to root_path, class: 'navbar-brand' do
       = image_tag 'pokestop.png', class: "pokestop__logo"
+    /! Example single danger button
+    .btn-group
+      button.btn.btn-outline-light.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
+        | Navigation
+      .dropdown-menu
+        = link_to t('.pokemons'), pokemons_path, class: 'dropdown-item'
+        = link_to t('.attaques'), attacks_path, class: 'dropdown-item'
+        = link_to t('.objets'), items_path, class: 'dropdown-item'
+
 
     ul.navbar-nav.ml-auto
       - if user_signed_in?
