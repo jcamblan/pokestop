@@ -1,4 +1,7 @@
 class AttacksController < ApplicationController
+
+  breadcrumb 'Attaques', :attacks_path
+
   def show
     @attack = Attack.find(params[:id])
     @filterrific = initialize_filterrific(
@@ -10,6 +13,7 @@ class AttacksController < ApplicationController
       }
     ) or return
     @pokemons = @filterrific.find.page(params[:page])
+    breadcrumb @attack.name, attack_path(@attack)
   end
   def index
     @attacks = Attack.all.order(:name).page(params[:page]).per(25)

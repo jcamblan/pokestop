@@ -20,5 +20,6 @@ html
     - flash.each do |message_type, message| %
       .alert.message_type class=("alert-<%= %>") = message
     .container.mt-3
+
       = yield
     = render 'layouts/footer'
