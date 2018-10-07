@@ -1,12 +1,13 @@
 - title("Tags")
+
 .card.mb-3
   .card-header
-    i.fas.fa-table
+    i.fas.fa-table.mr-auto
     | Liste des tags
+    = link_to new_admin_tag_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
   .card-body
-    div
-      = link_to new_admin_tag_path do
-        button Ajouter
+
     .table-responsive
       table.dataTable.table.table-sm cellspacing="0" width="100%" 
         thead

@@ -3,6 +3,8 @@
   .card-header
     i.fas.fa-table
     | Liste des générations
+    = link_to new_admin_generation_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
   .card-body
     .table-responsive
       table.dataTable.table.table-sm cellspacing="0" width="100%" 

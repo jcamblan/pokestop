@@ -2,7 +2,9 @@
 .card.mb-3
   .card-header
     i.fas.fa-table
-    | Liste des générations
+    | Liste des articles
+    = link_to new_admin_article_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
   .card-body
     .table-responsive
       table.dataTable.table.table-sm cellspacing="0" width="100%" 

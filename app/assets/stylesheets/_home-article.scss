@@ -3,7 +3,7 @@
 .home-article {
   position: relative;
   border-bottom: 5px solid $success;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background-color: white;
   min-height: 160px;
   padding: 15px 15px 0 15px;
@@ -23,4 +23,14 @@
 
 .home-article__heading {
   text-align: justify;
+}
+
+@media (min-width: 576px) {
+  .root {
+    background-image: image-url("bg_bulbizarre.jpg");
+
+    img.pokestop__logo {
+      width: 500px;
+    }
+  }
 }

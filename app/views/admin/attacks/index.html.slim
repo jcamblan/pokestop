@@ -3,6 +3,8 @@
   .card-header
     i.fas.fa-table
     | Attaques rapides
+    = link_to new_admin_attack_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
   .card-body
     .table-responsive
       table.dataTable.table.table-sm cellspacing="0" width="100%" 
