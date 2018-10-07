@@ -20,7 +20,7 @@ class Admin::ArticlesController < ApplicationController
 
   def create
     @article = Article.create!(article_params)
-    redirect_to @article
+    redirect_to edit_admin_article_path(@article)
   end
 
   def update
@@ -39,6 +39,6 @@ class Admin::ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :header, :body, :published, :homepage, {:article_category_ids => []}, {images: []})
+      params.require(:article).permit(:title, :image_id, :header, :body, :published, :homepage, {:tag_ids => []}, {images: []})
     end
 end

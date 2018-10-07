@@ -1,5 +1,10 @@
-.block.article
-  .block__body
-    h2.card-title = article.title
+.home-article.shadow
+  .home-article__title
+    h3.card-title = article.title
+  .home-article__infos
+    span.home-article__date = "le #{article.created_at.strftime('%d/%m/%Y')} à #{article.created_at.strftime('%H:%M')} | "
+    - article.tags.each do |tag|
+      span.badge.badge-success.mr-1 = tag.name
+  hr
+  .home-article__heading
     p.card-text = sanitize article.header
-  .block__footer = article.created_at

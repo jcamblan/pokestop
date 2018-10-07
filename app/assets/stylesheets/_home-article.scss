@@ -1,0 +1,26 @@
+.articles {}
+
+.home-article {
+  position: relative;
+  border-bottom: 5px solid $success;
+  margin-bottom: 40px;
+  background-color: white;
+  min-height: 160px;
+  padding: 15px 15px 0 15px;
+}
+
+.home-article__heading, .home-article__title, .home-article__footer {
+}
+
+.home-article__title {
+  h3 {
+    font-family: arial;
+  }
+}
+.home-article__date {
+  font-size: 14px;
+}
+
+.home-article__heading {
+  text-align: justify;
+}

@@ -21,6 +21,10 @@ script
           | Carte d'identité
         .card-body
           .form-group
+            = f.label :image_id, "Image :"
+            br
+            = f.collection_select :image_id, Image.all, :id, :image, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
             = f.label :title, "Titre :"
             = f.text_field :title, {:class => 'form-control'}
           .form-group
