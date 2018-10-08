@@ -5,8 +5,7 @@
   border-bottom: 5px solid $success;
   margin-bottom: 30px;
   background-color: white;
-  min-height: 160px;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
 }
 
 .home-article__heading, .home-article__title, .home-article__footer {
@@ -15,6 +14,9 @@
 .home-article__title {
   h3 {
     font-family: arial;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
   }
 }
 .home-article__date {
@@ -23,14 +25,4 @@
 
 .home-article__heading {
   text-align: justify;
-}
-
-@media (min-width: 576px) {
-  .root {
-    background-image: image-url("bg_bulbizarre.jpg");
-
-    img.pokestop__logo {
-      width: 500px;
-    }
-  }
 }

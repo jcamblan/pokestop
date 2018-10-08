@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   resources :types, only: [:index, :show]
   resources :attacks, only: [:index, :show]
   resources :generations, only: [:index, :show]
-  resources :articles
-  resources :events
-  resources :eggs
+  resources :articles, only: [:index, :show]
+  resources :events, only: [:index, :show]
+  resources :eggs, only: [:index, :show]
+  resources :tags, only: [:show]
 
   get '/admin', to: 'admin#index'
   namespace :admin do

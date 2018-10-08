@@ -7,4 +7,7 @@
       span.badge.badge-success.mr-1 = tag.name
   hr
   .home-article__heading
-    = sanitize article.header
+    p.card-text = sanitize article.header
+  - if current_page? article_path(article)
+    .home-article__body
+      = sanitize article.body

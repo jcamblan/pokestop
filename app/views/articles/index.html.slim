@@ -1,0 +1,4 @@
+.articles.pt-4
+  h2 Dernières actualités
+  - @articles.each do |article|
+    = render 'article', article: article
