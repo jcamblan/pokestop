@@ -1,7 +1,7 @@
 - title("Liste des objets")
 - @items_categories.each do |items_category|
-  .item-category.container-fluid class=("item-category--#{items_category.name_en.parameterize}")
+  .item-category.block.container-fluid class=("item-category--#{items_category.name_en.parameterize}")
     h2 = items_category.name
-    .row
+    .row.justify-content-center
       - items_category.items.each do |item|
         = render 'item', item: item

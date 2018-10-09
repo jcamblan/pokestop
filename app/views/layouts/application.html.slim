@@ -17,8 +17,7 @@ html
   body
     - header = current_page?(root_path) ? 'layouts/root_header' : 'layouts/header'
     = render header
-    - flash.each do |message_type, message| %
-      .alert.message_type class=("alert-<%= %>") = message
+    = flash_messages
     .container.mt-3
 
       = yield

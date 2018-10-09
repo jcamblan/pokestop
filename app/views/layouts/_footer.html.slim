@@ -1,10 +1,15 @@
 /= debug(params) if Rails.env.development?
-.container-fluid
-  footer.row
-    .col-12.col-sm-5
+
+footer
+  .container.row
+    .col-12.col-sm-6
       .footer__desc
         = image_tag 'pokestop.png', class: "pokestop__logo"
-        p Pokéstop était à l'origine un simple projet pédagodique pour me former au framework Ruby on Rails. Mais après avoir passé des semaines dessus et agrégé un paquet de données, je me suis dit que ça valait le coup de les partager.
+        p Pokéstop est né d'une envie de proposer un site à la fois complet, minimaliste et agréable à consulter aux joueurs néophytes de Pokémon GO.
+        p 
+          | C'était aussi l'occasion pour moi, en plein apprentissage du développement web, de réaliser mon premier site 
+          em from scratch
+          |  sous Ruby on Rails. N'hésitez pas à me soumettre toutes vos remarques pour améliorer la qualité du site !
       .footer__social
         ul
           li 
@@ -23,6 +28,5 @@
           li = link_to t('.attacks'), attacks_path
           li = link_to t('.generations'), generations_path
           li = link_to t('.eggs'), eggs_path
-    .col-12.col-sm-3
-    .footer__copyrights
-      = render 'layouts/copyrights'
+  .footer__copyrights
+    = render 'layouts/copyrights'
