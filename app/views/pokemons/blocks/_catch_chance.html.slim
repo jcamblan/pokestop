@@ -1,0 +1,67 @@
+- if pokemon.flee_rate || pokemon.capture_rate
+  .block.capture-rate
+    h2 = t('.catch_chances')
+    .row
+      .col-6.text-center
+        p.capture-rate__raw-rate.capture-rate__raw-rate--capture = pokemon.capture_rate.round.to_s + "%"
+        p.capture-rate__raw-label = t('.capture_rate')
+      .col-6.text-center
+        p.capture-rate__raw-rate.capture-rate__raw-rate--flee = pokemon.flee_rate.round.to_s + "%"
+        p.capture-rate__raw-label = t('.flee_rate')
+
+    table.table.capture-rate__table
+      thead
+        tr
+          td
+          th = image_tag 'items/pokeball.png'
+          th = image_tag 'items/great-ball.png'
+          th = image_tag 'items/ultra-ball.png'
+      tbody
+        tr
+          th 
+            = t('.normal')
+          td 
+            = format_capture_rate(pokemon.capture_rate)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.5)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 2)
+            | %
+        tr
+          th 
+            = t('.nice')
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.15)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.15 * 1.5)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.15 * 2)
+            | %
+        tr
+          th 
+            = t('.super')
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.5)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.5 * 1.5)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.5 * 2)
+            | %
+        tr
+          th 
+            = t('.excellent')
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.85)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.85 * 1.5)
+            | %
+          td 
+            = format_capture_rate(pokemon.capture_rate * 1.85 * 2)
+            | %

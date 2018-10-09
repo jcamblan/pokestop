@@ -9,6 +9,7 @@ class MovesetsCalculator
         pokemon.charge_attacks.each do |charge_attack|
 
             attacking_dps_values = get_dps_if_attacking(pokemon,fast_attack,charge_attack)
+            defending_dps_values = get_dps_if_defending(pokemon,fast_attack,charge_attack)
 
             moveset = Moveset.new
             moveset.pokemon_id = pokemon.id
@@ -17,6 +18,7 @@ class MovesetsCalculator
             moveset.charge_attack_id = charge_attack.id
             moveset.charge_attack_raw_dps = attacking_dps_values[:ca_dps]
             moveset.raw_attacking_dps = attacking_dps_values[:total_dps]
+            moveset.raw_defending_dps = defending_dps_values[:total_dps]
             moveset.save
         end
       end
@@ -58,6 +60,58 @@ class MovesetsCalculator
         next
       end
       timer += 1
+    end
+    damage_done = damage_done_by_fa + damage_done_by_ca
+    return {
+             fa_dps: (damage_done_by_fa / timer).round(1),
+             ca_dps: (damage_done_by_ca / timer).round(1),
+             total_dps: (damage_done / timer).round(1)
+           }
+  end
+
+  def get_dps_if_defending(pokemon,fast_attack,charge_attack,*target)
+
+    if target.first.nil?
+      target = nil
+    else
+      target = target.first
+    end
+
+    ca_energy_cost = get_energy_cost(charge_attack.energy_bars)
+    fa_damages = get_damages(pokemon,fast_attack,target)
+    ca_damages = get_damages(pokemon,charge_attack,target)
+
+    timer = 0
+    damage_done_by_fa = 0
+    damage_done_by_ca = 0
+    energy = 0
+    duration = 100
+
+    while timer < duration do 
+      if ca_energy_cost <= energy
+        damage_done_by_ca += ca_damages
+        if timer == 0 || timer == 1
+          timer += 1
+        else
+          timer += 2
+        end
+        energy -= ca_energy_cost
+        next
+      else
+        damage_done_by_fa += fa_damages
+        if energy + fast_attack.epu <= 200 # En défense, l'énergie des pokémons est capée à 200
+          energy += fast_attack.epu
+        else
+          energy = 100
+        end
+        if timer == 0 || timer == 1
+          timer += 1
+        else
+          timer += 2
+        end
+        next
+      end
+      timer += 2
     end
     damage_done = damage_done_by_fa + damage_done_by_ca
     return {

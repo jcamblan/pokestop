@@ -113,30 +113,13 @@ ul.eggs__list {
   }
 }
 
+.pokemon__type {
+  display: inline-block;
+  margin: 2px;
+}
 
 
 .pokemon__name {}
-.pokemon__type {
-  @extend .btn;
-}
-.pokemon__type--bug      { background: $bug     ; }
-.pokemon__type--dark     { background: $darkness    ; }
-.pokemon__type--dragon   { background: $dragon  ; }
-.pokemon__type--electric { background: $electric; }
-.pokemon__type--fighting { background: $fighting; }
-.pokemon__type--fire     { background: $fire    ; }
-.pokemon__type--flying   { background: $flying  ; }
-.pokemon__type--fairy    { background: $fairy   ; }
-.pokemon__type--ground   { background: $ground  ; }
-.pokemon__type--ghost    { background: $ghost   ; }
-.pokemon__type--grass    { background: $grass   ; }
-.pokemon__type--ice      { background: $ice     ; }
-.pokemon__type--normal   { background: $normal  ; }
-.pokemon__type--psychic  { background: $psychic ; }
-.pokemon__type--poison   { background: $poison  ; }
-.pokemon__type--rock     { background: $rock    ; }
-.pokemon__type--steel    { background: $steel   ; }
-.pokemon__type--water    { background: $water   ; }
 
 .pokemon_sprite--gray {
   @extend .content--gray;
@@ -145,4 +128,52 @@ ul.eggs__list {
 .pokemon__evolutions { }
 
 .pokemon__evolution {
+}
+
+.capture-rate__raw-rate {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.capture-rate__raw-rate--capture {
+  color: $success;
+}
+
+.capture-rate__raw-rate--flee {
+  color: $warning;
+}
+
+.capture-rate__raw-label {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.capture-rate__table {
+
+  margin-top: 20px;
+
+  thead th, td {
+    text-align: center;
+  }
+  img {
+    width: 25px;
+  }
+}
+
+.pokemon__movesets {
+  padding-top: 30px;
+  table {
+    text-align: center;
+
+    td.fast_attack {
+      text-align: right;
+    }
+    td.charge_attack {
+      text-align: left;
+    }
+  }
+
 }

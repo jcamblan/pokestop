@@ -1,0 +1,31 @@
+- if @pokemon.attacks.present?
+  script
+    | $(document).ready(function() {
+    |   $('#movesets__dataTable').DataTable( {
+    |       "paging":   false,
+    |       "info":     false,
+    |       "searching":   false
+    |   } );
+    | } );
+  .block.pokemon__movesets
+    h2 = t('.movesets')
+    table#movesets__dataTable.table.table-sm
+      thead
+        tr
+          th = t('.fast_attack')
+          th = t('.charge_attack')
+          th = t('.offensive')
+          th = t('.defensive')
+      tbody
+        - @movesets.each do |moveset|
+          tr
+            td.fast_attack 
+              span.type__badge class=("type__badge--#{moveset.fast_attack.type.name_en.parameterize}") = link_to moveset.fast_attack.name, moveset.fast_attack
+            td.charge_attack
+              span.type__badge class=("type__badge--#{moveset.charge_attack.type.name_en.parameterize}") = link_to moveset.charge_attack.name, moveset.charge_attack
+            td 
+              = (moveset.raw_attacking_dps / @movesets.order(raw_attacking_dps: :desc).first.raw_attacking_dps * 100).round
+              | %
+            td 
+              = (moveset.raw_defending_dps / @movesets.order(raw_defending_dps: :desc).first.raw_defending_dps * 100).round
+              | %

@@ -34,4 +34,12 @@ module PokemonHelper
   def energy_bars(attack)
     image_tag "attacks/#{attack.energy_bars}-energy.png"
   end
+
+  def format_capture_rate(number)
+    capture_rate = number
+    if capture_rate > 100
+      capture_rate = 100
+    end
+    return capture_rate.round
+  end
 end

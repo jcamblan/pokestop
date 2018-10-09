@@ -79,11 +79,25 @@ fr:
         fast_moves: "Attaques rapides :"
       attack:
         energy_generated: "Gènère %{epu} points d'énergie"
+      catch_chance:
+        catch_chances: "Chances de capture"
+        capture_rate: "Taux de capture de base"
+        flee_rate: "Taux de fuite de base"
+        normal: "Lancer normal"
+        nice: "Joli"
+        super: "Super"
+        excellent: "Excellent"
       eggs:
         eggs: "Œuf"
         can_be_obtained: "Ce pokémon peut être obtenu dans le(s) oeuf(s) suivant(s) :"
       evolutions:
         evolutions: "Evolutions"
+      movesets:
+        movesets: "Combinaisons d'attaques"
+        fast_attack: "Attaque rapide"
+        charge_attack: "Attaque chargée"
+        offensive: "ATT"
+        defensive: "DEF"
       primary_stats:
         primary_stats: "Stats principales"
       secondary_stats:
@@ -92,6 +106,8 @@ fr:
         english_name: "Nom anglais :"
         flee_rate: "Chances de fuite :"
         secondary_stats: "Stats secondaires"
+      texts:
+        pokedex_entry: "Description du pokédex"
       types:
         types: "Type"
     filters:

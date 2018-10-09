@@ -9,21 +9,3 @@
     .attacks__charged
       - @pokemon.charge_attacks.each do |attack|
         = render 'pokemons/blocks/attack', attack: attack, pokemon: pokemon
-  .block
-    h2 test combos
-    table.table.table-sm cellspacing="0" width="100%"
-      thead
-        tr
-          th Fast Attack
-          th Charge Attack
-          th ATT
-          th DEF
-      tbody
-        - @movesets.each do |moveset|
-          tr
-            td = moveset.fast_attack.name
-            td = moveset.charge_attack.name
-            td 
-              = (moveset.raw_attacking_dps / @movesets.first.raw_attacking_dps * 100).round
-              | %
-            td = moveset.raw_defending_dps
