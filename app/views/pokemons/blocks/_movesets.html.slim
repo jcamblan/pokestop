@@ -25,8 +25,8 @@
             td.charge_attack
               span.type__badge class=("type__badge--#{moveset.charge_attack.type.name_en.parameterize}") = link_to moveset.charge_attack.name, moveset.charge_attack
             td 
-              = (moveset.raw_attacking_dps / @movesets.order(raw_attacking_dps: :desc).first.raw_attacking_dps * 100).round
+              = (moveset.raw_attacking_dps / @movesets.sort_by{|e| -e[:raw_attacking_dps]}.first.raw_attacking_dps * 100).round
               | %
             td 
-              = (moveset.raw_defending_dps / @movesets.order(raw_defending_dps: :desc).first.raw_defending_dps * 100).round
+              = (moveset.raw_defending_dps / @movesets.sort_by{|e| -e[:raw_defending_dps]}.first.raw_defending_dps * 100).round
               | %

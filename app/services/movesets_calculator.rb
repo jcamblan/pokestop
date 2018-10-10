@@ -25,6 +25,25 @@ class MovesetsCalculator
     end
   end
 
+  def get_pokemon_movesets(pokemon)
+    movesets = Array.new
+    pokemon.fast_attacks.each do |fast_attack|
+      pokemon.charge_attacks.each do |charge_attack|
+        attacking_dps_values = get_dps_if_attacking(pokemon,fast_attack,charge_attack)
+        defending_dps_values = get_dps_if_defending(pokemon,fast_attack,charge_attack)
+
+        moveset = Moveset.new
+        moveset.fast_attack_id = fast_attack.id
+        moveset.charge_attack_id = charge_attack.id
+        moveset.raw_attacking_dps = attacking_dps_values[:total_dps]
+        moveset.raw_defending_dps = defending_dps_values[:total_dps]
+
+        movesets << moveset
+      end
+    end
+    return movesets
+  end
+
   def get_dps_if_attacking(pokemon,fast_attack,charge_attack,*target)
 
     if target.first.nil?
