@@ -12,6 +12,7 @@ class Import
   @@pokemons = @backup_file.dig('pokemons')
   @@eggs = @backup_file.dig('eggs')
   @@evolutions = @backup_file.dig('evolutions')
+  @@alternative_skins = @backup_file.dig('alternative_skins')
 
   def import_everything
     create_generations if @@generations
@@ -25,6 +26,7 @@ class Import
     create_pokemons if @@pokemons
     create_eggs if @@eggs
     create_evolutions if @@evolutions
+    create_alternative_skins if @@alternative_skins
   end 
 
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
@@ -154,6 +156,9 @@ class Import
     @@pokemons.each do |pokemon|
       create_pokemon(pokemon) unless Pokemon.where(name: pokemon['name']).first
     end
+    @@pokemons.each do |pokemon|
+      assign_alolan_form(pokemon) if pokemon['alolan_form']
+    end
   end
 
   def create_pokemon(pokemon)
@@ -161,6 +166,7 @@ class Import
     p.name = pokemon['name']
     p.name_en = pokemon['name_en']
     p.num = pokemon['num']
+    p.alolan = pokemon['alolan']
     p.candy_id = Candy.where(name: pokemon['candy']).first.id if pokemon['candy']
     p.candy_distance = pokemon['candy_distance']
     p.pc_max = pokemon['pc_max']
@@ -183,6 +189,12 @@ class Import
       attacks_array << Attack.where(name_en: a['name_en']).first
     end
     return attacks_array
+  end
+
+  def assign_alolan_form(pokemon)
+    p = Pokemon.find_by(num: pokemon['num'])
+    p.alolan_form = Pokemon.find_by(num: pokemon['alolan_form'])
+    p.save
   end
 
 ## PUIS LES OEUFS
@@ -221,6 +233,25 @@ class Import
     e.candies = evolution['candies']
     e.item_id = Item.where(name: evolution['item']).first.id if evolution['item']
     e.save
+  end
+
+## PUIS LES SKINS ALTERNATIFS
+
+  def create_alternative_skins
+    @@alternative_skins.each do |skin|
+      create_alternative_skin(skin) unless AlternativeSkin.find_by(name: skin['name'])
+    end
+  end
+
+  def create_alternative_skin(skin)
+    s = AlternativeSkin.new
+    s.name = s['name']
+    s.name_en = s['name_en']
+    s.pokemon_id = Pokemon.find_by(num: s['pokemon_num'])
+    s.desc = s['desc']
+    s.shiny = s['shiny']
+    s.nametag = s['nametag']
+    s.save
   end
 
 end

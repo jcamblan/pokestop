@@ -36,6 +36,7 @@ class MainController < ApplicationController
     @attack_categories = AttackCategory.all
     @attacks = Attack.all.order(:attack_category_id)
     @eggs = Egg.all.order(:id)
+    @alternative_skins = AlternativeSkin.all.order(:pokemon_id)
   end
 
 end

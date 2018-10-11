@@ -93,6 +93,8 @@ json.pokemons do
     json.name pokemon.name
     json.name_en pokemon.name_en
     json.num pokemon.num
+    json.alolan pokemon.alolan
+    json.alolan_form pokemon.alolan_form.num if pokemon.alolan_form
     json.type_1 pokemon.types.first.name
     json.type_2 pokemon.types.second.name if pokemon.types.second
     json.candy pokemon.candy.name if pokemon.candy
@@ -124,5 +126,16 @@ json.evolutions do
     json.after_evolution Pokemon.find(evolution.after_evolution).num
     json.candies evolution.candies
     json.item evolution.item.name if evolution.item
+  end
+end
+
+json.alternative_skins do 
+  json.array!(@alternative_skins) do |alternative_skin|
+    json.name alternative_skin.name
+    json.name_en alternative_skin.name_en
+    json.pokemon_num alternative_skin.pokemon.num
+    json.desc alternative_skin.desc
+    json.shiny alternative_skin.shiny
+    json.nametag alternative_skin.nametag
   end
 end
