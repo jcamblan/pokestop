@@ -193,7 +193,7 @@ class Import
 
   def assign_alolan_form(pokemon)
     p = Pokemon.find_by(num: pokemon['num'])
-    p.alolan_form = Pokemon.find_by(num: pokemon['alolan_form'])
+    p.alolan_form_id = Pokemon.find_by(num: pokemon['alolan_form']).id
     p.save
   end
 
