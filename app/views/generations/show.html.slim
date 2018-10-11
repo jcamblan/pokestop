@@ -12,7 +12,7 @@
       tbody
         - @pokemons.each do |p|
           tr class=("pokemon_sprite--gray" unless p.generation.on_prod)
-            td = link_to display_sprite(p), pokemon_path(p.num)
+            td = link_to display_pokemon_sprite(p), pokemon_path(p.num)
             td = link_to p.num, pokemon_path(p.num)
             td = link_to p.name, pokemon_path(p.num)
             td 

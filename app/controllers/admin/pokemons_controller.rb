@@ -45,8 +45,8 @@ class Admin::PokemonsController < ApplicationController
 
     def pokemon_params
       params.require(:pokemon).permit(:num, :name, :name_en, :atk, :def, :sta, :pc_max,
-                                      :generation_id, :candy_id, :candy_distance,
-                                      :capture_rate, :flee_rate, {:egg_ids => []}, {:type_ids => []}, {:attack_ids => []},
+                                      :generation_id, :candy_id, :candy_distance, :alolan,
+                                      :capture_rate, :flee_rate, :alolan_form_id, {:egg_ids => []}, {:type_ids => []}, {:attack_ids => []},
                                       :pokedex_entry, :comment)
     end
 end

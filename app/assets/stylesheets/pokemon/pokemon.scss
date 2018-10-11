@@ -177,3 +177,38 @@ ul.eggs__list {
   }
 
 }
+
+/* Alternative skins */
+
+.skin {
+  position: relative;
+  padding-left: 120px;
+  height: 110px;
+}
+
+.skin__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $box-shadow;
+  position: relative;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skin__ball {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+
+  img {
+    width: 70px;
+  }
+}

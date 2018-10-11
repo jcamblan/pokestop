@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_06_144449) do
+ActiveRecord::Schema.define(version: 2018_10_11_130650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,19 +36,15 @@ ActiveRecord::Schema.define(version: 2018_10_06_144449) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "alternative_skin_categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "alternative_skins", force: :cascade do |t|
     t.string "name"
     t.bigint "pokemon_id"
-    t.bigint "alternative_skin_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["alternative_skin_category_id"], name: "index_alternative_skins_on_alternative_skin_category_id"
+    t.boolean "shiny"
+    t.text "desc"
+    t.string "name_en"
+    t.string "nametag"
     t.index ["pokemon_id"], name: "index_alternative_skins_on_pokemon_id"
   end
 
@@ -198,6 +194,8 @@ ActiveRecord::Schema.define(version: 2018_10_06_144449) do
     t.decimal "capture_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "alolan_form_id"
+    t.boolean "alolan"
   end
 
   create_table "pokemons_types", id: false, force: :cascade do |t|
@@ -267,7 +265,6 @@ ActiveRecord::Schema.define(version: 2018_10_06_144449) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "alternative_skins", "alternative_skin_categories"
   add_foreign_key "alternative_skins", "pokemons"
   add_foreign_key "evolutions", "items"
   add_foreign_key "evolutions", "pokemons"

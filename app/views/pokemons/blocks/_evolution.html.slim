@@ -3,7 +3,7 @@
     .pokemon__evolution.col
       .evolution
         .evolution__sprite class=("evolution_sprite--gray" unless pokemon.generation.on_prod)
-          = link_to display_sprite(pokemon), pokemon.num
+          = link_to display_pokemon_sprite(pokemon), pokemon.num
           .evolution__name
             = link_to pokemon.name, pokemon.num
         - if pokemon.is_evolution? && evolution.candies

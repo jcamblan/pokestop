@@ -1,0 +1,25 @@
+- title("Objets")
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des objets
+    = link_to new_admin_item_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom FR
+            th Nom EN
+            th Catégorie
+        tbody
+          - @items.each do |item|
+            tr
+              td = link_to item.id, edit_admin_item_path(item)
+              td = item.name
+              td = item.name_en
+              td = item.item_category.name
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM

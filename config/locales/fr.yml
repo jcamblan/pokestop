@@ -82,7 +82,7 @@ fr:
       catch_chance:
         catch_chances: "Chances de capture"
         capture_rate: "Taux de capture de base"
-        flee_rate: "Taux de fuite de base"
+        flee_rate: "Taux de fuite"
         normal: "Lancer normal"
         nice: "Joli"
         super: "Super"
@@ -102,10 +102,8 @@ fr:
         primary_stats: "Stats principales"
       secondary_stats:
         buddy_distance: "Distance à parcourir pour 1 %{candy} :"
-        capture_rate: "Chances de capture :"
         english_name: "Nom anglais :"
-        flee_rate: "Chances de fuite :"
-        secondary_stats: "Stats secondaires"
+        secondary_stats: "Divers"
       texts:
         pokedex_entry: "Description du pokédex"
       types:

@@ -1,6 +1,13 @@
 class AlternativeSkin < ApplicationRecord
 
-  belongs_to :pokemon
-  belongs_to :alternative_skin_category
+  validates :name, presence: true
+  validates :name_en, presence: true
+  validates :nametag, presence: true
+
+  belongs_to :pokemon, touch: true
+
+  def shiny?
+    return self.shiny
+  end
 
 end

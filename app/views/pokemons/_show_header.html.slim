@@ -6,7 +6,7 @@
   .pokemon__generation
     = link_to "Gen ##{pokemon.generation.id} : #{pokemon.generation.name}", pokemon.generation
   .pokemon__ball
-    .pokemon__sprite class=("pokemon_sprite--gray" unless pokemon.generation.on_prod) = display_sprite(pokemon)
+    .pokemon__sprite class=("pokemon_sprite--gray" unless pokemon.generation.on_prod) = display_pokemon_sprite(pokemon)
     .pokemon__name 
       h1 = pokemon.name
     .pokemon__num = "#{pokemon.num}"

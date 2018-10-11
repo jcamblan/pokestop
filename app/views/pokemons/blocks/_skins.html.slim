@@ -1,0 +1,29 @@
+- if pokemon.alternative_skins.exists? || pokemon.alolan_form || pokemon.original_form
+  .block.skins
+    h2 = t('.alternative_skins')
+    - if pokemon.alolan_form
+      .skin.shadow-sm.m-2
+        .skin__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
+          .skin__ball
+            .skin__sprite = display_pokemon_sprite(pokemon.alolan_form)
+        p
+          strong = pokemon.alolan_form.name
+        p
+          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.alolan_form.num)
+    - if pokemon.original_form
+      .skin.shadow-sm.m-2
+        .skin__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
+          .skin__ball
+            .skin__sprite = display_pokemon_sprite(pokemon.original_form)
+        p
+          strong = pokemon.original_form.name
+        p
+          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.original_form.num)
+    - pokemon.alternative_skins.each do |skin|
+      .skin.shadow-sm.m-2
+        .skin__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
+          .skin__ball
+            .skin__sprite = display_alt_skin_sprite(skin)
+        p
+          strong = skin.name
+        p = skin.desc

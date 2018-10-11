@@ -1,7 +1,11 @@
 module PokemonHelper
 
-  def display_sprite(pokemon)
-    image_tag "pokemon/#{pokemon.generation.id}-#{pokemon.generation.name.downcase}/#{pokemon.num}.png"
+  def display_pokemon_sprite(pokemon)
+    image_tag "pokemon/#{pokemon.generation.id}-#{pokemon.generation.name.parameterize}/#{pokemon.num}.png"
+  end
+
+  def display_alt_skin_sprite(skin)
+    image_tag "pokemon/#{skin.pokemon.generation.id}-#{skin.pokemon.generation.name.parameterize}/#{skin.pokemon.num}-#{skin.nametag}.png"
   end
 
   def type_image(type)

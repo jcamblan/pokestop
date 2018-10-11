@@ -1,0 +1,41 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @item] do |f|
+  - if @item.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@item.errors.count, "error")}"
+      ul
+      - @item.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-8
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :name_en, "Nom anglais :"
+            = f.text_field :name_en, {:class => 'form-control'}
+          .form-group
+            = f.label :desc, "Entête :"
+            = f.hidden_field :desc, {:class => 'form-control'}
+            trix-editor input=("item_desc")
+    .col-12.col-md-4
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :item_category_id, "Génération :"
+            br
+            = f.collection_select :item_category_id, ItemCategory.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}

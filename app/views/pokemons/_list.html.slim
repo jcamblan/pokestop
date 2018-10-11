@@ -13,7 +13,7 @@
     - @pokemons.each do |pokemon|
       tr class=("list__tr--gray" unless pokemon.generation.on_prod)
         td 
-          = link_to display_sprite(pokemon), pokemon_path(pokemon.num)
+          = link_to display_pokemon_sprite(pokemon), pokemon_path(pokemon.num)
           = link_to pokemon.name, pokemon_path(pokemon.num)
         td = link_to pokemon.num, pokemon_path(pokemon.num)
         td = small_stat_bar('pc_max',pokemon.pc_max,pokemon.max_pc_max)

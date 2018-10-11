@@ -3,7 +3,8 @@
     = image_tag "items/#{item.name_en.parameterize}.png", height: "100px"
     p
       strong = item.name
-    p.card-text.text-justify = item.desc
+    .text-justify 
+      = sanitize item.desc
     - unless item.pokemons.empty?
       ul.text-left
         - item.pokemons.each do |p|

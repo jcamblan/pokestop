@@ -27,6 +27,9 @@ Rails.application.routes.draw do
     resources :articles
     resources :tags
     resources :images
+    resources :items
+    resources :alternative_skins
+    resources :alternative_skin_categories
   end
 
 end

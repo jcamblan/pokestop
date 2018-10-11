@@ -1,3 +1,0 @@
-class AlternativeSkinCategory < ApplicationRecord
-
-end

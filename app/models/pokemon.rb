@@ -6,6 +6,7 @@ class Pokemon < ApplicationRecord
   has_and_belongs_to_many :eggs
   belongs_to :candy, required: false
   has_many :movesets
+  has_many :alternative_skins
 
   validates :name, presence: true
   validates :num, presence: true
@@ -66,6 +67,20 @@ class Pokemon < ApplicationRecord
   def next
     Pokemon.where("num > ?", num).order("num ASC").first || Pokemon.first
   end
+
+  #------------------------------------------------------------------------
+  # Gestion des pokémons aloha
+  #------------------------------------------------------------------------
+
+  def alolan_form
+    Pokemon.find(alolan_form_id) if alolan_form_id
+  end
+
+  def original_form
+    Pokemon.find_by(alolan_form_id: id) if alolan
+  end
+
+
 
   #------------------------------------------------------------------------
   # Récupération du bonbon associé au pokémon

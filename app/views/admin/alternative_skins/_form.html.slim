@@ -1,0 +1,54 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @alternative_skin] do |f|
+  - if @alternative_skin.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@alternative_skin.errors.count, "error")}"
+      ul
+      - @alternative_skin.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom FR :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :name_en, "Nom EN :"
+            = f.text_field :name_en, {:class => 'form-control'}
+          .form-group
+            = f.label :nametag, "Nametag :"
+            = f.text_field :nametag, {:class => 'form-control'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :pokemon_id, "Génération :"
+            br
+            = f.collection_select :pokemon_id, Pokemon.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :shiny, "Shiny ?"
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :shiny, {:class => 'form-control'}
+              span.slider.round
+  .row
+    .col-12
+      .card.mb-3
+        .card-body
+          .form-group
+            = f.label :desc, "Description :"
+            = f.hidden_field :desc, {:class => 'form-control'}
+            trix-editor input=("item_desc")

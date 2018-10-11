@@ -32,6 +32,12 @@ script
           .form-group
             = f.label :name_en, "Nom EN :"
             = f.text_field :name_en, {:class => 'form-control'}
+          .form-group
+            = f.label :alolan, "Forme Aloha ? "
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :alolan, {:class => 'form-control'}
+              span.slider.round
       .card.mb-3
         .card-header
           | Statistiques principales
@@ -73,6 +79,10 @@ script
             = f.label :egg_ids, "Oeufs :"
             br
             = f.collection_select :egg_ids, Egg.all, :id, :name, {}, {multiple: true, style: 'width:100%', :class => 'multiple-select'}
+          .form-group
+            = f.label :alolan_form_id, "Forme Aloha :"
+            br
+            = f.collection_select :alolan_form_id, Pokemon.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
       .card.mb-3
         .card-header
           | Statistiques secondaires
