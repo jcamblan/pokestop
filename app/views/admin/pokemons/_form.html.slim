@@ -66,7 +66,7 @@ script
           .form-group
             = f.label :candy_id, "Bonbon :"
             br
-            = f.collection_select :candy_id, Candy.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+            = f.collection_select :candy_id, Candy.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
           .form-group
             = f.label :type_ids, "Types :"
             br

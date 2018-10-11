@@ -14,7 +14,8 @@
               | &nbsp;
               = image_tag "items/#{evolution.item.name_en.parameterize}.png", width: "30px", height: "30px", alt: evolution.item.name, title: evolution.item.name
               | &nbsp;1
-      = image_tag 'arrow-down.png', width: "30px" if pokemon.can_evolve?
+      - if pokemon.can_evolve?
+        i.fas.fa-arrow-circle-down.fa-2x style=("color: #{pokemon.candy.primary_color}")
       - if pokemon.can_evolve?
         .evolution__evolutions
           = render 'pokemons/blocks/evolution', pokemons: pokemon.evolutions_as_pokemons, evolutions: pokemon.evolutions

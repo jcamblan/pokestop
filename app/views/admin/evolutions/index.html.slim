@@ -1,0 +1,25 @@
+- title("Evolutions")
+
+.card.mb-3
+  .card-header
+    i.fas.fa-table.mr-auto
+    | Liste des évolutions
+    = link_to new_admin_evolution_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th nom
+            th avant évolution
+            th après évolution
+        tbody
+          - @evolutions.each do |evolution|
+            tr
+              td = link_to evolution.id, edit_admin_evolution_path(evolution)
+              td = evolution.title
+              td = evolution.pokemon.name
+              td = Pokemon.find(evolution.after_evolution).name

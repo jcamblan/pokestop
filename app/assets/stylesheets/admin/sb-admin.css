@@ -119,7 +119,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 .navbar-nav .nav-item .nav-link .badge {
   position: absolute;
   margin-left: 0.75rem;
-  top: 0.3rem;
+  /*top: 0.3rem;*/
   font-weight: 400;
   font-size: 0.5rem;
 }
@@ -142,7 +142,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 .sidebar .nav-item .nav-link {
   text-align: center;
-  padding: 0.75rem 1rem;
+  /*padding: 0.75rem 1rem;*/
   width: 90px;
 }
 
@@ -189,7 +189,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
     display: block;
     width: 100%;
     text-align: left;
-    padding: 1rem;
+    padding-left: 1rem;
     width: 225px;
   }
   .sidebar .nav-item .nav-link span {
@@ -213,7 +213,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   }
   .sidebar.toggled .nav-item .nav-link {
     text-align: center;
-    padding: 0.75rem 1rem;
+    /*padding: 0.75rem 1rem;*/
     width: 90px;
   }
   .sidebar.toggled .nav-item .nav-link span {

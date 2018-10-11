@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     resources :items
     resources :alternative_skins
     resources :alternative_skin_categories
+    resources :evolutions
   end
 
 end

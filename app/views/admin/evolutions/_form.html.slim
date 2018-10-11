@@ -1,0 +1,57 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @evolution] do |f|
+  - if @evolution.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@evolution.errors.count, "error")}"
+      ul
+      - @evolution.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :title, "Titre FR :"
+            = f.text_field :title, {:class => 'form-control'}
+          .form-group
+            = f.label :title_en, "Titre EN :"
+            = f.text_field :title_en, {:class => 'form-control'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Associations
+        .card-body
+          .form-group
+            = f.label :pokemon_id, "Avant transformation :"
+            br
+            = f.collection_select :pokemon_id, Pokemon.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :after_evolution, "Après transformation :"
+            br
+            = f.collection_select :after_evolution, Pokemon.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :first_form, "Pokémon référent :"
+            br
+            = f.collection_select :first_form, Pokemon.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Bonbons et objets
+        .card-body
+          .form-group
+            = f.label :candies, "Nombre de bonbons requis :"
+            = f.text_field :candies, {:class => 'form-control'}
+          .form-group
+            = f.label :item_id, "Objet requis :"
+            br
+            = f.collection_select :item_id, Item.all, :id, :name, {prompt: true}, {style: 'width:100%', :class => 'single-select'}
