@@ -15,6 +15,7 @@ json.generations do
   json.array!(@generations) do |generation|
     json.id generation.id
     json.name generation.name
+    json.on_prod generation.on_prod
   end
 end
 

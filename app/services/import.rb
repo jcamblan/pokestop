@@ -38,7 +38,7 @@ class Import
   end
 
   def create_generation(generation)
-    Generation.create(name: generation['name'])
+    Generation.create(name: generation['name'], on_prod: generation['on_prod'])
   end
 
 ## PUIS LES BONBONS
@@ -248,12 +248,12 @@ class Import
 
   def create_alternative_skin(skin)
     s = AlternativeSkin.new
-    s.name = s['name']
-    s.name_en = s['name_en']
-    s.pokemon_id = Pokemon.find_by(num: s['pokemon_num']).id
-    s.desc = s['desc']
-    s.shiny = s['shiny']
-    s.nametag = s['nametag']
+    s.name = skin['name']
+    s.name_en = skin['name_en']
+    s.pokemon_id = Pokemon.find_by(num: skin['pokemon_num']).id
+    s.desc = skin['desc']
+    s.shiny = skin['shiny']
+    s.nametag = skin['nametag']
     s.save
   end
 
