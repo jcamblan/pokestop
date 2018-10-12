@@ -1,8 +1,8 @@
 .row.pokemon__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
   .pokemon__prev
-    = link_to "<< #{pokemon.prev.name} (##{pokemon.prev.num})", pokemon.prev
+    = link_to "<< #{pokemon.prev.name}", pokemon.prev
   .pokemon__next
-    = link_to "#{pokemon.next.name} (##{pokemon.next.num}) >>", pokemon.next
+    = link_to "#{pokemon.next.name} >>", pokemon.next
   .pokemon__generation
     = link_to "Gen ##{pokemon.generation.id} : #{pokemon.generation.name}", pokemon.generation
   .pokemon__ball
