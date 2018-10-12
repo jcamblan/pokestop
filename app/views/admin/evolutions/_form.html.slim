@@ -54,4 +54,4 @@ script
           .form-group
             = f.label :item_id, "Objet requis :"
             br
-            = f.collection_select :item_id, Item.all, :id, :name, {prompt: true}, {style: 'width:100%', :class => 'single-select'}
+            = f.collection_select :item_id, Item.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}

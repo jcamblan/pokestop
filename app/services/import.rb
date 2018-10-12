@@ -250,7 +250,7 @@ class Import
     s = AlternativeSkin.new
     s.name = s['name']
     s.name_en = s['name_en']
-    s.pokemon_id = Pokemon.find_by(num: s['pokemon_num'])
+    s.pokemon_id = Pokemon.find_by(num: s['pokemon_num']).id
     s.desc = s['desc']
     s.shiny = s['shiny']
     s.nametag = s['nametag']

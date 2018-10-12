@@ -1,11 +1,17 @@
 .item.shadow-sm style="width: 300px; padding: 10px; margin: 5px;"
-  .item-body.text-center
+  .item__body.text-center
     = image_tag "items/#{item.name_en.parameterize}.png", height: "100px"
     p
       strong = item.name
     .text-justify 
       = sanitize item.desc
     - unless item.pokemons.empty?
-      ul.text-left
+      hr
+      p
+        strong Permet d'obtenir :
+      .item__pokemons.row.justify-content-around
         - item.pokemons.each do |p|
-          li = link_to p.name, pokemon_path(p.num)
+          .item__pokemon.shadow-sm.p-2
+            = link_to display_pokemon_sprite(p), pokemon_path(p.num)
+            br
+            = link_to p.name, pokemon_path(p.num)
