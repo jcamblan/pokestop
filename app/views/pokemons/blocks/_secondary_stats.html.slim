@@ -2,9 +2,10 @@
   .pokemon__block.block
     h2 = t('.secondary_stats')
     ul.list-group
-      - if pokemon.candy && pokemon.candy_distance
-        li.list-group-item
-          = sanitize t('.buddy_distance', candy: (image_tag pokemon.candy.image_path, width: "30px")) if pokemon.candy
-          = " #{pokemon.candy_distance} km"
+      - cache pokemon.candy do
+        - if pokemon.candy && pokemon.candy_distance
+          li.list-group-item
+            = sanitize t('.buddy_distance', candy: (image_tag pokemon.candy.image_path, width: "30px")) if pokemon.candy
+            = " #{pokemon.candy_distance} km"
       - if pokemon.name_en.present?
         li.list-group-item = "#{t('.english_name')} #{pokemon.name_en}"

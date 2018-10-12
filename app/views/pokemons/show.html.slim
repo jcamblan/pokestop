@@ -3,5 +3,6 @@
 - content_for :meta_image, pokemon_sprite_url(@pokemon)
 - canonical(request.original_url)
 .pokemon.row.flex-column
-  = render 'show_header', pokemon: @pokemon
-  = render 'blocks', pokemon: @pokemon
+  - cache @pokemon do
+    = render 'show_header', pokemon: @pokemon
+    = render 'blocks', pokemon: @pokemon, movesets: @movesets
