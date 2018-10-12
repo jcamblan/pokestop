@@ -5,7 +5,7 @@ class Generation < ApplicationRecord
   validates :name, presence: true
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   #------------------------------------------------------------------------
   # pour la gem filterrific

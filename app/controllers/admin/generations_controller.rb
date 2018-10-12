@@ -10,7 +10,7 @@ class Admin::GenerationsController < ApplicationController
   end
 
   def edit
-    @generation = Generation.find(params[:id])
+    @generation = Generation.friendly.find(params[:id])
     breadcrumb @generation.name, edit_admin_generation_path(@generation)
   end
 
@@ -19,7 +19,7 @@ class Admin::GenerationsController < ApplicationController
   end
 
   def update
-    @generation = Generation.find(params[:id])
+    @generation = Generation.friendly.find(params[:id])
     if @generation.update(generation_params)
       redirect_to admin_generations_path
     else

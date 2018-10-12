@@ -10,7 +10,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     breadcrumb @article.title, edit_admin_article_path(@article)
   end
 
@@ -24,7 +24,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     if @article.update(article_params)
       redirect_to admin_articles_path
     else

@@ -20,7 +20,7 @@ class Type < ApplicationRecord
                           :association_foreign_key => "extreme_weakness_id"
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
 
   def weak_against

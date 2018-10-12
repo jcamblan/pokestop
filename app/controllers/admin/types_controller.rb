@@ -10,7 +10,7 @@ class Admin::TypesController < ApplicationController
   end
 
   def edit
-    @type = Type.find(params[:id])
+    @type = Type.friendly.find(params[:id])
     breadcrumb @type.name, edit_admin_type_path(@type)
   end
 
@@ -28,7 +28,7 @@ class Admin::TypesController < ApplicationController
   end
 
   def update
-    @type = Type.find(params[:id])
+    @type = Type.friendly.find(params[:id])
     if @type.update(type_params)
       redirect_to admin_types_path
     else

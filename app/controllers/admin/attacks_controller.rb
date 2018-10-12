@@ -11,7 +11,7 @@ class Admin::AttacksController < ApplicationController
   end
 
   def edit
-    @attack = Attack.find(params[:id])
+    @attack = Attack.friendly.find(params[:id])
     breadcrumb @attack.name, edit_admin_attack_path(@attack)
   end
 
@@ -20,7 +20,7 @@ class Admin::AttacksController < ApplicationController
   end
 
   def update
-    @attack = Attack.find(params[:id])
+    @attack = Attack.friendly.find(params[:id])
     if @attack.update(attack_params)
       redirect_to admin_attacks_path
     else

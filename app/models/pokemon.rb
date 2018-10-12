@@ -19,7 +19,7 @@ class Pokemon < ApplicationRecord
   validates :capture_rate, numericality: true, :allow_nil => true
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   #------------------------------------------------------------------------
   # On vérifie si le pokémon peut évoluer ou s'il est lui-même l'évolution d'un autre pokémon

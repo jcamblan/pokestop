@@ -23,7 +23,7 @@ class Admin::ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
-    @image = Image.find(params[:id])
+    @image = Image.friendly.find(params[:id])
     breadcrumb @image.id.to_s, edit_admin_image_path(@image)
   end
 
@@ -75,7 +75,7 @@ class Admin::ImagesController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_image
-      @image = Image.find(params[:id])
+      @image = Image.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

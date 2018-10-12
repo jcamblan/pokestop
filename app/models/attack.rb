@@ -11,7 +11,7 @@ class Attack < ApplicationRecord
   validates :energy_bars, numericality: { only_integer: true }, :allow_nil => true
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
 
   # STAB (Same Type Pokemon Bonus) : bonus de 20% aux dégâts si le type du pokémon est le même

@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   belongs_to :item_category
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   def pokemons
     item_pokemons = Array.new

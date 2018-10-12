@@ -10,7 +10,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = Item.friendly.find(params[:id])
     breadcrumb @item.name, edit_admin_item_path(@item)
   end
 
@@ -24,7 +24,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = Item.friendly.find(params[:id])
     if @item.update(item_params)
       redirect_to admin_items_path
     else

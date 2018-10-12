@@ -11,7 +11,7 @@ class Admin::PokemonsController < ApplicationController
   end
 
   def edit
-    @pokemon = Pokemon.find(params[:id])
+    @pokemon = Pokemon.friendly.find(params[:id])
     breadcrumb @pokemon.name, edit_admin_pokemon_path(@pokemon)
   end
 
@@ -20,7 +20,7 @@ class Admin::PokemonsController < ApplicationController
   end
 
   def update
-    @pokemon = Pokemon.find(params[:id])
+    @pokemon = Pokemon.friendly.find(params[:id])
     if @pokemon.update(pokemon_params)
       redirect_to admin_pokemons_path
     else

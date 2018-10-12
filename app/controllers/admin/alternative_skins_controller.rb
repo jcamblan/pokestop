@@ -10,7 +10,7 @@ class Admin::AlternativeSkinsController < ApplicationController
   end
 
   def edit
-    @alternative_skin = AlternativeSkin.find(params[:id])
+    @alternative_skin = AlternativeSkin.friendly.find(params[:id])
     breadcrumb @alternative_skin.name, edit_admin_alternative_skin_path(@alternative_skin)
   end
 
@@ -28,7 +28,7 @@ class Admin::AlternativeSkinsController < ApplicationController
   end
 
   def update
-    @alternative_skin = AlternativeSkin.find(params[:id])
+    @alternative_skin = AlternativeSkin.friendly.find(params[:id])
     if @alternative_skin.update(alternative_skin_params)
       redirect_to admin_alternative_skins_path
     else
