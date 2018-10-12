@@ -1,12 +1,14 @@
-- if pokemon.types_very_strong_against_it
-  p
-   strong Types très efficaces contre ce Pokémon :
-  ul.list-inline
-  - pokemon.types_very_strong_against_it.each do |t|
-    li.list-inline-item = link_to type_image(t), t
-- if pokemon.types_strong_against_it
-  p
-   strong Types efficaces contre ce Pokémon :
-  ul.list-inline
-  - pokemon.types_strong_against_it.each do |t|
-    li.list-inline-item = link_to type_image(t), t
+hr
+.pokemon__strong-types.d-flex.flex-row.justify-content-center.row
+  - if pokemon.types_very_strong_against_it
+    .col-12.col-md-6
+      p
+        strong Types très efficaces contre ce Pokémon&nbsp:
+      - pokemon.types_very_strong_against_it.each do |t|
+        .pokemon__type = link_to type_image(t), t
+  - if pokemon.types_strong_against_it
+    .col-12.col-md-6
+      p
+        strong Types efficaces contre ce Pokémon&nbsp;:
+      - pokemon.types_strong_against_it.each do |t|
+        .pokemon__type = link_to type_image(t), t

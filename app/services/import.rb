@@ -75,8 +75,11 @@ class Import
 
   def give_type_strengths_and_weaknesses(type)
     t = Type.find_by(name_en: type['name_en'])
+    t.strengths.clear
     t.strengths << type_types_list(type['strengths'])
+    t.weaknesses.clear
     t.weaknesses << type_types_list(type['weaknesses'])
+    t.extreme_weaknesses.clear
     t.extreme_weaknesses << type_types_list(type['extreme_weaknesses'])
     t.save
   end
