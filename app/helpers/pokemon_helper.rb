@@ -46,4 +46,8 @@ module PokemonHelper
     end
     return capture_rate.round
   end
+
+  def pokemon_sprite_url(pokemon)
+    return "pokemon/#{pokemon.generation.id}-#{pokemon.generation.name.parameterize}/#{pokemon.num}.png"
+  end
 end

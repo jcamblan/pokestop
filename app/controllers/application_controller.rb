@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to root_path, :alert => exception.message }
     end
   end
+
+  def default_url_options
+    { host: ENV['HOST'] || 'localhost:3000' }
+  end
+
 end

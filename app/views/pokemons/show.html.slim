@@ -1,4 +1,6 @@
 - title("#{@pokemon.name} (##{@pokemon.num})")
+- content_for :meta_title, "#{@pokemon.name} (##{@pokemon.num})"
+- content_for :meta_image, pokemon_sprite_url(@pokemon)
 .pokemon.row.flex-column
   = render 'show_header', pokemon: @pokemon
   = render 'blocks', pokemon: @pokemon
