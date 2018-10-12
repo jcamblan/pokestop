@@ -10,6 +10,10 @@ class Attack < ApplicationRecord
   validates :epu, numericality: true, :allow_nil => true
   validates :energy_bars, numericality: { only_integer: true }, :allow_nil => true
 
+  def to_param
+    "#{self.id}-#{self.name.parameterize}"
+  end
+
 
   # STAB (Same Type Pokemon Bonus) : bonus de 20% aux dégâts si le type du pokémon est le même
   # que celui de l'attaque

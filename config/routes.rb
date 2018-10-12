@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   get :calendar, controller: :events
 
   resources :pokemons, only: [:index, :show], param: :num
-  resources :items, only: [:index, :show]
+  resources :objets, only: [:index, :show], controller: 'items', as: :items
   resources :types, only: [:index, :show]
-  resources :attacks, only: [:index, :show]
+  resources :attaques, only: [:index, :show], controller: 'attacks', as: :attacks
   resources :generations, only: [:index, :show]
   resources :articles, only: [:index, :show]
   resources :events, only: [:index, :show]
-  resources :eggs, only: [:index, :show]
+  resources :oeufs, only: [:index, :show], controller: 'eggs', as: :eggs
   resources :tags, only: [:show]
 
   get '/admin', to: 'admin#index'

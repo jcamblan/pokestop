@@ -1,0 +1,5 @@
+.block
+  h2 = egg.name
+  .egg__pokemons.row.justify-content-center
+    - egg.pokemons.each do |pokemon|
+      = render 'pokemon', egg: egg, pokemon: pokemon

@@ -1,0 +1,5 @@
+- title("Liste des oeufs")
+.block
+  p Le contenu des oeufs varie dans le temps. Je tâche de maintenir leur contenu à jour donc cette page n'affiche que les Pokémons présents en ce moment dans les oeufs.
+- @eggs.each do |egg|
+  = render 'egg', egg: egg
