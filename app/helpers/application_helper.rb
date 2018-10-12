@@ -3,6 +3,10 @@ module ApplicationHelper
     content_for :title, text
   end
   
+  def canonical(url)
+    content_for(:canonical, tag(:link, rel: :canonical, href: url)) if url
+  end
+
   def bootstrap_class_for flash_type
     { success: "alert-success", error: "alert-danger", alert: "alert-warning", notice: "alert-info" }[flash_type.to_sym] || flash_type.to_s
   end
