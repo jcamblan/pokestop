@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get :export, controller: :main
   get :calendar, controller: :events
 
-  resources :pokemons, only: [:index, :show], param: :num
+  resources :pokemons, only: [:index, :show]
   resources :objets, only: [:index, :show], controller: 'items', as: :items
   resources :types, only: [:index, :show]
   resources :attaques, only: [:index, :show], controller: 'attacks', as: :attacks

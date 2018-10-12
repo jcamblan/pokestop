@@ -4,9 +4,8 @@ class Generation < ApplicationRecord
 
   validates :name, presence: true
 
-  def to_param
-    "#{self.id}-#{self.name.parameterize}"
-  end
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
   #------------------------------------------------------------------------
   # pour la gem filterrific

@@ -46,6 +46,8 @@ gem 'devise'
 gem 'cancancan'
 # gestion des rôles
 gem 'rolify'
+# pour de jolies url
+gem 'friendly_id', '~> 5.2.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

@@ -19,9 +19,8 @@ class Type < ApplicationRecord
                           :foreign_key => "type_id",
                           :association_foreign_key => "extreme_weakness_id"
 
-  def to_param
-    "#{self.id}-#{self.name.parameterize}"
-  end
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
 
   def weak_against

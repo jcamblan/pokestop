@@ -3,7 +3,7 @@ class AttacksController < ApplicationController
   breadcrumb 'Attaques', :attacks_path
 
   def show
-    @attack = Attack.find(params[:id])
+    @attack = Attack.friendly.find(params[:id])
     @filterrific = initialize_filterrific(
       @attack.pokemons,
       params[:filterrific],

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   breadcrumb 'Articles', :articles_path
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     breadcrumb @article.title, article_path(@article)
   end
   def index

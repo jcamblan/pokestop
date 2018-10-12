@@ -3,9 +3,9 @@
     .pokemon__evolution.col
       .evolution
         .evolution__sprite class=("evolution_sprite--gray" unless pokemon.generation.on_prod)
-          = link_to display_pokemon_sprite(pokemon), pokemon.num
+          = link_to display_pokemon_sprite(pokemon), pokemon
           .evolution__name
-            = link_to pokemon.name, pokemon.num
+            = link_to pokemon.name, pokemon
         - if pokemon.is_evolution? && evolution.candies
           .evolution__candies
             = image_tag pokemon.candy.image_path, width: "30px", alt: pokemon.candy.name, title: pokemon.candy.name if pokemon.candy
