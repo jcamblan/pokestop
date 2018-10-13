@@ -29,6 +29,39 @@ class Import
     create_alternative_skins if @@alternative_skins
   end 
 
+## ON VIDE
+
+  def clear_everything
+    AlternativeSkin.delete_all
+    Evolution.delete_all
+    Pokemon.delete_all
+    Egg.delete_all
+    Item.delete_all
+    ItemCategory.delete_all
+    Attack.delete_all
+    AttackCategory.delete_all
+    Type.delete_all
+    Candy.delete_all
+    Generation.delete_all
+    ActiveRecord::Base.connection.execute("DELETE FROM attacks_pokemons")
+    ActiveRecord::Base.connection.execute("DELETE FROM eggs_pokemons")
+    ActiveRecord::Base.connection.execute("DELETE FROM extreme_weaknesses_types")
+    ActiveRecord::Base.connection.execute("DELETE FROM pokemons_types")
+    ActiveRecord::Base.connection.execute("DELETE FROM strengths_types")
+    ActiveRecord::Base.connection.execute("DELETE FROM types_weaknesses")
+    ActiveRecord::Base.connection.reset_pk_sequence!('generations')
+    ActiveRecord::Base.connection.reset_pk_sequence!('candies')
+    ActiveRecord::Base.connection.reset_pk_sequence!('types')
+    ActiveRecord::Base.connection.reset_pk_sequence!('attack_categories')
+    ActiveRecord::Base.connection.reset_pk_sequence!('attacks')
+    ActiveRecord::Base.connection.reset_pk_sequence!('item_categories')
+    ActiveRecord::Base.connection.reset_pk_sequence!('items')
+    ActiveRecord::Base.connection.reset_pk_sequence!('pokemons')
+    ActiveRecord::Base.connection.reset_pk_sequence!('eggs')
+    ActiveRecord::Base.connection.reset_pk_sequence!('evolutions')
+    ActiveRecord::Base.connection.reset_pk_sequence!('alternative_skins')
+  end
+
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
 
   def create_generations
@@ -181,7 +214,9 @@ class Import
     p.generation_id = pokemon['generation']
     p.pokedex_entry = pokemon['pokedex_entry']
     p.comment = pokemon['comment']
+    p.types.clear
     p.types << Type.where(name: pokemon['type_1']).or(Type.where(name: pokemon['type_2']))
+    p.attacks.clear
     p.attacks << pokemon_attacks_list(pokemon['attacks'])
     p.save
   end
@@ -213,6 +248,7 @@ class Import
     e.name = egg['name']
     e.desc = egg['desc']
     egg['pokemons'].each do |p|
+      e.pokemons.clear
       e.pokemons << Pokemon.where(num: p['num']).first
     end
     e.save
