@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
 
-  belongs_to :item_category
+  belongs_to :item_category, touch: true
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]

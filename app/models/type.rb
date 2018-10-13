@@ -1,6 +1,6 @@
 class Type < ApplicationRecord
 
-  has_and_belongs_to_many :pokemons
+  has_and_belongs_to_many :pokemons, touch: true
   has_many :attacks
 
   has_and_belongs_to_many :strengths,

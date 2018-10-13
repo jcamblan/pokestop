@@ -1,9 +1,9 @@
 class Pokemon < ApplicationRecord
-  belongs_to :generation
-  has_and_belongs_to_many :types
-  has_and_belongs_to_many :attacks
+  belongs_to :generation, touch: true
+  has_and_belongs_to_many :types, touch: true
+  has_and_belongs_to_many :attacks, touch: true
   has_many :evolutions
-  has_and_belongs_to_many :eggs
+  has_and_belongs_to_many :eggs, touch: true
   belongs_to :candy, required: false
   has_many :movesets
   has_many :alternative_skins
