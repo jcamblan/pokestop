@@ -2,6 +2,11 @@
   @extend .pt-3;
 }
 
+h1.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .fc-basic-view .fc-body .fc-row {
   min-height: 0 !important;
 }

@@ -1,12 +1,15 @@
 header.root
-    = image_tag 'pokestop.png', class: "pokestop__logo"
 
-    p Base de données & actualités sur Pokémon GO
+  h1.hidden Pokéstop
 
-    .search
-      = form_with url: search_path, local: true, method: :get, html: { class: "form" } do |form|
-        = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control"
-        = form.button t('.search'), class: "btn btn-outline-success"
+  = image_tag 'pokestop.png', class: "pokestop__logo"
 
-    .wip.d-none.d-md-block
-      = image_tag 'wip.gif'
+  p Base de données & actualités sur Pokémon GO
+
+  .search
+    = form_with url: search_path, local: true, method: :get, html: { class: "form" } do |form|
+      = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control"
+      = form.button t('.search'), class: "btn btn-outline-success"
+
+  .wip.d-none.d-md-block
+    = image_tag 'wip.gif'
