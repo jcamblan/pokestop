@@ -9,7 +9,7 @@
         p
           strong = pokemon.alolan_form.name
         p
-          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.alolan_form.num)
+          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.alolan_form)
     - if pokemon.original_form
       .skin.shadow-sm.m-2
         .skin__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
@@ -18,7 +18,7 @@
         p
           strong = pokemon.original_form.name
         p
-          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.original_form.num)
+          = link_to "Voir la fiche du pokémon", pokemon_path(pokemon.original_form)
     - pokemon.alternative_skins.each do |skin|
       .skin.shadow-sm.m-2
         .skin__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)

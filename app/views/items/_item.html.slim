@@ -12,6 +12,6 @@
       .item__pokemons.row.justify-content-around
         - item.pokemons.each do |p|
           .item__pokemon.shadow-sm.p-2
-            = link_to display_pokemon_sprite(p), pokemon_path(p.num)
+            = link_to display_pokemon_sprite(p), pokemon_path(p)
             br
-            = link_to p.name, pokemon_path(p.num)
+            = link_to p.name, pokemon_path(p)
