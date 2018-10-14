@@ -277,7 +277,7 @@ class Import
 
   def create_alternative_skins
     @@alternative_skins.each do |skin|
-      create_alternative_skin(skin) unless AlternativeSkin.find_by(name: skin['name'])
+      create_alternative_skin(skin) if AlternativeSkin.where(pokemon_id: Pokemon.find_by(num: skin['pokemon_num']).id).where(name: skin['name']).empty?
     end
   end
 
