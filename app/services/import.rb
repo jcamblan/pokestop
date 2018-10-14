@@ -248,7 +248,6 @@ class Import
     e.name = egg['name']
     e.desc = egg['desc']
     egg['pokemons'].each do |p|
-      e.pokemons.clear
       e.pokemons << Pokemon.where(num: p['num']).first
     end
     e.save

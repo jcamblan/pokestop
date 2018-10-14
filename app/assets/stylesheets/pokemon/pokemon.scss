@@ -190,8 +190,7 @@ ul.eggs__list {
 
 .skin {
   position: relative;
-  padding-left: 120px;
-  height: 110px;
+  width: 140px;
 }
 
 .skin__header {
@@ -199,11 +198,7 @@ ul.eggs__list {
   justify-content: center;
   align-items: center;
   box-shadow: $box-shadow;
-  position: relative;
-  padding: 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 20px;
 }
 
 .skin__ball {

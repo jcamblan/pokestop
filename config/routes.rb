@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :alternative_skins
     resources :alternative_skin_categories
     resources :evolutions
+    resources :eggs
   end
 
 

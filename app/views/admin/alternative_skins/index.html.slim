@@ -13,9 +13,11 @@
         thead
           tr
             th id
+            th Pokémon
             th Nom
         tbody
           - @alternative_skins.each do |alternative_skin|
             tr
               td = link_to alternative_skin.id, edit_admin_alternative_skin_path(alternative_skin)
+              td = alternative_skin.pokemon.name
               td = alternative_skin.name

@@ -1,0 +1,23 @@
+- title("Oeufs")
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des eggs
+    = link_to new_admin_egg_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+            th desc
+        tbody
+          - @eggs.each do |egg|
+            tr
+              td = link_to egg.id, edit_admin_egg_path(egg)
+              td = egg.name
+              td = egg.desc
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM
