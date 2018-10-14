@@ -118,11 +118,11 @@ class Pokemon < ApplicationRecord
   #------------------------------------------------------------------------
 
   def charge_attacks
-    self.attacks.where(attack_category_id: 1)
+    self.attacks.where(attack_category_id: AttackCategory.find_by(name_en: "Charge Attack").id)
   end
   
   def fast_attacks
-    self.attacks.where(attack_category_id: 2)
+    self.attacks.where(attack_category_id: AttackCategory.find_by(name_en: "Fast Attack").id)
   end
 
   #------------------------------------------------------------------------
