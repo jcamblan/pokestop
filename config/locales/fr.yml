@@ -104,6 +104,8 @@ fr:
         buddy_distance: "Distance à parcourir pour 1 %{candy} :"
         english_name: "Nom anglais :"
         secondary_stats: "Divers"
+      skins:
+        alternative_skins: "Apparences alternatives"
       texts:
         pokedex_entry: "Description du pokédex"
       types:
