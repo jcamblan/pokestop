@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  step_id: 1
+  special_research: one
+  candy: one
+  pokemon: one
+
+two:
+  step_id: 1
+  special_research: two
+  candy: two
+  pokemon: two

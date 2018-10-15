@@ -1,5 +1,6 @@
-.block
-  h2 = egg.name
+.block.egg
+  h2.egg__name = egg.name
+  = image_tag "egg/#{egg.name.parameterize}.png", alt: egg.name, class: "egg__image"
   .egg__pokemons.row.justify-content-center
     - egg.pokemons.each do |pokemon|
       = render 'pokemon', egg: egg, pokemon: pokemon

@@ -15,4 +15,8 @@ class Item < ApplicationRecord
     return item_pokemons
   end
 
+  def image_path
+    return "items/#{self.name_en.parameterize}.png"
+  end
+
 end

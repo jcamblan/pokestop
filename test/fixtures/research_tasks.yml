@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_step: one
+  desc: MyString
+  desc_en: MyString
+  xp_reward: 1
+  pokemon: one
+
+two:
+  research_step: two
+  desc: MyString
+  desc_en: MyString
+  xp_reward: 1
+  pokemon: two

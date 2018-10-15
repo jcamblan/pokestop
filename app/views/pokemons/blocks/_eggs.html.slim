@@ -1,6 +1,6 @@
 - unless pokemon.eggs.empty?
   .pokemon__block.block.eggs
-    h2 = t('.eggs').pluralize(pokemon.eggs.count)
+    h2.block__h2 = t('.eggs').pluralize(pokemon.eggs.count)
     p = t('.can_be_obtained')
     ul.eggs__list
       - pokemon.eggs.each do |e|

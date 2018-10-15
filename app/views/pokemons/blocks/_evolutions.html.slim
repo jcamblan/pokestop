@@ -1,6 +1,6 @@
 - if @evolutions
   - cache @evolutions do
     .pokemon__block.block
-      h2 = t('.evolutions')
+      h2.block__h2 = t('.evolutions')
       = render 'pokemons/blocks/evolution', pokemons: @evolutions, evolutions: []
 

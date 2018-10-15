@@ -1,0 +1,54 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @research_reward] do |f|
+  - if @research_reward.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@research_reward.errors.count, "error")}"
+      ul
+      - @research_reward.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom FR :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :research_step_id, "Dépend de l'étape :"
+            br
+            = f.collection_select :research_step_id, ResearchStep.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "pokemon", {:class => 'custom-control-input'}
+              = f.label 'reward_type_pokemon', "Pokémon", {:class => 'custom-control-label'}
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "item", {:class => 'custom-control-input'}
+              = f.label 'reward_type_item', "Objet", {:class => 'custom-control-label'}
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "candy", {:class => 'custom-control-input'}
+              = f.label 'reward_type_candy', "Bonbon", {:class => 'custom-control-label'}
+          .form-group
+            = f.label :quantity, "Quantité :"
+            = f.text_field :quantity, {:class => 'form-control'}
+          .form-group
+            = f.label :pokemon_id, "Pokémon :"
+            br
+            = f.collection_select :pokemon_id, Pokemon.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :item_id, "Objet :"
+            br
+            = f.collection_select :item_id, Item.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :candy_id, "Bonbon :"
+            br
+            = f.collection_select :candy_id, Candy.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}

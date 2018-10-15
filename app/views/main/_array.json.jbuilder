@@ -140,3 +140,44 @@ json.alternative_skins do
     json.nametag alternative_skin.nametag
   end
 end
+
+json.special_researches do
+  json.array!(@special_researches) do |research|
+    json.name research.name
+    json.is_active research.is_active
+    json.steps do
+      json.array!(research.research_steps.order(:step_id)) do |step|
+        json.name step.name
+        json.step_id step.step_id
+        json.tasks do
+          json.array!(step.research_tasks) do |task|
+            json.name task.name
+            json.desc task.desc
+            json.xp_reward task.xp_reward
+          end
+        end
+        json.rewards do
+          json.array!(step.research_rewards) do |reward|
+            json.name reward.name
+            json.reward_type reward.reward_type
+            json.quantity reward.quantity
+            json.pokemon reward.pokemon.name if reward.pokemon
+            json.item reward.item.name if reward.item
+            json.candy reward.candy.name if reward.candy
+          end
+        end
+      end
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+

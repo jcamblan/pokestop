@@ -1,0 +1,25 @@
+- title("Tags")
+
+.card.mb-3
+  .card-header
+    i.fas.fa-table.mr-auto
+    | Liste des études spéciales
+    = link_to new_admin_research_step_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Etape
+            th Nom
+            th Dépend de
+        tbody
+          - @research_steps.each do |research_step|
+            tr
+              td = link_to research_step.id, edit_admin_research_step_path(research_step)
+              td = research_step.step_id
+              td = research_step.name
+              td = research_step.special_research.name

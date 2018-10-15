@@ -1,6 +1,6 @@
 - if pokemon.candy_distance || pokemon.name_en.present?
   .pokemon__block.block
-    h2 = t('.secondary_stats')
+    h2.block__h2 = t('.secondary_stats')
     ul.list-group
       - cache pokemon.candy do
         - if pokemon.candy && pokemon.candy_distance

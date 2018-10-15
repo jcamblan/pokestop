@@ -1,0 +1,35 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @research_task] do |f|
+  - if @research_task.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@research_task.errors.count, "error")}"
+      ul
+      - @research_task.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12.col-md-6
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom FR :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :research_step_id, "Dépend de l'étape :"
+            br
+            = f.collection_select :research_step_id, ResearchStep.all, :id, :name, {}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :desc, "Description :"
+            = f.text_field :desc, {:class => 'form-control'}
+          .form-group
+            = f.label :xp_reward, "Récompense d'XP :"
+            = f.text_field :xp_reward, {:class => 'form-control'}

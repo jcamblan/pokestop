@@ -21,6 +21,11 @@ class Pokemon < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
+
+  def image_path
+    return "pokemon/#{self.generation.id}-#{self.generation.name.parameterize}/#{self.num}.png"
+  end
+
   #------------------------------------------------------------------------
   # On vérifie si le pokémon peut évoluer ou s'il est lui-même l'évolution d'un autre pokémon
   #------------------------------------------------------------------------

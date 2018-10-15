@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_step: one
+  quantity: 1
+  pokemon: one
+  item: one
+  candy: one
+
+two:
+  research_step: two
+  quantity: 1
+  pokemon: two
+  item: two
+  candy: two

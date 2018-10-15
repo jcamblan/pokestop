@@ -1,0 +1,6 @@
+.reward.col-4
+  .reward__image = image_tag reward.reward.image_path, width: "50px", alt: reward.reward.name, title: reward.reward.name
+  - if reward.reward_type == 'pokemon'
+    .reward__pokemon Un pokémon apparaît&nbsp;!
+  - else
+    .reward__quantity = "x#{reward.quantity}"

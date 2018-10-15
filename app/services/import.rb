@@ -13,6 +13,7 @@ class Import
   @@eggs = @backup_file.dig('eggs')
   @@evolutions = @backup_file.dig('evolutions')
   @@alternative_skins = @backup_file.dig('alternative_skins')
+  @@special_researches = @backup_file.dig('special_researches')
 
   def import_everything
     create_generations if @@generations
@@ -43,6 +44,10 @@ class Import
     Type.delete_all
     Candy.delete_all
     Generation.delete_all
+    ResearchTask.delete_all
+    ResearchReward.delete_all
+    ResearchStep.delete_all
+    SpecialResearch.delete_all
     ActiveRecord::Base.connection.execute("DELETE FROM attacks_pokemons")
     ActiveRecord::Base.connection.execute("DELETE FROM eggs_pokemons")
     ActiveRecord::Base.connection.execute("DELETE FROM extreme_weaknesses_types")
@@ -60,6 +65,10 @@ class Import
     ActiveRecord::Base.connection.reset_pk_sequence!('eggs')
     ActiveRecord::Base.connection.reset_pk_sequence!('evolutions')
     ActiveRecord::Base.connection.reset_pk_sequence!('alternative_skins')
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_tasks')
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_rewards')
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_steps')
+    ActiveRecord::Base.connection.reset_pk_sequence!('special_researches')
   end
 
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
@@ -292,4 +301,86 @@ class Import
     s.save
   end
 
+## PUIS LES RECHERCHES
+
+  def create_special_researches
+    @@special_researches.each do |research|
+      create_special_research(research) unless SpecialResearch.find_by(name: research['name'])
+    end
+  end
+
+  def create_special_research(research)
+    r = SpecialResearch.new
+    r.name = research['name']
+    r.is_active = research['is_active']
+    r.save
+    create_research_steps(research['steps'],SpecialResearch.find_by(name: research['name']))
+  end
+
+  def create_research_steps(steps,research)
+    steps.each do |step|
+      create_research_step(step,research)
+    end
+  end
+
+  def create_research_step(step,research)
+    s = ResearchStep.new
+    s.name = step['name']
+    s.step_id = step['step_id']
+    s.special_research_id = research.id
+    s.save
+    create_research_tasks(step['tasks'],ResearchStep.find_by(name: step['name']))
+    create_research_rewards(step['rewards'],ResearchStep.find_by(name: step['name']))
+  end
+
+  def create_research_tasks(tasks,step)
+    tasks.each do |task|
+      create_research_task(task,step)
+    end
+  end
+
+  def create_research_task(task,step)
+    t = ResearchTask.new
+    t.name = task['name']
+    t.desc = task['desc']
+    t.xp_reward = task['xp_reward']
+    t.research_step_id = step.id
+    t.save
+  end
+
+  def create_research_rewards(rewards,step)
+    rewards.each do |reward|
+      create_research_reward(reward,step)
+    end
+  end
+
+  def create_research_reward(reward,step)
+    r = ResearchReward.new
+    r.name = reward['name']
+    r.reward_type = reward['reward_type']
+    r.quantity = reward['quantity']
+    r.research_step_id = step.id
+    r.item_id = Item.find_by(name: reward['item']).id if reward['item']
+    r.pokemon_id = Pokemon.find_by(name: reward['pokemon']).id if reward['pokemon']
+    r.candy_id = Candy.find_by(name: reward['candy']).id if reward['candy']
+    r.save
+  end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

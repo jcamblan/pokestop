@@ -1,0 +1,14 @@
+.col-12.col-md-6.col-lg-4
+  .block.research__step.step
+    h2.step__title = step.name
+    .step__tasks
+      - step.research_tasks.each do |task|
+        = render 'task', task: task
+    .step__rewards.rewards
+      .rewards__title
+        h3 Récompenses
+      .rewards__rewards.d-flex.justify-content-around
+        - step.research_rewards.each do |reward|
+          = render 'reward', reward: reward
+
+

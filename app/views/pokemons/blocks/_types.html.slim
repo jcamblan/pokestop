@@ -1,6 +1,6 @@
 - unless pokemon.types.empty?
   .pokemon__block.block.text-center
-    h2 = t('.types').pluralize(pokemon.types.count)
+    h2.block__h2 = t('.types').pluralize(pokemon.types.count)
     - cache pokemon.types
       - pokemon.types.each do |type|
         .pokemon__type

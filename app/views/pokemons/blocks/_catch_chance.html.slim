@@ -1,6 +1,6 @@
 - if pokemon.flee_rate || pokemon.capture_rate
   .block.capture-rate
-    h2 = t('.catch_chances')
+    h2.block__h2 = t('.catch_chances')
     .row
       .col-6.text-center
         p.capture-rate__raw-rate.capture-rate__raw-rate--capture = pokemon.capture_rate.round.to_s + "%"

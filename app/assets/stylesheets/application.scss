@@ -30,6 +30,7 @@
 @import "types";
 @import "home-article";
 @import 'item';
+@import 'researches';
 
 .navbar {
   z-index: 200;
@@ -42,4 +43,20 @@ body {
 
 .content--gray {
   -webkit-filter: grayscale(100%) opacity(20%);
+}
+
+.egg {
+  position: relative;
+  margin-top: 70px;
+  padding-top: 50px;
+}
+
+img.egg__image {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -50px;
+  width: 100px;
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_120526) do
+ActiveRecord::Schema.define(version: 2018_10_15_133505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -226,6 +226,48 @@ ActiveRecord::Schema.define(version: 2018_10_13_120526) do
     t.index ["type_id"], name: "index_pokemons_types_on_type_id"
   end
 
+  create_table "research_rewards", force: :cascade do |t|
+    t.bigint "research_step_id"
+    t.integer "quantity"
+    t.bigint "pokemon_id"
+    t.bigint "item_id"
+    t.bigint "candy_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "reward_type"
+    t.string "name"
+    t.index ["candy_id"], name: "index_research_rewards_on_candy_id"
+    t.index ["item_id"], name: "index_research_rewards_on_item_id"
+    t.index ["pokemon_id"], name: "index_research_rewards_on_pokemon_id"
+    t.index ["research_step_id"], name: "index_research_rewards_on_research_step_id"
+  end
+
+  create_table "research_steps", force: :cascade do |t|
+    t.integer "step_id"
+    t.bigint "special_research_id"
+    t.bigint "candy_id"
+    t.bigint "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["candy_id"], name: "index_research_steps_on_candy_id"
+    t.index ["pokemon_id"], name: "index_research_steps_on_pokemon_id"
+    t.index ["special_research_id"], name: "index_research_steps_on_special_research_id"
+  end
+
+  create_table "research_tasks", force: :cascade do |t|
+    t.bigint "research_step_id"
+    t.string "desc"
+    t.string "desc_en"
+    t.integer "xp_reward"
+    t.bigint "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["pokemon_id"], name: "index_research_tasks_on_pokemon_id"
+    t.index ["research_step_id"], name: "index_research_tasks_on_research_step_id"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
@@ -234,6 +276,14 @@ ActiveRecord::Schema.define(version: 2018_10_13_120526) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "special_researches", force: :cascade do |t|
+    t.string "name"
+    t.boolean "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
   end
 
   create_table "strengths_types", id: false, force: :cascade do |t|
@@ -292,4 +342,13 @@ ActiveRecord::Schema.define(version: 2018_10_13_120526) do
   add_foreign_key "evolutions", "pokemons"
   add_foreign_key "items", "item_categories"
   add_foreign_key "pokemons", "generations"
+  add_foreign_key "research_rewards", "candies"
+  add_foreign_key "research_rewards", "items"
+  add_foreign_key "research_rewards", "pokemons"
+  add_foreign_key "research_rewards", "research_steps"
+  add_foreign_key "research_steps", "candies"
+  add_foreign_key "research_steps", "pokemons"
+  add_foreign_key "research_steps", "special_researches"
+  add_foreign_key "research_tasks", "pokemons"
+  add_foreign_key "research_tasks", "research_steps"
 end

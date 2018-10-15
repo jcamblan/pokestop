@@ -1,0 +1,29 @@
+- title("Tags")
+
+.card.mb-3
+  .card-header
+    i.fas.fa-table.mr-auto
+    | Liste des récompenses
+    = link_to new_admin_research_reward_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+            th Récompense
+            th Etape
+            th Etude
+        tbody
+          - @research_rewards.each do |research_reward|
+            tr
+              td = link_to research_reward.id, edit_admin_research_reward_path(research_reward)
+              td = research_reward.name
+              td 
+                = "x#{research_reward.quantity} #{research_reward.reward.name}" if research_reward.reward
+              td = research_reward.research_step.name
+              td = research_reward.research_step.special_research.name
+

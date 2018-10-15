@@ -1,0 +1,8 @@
+.research
+  .research__header style=("background-image: url('#{image_path(@research.name.parameterize + ".jpg")}')")
+    .research__titles
+      p.research__subtitle Etude spéciale :
+      h1.research__title = @research.name
+  .row.research__steps
+    - @research.research_steps.each do |step|
+      = render 'step', step: step

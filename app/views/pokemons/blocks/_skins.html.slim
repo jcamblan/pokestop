@@ -1,6 +1,6 @@
 - if pokemon.alternative_skins.exists? || pokemon.alolan_form || pokemon.original_form
   .block.skins
-    h2 = t('.alternative_skins')
+    h2.block__h2 = t('.alternative_skins')
     .row.justify-content-center
       - if pokemon.alolan_form
         .skin.shadow-sm.m-2
