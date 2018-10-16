@@ -10,7 +10,7 @@ class Admin::TagsController < ApplicationController
   end
 
   def edit
-    @tag = Tag.friendly.find(params[:id])
+    @tag = Tag.find(params[:id])
     breadcrumb @tag.name, edit_admin_tag_path(@tag)
   end
 
@@ -28,7 +28,7 @@ class Admin::TagsController < ApplicationController
   end
 
   def update
-    @tag = Tag.friendly.find(params[:id])
+    @tag = Tag.find(params[:id])
     if @tag.update(tag_params)
       redirect_to admin_tags_path
     else
