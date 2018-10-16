@@ -16,12 +16,12 @@ header.root
 
 nav.navbar.navbar-light.bg-light.justify-content-center
   = link_to pokemons_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary Pokémons
+    button.m-1.btn.btn-sm.btn-outline-secondary = t('.pokemons')
   = link_to attacks_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary Attaques
+    button.m-1.btn.btn-sm.btn-outline-secondary = t('.attacks')
   = link_to items_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary Objets
+    button.m-1.btn.btn-sm.btn-outline-secondary = t('.items')
   = link_to special_researches_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary Etudes spéciales
+    button.m-1.btn.btn-sm.btn-outline-secondary = t('.researches')
   = link_to eggs_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary Oeufs
+    button.m-1.btn.btn-sm.btn-outline-secondary = t('.eggs')

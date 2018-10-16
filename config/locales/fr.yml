@@ -71,7 +71,18 @@ fr:
     header:
       search: "Rechercher"
       search_placeholder: "Pokémon, objet, attaque..."
+    menu:
+      attacks: "Attaques"
+      eggs: "Oeufs"
+      items: "Objets"
+      pokemons: "Pokémons"
+      researches: "Etudes spéciales"
     root_header:
+      attacks: "Attaques"
+      eggs: "Oeufs"
+      items: "Objets"
+      pokemons: "Pokémons"
+      researches: "Etudes spéciales"
       search: "Rechercher"
       search_placeholder: "Pokémon, objet, attaque..."
   pokemons:
