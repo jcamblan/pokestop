@@ -1,2 +1,19 @@
 - @researches.each do |research|
-  p = link_to research.name, research
+  .research__header style=("background-image: url('#{image_path(research.name.parameterize + ".jpg")}')")
+    .research__titles
+      p.research__subtitle Etude spéciale :
+      h1.research__title = link_to research.name, research, class: 'research__title'
+    .d-none.d-md-block.pl-3.pt-3
+      .d-inline-block
+        .task__xp.task__xp--relative.d-flex.flex-column.align-items-center.justify-content-center
+          span = research.total_xp
+          span PX
+      - research.pokemons_rewarded.each do |pokemon|
+        .reward__image.d-inline-block 
+          = link_to pokemon do
+            = image_tag pokemon.image_path, width: "50px", alt: pokemon.name, title: pokemon.name
+    .d-none.d-md-block.pl-3.pt-3
+      - research.items_rewarded.uniq.each do |item|
+        .reward__image.d-inline-block 
+          = link_to item do
+            = image_tag item.image_path, width: "40px", alt: item.name, title: item.name

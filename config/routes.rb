@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   resources :oeufs, only: [:index, :show], controller: 'eggs', as: :eggs
   resources :tags, only: [:show]
-  resources :recherches, only: [:show, :index], controller: 'special_researches', as: :special_researches
+  resources :etudes, only: [:show, :index], controller: 'special_researches', as: :special_researches
 
   get '/admin', to: 'admin#index'
   namespace :admin do

@@ -3,13 +3,7 @@ header
     = link_to root_path, class: 'navbar-brand' do
       = image_tag 'pokestop.png', class: "pokestop__logo"
     /! Example single danger button
-    .btn-group
-      button.btn.btn-outline-light.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
-        | Navigation
-      .dropdown-menu
-        = link_to t('.pokemons'), pokemons_path, class: 'dropdown-item'
-        = link_to t('.attaques'), attacks_path, class: 'dropdown-item'
-        = link_to t('.objets'), items_path, class: 'dropdown-item'
+    = render 'layouts/menu'
 
 
     ul.navbar-nav.ml-auto

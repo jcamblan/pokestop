@@ -13,3 +13,15 @@ header.root
 
   .wip.d-none.d-md-block
     = image_tag 'wip.gif'
+
+nav.navbar.navbar-light.bg-light.justify-content-center
+  = link_to pokemons_path do
+    button.m-1.btn.btn-sm.btn-outline-secondary Pokémons
+  = link_to attacks_path do
+    button.m-1.btn.btn-sm.btn-outline-secondary Attaques
+  = link_to items_path do
+    button.m-1.btn.btn-sm.btn-outline-secondary Objets
+  = link_to special_researches_path do
+    button.m-1.btn.btn-sm.btn-outline-secondary Etudes spéciales
+  = link_to eggs_path do
+    button.m-1.btn.btn-sm.btn-outline-secondary Oeufs
