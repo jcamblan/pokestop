@@ -2,22 +2,6 @@
 - content_for :meta_title, "Pokéstop : Génération ##{@generation.id} : #{@generation.name}"
 - canonical(request.original_url)
 .pokemons
-  .pokemons__list
-    = paginate @pokemons
-    table.table
-      thead
-        tr
-          th scope="col"
-          th scope="col" = t('views.generations.show.col_num')
-          th scope="col" = t('views.generations.show.col_name')
-          th scope="col" = t('views.generations.show.col_types')
-      tbody
-        - @pokemons.each do |p|
-          tr class=("pokemon_sprite--gray" unless p.generation.on_prod)
-            td = link_to display_pokemon_sprite(p), pokemon_path(p)
-            td = link_to p.num, pokemon_path(p)
-            td = link_to p.name, pokemon_path(p)
-            td 
-              - p.types.each do |t|
-                 = link_to type_image(t), t
-    = paginate @pokemons
+  .block
+    .list
+      = render 'pokemons/list'

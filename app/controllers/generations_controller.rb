@@ -4,7 +4,7 @@ class GenerationsController < ApplicationController
 
   def show
     @generation = Generation.friendly.find(params[:id])
-    @pokemons = Pokemon.where(generation_id: @generation.id).order(params[:order]).order(:num).page(params[:page]).per(25)
+    @pokemons = Pokemon.where(generation_id: @generation.id).order(params[:order]).order(num: :asc)
     breadcrumb @generation.name, generation_path(@generation)
   end
   def index
