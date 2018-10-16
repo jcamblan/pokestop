@@ -1,18 +1,8 @@
 class Scrapper
 
   def get_pokemon_datas(pokemon)
-    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/pokemon/#{pokemon.id}")
+    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/pokemon/#{pokemon.num.to_i}")
     doc = Nokogiri::HTML(open(url))
-    evolution_requirements = doc.css('div#evolution-requirements table tr')
-    evolution_requirements.each do |er|
-      if er.css('td')[0].text == 'Flee Rate'
-        pokemon.flee_rate = er.css('td')[1].text.gsub(' %', '').to_f
-      elsif er.css('td')[0].text == 'Capture Rate'
-        pokemon.capture_rate = er.css('td')[1].text.gsub(' km', '').to_i
-      elsif er.css('td')[0].text == 'Buddy Distance'
-        pokemon.candy_distance = er.css('td')[1].text.gsub(' %', '').to_f
-      end
-    end
     pokemon_stats = doc.css('div#pokemon-stats')
     pokemon.pc_max = pokemon_stats.css('span.max-cp-number').text.to_i
     stats = pokemon_stats.css('div.stats-container div.pokemon-stats div.header-stats')
@@ -20,13 +10,16 @@ class Scrapper
     pokemon.def = stats[1].css('span').text.gsub('DEF', '').to_i
     pokemon.sta = stats[2].css('span').text.gsub('STA', '').to_i
     pokemon.save
+    puts "#{pokemon.name} : OK"
   end
 
   def get_pokemons_datas
-    generations = Generation.where(on_prod: true)
+    generations = Generation.where(id: 4)
     generations.each do |g|
       g.pokemons.each do |p|
-        get_pokemon_datas(p)
+        unless p.alolan == true || p.num == "413"
+          get_pokemon_datas(p)
+        end
       end
     end
   end
@@ -62,16 +55,18 @@ class Scrapper
   end
 
   def assign_attacks
-    generations = Generation.where(on_prod: true)
+    generations = Generation.where(name: 'Sinnoh')
     generations.each do |g|
       g.pokemons.each do |p|
-        get_attacks(p)
+        unless p.alolan == true || p.num == "413"
+          get_attacks(p)
+        end
       end
     end
   end
 
   def get_attacks(pokemon)
-    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/pokemon/#{pokemon.id}")
+    url =  Addressable::URI.normalized_encode("https://pokemongo.gamepress.gg/pokemon/#{pokemon.num.to_i}")
     doc = Nokogiri::HTML(open(url))
     fast_attacks = doc.css('div#pokemon-primary-moves div.primary-move article').each do |a|
       scrapped_name = a.css('div.primary-move-title a span').text
