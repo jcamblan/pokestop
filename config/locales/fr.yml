@@ -1,4 +1,7 @@
 fr:
+  attacks:
+    show:
+      pokemons_count: "%{count} pokemons utilisent cette attaque"
   devise:
     confirmations:
       confirmed: "Votre compte a été validé."

@@ -3,16 +3,7 @@ class PokemonsController < ApplicationController
   breadcrumb 'Pokémons', :pokemons_path
 
   def index
-    @filterrific = initialize_filterrific(
-      Pokemon,
-      params[:filterrific],
-      :select_options => {
-        with_generation_id: Generation.options_for_select,
-        with_type_id: Type.options_for_select,
-        with_on_prod: ['Filtrer']
-      }
-    ) or return
-    @pokemons = @filterrific.find.page(params[:page])
+    @pokemons = Pokemon.all.order(num: :asc)
 
     respond_to do |format|
       format.html

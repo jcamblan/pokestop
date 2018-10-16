@@ -1,6 +1,11 @@
 - title("Liste des objets")
+.block.justify-content-center.d-flex
+  - @items_categories.each do |items_category|
+    = link_to "##{items_category.name.parameterize}" do
+      button.m-1.btn.btn-sm.btn-outline-secondary = items_category.name
+
 - @items_categories.each do |items_category|
-  .item-category.block.container-fluid class=("item-category--#{items_category.name_en.parameterize}")
+  .item-category.block.container-fluid class=("item-category--#{items_category.name_en.parameterize}") id=(items_category.name.parameterize)
     h2 = items_category.name
     .row.justify-content-center
       - items_category.items.each do |item|

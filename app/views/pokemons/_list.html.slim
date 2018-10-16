@@ -1,26 +1,32 @@
-.list__results#filterrific_results
-  = paginate @pokemons
-  table.table
+script
+  | $(document).ready(function() {
+  |   $('#pokemons__dataTable').DataTable( {
+  |       "retrieve": true,
+  |       "order": [[ 1, 'asc' ]]
+  |   } );
+  | } );
+.list__results
+  table#pokemons__dataTable.table
     thead.thead-light
       tr
-        th = sanitize filterrific_sorting_link(@filterrific, :name).gsub('Name', t('.name'))
-        th = sanitize filterrific_sorting_link(@filterrific, :num).gsub('Num', t('.num'))
-        th = sanitize filterrific_sorting_link(@filterrific, :pc_max).gsub('Pc max', t('.pc_max'))
-        th = sanitize filterrific_sorting_link(@filterrific, :atk).gsub('Atk', t('.atk'))
-        th = sanitize filterrific_sorting_link(@filterrific, :def).gsub('Def', t('.def'))
-        th = sanitize filterrific_sorting_link(@filterrific, :sta).gsub('Sta', t('.sta'))
+        th = t('.name')
+        th = t('.num')
+        th = t('.pc_max')
+        th = t('.atk')
+        th = t('.def')
+        th = t('.sta')
         th = t('.types')
-    - @pokemons.each do |pokemon|
-      tr class=("list__tr--gray" unless pokemon.generation.on_prod)
-        td 
-          = link_to display_pokemon_sprite(pokemon), pokemon_path(pokemon)
-          = link_to pokemon.name, pokemon_path(pokemon)
-        td = link_to pokemon.num, pokemon_path(pokemon)
-        td = small_stat_bar('pc_max',pokemon.pc_max,pokemon.max_pc_max)
-        td = small_stat_bar('atk',pokemon.atk,pokemon.max_atk)
-        td = small_stat_bar('def',pokemon.def,pokemon.max_def)
-        td = small_stat_bar('sta',pokemon.sta,pokemon.max_sta)
-        td 
-          - pokemon.types.each do |t|
-            = link_to type_image(t), t
-  = paginate @pokemons
+    - cache @pokemons do
+      - @pokemons.each do |pokemon|
+        tr class=("list__tr--gray" unless pokemon.generation.on_prod)
+          td 
+            = link_to display_pokemon_sprite(pokemon), pokemon_path(pokemon)
+            = link_to pokemon.name, pokemon_path(pokemon)
+          td = link_to pokemon.num, pokemon_path(pokemon)
+          td = small_stat_bar('pc_max',pokemon.pc_max,pokemon.max_pc_max)
+          td = small_stat_bar('atk',pokemon.atk,pokemon.max_atk)
+          td = small_stat_bar('def',pokemon.def,pokemon.max_def)
+          td = small_stat_bar('sta',pokemon.sta,pokemon.max_sta)
+          td 
+            - pokemon.types.each do |t|
+              = link_to type_image(t), t
