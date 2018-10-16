@@ -16,6 +16,7 @@ class Import
   @@special_researches = @backup_file.dig('special_researches')
 
   def import_everything
+    clear_everything
     create_generations if @@generations
     create_candies if @@candies
     create_types if @@types
@@ -28,11 +29,16 @@ class Import
     create_eggs if @@eggs
     create_evolutions if @@evolutions
     create_alternative_skins if @@alternative_skins
+    create_special_researches if @@special_researches
   end 
 
 ## ON VIDE
 
   def clear_everything
+    ResearchTask.delete_all
+    ResearchReward.delete_all
+    ResearchStep.delete_all
+    SpecialResearch.delete_all
     AlternativeSkin.delete_all
     Evolution.delete_all
     Pokemon.delete_all
@@ -44,16 +50,16 @@ class Import
     Type.delete_all
     Candy.delete_all
     Generation.delete_all
-    ResearchTask.delete_all
-    ResearchReward.delete_all
-    ResearchStep.delete_all
-    SpecialResearch.delete_all
     ActiveRecord::Base.connection.execute("DELETE FROM attacks_pokemons")
     ActiveRecord::Base.connection.execute("DELETE FROM eggs_pokemons")
     ActiveRecord::Base.connection.execute("DELETE FROM extreme_weaknesses_types")
     ActiveRecord::Base.connection.execute("DELETE FROM pokemons_types")
     ActiveRecord::Base.connection.execute("DELETE FROM strengths_types")
     ActiveRecord::Base.connection.execute("DELETE FROM types_weaknesses")
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_tasks')
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_rewards')
+    ActiveRecord::Base.connection.reset_pk_sequence!('research_steps')
+    ActiveRecord::Base.connection.reset_pk_sequence!('special_researches')
     ActiveRecord::Base.connection.reset_pk_sequence!('generations')
     ActiveRecord::Base.connection.reset_pk_sequence!('candies')
     ActiveRecord::Base.connection.reset_pk_sequence!('types')
@@ -65,10 +71,6 @@ class Import
     ActiveRecord::Base.connection.reset_pk_sequence!('eggs')
     ActiveRecord::Base.connection.reset_pk_sequence!('evolutions')
     ActiveRecord::Base.connection.reset_pk_sequence!('alternative_skins')
-    ActiveRecord::Base.connection.reset_pk_sequence!('research_tasks')
-    ActiveRecord::Base.connection.reset_pk_sequence!('research_rewards')
-    ActiveRecord::Base.connection.reset_pk_sequence!('research_steps')
-    ActiveRecord::Base.connection.reset_pk_sequence!('special_researches')
   end
 
 ## ON IMPORTE TOUJOURS LES GENERATIONS EN PREMIER
