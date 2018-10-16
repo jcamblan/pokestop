@@ -1,3 +1,6 @@
+- title("Liste des articles")
+- content_for :meta_title, "Pokéstop : Liste des articles)"
+- canonical(request.original_url)
 .articles.pt-4
   h2 Dernières actualités
   - @articles.each do |article|

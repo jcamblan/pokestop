@@ -1,4 +1,6 @@
 - title("#{@attack.name} (#{@attack.attack_category.name})")
+- content_for :meta_title, "Pokéstop : #{@attack.name} (#{@attack.attack_category.name}))"
+- canonical(request.original_url)
 .row
   .col-12.col-md-6
     .block

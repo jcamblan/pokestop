@@ -1,7 +1,7 @@
 header
   nav.navbar.navbar-dark.justify-content-between.navbar-expand-md style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
     = link_to root_path, class: 'navbar-brand' do
-      = image_tag 'pokestop.png', class: "pokestop__logo"
+      = image_tag 'pokestop.png', class: "pokestop__logo", alt: "Logo Pokéstop"
     /! Example single danger button
     = render 'layouts/menu'
 

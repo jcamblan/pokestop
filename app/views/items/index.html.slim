@@ -1,4 +1,6 @@
 - title("Liste des objets")
+- content_for :meta_title, "Pokéstop : Liste des objets"
+- canonical(request.original_url)
 .block.justify-content-center.d-flex
   - @items_categories.each do |items_category|
     = link_to "##{items_category.name.parameterize}" do

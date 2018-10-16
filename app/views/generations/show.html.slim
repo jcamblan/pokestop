@@ -1,4 +1,6 @@
 - title("Génération ##{@generation.id} : #{@generation.name}")
+- content_for :meta_title, "Pokéstop : Génération ##{@generation.id} : #{@generation.name}"
+- canonical(request.original_url)
 .pokemons
   .pokemons__list
     = paginate @pokemons

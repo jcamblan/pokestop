@@ -1,4 +1,6 @@
 - title("Liste des pokémons")
+- content_for :meta_title, "Pokéstop : Liste des Pokémons"
+- canonical(request.original_url)
 .pokemons.row.flex-column
   = render 'index_header'
   .pokemons__block.block

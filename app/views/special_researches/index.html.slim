@@ -1,3 +1,6 @@
+- title("Etudes spéciales")
+- content_for :meta_title, "Pokéstop : Etudes spéciales"
+- canonical(request.original_url)
 - @researches.each do |research|
   .research__header style=("background-image: url('#{image_path(research.name.parameterize + ".jpg")}')")
     .research__titles

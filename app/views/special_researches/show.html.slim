@@ -1,3 +1,6 @@
+- title(@research.name)
+- content_for :meta_title, "Pokéstop : #{@research.name}"
+- canonical(request.original_url)
 .research
   .research__header style=("background-image: url('#{image_path(@research.name.parameterize + ".jpg")}')")
     .research__titles
