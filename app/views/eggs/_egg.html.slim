@@ -4,3 +4,4 @@
   .egg__pokemons.row.justify-content-center
     - egg.pokemons.each do |pokemon|
       = render 'pokemon', egg: egg, pokemon: pokemon
+  .egg__updated = "Dernière mise à jour : #{egg.updated_at.strftime('%d/%m/%Y')}, #{egg.updated_at.strftime('%H:%M')}"

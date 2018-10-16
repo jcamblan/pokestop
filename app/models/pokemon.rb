@@ -1,9 +1,13 @@
 class Pokemon < ApplicationRecord
   belongs_to :generation, touch: true
-  has_and_belongs_to_many :types, touch: true
-  has_and_belongs_to_many :attacks, touch: true
+  has_and_belongs_to_many :types,
+                          after_add: :touch_updated_at,
+                          after_remove: :touch_updated_at
+  has_and_belongs_to_many :attacks,
+                          after_add: :touch_updated_at,
+                          after_remove: :touch_updated_at
   has_many :evolutions
-  has_and_belongs_to_many :eggs, touch: true
+  has_and_belongs_to_many :eggs
   belongs_to :candy, required: false
   has_many :movesets
   has_many :alternative_skins
@@ -21,6 +25,9 @@ class Pokemon < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
+  def touch_updated_at(habtm)
+    self.touch if persisted?
+  end
 
   def image_path
     return "pokemon/#{self.generation.id}-#{self.generation.name.parameterize}/#{self.num}.png"
