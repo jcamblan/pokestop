@@ -3,7 +3,7 @@ class PokemonsController < ApplicationController
   breadcrumb 'Pokémons', :pokemons_path
 
   def index
-    @pokemons = Pokemon.all.order(num: :asc)
+    @pokemons = Pokemon.where(:generation_id => Generation.where(on_prod: true).ids).order(num: :asc)
 
     respond_to do |format|
       format.html
