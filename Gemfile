@@ -48,6 +48,8 @@ gem 'cancancan'
 gem 'rolify'
 # pour de jolies url
 gem 'friendly_id', '~> 5.2.0'
+# sitemap
+gem 'sitemap_generator'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
