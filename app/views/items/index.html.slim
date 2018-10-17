@@ -1,5 +1,7 @@
 - title("Liste des objets")
 - content_for :meta_title, "Pokéstop : Liste des objets"
+- content_for :meta_description, "Les objets dans Pokémon GO, quels sont-ils ? A quoi servent-ils ? Quels sont leurs réseaux ?"
+- content_for :meta_keywords, "objets,items,baie,capsule,incubateur,pass de raid"
 - canonical(request.original_url)
 .block.justify-content-center.d-flex
   - @items_categories.each do |items_category|

@@ -7,6 +7,10 @@ module MetaTagsHelper
     content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["meta_description"]
   end
 
+  def meta_keywords
+    content_for?(:meta_keywords) ? content_for(:meta_keywords) + "," + DEFAULT_META["meta_keywords"] : DEFAULT_META["meta_keywords"]
+  end
+
   def meta_image
     meta_image = (content_for?(:meta_image) ? content_for(:meta_image) : DEFAULT_META["meta_image"])
     # ajoutez la ligne ci-dessous pour que le helper fonctionne indifféremment

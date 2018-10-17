@@ -1,5 +1,7 @@
 - title("Génération ##{@generation.id} : #{@generation.name}")
 - content_for :meta_title, "Pokéstop : Génération ##{@generation.id} : #{@generation.name}"
+- content_for :meta_description, "Liste des pokémons de la génération #{@generation.name}"
+- content_for :meta_keywords, "#{@generation.name}"
 - canonical(request.original_url)
 .pokemons
   .block
