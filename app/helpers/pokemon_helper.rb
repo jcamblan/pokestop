@@ -4,6 +4,10 @@ module PokemonHelper
     image_tag "pokemon/#{pokemon.generation.id}-#{pokemon.generation.name.parameterize}/#{pokemon.num}.png", alt: pokemon.name
   end
 
+  def display_pokemon_small_sprite(pokemon)
+    image_tag "pokemon/#{pokemon.generation.id}-#{pokemon.generation.name.parameterize}/small-#{pokemon.num}.png", alt: pokemon.name
+  end
+
   def display_alt_skin_sprite(skin)
     image_tag "pokemon/#{skin.pokemon.generation.id}-#{skin.pokemon.generation.name.parameterize}/#{skin.pokemon.num}-#{skin.nametag}.png", alt: skin.pokemon.name
   end

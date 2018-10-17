@@ -113,19 +113,19 @@ class Pokemon < ApplicationRecord
   # Les valeurs max des stats servent à générer les barres de progression
   #------------------------------------------------------------------------
 
-  def max_pc_max
+  def self.max_pc_max
     Pokemon.where("pc_max > 0").order(:pc_max).last.pc_max
   end
 
-  def max_atk
+  def self.max_atk
     Pokemon.where("atk > 0").order(:atk).last.atk
   end
 
-  def max_def
+  def self.max_def
     Pokemon.where("def > 0").order(:def).last.def
   end
 
-  def max_sta
+  def self.max_sta
     Pokemon.where("sta > 0").order(:sta).last.sta
   end
 
