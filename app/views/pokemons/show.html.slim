@@ -1,5 +1,7 @@
 - title("#{@pokemon.name} (##{@pokemon.num})")
 - content_for :meta_title, "Pokéstop : #{@pokemon.name} (##{@pokemon.num})"
+- content_for :meta_description, "Tout ce qu'il y a à savoir sur #{@pokemon.name} dans Pokémon GO : attaques, movesets, statistiques, évolutions..."
+- content_for :meta_keywords, "#{@pokemon.name},évolution,compétence,attaque"
 - content_for :meta_image, pokemon_sprite_url(@pokemon)
 - canonical(request.original_url)
 .pokemon.row.flex-column
