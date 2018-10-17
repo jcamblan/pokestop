@@ -34,7 +34,14 @@ html
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
+    
+    /! Global site tag (gtag.js) - Google Analytics
+    script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-127678810-1" 
+    javascript:
+      | window.dataLayer = window.dataLayer || [];
+      | function gtag(){dataLayer.push(arguments);}
+      | gtag('js', new Date());
+      | gtag('config', 'UA-127678810-1');
   body
     - header = current_page?(root_path) ? 'layouts/root_header' : 'layouts/header'
     = render header
@@ -43,11 +50,3 @@ html
 
       = yield
     = render 'layouts/footer'
-
-    /! Global site tag (gtag.js) - Google Analytics
-    script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-127678810-1" 
-    javascript:
-      | window.dataLayer = window.dataLayer || [];
-      | function gtag(){dataLayer.push(arguments);}
-      | gtag('js', new Date());
-      | gtag('config', 'UA-127678810-1');
