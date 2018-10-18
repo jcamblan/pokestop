@@ -1,0 +1,33 @@
+.events
+  .row
+    .col-12
+      .block
+        h2.block__h2 Evenements en cours
+        - if @current_events.empty?
+          p Aucun event à afficher
+        - else
+          - @current_events.each do |event|
+            .event
+              .event__title = event.title
+              .event__headline = sanitize event.headline
+              .event__start = event.start_date
+              .event__end = event.end_date
+  .row
+    .col-12.col-md-6.order-2
+      .block
+        h2.block__h2 Evenements passés
+        - if @past_events.empty?
+          p Aucun event à afficher
+        - else
+          - @past_events.each do |event|
+            .event
+              = event.title
+    .col-12.col-md-6.order-1
+      .block
+        h2.block__h2 Evenements à venir
+        - if @future_events.empty?
+          p Aucun event à afficher
+        - else
+          - @future_events.each do |event|
+            .event
+              = event.title

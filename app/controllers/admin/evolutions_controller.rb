@@ -10,7 +10,7 @@ class Admin::EvolutionsController < ApplicationController
   end
 
   def edit
-    @evolution = Evolution.friendly.find(params[:id])
+    @evolution = Evolution.find(params[:id])
     breadcrumb @evolution.title, edit_admin_evolution_path(@evolution)
   end
 
@@ -28,7 +28,7 @@ class Admin::EvolutionsController < ApplicationController
   end
 
   def update
-    @evolution = Evolution.friendly.find(params[:id])
+    @evolution = Evolution.find(params[:id])
     if @evolution.update(evolution_params)
       redirect_to admin_evolutions_path
     else

@@ -7,4 +7,16 @@ class Event < ApplicationRecord
     title_changed?
   end
 
+  def self.now
+    self.where('start_date < ?', DateTime.now).where('end_date > ?', DateTime.now)
+  end
+
+  def self.past
+    self.where('end_date < ?', DateTime.now)
+  end
+
+  def self.future
+    self.where('start_date > ?', DateTime.now)
+  end
+
 end
