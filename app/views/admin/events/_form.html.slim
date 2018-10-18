@@ -3,10 +3,12 @@ javascript:
     $('.multiple-select').select2();
     $('.single-select').select2();
     $('#datetimepicker1').datetimepicker({
-      locale: 'fr'
+      locale: 'fr',
+      sideBySide: true
     });
     $('#datetimepicker2').datetimepicker({
-      locale: 'fr'
+      locale: 'fr',
+      sideBySide: true
     });
   });
 
@@ -37,14 +39,15 @@ javascript:
             = f.label :body, "Corps :"
             = f.hidden_field :body, {:class => 'form-control'}
             trix-editor input=("event_body")
-          label Dates de l'évènement :
           .form-group
-            #datetimepicker1.input-group.date data-target-input="nearest" 
+            = f.label :start_date, "Début de l'évènement :"
+            #datetimepicker1.input-group.date data-target-input="nearest"
               = f.text_field :start_date, value: f.object.persisted? && f.object.start_date ? l(f.object.start_date&.to_datetime) : '', :class => 'form-control datetimepicker-input', data: {target: "#datetimepicker1"}
               .input-group-append data-target="#datetimepicker1" data-toggle="datetimepicker" 
                 .input-group-text
                   i.fa.fa-calendar
           .form-group
+            = f.label :start_date, "Fin de l'évènement :"
             #datetimepicker2.input-group.date data-target-input="nearest" 
               = f.text_field :end_date, value: f.object.persisted? && f.object.end_date ? l(f.object.end_date&.to_datetime) : '', :class => 'form-control datetimepicker-input', data: {target: "#datetimepicker2"}
               .input-group-append data-target="#datetimepicker2" data-toggle="datetimepicker" 
