@@ -1,3 +1,7 @@
+- if user_signed_in? && current_user.has_role?(:admin)
+  .row.justify-content-center.pb-3
+    .truc
+      = link_to "Modifier la fiche de #{pokemon.name}", edit_admin_pokemon_path(pokemon)
 .row.pokemon__header style=("background: linear-gradient(to bottom right, #{pokemon.candy.primary_color}, #{pokemon.candy.secondary_color});" if pokemon.candy)
   .pokemon__prev
     = link_to "<< #{pokemon.prev.name}", pokemon.prev
