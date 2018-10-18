@@ -37,6 +37,7 @@
 //= require bootstrap4/util
 //= require search
 //= require admin/datatables
+//= require google_analytics
 
 
 document.addEventListener("turbolinks:load", function() {
