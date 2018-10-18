@@ -32,11 +32,11 @@ script
     thead.thead-light
       tr
         th = t('.name')
-        th = t('.num')
-        th = t('.pc_max')
-        th = t('.atk')
-        th = t('.def')
-        th = t('.sta')
+        th.d-none.d-md-table-cell = t('.num')
+        th.d-none.d-md-table-cell = t('.pc_max')
+        th.d-none.d-md-table-cell = t('.atk')
+        th.d-none.d-md-table-cell = t('.def')
+        th.d-none.d-md-table-cell = t('.sta')
         th = t('.types')
     - cache @pokemons do
       - @pokemons.each do |pokemon|
@@ -45,11 +45,11 @@ script
             td 
               = link_to display_pokemon_small_sprite(pokemon), pokemon_path(pokemon)
               = link_to pokemon.name, pokemon_path(pokemon)
-            td = link_to pokemon.num, pokemon_path(pokemon)
-            td = small_stat_bar('pc_max',pokemon.pc_max,@max_pc)
-            td = small_stat_bar('atk',pokemon.atk,@max_atk)
-            td = small_stat_bar('def',pokemon.def,@max_def)
-            td = small_stat_bar('sta',pokemon.sta,@max_sta)
+            td.d-none.d-md-table-cell = link_to pokemon.num, pokemon_path(pokemon)
+            td.d-none.d-md-table-cell = small_stat_bar('pc_max',pokemon.pc_max,@max_pc)
+            td.d-none.d-md-table-cell = small_stat_bar('atk',pokemon.atk,@max_atk)
+            td.d-none.d-md-table-cell = small_stat_bar('def',pokemon.def,@max_def)
+            td.d-none.d-md-table-cell = small_stat_bar('sta',pokemon.sta,@max_sta)
             td 
               - pokemon.types.each do |t|
                 = link_to type_image(t), t
