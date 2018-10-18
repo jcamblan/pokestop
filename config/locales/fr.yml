@@ -5,6 +5,9 @@ fr:
   date:
     formats:
       default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
   devise:
     confirmations:
       confirmed: "Votre compte a été validé."

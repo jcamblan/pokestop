@@ -26,5 +26,5 @@
 //= require admin/datatables
 //= require trix
 //= require trix_uploads
-//= require bootstrap-datepicker/core
-//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+//= require moment-with-locales
+//= require tempusdominus-bootstrap-4.js
