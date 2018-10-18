@@ -3,10 +3,11 @@
 - content_for :meta_description, "Les objets dans Pokémon GO, quels sont-ils ? A quoi servent-ils ? Quels sont leurs réseaux ?"
 - content_for :meta_keywords, "objets,items,baie,capsule,incubateur,pass de raid"
 - canonical(request.original_url)
-.block.justify-content-center.d-flex
-  - @items_categories.each do |items_category|
-    = link_to "##{items_category.name.parameterize}" do
-      button.m-1.btn.btn-sm.btn-outline-secondary = items_category.name
+.block
+  .row.justify-content-center
+    - @items_categories.each do |items_category|
+      = link_to "##{items_category.name.parameterize}" do
+        span.m-1.btn.btn-sm.btn-outline-secondary = items_category.name
 
 - @items_categories.each do |items_category|
   .item-category.block.container-fluid class=("item-category--#{items_category.name_en.parameterize}") id=(items_category.name.parameterize)
