@@ -1,0 +1,28 @@
+- title("Articles")
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des events
+    = link_to new_admin_event_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+            th Publié ?
+            th Début
+            th Fin
+        tbody
+          - @events.each do |event|
+            tr
+              td = link_to event.id, edit_admin_event_path(event)
+              td = event.title
+              td = event.on_prod
+              td = l(event.start_date)
+              td = l(event.end_date)
+
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM

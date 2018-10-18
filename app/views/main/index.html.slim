@@ -2,12 +2,10 @@
   .row.justify-content-center
     .col-12.col-md-4.order-md-2
       .block
-        h2 Dernières modifications
+        h2.block__h2 Dernières modifications
         - @updates.each do |update|
           = link_to "#{update.name} - #{update.updated_at.strftime('%d/%m/%Y')}, #{update.updated_at.strftime('%H:%M')}", pokemon_path(update)
           br
-      .block
-        #calendar
     .col-12.col-md-7.order-md-1
       .home__articles.articles
         = render 'articles', articles: @articles

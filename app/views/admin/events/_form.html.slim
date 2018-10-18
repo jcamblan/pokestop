@@ -1,0 +1,53 @@
+javascript:
+  $(document).ready(function() {
+    $('.multiple-select').select2();
+    $('.single-select').select2();
+    $('#datepicker').datepicker({ 
+      format: 'dd/mm/yyyy',
+      autoclose: true,
+      language: 'fr'
+    });
+  });
+
+= form_for [:admin, @event] do |f|
+  - if @event.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@event.errors.count, "error")}"
+      ul
+      - @event.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :title, "Titre :"
+            = f.text_field :title, {:class => 'form-control'}
+          .form-group
+            = f.label :headline, "Chapô :"
+            = f.hidden_field :headline, {:class => 'form-control'}
+            trix-editor input=("event_headline")
+          .form-group
+            = f.label :body, "Corps :"
+            = f.hidden_field :body, {:class => 'form-control'}
+            trix-editor input=("event_body")
+          label Dates de l'évènement :
+          #datepicker.input-daterange.input-group.mb-3
+            .input-group-prepend
+              span.input-group-text Du
+            = f.text_field :start_date, value: f.object.persisted? && f.object.start_date ? l(f.object.start_date&.to_date) : '', :class => 'form-control input-sm'
+            .input-group-prepend.input-group-append
+              span.input-group-text au
+            = f.text_field :end_date, value: f.object.persisted? && f.object.end_date ? l(f.object.end_date&.to_date) : '', :class => 'form-control input-sm'
+          .form-group
+            = f.label :on_prod, "Publier ?"
+            br
+            = content_tag :label, '', {:class => 'switch'} do
+              = f.check_box :on_prod, {:class => 'form-control'}
+              span.slider.round
+

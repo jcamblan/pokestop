@@ -50,6 +50,8 @@ gem 'rolify'
 gem 'friendly_id', '~> 5.2.0'
 # sitemap
 gem 'sitemap_generator'
+# Date Picker
+gem 'bootstrap-datepicker-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     resources :research_steps
     resources :research_tasks
     resources :research_rewards
+    resources :candies
+    resources :events
   end
 
 

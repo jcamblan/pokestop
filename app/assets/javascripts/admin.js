@@ -26,3 +26,5 @@
 //= require admin/datatables
 //= require trix
 //= require trix_uploads
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js

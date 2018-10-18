@@ -29,7 +29,7 @@ script
             trix-editor input=("article_header")
           .form-group
             = f.label :body, "Corps :"
-            = f.text_area :body, {:class => 'form-control'}
+            = f.hidden_field :body, {:class => 'form-control'}
             trix-editor input=("article_body")
           .form-group
             = f.label :tag_ids, "Tags :"

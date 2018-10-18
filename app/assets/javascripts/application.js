@@ -15,12 +15,7 @@
 //= require turbolinks
 //= require jquery/jquery.min
 //= require jquery-easy-autocomplete/jquery.easy-autocomplete
-//= require moment-with-locales
 //= require popper.min
-//= require fullcalendar/fullcalendar.min
-//= require fullcalendar/gcal.min
-//= require fullcalendar/fr
-//= require filterrific/filterrific-jquery
 //= require datatables/jquery.dataTables.min
 //= require datatables/dataTables.bootstrap4.min
 //= require bootstrap4/alert
@@ -38,23 +33,3 @@
 //= require search
 //= require admin/datatables
 //= require google_analytics
-
-
-document.addEventListener("turbolinks:load", function() {
-
-  // page is now ready, initialize the calendar...
-
-  $('#calendar').fullCalendar({
-    eventSources: [
-      'calendar.json'
-    ],
-    height: 300,
-    header: {
-      left:   'prev',
-      center: 'title',
-      right:  'next'
-    },
-
-  })
-
-});

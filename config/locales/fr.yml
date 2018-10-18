@@ -2,6 +2,9 @@ fr:
   attacks:
     show:
       pokemons_count: "%{count} pokemons utilisent cette attaque"
+  date:
+    formats:
+      default: "%d/%m/%Y"
   devise:
     confirmations:
       confirmed: "Votre compte a été validé."

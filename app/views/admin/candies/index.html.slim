@@ -1,0 +1,27 @@
+- title("Articles")
+.card.mb-3
+  .card-header
+    i.fas.fa-table
+    | Liste des candies
+    = link_to new_admin_candy_path, class: 'float-right' do
+      button.btn.btn-primary Ajouter
+  .card-body
+    .table-responsive
+      table.dataTable.table.table-sm cellspacing="0" width="100%" 
+        thead
+          tr
+            th id
+            th Nom
+            th Couleur principale
+            th Couleur secondaire
+        tbody
+          - @candies.each do |candy|
+            tr
+              td = link_to candy.id, edit_admin_candy_path(candy)
+              td = candy.name
+              td 
+                span style=("background-color: #{candy.primary_color}; color: black; padding: 3px;") = candy.primary_color
+              td  
+                span style=("background-color: #{candy.secondary_color}; color: white; padding: 3px;") = candy.secondary_color
+
+  .card-footer.small.text-muted Updated yesterday at 11:59 PM

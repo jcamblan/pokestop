@@ -1,0 +1,31 @@
+script
+  | $(document).ready(function() {
+  | $('.multiple-select').select2();
+  | $('.single-select').select2();
+  | });
+
+= form_for [:admin, @candy] do |f|
+  - if @candy.errors.any?
+    #error_explanation
+      .alert.alert-danger = "The form contains #{pluralize(@candy.errors.count, "error")}"
+      ul
+      - @candy.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .py-3.ml-auto.mr-3
+      = f.submit "Valider", class: "btn btn-primary"
+  .row
+    .col-12
+      .card.mb-3
+        .card-header
+          | Carte d'identité
+        .card-body
+          .form-group
+            = f.label :name, "Nom :"
+            = f.text_field :name, {:class => 'form-control'}
+          .form-group
+            = f.label :primary_color, "Couleur principale :"
+            = f.text_field :primary_color, {:class => 'form-control'}
+          .form-group
+            = f.label :secondary_color, "Couleur secondaire :"
+            = f.text_field :secondary_color, {:class => 'form-control'}
