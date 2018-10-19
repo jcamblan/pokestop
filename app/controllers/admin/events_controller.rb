@@ -39,6 +39,6 @@ class Admin::EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :headline, :body, :start_date, :end_date, :on_prod)
+      params.require(:event).permit(:title, :headline, :body, :start_date, :end_date, :on_prod, :image_url)
     end
 end

@@ -9,18 +9,18 @@
       table.table
         thead
           tr
-            th scope="col" = t('views.generations.index.col_num')
-            th scope="col" = t('views.generations.index.col_name')
-            th scope="col" = t('views.generations.index.col_first')
-            th scope="col" = t('views.generations.index.col_last')
+            th scope="col" = t('.num')
+            th scope="col" = t('.name')
+            th scope="col" = t('.first')
+            th scope="col" = t('.last')
         tbody
           - @generations.each do |g|
-            tr
+            tr class=("list__tr--gray" unless g.on_prod)
               td = link_to g.id, g
               td = link_to g.name, g
               td 
                 = link_to display_pokemon_sprite(g.pokemons.order(:num).first), pokemon_path(g.pokemons.order(:num).first)
-                = link_to "#{g.pokemons.order(:num).first.name} (##{g.pokemons.order(:num).first.num})", pokemon_path(g.pokemons.order(:num).first)
+                span.d-none.d-sm-inline = link_to "#{g.pokemons.order(:num).first.name} (##{g.pokemons.order(:num).first.num})", pokemon_path(g.pokemons.order(:num).first)
               td 
                 = link_to display_pokemon_sprite(g.pokemons.order(:num).last), pokemon_path(g.pokemons.order(:num).last)
-                = link_to "#{g.pokemons.order(:num).last.name} (##{g.pokemons.order(:num).last.num})", pokemon_path(g.pokemons.order(:num).last)
+                span.d-none.d-sm-inline = link_to "#{g.pokemons.order(:num).last.name} (##{g.pokemons.order(:num).last.num})", pokemon_path(g.pokemons.order(:num).last)

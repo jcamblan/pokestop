@@ -55,3 +55,15 @@ header {
     }
   }
 }
+
+.navbar__active {
+  font-weight: bold;
+}
+
+.nav-link {
+  text-shadow: 0px 0px 5px black;
+  text-transform: uppercase;
+}
+.nav-link {
+  color: white !important;
+}

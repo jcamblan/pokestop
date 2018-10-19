@@ -12,8 +12,9 @@
               .event__headline = sanitize event.headline
               .event__start = event.start_date
               .event__end = event.end_date
+              .event__image = image_tag event.image_url, class: 'rounded-circle'
   .row
-    .col-12.col-md-6.order-2
+    .col-12.col-md-6.order-2.order-md-1
       .block
         h2.block__h2 Evenements passés
         - if @past_events.empty?
@@ -22,7 +23,7 @@
           - @past_events.each do |event|
             .event
               = event.title
-    .col-12.col-md-6.order-1
+    .col-12.col-md-6.order-1.order-md-2
       .block
         h2.block__h2 Evenements à venir
         - if @future_events.empty?

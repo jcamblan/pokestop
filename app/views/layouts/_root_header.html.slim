@@ -1,27 +1,22 @@
-header.root
+header
+  .root
+    h1.hidden Pokéstop
 
-  h1.hidden Pokéstop
+    = image_tag 'pokestop.png', class: "pokestop__logo"
 
-  = image_tag 'pokestop.png', class: "pokestop__logo"
+    p.d-none.d-md-block Base de données & actualités sur Pokémon GO
 
-  p Base de données & actualités sur Pokémon GO
+    .search
+      = form_with url: search_path, local: true, method: :get, html: { class: "form" } do |form|
+        = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control"
+        = form.button t('.search'), class: "btn btn-outline-light"
 
-  .search
-    = form_with url: search_path, local: true, method: :get, html: { class: "form" } do |form|
-      = form.text_field :q, placeholder: t('.search_placeholder'), data: { behavior: 'autocomplete' }, class: "form-control"
-      = form.button t('.search'), class: "btn btn-outline-light"
+    .wip.d-none.d-md-block
+      = image_tag 'wip.gif'
 
-  .wip.d-none.d-md-block
-    = image_tag 'wip.gif'
-
-nav.navbar.navbar-light.bg-light.justify-content-center
-  = link_to pokemons_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary = t('.pokemons')
-  = link_to attacks_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary = t('.attacks')
-  = link_to items_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary = t('.items')
-  = link_to special_researches_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary = t('.researches')
-  = link_to eggs_path do
-    button.m-1.btn.btn-sm.btn-outline-secondary = t('.eggs')
+  nav.navbar.navbar-expand-sm.navbar-dark style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
+    button.navbar-toggler aria-controls="navbar__navigation" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbar__navigation" data-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #navbar__navigation.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+        = render 'layouts/menu'

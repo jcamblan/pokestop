@@ -67,6 +67,12 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
+  generations:
+    index:
+      num: "#"
+      name: "Nom"
+      first: "Premier Pokémon"
+      last: "Dernier Pokémon"
   layouts:
     footer:
       pokemons: "Pokémons"

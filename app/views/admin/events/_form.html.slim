@@ -32,6 +32,9 @@ javascript:
             = f.label :title, "Titre :"
             = f.text_field :title, {:class => 'form-control'}
           .form-group
+            = f.label :image_url, "URL image (carré SVP) :"
+            = f.text_field :image_url, {:class => 'form-control'}
+          .form-group
             = f.label :headline, "Chapô :"
             = f.hidden_field :headline, {:class => 'form-control'}
             trix-editor input=("event_headline")

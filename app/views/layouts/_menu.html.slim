@@ -1,9 +1,15 @@
-.btn-group
-  button.btn.btn-outline-light.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
-    | Navigation
-  .dropdown-menu
-    = link_to t('.pokemons'), pokemons_path, class: 'dropdown-item'
-    = link_to t('.attacks'), attacks_path, class: 'dropdown-item'
-    = link_to t('.items'), items_path, class: 'dropdown-item'
-    = link_to t('.researches'), special_researches_path, class: 'dropdown-item'
-    = link_to t('.eggs'), eggs_path, class: 'dropdown-item'
+li.nav-item class=("#{'active navbar__active' if current_page?(generations_path)}")
+  = link_to t('.pokemons'), generations_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(generations_path)
+li.nav-item class=("#{'active navbar__active' if current_page?(attacks_path)}")
+  = link_to t('.attacks'), attacks_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(attacks_path)
+li.nav-item class=("#{'active navbar__active' if current_page?(items_path)}")
+  = link_to t('.items'), items_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(items_path)
+li.nav-item class=("#{'active navbar__active' if current_page?(special_researches_path)}")
+  = link_to t('.researches'), special_researches_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(special_researches_path)
+li.nav-item class=("#{'active navbar__active' if current_page?(eggs_path)}")
+  = link_to t('.eggs'), eggs_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(eggs_path)
