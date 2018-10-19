@@ -1,9 +1,11 @@
 class MainController < ApplicationController
 
   def index
-    @events = Event.where(on_prod: true)
+    @current_events = Event.now.order(end_date: :asc)
+    @future_events = Event.future.order(start_date: :asc).limit(5)
     @articles = Article.where(published: true).where(homepage: true).order(created_at: :desc)
     @updates = Pokemon.all.order(updated_at: :desc).limit(5)
+
   end
 
   def search

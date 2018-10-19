@@ -1,11 +1,8 @@
 .home
   .row.justify-content-center
-    .col-12.col-md-4.order-md-2
-      .block
-        h2.block__h2 Dernières modifications
-        - @updates.each do |update|
-          = link_to "#{update.name} - #{update.updated_at.strftime('%d/%m/%Y')}, #{update.updated_at.strftime('%H:%M')}", pokemon_path(update)
-          br
-    .col-12.col-md-7.order-md-1
+    .col-12.col-lg-5.order-1.order-md-2
+      = render 'events', current_events: @current_events, future_events: @future_events
+      = render 'updates', updates: @updates
+    .col-12.col-lg-7.order-2.order-md-1
       .home__articles.articles
         = render 'articles', articles: @articles

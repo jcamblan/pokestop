@@ -1,4 +1,8 @@
-.articles.pt-4
-  h2 Dernières actualités
+.articles
+  h2.articles__title
+    i.fas.fa-bullhorn
+    | &nbsp;
+    | Dernières actualités
+  hr
   - articles.each do |a|
     = render 'article', article: a

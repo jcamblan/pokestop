@@ -1,13 +1,7 @@
-- if event.illustration.asset.url
-  li
-    figure.snip1529
-      = image_tag event.illustration.asset.url, class: 'pr-sample13'
-      .date
-        span.day = event.created_at.strftime('%d') 
-        span.month = event.created_at.strftime('%b')
-      figcaption
-        h3 = event.title
-        p = event.headline
-      .hover
-        i.ion-android-open
-      //= link_to '', article_path(article.id)
+- if event == events.first
+  hr.m-2
+.row
+  .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
+  .event__short-text
+    .event__title = link_to event.title, event
+    span.event__start = "Débute le #{l(event.start_date)}"

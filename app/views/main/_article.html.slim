@@ -8,3 +8,9 @@
   hr
   .home-article__heading
     = sanitize article.header
+  .home-article__more.text-right
+    = link_to article do
+      button.btn.btn-success
+        i.fas.fa-align-justify
+        | &nbsp;
+        | Lire la suite

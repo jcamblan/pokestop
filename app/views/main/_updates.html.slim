@@ -1,0 +1,15 @@
+.home__updates
+  .block
+    h2.updates__title 
+      i.fas.fa-wrench
+      | &nbsp;
+      | Fiches récemment modifiées
+    - updates.each do |update|
+      - if update == updates.first
+        hr.m-1
+      .row
+        .update__image.mx-4 = link_to display_pokemon_sprite(update), update
+        .update__short-text
+          = link_to update.name, update
+          = ", le #{l(update.updated_at)}"
+      hr.m-1

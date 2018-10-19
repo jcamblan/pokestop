@@ -1,8 +1,18 @@
-.events_carousel.carousel
-  ul
-    - events.each do |e|
-      = render 'event', event: e
-- if events.count
-  a.events__control-prev href="#"  &lsaquo;
-  a.events__control-next href="#"  &rsaquo;
-  p.events__pagination
+.home__events
+  .block
+    - unless current_events.empty?
+      h2.home__current-events 
+        i.far.fa-calendar-check
+        | &nbsp;
+        = t('current_events')
+      - current_events.each do |event|
+        = render 'event', event: event, events: current_events
+        hr.m-2
+    - unless future_events.empty?
+      h2.home__future-events 
+        i.far.fa-calendar-alt
+        | &nbsp;
+        = t('.future_events')
+      - future_events.each do |event|
+        = render 'event', event: event, events: future_events
+        hr.m-2
