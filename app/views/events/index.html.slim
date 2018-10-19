@@ -1,9 +1,16 @@
+- title("Events")
+- content_for :meta_title, "Liste des évènements Pokémon GO"
+- content_for :meta_description, "Quels sont les évènements en cours, passés ou à venir sur Pokémon GO ?"
+- canonical(request.original_url)
 .events
-  h1 Liste des events
+  .events__title
+    h1
+      i.far.fa-calendar-alt
+      |  Liste des évènements
   .row
     .col-12
       .events__current
-        h2.block__h2 Evenements en cours
+        h2.block__h2.sr-only En cours
         - if @current_events.empty?
           p Aucun event à afficher
         - else
@@ -12,7 +19,7 @@
               .col-12.col-md-3.col-lg-2 
                 .event__image = image_tag event.image_url, class: 'rounded-circle shadow'
               .col-12.col-md-9.col-lg-10
-                h3.event__title = event.title
+                h3.event__title = link_to event.title, event
                 .event__headline = sanitize event.headline
               .event__dates.rounded
                 span.event__start = "Du #{l(event.start_date)}"
@@ -20,7 +27,7 @@
   .row
     .col-12.col-md-6.order-2.order-md-1
       .block.events__past
-        h2.block__h2 Evenements passés
+        h2.block__h2 Passés
         - if @past_events.empty?
           p Aucun event à afficher
         - else
@@ -30,12 +37,12 @@
             .row
               .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
               .truc
-                .event__title = event.title
+                .event__title = link_to event.title, event
                 span.event__start = "Débute le #{l(event.start_date)}"
             hr.m-2
     .col-12.col-md-6.order-1.order-md-2
       .block.events__coming
-        h2.block__h2 Evenements à venir
+        h2.block__h2 Prochainement
         - if @future_events.empty?
           p Aucun event à afficher
         - else
@@ -45,6 +52,6 @@
             .row
               .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
               .truc
-                .event__title = event.title
+                .event__title = link_to event.title, event
                 span.event__start = "Débute le #{l(event.start_date)}"
             hr.m-2

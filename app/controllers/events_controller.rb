@@ -7,7 +7,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    breadcrumb @event.name, event_path(@event)
+    @event = Event.friendly.find(params[:id])
+    breadcrumb @event.title, event_path(@event)
   end
 
   def index

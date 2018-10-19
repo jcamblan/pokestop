@@ -1,3 +1,8 @@
+
+.events__title h1 {
+  text-align: center;
+}
+
 .events__current {
   padding-top: 40px;
 }
@@ -13,12 +18,14 @@
 
 .event__image img {
   width: 150px;
+  height: 150px;
   margin: auto;
   padding:0;
 }
 
 .event__image--small img {
   width: 60px;
+  height: 60px;
 }
 
 @media (min-width: 800px) {
@@ -33,7 +40,7 @@
 .event__texts {
 }
 
-h3.event__title {
+h1.event__title, h3.event__title {
   text-transform: uppercase;
   font-family: monospace;
   text-align: center;
@@ -45,8 +52,11 @@ h3.event__title {
 
 .event__dates {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   top: -15px;
-  right: 15px;
+  left: 0;
+  right:0;
   background-color: $light;
   padding: 4px;
   border-top: 2px solid lightgrey;

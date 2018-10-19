@@ -1,0 +1,20 @@
+- title("Event : #{@event.title}")
+- content_for :meta_title, "Event : #{@event.title}"
+- content_for :meta_description, strip_tags(@event.headline)
+- content_for :meta_image, @event.image_url
+- canonical(request.original_url)
+.event
+  .block.row.mx-auto
+    .col-12.col-md-3.col-lg-2 
+      .event__image = image_tag @event.image_url, class: 'rounded-circle shadow'
+    .col-12.col-md-9.col-lg-10
+      h1.event__title = @event.title
+      .event__headline = sanitize @event.headline
+    .event__dates.rounded
+      span.event__start = "Du #{l(@event.start_date)}"
+      span.event__end = " au #{l(@event.end_date)}"
+    .col-12
+      hr
+    .col-12
+      .event__body
+        = sanitize @event.body

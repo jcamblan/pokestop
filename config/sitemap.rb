@@ -29,6 +29,7 @@ SitemapGenerator::Sitemap.create do
   add items_path, :changefreq => 'weekly'
   add generations_path, :changefreq => 'weekly'
   add articles_path, :changefreq => 'weekly'
+  add events_path, :changefreq => 'weekly'
   add special_researches_path, :changefreq => 'weekly'
   add types_path, :changefreq => 'weekly'
   add eggs_path, :changefreq => 'weekly'
@@ -47,6 +48,10 @@ SitemapGenerator::Sitemap.create do
   
   Article.find_each do |article|
     add article_path(article), :lastmod => article.updated_at, :changefreq => 'daily'
+  end
+  
+  Event.find_each do |event|
+    add event_path(event), :lastmod => event.updated_at, :changefreq => 'daily'
   end
   
   Type.find_each do |type|
