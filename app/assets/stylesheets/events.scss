@@ -1,0 +1,54 @@
+.events__current {
+  padding-top: 40px;
+}
+
+.event {
+  padding: 30px 0 20px 0;
+  position: relative;
+}
+
+.event__image {
+  text-align:center;
+}
+
+.event__image img {
+  width: 150px;
+  margin: auto;
+  padding:0;
+}
+
+.event__image--small img {
+  width: 60px;
+}
+
+@media (min-width: 800px) {
+  .event__image {
+    text-align:left;
+  }
+  .event__image img {
+    margin: 0;
+  }
+}
+
+.event__texts {
+}
+
+h3.event__title {
+  text-transform: uppercase;
+  font-family: monospace;
+  text-align: center;
+}
+
+.event__headline {
+  text-align: justify;
+}
+
+.event__dates {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  background-color: $light;
+  padding: 4px;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+}

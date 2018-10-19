@@ -1,34 +1,50 @@
 .events
+  h1 Liste des events
   .row
     .col-12
-      .block
+      .events__current
         h2.block__h2 Evenements en cours
         - if @current_events.empty?
           p Aucun event à afficher
         - else
           - @current_events.each do |event|
-            .event
-              .event__title = event.title
-              .event__headline = sanitize event.headline
-              .event__start = event.start_date
-              .event__end = event.end_date
-              .event__image = image_tag event.image_url, class: 'rounded-circle'
+            .event.block.row.mx-auto
+              .col-12.col-md-3.col-lg-2 
+                .event__image = image_tag event.image_url, class: 'rounded-circle shadow'
+              .col-12.col-md-9.col-lg-10
+                h3.event__title = event.title
+                .event__headline = sanitize event.headline
+              .event__dates.rounded
+                span.event__start = "Du #{l(event.start_date)}"
+                span.event__end = " au #{l(event.end_date)}"
   .row
     .col-12.col-md-6.order-2.order-md-1
-      .block
+      .block.events__past
         h2.block__h2 Evenements passés
         - if @past_events.empty?
           p Aucun event à afficher
         - else
           - @past_events.each do |event|
-            .event
-              = event.title
+            - if event == @past_events.first
+              hr.m-2
+            .row
+              .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
+              .truc
+                .event__title = event.title
+                span.event__start = "Débute le #{l(event.start_date)}"
+            hr.m-2
     .col-12.col-md-6.order-1.order-md-2
-      .block
+      .block.events__coming
         h2.block__h2 Evenements à venir
         - if @future_events.empty?
           p Aucun event à afficher
         - else
           - @future_events.each do |event|
-            .event
-              = event.title
+            - if event == @future_events.first
+              hr.m-2
+            .row
+              .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
+              .truc
+                .event__title = event.title
+                span.event__start = "Débute le #{l(event.start_date)}"
+            hr.m-2
