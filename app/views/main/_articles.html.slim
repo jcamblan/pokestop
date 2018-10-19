@@ -2,7 +2,7 @@
   h2.articles__title
     i.fas.fa-bullhorn
     | &nbsp;
-    | Dernières actualités
+    = t('.last_news')
   hr
   - articles.each do |a|
     = render 'article', article: a

@@ -4,7 +4,7 @@
       h2.home__current-events 
         i.far.fa-calendar-check
         | &nbsp;
-        = t('current_events')
+        = t('.current_events')
       - current_events.each do |event|
         = render 'event', event: event, events: current_events
         hr.m-2

@@ -4,7 +4,7 @@
 - content_for :meta_image, @event.image_url
 - canonical(request.original_url)
 .event
-  .block.row.mx-auto
+  .block.row.mx-auto.pt-5
     .col-12.col-md-3.col-lg-2 
       .event__image = image_tag @event.image_url, class: 'rounded-circle shadow'
     .col-12.col-md-9.col-lg-10

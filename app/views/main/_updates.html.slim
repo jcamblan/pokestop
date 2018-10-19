@@ -3,7 +3,7 @@
     h2.updates__title 
       i.fas.fa-wrench
       | &nbsp;
-      | Fiches récemment modifiées
+      = t('.recently_updated')
     - updates.each do |update|
       - if update == updates.first
         hr.m-1

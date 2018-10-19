@@ -1,6 +1,8 @@
 
 .events__title h1 {
-  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: $secondary;
 }
 
 .events__current {
@@ -24,8 +26,8 @@
 }
 
 .event__image--small img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width: 800px) {
@@ -46,6 +48,7 @@ h1.event__title, h3.event__title {
   text-align: center;
 }
 
+
 .event__headline {
   text-align: justify;
 }
@@ -61,4 +64,8 @@ h1.event__title, h3.event__title {
   padding: 4px;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
+}
+
+.event__short-text {
+  line-height: 18px;
 }

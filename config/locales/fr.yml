@@ -97,6 +97,15 @@ fr:
       researches: "Etudes spéciales"
       search: "Rechercher"
       search_placeholder: "Pokémon, objet, attaque..."
+  main:
+    articles:
+      last_news: "Dernières actualités :"
+      read_more: "Lire la suite"
+    events:
+      current_events: "Events en cours :"
+      future_events: "Prochains events :"
+    updates:
+      recently_updated: "Fiches récemment modifiées :"
   pokemons:
     blocks:
       attacks:

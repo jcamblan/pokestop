@@ -35,8 +35,8 @@
             - if event == @past_events.first
               hr.m-2
             .row
-              .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
-              .truc
+              .col-1.event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
+              .col-9.event__short-text
                 .event__title = link_to event.title, event
                 span.event__start = "Débute le #{l(event.start_date)}"
             hr.m-2
@@ -50,8 +50,8 @@
             - if event == @future_events.first
               hr.m-2
             .row
-              .event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
-              .truc
+              .col-1.event__image--small.mx-4 = image_tag event.image_url, class: 'rounded-circle shadow'
+              .col-9.event__short-text
                 .event__title = link_to event.title, event
                 span.event__start = "Débute le #{l(event.start_date)}"
             hr.m-2
