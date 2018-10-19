@@ -13,3 +13,6 @@ li.nav-item class=("#{'active navbar__active' if current_page?(special_researche
 li.nav-item class=("#{'active navbar__active' if current_page?(eggs_path)}")
   = link_to t('.eggs'), eggs_path, class: 'nav-link'
   span.sr-only = "current" if current_page?(eggs_path)
+li.nav-item class=("#{'active navbar__active' if current_page?(events_path)}")
+  = link_to t('.events'), events_path, class: 'nav-link'
+  span.sr-only = "current" if current_page?(events_path)
