@@ -14,9 +14,9 @@ header
     .wip.d-none.d-md-block
       = image_tag 'wip.gif'
 
-  nav.navbar.navbar-expand-sm.navbar-dark style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
+  nav.navbar.navbar-expand-sm.navbar-dark.justify-content-center style=("background-color: #{@pokemon.candy.primary_color} ! important;" if @pokemon && @pokemon.candy)
     button.navbar-toggler aria-controls="navbar__navigation" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbar__navigation" data-toggle="collapse" type="button" 
       span.navbar-toggler-icon
     #navbar__navigation.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      ul.navbar-nav.mt-2.mt-lg-0.mx-auto
         = render 'layouts/menu'
