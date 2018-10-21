@@ -4,6 +4,7 @@ Projet de site Rails dédié à Pokémon mais surtout à mon apprentissage
 
 Pour réinitialiser la BDD et la remplir à partir d'une sauvegarde JSON :
 > `rake import:everything`
+
 Pour générer les combinaisons d'attaques à partir des attaques en base :
 > `MovesetsCalculator.new.fill_movesets_table` 
 
