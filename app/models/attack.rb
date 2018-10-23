@@ -1,7 +1,7 @@
 class Attack < ApplicationRecord
 
   belongs_to :attack_category, touch: true
-  has_and_belongs_to_many :pokemons, touch: true
+  has_and_belongs_to_many :pokemons
   belongs_to :type, touch: true
 
   validates :name, presence: true
