@@ -1,3 +1,7 @@
+h1.special-researches__title {
+  @extend h2.articles__title;
+}
+
 .research-index {
   background-color: white;
   margin-bottom: 30px;
