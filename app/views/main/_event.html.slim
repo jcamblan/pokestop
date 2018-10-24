@@ -5,6 +5,6 @@
   .col-9.event__short-text
     .event__title = link_to event.title, event
     - if event.start_date < DateTime.now
-      span.event__start = "Débute le #{l(event.start_date)}"
-    - else
       span.event__end = "Date de fin : #{l(event.end_date)}"
+    - else
+      span.event__start = "Débute le #{l(event.start_date)}"
