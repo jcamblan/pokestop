@@ -3,22 +3,38 @@
 - content_for :meta_description, "Les études spéciales dans Pokémon GO, comment obtenir Mew et Celebi"
 - content_for :meta_keywords, "mew,celebi,étude spéciale,quête"
 - canonical(request.original_url)
+h2.articles__title
+  i.fas.fa-search
+  | &nbsp;
+  = t('.researches')
+hr
 - @researches.each do |research|
-  .research__header style=("background-image: url('#{image_path(research.name.parameterize + ".jpg")}')")
-    .research__titles
-      p.research__subtitle Etude spéciale :
-      h1.research__title = link_to research.name, research, class: 'research__title'
-    .d-none.d-md-block.pl-3.pt-3
-      .d-inline-block
-        .task__xp.task__xp--relative.d-flex.flex-column.align-items-center.justify-content-center
-          span = research.total_xp
-          span PX
-      - research.pokemons_rewarded.each do |pokemon|
-        .reward__image.d-inline-block 
-          = link_to pokemon do
-            = image_tag pokemon.image_path, width: "50px", alt: pokemon.name, title: pokemon.name
-    .d-none.d-md-block.pl-3.pt-3
-      - research.items_rewarded.uniq.each do |item|
-        .reward__image.d-inline-block 
-          = link_to item do
-            = image_tag item.image_path, width: "40px", alt: item.name, title: item.name
+  .research-index
+    .research-index__header style=("background-image: url('#{image_path(research.name.parameterize + ".jpg")}')")
+    .p-2
+      .research-index__titles
+        h2 = research.name
+      hr.research-index__hr
+      .research-index__body.px-3.text-center
+        p.research-index__desc = sanitize research.desc
+        hr
+        h3 
+          i.fas.fa-gift
+          | &nbsp;
+          = t('.rewards')
+        .d-inline-block
+          .task__xp.task__xp--relative.d-flex.flex-column.align-items-center.justify-content-center
+            span = research.total_xp
+            span PX
+        - research.pokemons_rewarded.each do |pokemon|
+          .reward__image.d-inline-block 
+            = link_to pokemon do
+              = image_tag pokemon.image_path, width: "50px", alt: pokemon.name, title: pokemon.name
+      .px-3.pt-3.text-center
+        - research.items_rewarded.uniq.each do |item|
+          .reward__image.d-inline-block 
+            = link_to item do
+              = image_tag item.image_path, width: "40px", alt: item.name, title: item.name
+      .text-center.pt-2
+        = link_to research do
+          button.btn.btn-outline-secondary = t('.more').upcase

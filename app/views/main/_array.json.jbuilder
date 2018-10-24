@@ -145,6 +145,7 @@ json.special_researches do
   json.array!(@special_researches) do |research|
     json.name research.name
     json.is_active research.is_active
+    json.desc research.desc
     json.steps do
       json.array!(research.research_steps.order(:step_id)) do |step|
         json.name step.name

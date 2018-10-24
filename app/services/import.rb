@@ -315,6 +315,7 @@ class Import
     r = SpecialResearch.new
     r.name = research['name']
     r.is_active = research['is_active']
+    r.desc = research['desc']
     r.save
     create_research_steps(research['steps'],SpecialResearch.find_by(name: research['name']))
   end

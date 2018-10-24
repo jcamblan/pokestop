@@ -170,6 +170,11 @@ fr:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+  special_researches:
+    index:
+      researches: "études spéciales :"
+      rewards: "Récompenses :"
+      more: "Voir l'étude spéciale"
   views:
     pagination:
       first: "&laquo;"
