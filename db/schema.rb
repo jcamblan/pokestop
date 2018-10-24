@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_203008) do
+ActiveRecord::Schema.define(version: 2018_10_24_075337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -265,6 +265,9 @@ ActiveRecord::Schema.define(version: 2018_10_18_203008) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.integer "pokemon_reward"
+    t.integer "item_reward"
+    t.string "reward_type"
     t.index ["pokemon_id"], name: "index_research_tasks_on_pokemon_id"
     t.index ["research_step_id"], name: "index_research_tasks_on_research_step_id"
   end
@@ -285,6 +288,7 @@ ActiveRecord::Schema.define(version: 2018_10_18_203008) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.text "desc"
   end
 
   create_table "strengths_types", id: false, force: :cascade do |t|

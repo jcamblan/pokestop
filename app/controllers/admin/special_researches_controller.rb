@@ -43,6 +43,6 @@ class Admin::SpecialResearchesController < ApplicationController
     end
 
     def special_research_params
-      params.require(:special_research).permit(:name, :is_active)
+      params.require(:special_research).permit(:name, :desc, :is_active)
     end
 end

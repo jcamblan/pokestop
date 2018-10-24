@@ -45,6 +45,6 @@ class Admin::ResearchTasksController < ApplicationController
     end
 
     def research_task_params
-      params.require(:research_task).permit(:name, :research_step_id, :pokemon_id, :desc, :xp_reward)
+      params.require(:research_task).permit(:name, :research_step_id, :pokemon_id, :desc, :xp_reward, :pokemon_reward, :item_reward, :reward_type)
     end
 end

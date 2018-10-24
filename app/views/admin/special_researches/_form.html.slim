@@ -24,6 +24,10 @@ script
             = f.label :name, "Nom FR :"
             = f.text_field :name, {:class => 'form-control'}
           .form-group
+            = f.label :desc, "Description :"
+            = f.hidden_field :desc, {:class => 'form-control'}
+            trix-editor input=("special_research_desc")
+          .form-group
             = f.label :is_active, "Etude active ?"
             br
             = content_tag :label, '', {:class => 'switch'} do

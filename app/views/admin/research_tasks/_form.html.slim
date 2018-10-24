@@ -31,5 +31,23 @@ script
             = f.label :desc, "Description :"
             = f.text_field :desc, {:class => 'form-control'}
           .form-group
-            = f.label :xp_reward, "Récompense d'XP :"
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "pokemon", {:class => 'custom-control-input'}
+              = f.label 'reward_type_pokemon', "Pokémon", {:class => 'custom-control-label'}
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "item", {:class => 'custom-control-input'}
+              = f.label 'reward_type_item', "Objet", {:class => 'custom-control-label'}
+            .custom-control.custom-radio.custom-control-inline
+              = f.radio_button :reward_type, "xp", {:class => 'custom-control-input'}
+              = f.label 'reward_type_xp', "XP", {:class => 'custom-control-label'}
+          .form-group
+            = f.label :pokemon_reward, "Pokémon :"
+            br
+            = f.collection_select :pokemon_reward, Pokemon.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :item_reward, "Objet :"
+            br
+            = f.collection_select :item_reward, Item.all, :id, :name, {:prompt => true}, {style: 'width:100%', :class => 'single-select'}
+          .form-group
+            = f.label :xp_reward, "XP :"
             = f.text_field :xp_reward, {:class => 'form-control'}

@@ -83,6 +83,15 @@ h2.step__title {
   display: inline-block;
 }
 
+.task__reward {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $white;
+  height: 50px;
+}
+
 .rewards {
   margin-top: 40px;
   background-color: #e9e7fd;

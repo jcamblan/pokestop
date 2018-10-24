@@ -26,6 +26,11 @@ class SpecialResearch < ApplicationRecord
           pokemons << reward.pokemon
         end
       end
+      step.research_tasks.each do |task|
+        if task.reward_type == 'pokemon'
+          pokemons << task.reward
+        end
+      end
     end
     return pokemons
   end

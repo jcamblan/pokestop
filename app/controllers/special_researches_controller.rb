@@ -3,7 +3,7 @@ class SpecialResearchesController < ApplicationController
   breadcrumb 'Etudes spéciales', :special_researches_path
 
   def index
-    @researches = SpecialResearch.all.order(:id)
+    @researches = SpecialResearch.where(is_active: true).order(:id)
   end
 
   def show

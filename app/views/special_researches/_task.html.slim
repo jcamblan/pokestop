@@ -1,8 +1,12 @@
 .step__task.task
   .task__desc.d-flex.flex-row.align-items-center
     span = task.desc
-  .task__xp.d-flex.flex-column.align-items-center.justify-content-center
-    span = task.xp_reward
-    span PX
+  - if task.reward_type == "xp" || task.reward_type.nil?
+    .task__xp.d-flex.flex-column.align-items-center.justify-content-center
+      span = task.xp_reward
+      span PX
+  - elsif task.reward_type == "pokemon" ||  task.reward_type == "item"
+    .task__reward.d-flex.flex-column.align-items-center.justify-content-center
+      = link_to task.reward do
+        = image_tag task.reward.image_path, width: "50px", alt: task.reward.name, title: task.reward.name
 hr
-  
