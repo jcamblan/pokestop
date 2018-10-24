@@ -345,7 +345,10 @@ class Import
     t = ResearchTask.new
     t.name = task['name']
     t.desc = task['desc']
-    t.xp_reward = task['xp_reward']
+    t.reward_type = task['reward_type']
+    t.pokemon_reward = Pokemon.find_by(name: task['pokemon_reward']).id if task['pokemon_reward']
+    t.item_reward = Item.find_by(name: task['item_reward']).id if task['item_reward']
+    t.xp_reward = task['xp_reward'] if task['xp_reward']
     t.research_step_id = step.id
     t.save
   end

@@ -153,7 +153,10 @@ json.special_researches do
           json.array!(step.research_tasks) do |task|
             json.name task.name
             json.desc task.desc
-            json.xp_reward task.xp_reward
+            json.reward_type task.reward_type
+            json.pokemon_reward task.reward.name if task.pokemon_reward && task.reward_type == "pokemon"
+            json.item_reward task.reward.name if task.item_reward && task.reward_type == "item"
+            json.xp_reward task.xp_reward if task.xp_reward && task.reward_type == "xp"
           end
         end
         json.rewards do

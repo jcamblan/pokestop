@@ -12,7 +12,9 @@ class SpecialResearch < ApplicationRecord
     xp = 0
     self.research_steps.each do |step|
       step.research_tasks.each do |task|
-        xp += task.xp_reward
+        if task.reward_type == "xp"
+          xp += task.xp_reward
+        end
       end
     end
     return xp
