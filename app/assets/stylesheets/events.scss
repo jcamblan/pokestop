@@ -12,6 +12,15 @@
 .event {
   padding: 30px 0 20px 0;
   position: relative;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+}
+
+@media (min-width: 570px) {
+  .event {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .event__image {

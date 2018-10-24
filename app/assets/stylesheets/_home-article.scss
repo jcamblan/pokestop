@@ -6,6 +6,20 @@
   margin-bottom: 30px;
   background-color: white;
   padding: 15px;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+}
+
+@media (min-width: 570px) {
+  .home-article {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.home-article img {
+  max-width: 100%;
+  height: auto;
 }
 
 .home-article__heading, .home-article__title, .home-article__footer {
